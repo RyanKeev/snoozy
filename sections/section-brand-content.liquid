@@ -1,0 +1,125 @@
+
+{% if section.settings.show_section %}
+	<section class="section-brand-content" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container">
+			<div class="section-content-wrap" content-positon="{{ section.settings.content_position }}">
+				{% if section.settings.section_title != blank %}
+					<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+				{% endif %}
+
+				{% if section.settings.section_content != blank %}
+					<div class="content-block box-content" style="--max-content:{{ section.settings.section_content_width }}px">
+						{{ section.settings.section_content }}
+					</div>
+				{% endif %}
+
+				{% if section.settings.ps_text != blank %}
+					<div class="ps-wrapper">
+						<span class="ps-text">{{ section.settings.ps_text }} </span>
+						<span class="ps-author">{{ section.settings.ps_author }}</span></div>
+				{% endif %}
+			</div>
+
+			<div class="gallery-layout">
+				{%- for block in section.blocks -%}
+					{% if block.settings.gallery_images != blank %}
+						<div class="gallery-item img-wrap">
+							<img class="lazyload" data-src="{{ block.settings.gallery_images | img_url: 'master' }}"
+							     width="360" height="360" alt="image">
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Section Brand Content",
+	"class": "shopify-section-brand-content",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "select",
+			"id": "content_position",
+			"label": "Content Position",
+			"options": [
+				{
+					"value": "left",
+					"label": "Left"
+				},
+				{
+					"value": "center",
+					"label": "Center"
+				},
+				{
+					"value": "right",
+					"label": "Right"
+				}
+			],
+			"default": "left"
+		},
+		{
+			"type": "richtext",
+			"id": "section_title",
+			"label": "Section Title"
+		},
+		{
+			"type": "richtext",
+			"id": "section_content",
+			"label": "Section Content"
+		},
+		{
+			"type": "range",
+			"id": "section_content_width",
+			"min": 500,
+			"max": 1100,
+			"step": 100,
+			"unit": "px",
+			"label": "Content Max Width",
+			"default": 1100
+		},
+		{
+			"type": "text",
+			"id": "ps_text",
+			"label": "P.S - Text"
+		},
+		{
+			"type": "text",
+			"id": "ps_author",
+			"label": "P.S - Author"
+		}
+	],
+	"blocks": [
+		{
+		"type": "image_picker",
+		"name": "Gallery Images",
+		"settings": [
+				{
+					"type": "image_picker",
+					"id": "gallery_images",
+					"label": "Gallery Image"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Brand Content"
+		}
+	]
+}
+{% endschema %}

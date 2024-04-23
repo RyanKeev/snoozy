@@ -1,0 +1,117 @@
+
+{% if section.settings.show_section %}
+	<section class="section-card-info" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container">
+			{% if section.settings.section_title != blank %}
+				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+			{% endif %}
+
+			<div class="card-layout {% if section.settings.count_column == 'four-columns' %}four-columns{% endif %}">
+				{%- for block in section.blocks -%}
+					<div class="card-item">
+						{% if block.settings.card_info_image != blank %}
+							<div class="card-image img-wrap">
+								{{ block.settings.card_info_image | image_url: width: 360 | image_tag: alt: "card image", loading: 'lazy', class: 'lazyload' }}
+							</div>
+						{% endif %}
+						{% if block.settings.card_info_title != blank %}
+							<div class="card-title">{{ block.settings.card_info_title }}</div>
+						{% endif %}
+						{% if block.settings.card_info_content != blank %}
+							<div class="card-content box-content">{{ block.settings.card_info_content }}</div>
+						{% endif %}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		{% if section.settings.show_section_decor %}
+			<div class="section-decor" style="--color-decor:{{ section.settings.section_decor_color }}">
+				<svg width="40" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-width="2"><path d="M7 8C7 9.65685 5.65685 11 4 11C2.34315 11 1 9.65685 1 8C1 6.34315 2.34315 5 4 5C5.65685 5 7 6.34315 7 8Z"></path><path d="M27 8C27 11.866 23.866 15 20 15C16.134 15 13 11.866 13 8C13 4.13401 16.134 1 20 1C23.866 1 27 4.13401 27 8Z"></path><path d="M39 8C39 9.65685 37.6569 11 36 11C34.3431 11 33 9.65685 33 8C33 6.34315 34.3431 5 36 5C37.6569 5 39 6.34315 39 8Z"></path></g></svg>
+			</div>
+		{% endif %}
+	</section>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Section Card Info",
+	"class": "shopify-section-card-info",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show_section_decor",
+			"label": "Show Section Decor",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "color",
+			"id": "section_decor_color",
+			"label": "Section Decor Color",
+			"default": "#f7f3eb"
+		},
+		{
+			"type": "richtext",
+			"id": "section_title",
+			"label": "Section Title"
+		},
+		{
+			"type": "select",
+			"id": "count_column",
+			"options": [
+				{
+					"value": "three-columns",
+					"label": "3-columns"
+				},
+				{
+					"value": "four-columns",
+					"label": "4-columns"
+				}
+			],
+			"default": "three-columns",
+			"label": "Count column:"
+		}
+	],
+	"blocks": [
+		{
+		"type": "image_picker",
+		"name": "Card Item",
+		"settings": [
+				{
+					"type": "image_picker",
+					"id": "card_info_image",
+					"label": "Card Image"
+				},
+				{
+					"type": "text",
+					"id": "card_info_title",
+					"label": "Card Title"
+				},
+				{
+					"type": "richtext",
+					"id": "card_info_content",
+					"label": "Card Content"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Card Info"
+		}
+	]
+}
+{% endschema %}

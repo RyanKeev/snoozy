@@ -1,0 +1,73 @@
+
+{% if section.settings.show_section %}
+	<section class="section-benefits" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container">
+			<div class="benefits-layout">
+				{%- for block in section.blocks -%}
+					{% if block.settings.benefits_image != blank %}
+						<div class="benefits-item">
+							<div class="icon-wrap img-wrap" style="--background-image: {{ block.settings.benefits_background }}">
+								<img class="lazyload" data-src="{{ block.settings.benefits_image | img_url: '50' }}"
+								     width="50" height="50" alt="benefits icon">
+							</div>
+							{% if block.settings.benefits_title != blank %}
+								<div class="benefits-title">{{ block.settings.benefits_title }}</div>
+							{% endif %}
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Section Benefits",
+	"class": "shopify-section-benefits",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		}
+	],
+	"blocks": [
+		{
+		"type": "image_picker",
+		"name": "Benefits Item",
+		"settings": [
+				{
+					"type": "image_picker",
+					"id": "benefits_image",
+					"label": "Benefits Image"
+				},
+				{
+					"type": "color",
+					"id": "benefits_background",
+					"label": "Benefits Background",
+					"default": "#FFFFFF"
+				},
+				{
+					"type": "text",
+					"id": "benefits_title",
+					"label": "Benefits Title"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Benefits"
+		}
+	]
+}
+{% endschema %}

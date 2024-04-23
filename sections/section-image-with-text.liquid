@@ -1,0 +1,383 @@
+<script src="{{ 'section-before-after.js' | asset_url }}" defer="defer"></script>
+
+{% if section.settings.show_section %}
+	<section class="section-image-content {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container">
+			{% if section.settings.section_title != blank %}
+				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+			{% endif %}
+
+			<div class="chess-layout">
+				{%- for block in section.blocks -%}
+					<style>
+						.wrap-rounded {
+							height: 100%;
+							background: {{ block.settings.info_block_background_color }};
+							padding: 5rem;
+							align-items: center;
+							justify-content: center;
+							border-radius: 5%;
+							-webkit-border-radius: 5%;
+							-moz-border-radius: 5%;
+							-ms-border-radius: 5%;
+							-o-border-radius: 5%;
+						}
+						.info-color {
+							color: {{ block.settings.info_block_color  }} !important;
+							text-align: center;
+							margin: 7px 0;
+						}
+						.box-content p {
+							text-align: center;
+							margin: 7px 0;
+							color: {{ block.settings.info_block_color  }} !important;
+						}
+					</style>
+					<div class="chess-item">
+						<div class="media-block">
+							{% if block.settings.active_before_after and block.settings.before_image and block.settings.after_image %}
+								<div class="before-after" style="--before-after-initial-drag-position: {{ block.settings.drag_initial_position }}%; --clip-path-offset: 0px;">
+									<div class="before-image-wrap">
+										<div class="image-before img-wrap">
+											{{ block.settings.before_image | image_url: width: 555 | image_tag: alt: "image", loading: 'lazy', class: 'lazyload' }}
+										</div>
+										{%- if block.settings.before_text != blank -%}
+											<p class="label label-after">{{- block.settings.before_text | escape -}}</p>
+										{%- endif -%}
+									</div>
+
+									<div class="after-image-wrap">
+										<div class="image-after img-wrap">
+											{{ block.settings.after_image | image_url: width: 555 | image_tag: alt: "image", loading: 'lazy', class: 'lazyload' }}
+										</div>
+										{%- if block.settings.after_text != blank -%}
+											<p class="label label-before">{{- block.settings.after_text | escape -}}</p>
+										{%- endif -%}
+									</div>
+
+									<div class="cursor-wrapper">
+										<split-cursor class="split-cursor">
+											<svg width="47.25" height="480" viewBox="0 0 38 386" fill="none" xmlns="http://www.w3.org/2000/svg">
+												<path d="M37 193.5C37 203.742 28.9168 212 19 212C9.0832 212 1 203.742 1 193.5C1 183.258 9.0832 175 19 175C28.9168 175 37 183.258 37 193.5Z" stroke="white" stroke-width="2"></path>
+												<path d="M24.9702 189.095L29.7664 194.028L24.9702 198.96" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+												<path d="M12.9798 189.095L8.18359 194.028L12.9798 198.96" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+											</svg>
+										</split-cursor>
+									</div>
+								</div>
+							{% elsif block.settings.video != blank %}
+								<div class="media-video-wrap">
+									{{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, image_size: '555x',  loading: 'lazy', class: 'lazyload rounded-5' }}
+								</div>
+
+							{% elsif block.settings.image != blank %}
+								<div class="image img-wrap">
+									{{ block.settings.image | image_url: width: 555 | image_tag: alt: "image", loading: 'lazy', class: 'lazyload' }}
+								</div>
+							{% endif %}
+						</div>
+						<div class="info-block {% if block.settings.video != blank %}wrap-rounded{% endif %}" style="order:{% if block.settings.image_first %} 2 {% else %} 1 {% endif %};">
+
+							{% if block.settings.caption != blank  %}
+								<div class="item-caption info-color center font-body-bold">{{ block.settings.caption }}</div>
+							{% endif %}
+							{% if block.settings.title != blank  %}
+								<div class="item-title info-color center">{{ block.settings.title }}</div>
+							{% endif %}
+							{% if block.settings.content != blank  %}
+								<div class="item-content box-content info-color center">{{ block.settings.content }}</div>
+							{% endif %}
+							{% if block.settings.author != blank  %}
+								<div class="item-author info-color center">{{ block.settings.author }}</div>
+							{% endif %}
+							{%- if block.settings.button_label != blank -%}
+								<a
+								  class="button button--primary font-body-bold"
+								  {% if block.settings.button_link == blank %}
+									role="link" aria-disabled="true"
+								  {% else %}
+									href="{{ block.settings.button_link }}"
+								  {% endif %}
+								>
+								  {{ block.settings.button_label | escape }}
+								</a>
+							  {%- endif -%}
+
+							{% if block.settings.show_benefits_block %}
+								<div class="benefits-layout" style="--background-image: {{ block.settings.benefits_background }}">
+									{% if block.settings.benefits_image_one != blank and block.settings.benefits_title_one != blank %}
+										<div class="benefits-item">
+											<div class="icon-wrap img-wrap">
+												{{ block.settings.benefits_image_one | image_url: width: 50 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
+											</div>
+											<div class="benefits-title">{{ block.settings.benefits_title_one }}</div>
+										</div>
+									{% endif %}
+
+									{% if block.settings.benefits_image_two != blank and block.settings.benefits_title_two != blank %}
+										<div class="benefits-item">
+											<div class="icon-wrap img-wrap">
+												{{ block.settings.benefits_image_two | image_url: width: 50 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
+											</div>
+											<div class="benefits-title">{{ block.settings.benefits_title_two }}</div>
+										</div>
+									{% endif %}
+
+									{% if block.settings.benefits_image_third != blank and block.settings.benefits_title_third != blank %}
+										<div class="benefits-item">
+											<div class="icon-wrap img-wrap">
+												{{ block.settings.benefits_image_third | image_url: width: 50 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
+											</div>
+											<div class="benefits-title">{{ block.settings.benefits_title_third }}</div>
+										</div>
+									{% endif %}
+
+									{% if block.settings.benefits_image_fourth != blank and block.settings.benefits_title_fourth != blank %}
+										<div class="benefits-item">
+											<div class="icon-wrap img-wrap">
+												{{ block.settings.benefits_image_fourth | image_url: width: 50 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
+											</div>
+											<div class="benefits-title">{{ block.settings.benefits_title_fourth }}</div>
+										</div>
+									{% endif %}
+								</div>
+							{% endif %}
+						</div>
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+		{% if section.settings.show_section_decor %}
+			<div class="section-decor" style="--color-decor:{{ section.settings.section_decor_color }}">
+				<svg width="40" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-width="2"><path d="M7 8C7 9.65685 5.65685 11 4 11C2.34315 11 1 9.65685 1 8C1 6.34315 2.34315 5 4 5C5.65685 5 7 6.34315 7 8Z"></path><path d="M27 8C27 11.866 23.866 15 20 15C16.134 15 13 11.866 13 8C13 4.13401 16.134 1 20 1C23.866 1 27 4.13401 27 8Z"></path><path d="M39 8C39 9.65685 37.6569 11 36 11C34.3431 11 33 9.65685 33 8C33 6.34315 34.3431 5 36 5C37.6569 5 39 6.34315 39 8Z"></path></g></svg>
+			</div>
+		{% endif %}
+	</section>
+
+	{% comment %}<script>
+		const videoWap = document.querySelectorAll('.media-video-wrap');
+        videoWap ? videoWap.forEach(item => item.querySelector('video').play()) : '';
+	</script>{% endcomment %}
+{% endif %}
+
+
+{% schema %}
+{
+	"name": "Section Image With Text",
+	"class": "shopify-image-with-text",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show_section_decor",
+			"label": "Show Section Decor",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "color",
+			"id": "section_decor_color",
+			"label": "Section Decor Color",
+			"default": "#f7f3eb"
+		},
+		{
+			"type": "richtext",
+			"id": "section_title",
+			"label": "Section Title"
+		}
+	],
+	"blocks": [
+		{
+			"type": "image_picker",
+			"name": "Item",
+			"settings": [
+				{
+					"type": "checkbox",
+					"id": "image_first",
+					"label": "Image first column",
+					"default": true
+				},
+				{
+					"type": "color",
+					"id": "info_block_background_color",
+					"label": "Info Background Color",
+					"default": "#FFFFFF"
+				},
+				{
+					"type": "color",
+					"id": "info_block_color",
+					"label": "Info Text Color",
+					"default": "#000000"
+				},
+				{
+					"type": "image_picker",
+					"id": "image",
+					"label": "Image"
+				},
+				{
+					"type": "text",
+					"id": "caption",
+					"default": "Add a tagline",
+					"label": "caption"
+				},
+				{
+					"type": "richtext",
+					"id": "title",
+					"label": "Title"
+				},
+				{
+					"type": "richtext",
+					"id": "content",
+					"label": "Content"
+				},
+				{
+					"type": "text",
+					"id": "author",
+					"label": "Author"
+				},
+				{
+					"type": "text",
+					"id": "button_label",
+					"default": "Button label",
+					"label": "Button label"
+				  },
+				  {
+					"type": "url",
+					"id": "button_link",
+					"label": "Button link"
+				  },
+				{
+					"type": "header",
+					"content": "Before/after image"
+				},
+				{
+					"type": "checkbox",
+					"id": "active_before_after",
+					"label": "Enable functionality for 'Before & Active'",
+					"default": false
+				},
+				{
+					"type": "image_picker",
+					"id": "before_image",
+					"label": "Before image",
+					"info": "555 x 555 .jpg recommended"
+				},
+				{
+					"type": "image_picker",
+					"id": "after_image",
+					"label": "After image",
+					"info": "Dimensions must match before image."
+				},
+				{
+					"type": "text",
+					"id": "before_text",
+					"label": "Before text",
+					"default": "Before"
+				},
+				{
+					"type": "text",
+					"id": "after_text",
+					"label": "After text",
+					"default": "After"
+				},
+				{
+					"type": "range",
+					"id": "drag_initial_position",
+					"min": 0,
+					"max": 100,
+					"unit": "%",
+					"label": "Drag initial position",
+					"default": 50
+				},
+				{
+					"type": "header",
+					"content": "Video Settings"
+				},
+				{
+					"type": "image_picker",
+					"id": "video_poster",
+					"label": "Video poster"
+				},
+				{
+					"type": "video",
+					"id": "video",
+					"label": "Video"
+				},
+				{
+					"type": "header",
+					"content": "Benefits blocks"
+				},
+				{
+					"type": "checkbox",
+					"id": "show_benefits_block",
+					"label": "Show Benefits block",
+					"default": false
+				},
+				{
+					"type": "color",
+					"id": "benefits_background",
+					"label": "Benefits Background",
+					"default": "#FFFFFF"
+				},
+				{
+					"type": "image_picker",
+					"id": "benefits_image_one",
+					"label": "Benefits Image: One"
+				},
+				{
+					"type": "text",
+					"id": "benefits_title_one",
+					"label": "Benefits Title: One"
+				},
+				{
+					"type": "image_picker",
+					"id": "benefits_image_two",
+					"label": "Benefits Image: Two"
+				},
+				{
+					"type": "text",
+					"id": "benefits_title_two",
+					"label": "Benefits Title: Two"
+				},
+				{
+					"type": "image_picker",
+					"id": "benefits_image_third",
+					"label": "Benefits Image: Third"
+				},
+				{
+					"type": "text",
+					"id": "benefits_title_third",
+					"label": "Benefits Title: Third"
+				},
+				{
+					"type": "image_picker",
+					"id": "benefits_image_fourth",
+					"label": "Benefits Image: Fourth"
+				},
+				{
+					"type": "text",
+					"id": "benefits_title_fourth",
+					"label": "Benefits Title One: Fourth"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Image With Text"
+		}
+	]
+}
+{% endschema %}

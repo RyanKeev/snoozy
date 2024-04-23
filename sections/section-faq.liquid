@@ -1,0 +1,94 @@
+
+{% if section.settings.show_section %}
+	<section class="section-faq {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container">
+			{% if section.settings.section_title != blank %}
+				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+			{% endif %}
+
+			<div class="faq-layout">
+				{%- for block in section.blocks -%}
+					{% if block.settings.faq_question != blank and block.settings.faq_answer != blank  %}
+						<div class="faq-item">
+							<div class="faq-question" style="--bg-default:{{ block.settings.question_background }}">
+								<span>{{ block.settings.faq_question }}</span>
+								<div class="icon">{% render 'icon-arrow-left' %}</div>
+							</div>
+							<div class="faq-answer">
+								<div class="answer-content box-content">{{ block.settings.faq_answer }}</div>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
+
+		{% if section.settings.show_section_decor %}
+			<div class="section-decor" style="--color-decor:{{ section.settings.section_decor_color }}">
+				<svg width="40" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-width="2"><path d="M7 8C7 9.65685 5.65685 11 4 11C2.34315 11 1 9.65685 1 8C1 6.34315 2.34315 5 4 5C5.65685 5 7 6.34315 7 8Z"></path><path d="M27 8C27 11.866 23.866 15 20 15C16.134 15 13 11.866 13 8C13 4.13401 16.134 1 20 1C23.866 1 27 4.13401 27 8Z"></path><path d="M39 8C39 9.65685 37.6569 11 36 11C34.3431 11 33 9.65685 33 8C33 6.34315 34.3431 5 36 5C37.6569 5 39 6.34315 39 8Z"></path></g></svg>
+			</div>
+		{% endif %}
+	</section>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Section FAQ",
+	"class": "shopify-section-faq",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show_section_decor",
+			"label": "Show Section Decor",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "text",
+			"id": "section_title",
+			"label": "Section Title"
+		}
+	],
+	"blocks": [
+		{
+			"type": "image_picker",
+			"name": "FAQ Item",
+			"settings": [
+				{
+					"type": "color",
+					"id": "question_background",
+					"label": "Benefits Background: Default",
+					"default": "#f7f3eb"
+				},
+				{
+					"type": "text",
+					"id": "faq_question",
+					"label": "FAQ: Question"
+				},
+				{
+					"type": "richtext",
+					"id": "faq_answer",
+					"label": "FAQ: Answer"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section FAQ"
+		}
+	]
+}
+{% endschema %}

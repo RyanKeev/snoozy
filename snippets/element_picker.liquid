@@ -1,0 +1,845 @@
+<div class="elem_picker_savebar" style="display:none;">
+  <div id="elementPickerPopup">
+    <a href="#popup1" class="btn">Open Pickerbox</a>
+
+    <div id="popup1" class="popup">
+      <a href="#" class="close">&times;</a>
+      <div class="pop-up-data">
+        <div class="picker_title"><p> Welcome to Coming Soon Picker </p></div>
+    <div>
+      <div class='picker_icon_wrap'>
+      </div>
+      <!-- <img src="https://setubridgeapps.com/coming-soon-product/app/admin/source/element_picker.gif" alt="Pineapple" class="picker_image"> -->
+        </div>
+        <div> 
+          <a href="#"><button class="elem_save start_stop_eLem_picker " id="start_stop_eLem_picker" data-curr-event="START">START PICKING</button></a>
+        </div>
+      </div>
+    </div>
+    <a href="#" class="close-popup"></a>
+    <div id="popup2" class="popup codeblock_content pop-up2">
+      <a href="#" class="close">&times;</a>
+      <div>
+
+        <h2 class="pop2_title"> COPY CLIPBOARD </h2>
+        <button  class="direct_apply"> Automatically Apply Classes </button>
+      </div>
+      <div class="class_copy_codeblock_border">
+
+        <span class="copy_class"> </span>
+        <div>
+          <div style="float:left"><button class="code_copy_btn"><img class="copy_img"src="https://cdn.shopify.com/s/files/1/0259/8135/4043/files/file.png?v=1638521783">Copy </button></div>
+        </div>
+      </div>
+      <div class="flex-container">
+        <div style="float:left"><div  class="redirectadmin"><button class="close_windows"> Back To Admin </button></div></div>
+
+        <div style="float:right">
+          <a href="#" style="float:left"><button class="reset_btn start_stop_eLem_picker " id="reset_eLem_picker" data-curr-event="START">Re-Pick Element</button></a>
+
+
+        </div>
+      </div>
+    </div>
+    <a href="#" class="close-popup"></a>
+  </div>
+</div>
+
+<style>
+  .copy_img{
+    width: 20px;
+    margin: 3px 5px 0 0;
+  }
+  }
+  .pop2_title{
+    text-align: center;
+    font-size: 26px;
+    text-transform: uppercase;
+    float: left;
+
+  }
+  .copy_class{
+    padding: 31px 5px;
+    font-family: sans-serif;
+    /*     width: 457px; */
+  }
+  .pop-up2
+  {
+    display: flex;
+    flex-direction: column;
+
+  }
+  @media only screen and (max-width: 600px) {
+    .popup {
+      width: 94% !important;
+    }
+  }
+  .picker_image
+  {
+
+    width: 100%;
+
+
+  }
+  .direct_apply{
+    background: #008000;
+    border: 1px solid #008000!important;
+    color: #fff !important;
+    border-radius: 5px!important;
+    margin: -50px 1px 5px 0!important;
+    width: auto!important;
+    /* height: 40px!important; */
+    font-weight: 600!important;
+    font-size: 15px!important;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    float: right;
+    cursor:pointer;
+
+  }
+  .picker_title{
+    font-size: larger;
+    text-align: center;
+    color: #000000;
+    font-family: sans-serif ;
+  }
+  .pop-up-data{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+  }
+  @media only screen and (max-width: 1024px) {
+    .flex-container {
+      display: flex;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+
+  {
+  }
+  .pop-up-data > div {
+    margin: 5px;
+    padding: 5px;
+  }
+  .flex-container {
+    /*   display: flex; */
+
+  }
+
+  .flex-container > div {
+    padding: 0;
+  }
+  #elementPickerPopup .btn {
+    display: inline-block;
+    padding: 8px 20px;
+    border: 2px solid #e49503;
+    border-radius: 10px;
+    transition: background .3s;
+    POSITION: FIXED;
+    TOP: 5px;
+    right: 71px;
+    background: #e6a836;
+    text-decoration: none;
+  }
+  }
+  #elementPickerPopup  .btn:hover {
+    background: #00898E;
+  }
+  #elementPickerPopup  .popup {
+    position: fixed;
+    padding: 20px;
+    width: 41%;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: #fff;
+    visibility: hidden;
+    opacity: 0;
+    /* "delay" the visibility transition */
+    -webkit-transition: opacity .5s, visibility 0s linear .5s;
+    transition: opacity .5s, visibility 0s linear .5s;
+    z-index: 1;
+    text-decoration:none;
+  }
+  #elementPickerPopup  .popup:target {
+    visibility: visible;
+    opacity: 1;
+    /* cancel visibility transition delay */
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+    z-index: 99999;
+  }
+  }
+  #elementPickerPopup  .popup-close {
+    position: absolute;
+    padding: 10px;
+    max-width: 500px;
+    border-radius: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    background: rgba(255,255,255,.9);
+  }
+  #elementPickerPopup  .popup .close {
+    position: absolute;
+    right: -15px;
+    top: -15px;
+    padding: 5px;
+    color: #000;
+    transition: color .3s;
+    font-size: 30px;
+    background: #ffff;
+    line-height: .6em;
+    font-weight: bold;
+    font-weight: bold;
+    z-index: 99999999;
+    opacity: 1;
+    border-radius: 50%;
+    text-decoration:none;
+  }
+  #elementPickerPopup  .popup .close:hover {
+    color: #00E5EE;
+  }
+
+  #elementPickerPopup  .close-popup {
+    display:block;
+    background: rgba(0,0,0,.7);
+    cursor: default;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    visibility: hidden;
+    /* "delay" the visibility transition */
+    -webkit-transition: opacity .5s, visibility 0s linear .5s;
+    transition: opacity .5s, visibility 0s linear .5s;
+  }
+  #elementPickerPopup  .popup:target + .close-popup{  
+    opacity: 1;
+    visibility: visible;
+    /* cancel visibility transition delay */
+    -webkit-transition-delay: 0s;
+    transition-delay: 0s;
+
+  }
+
+  #_picker_cover_wrap_box svg>path:first-child {	
+    fill: rgb(255 255 255 / 0%)!important;
+  }
+
+
+  #_picker_cover_wrap_box svg>path+path
+  {	
+    stroke: #c000ff!important;
+    stroke-width: 1px!important;
+    stroke-dasharray: 3!important;
+    fill: #267ceb8c!important;
+  }
+  .class_copy_codeblock
+  {
+    width: 100%;
+    position: fixed;
+    bottom: 0%;
+    z-index: 999999999999999999999999999999999999;
+    display:none;
+
+  }
+  .class_copy_codeblock_border{
+    border-radius: 4px;
+    display: flex;
+    margin: 6px 0px 25px 0px;
+    padding: 0 20px;
+    border-style: dashed;
+    border-color: #ffffff;
+    border-width: 2px;
+    background-color: #383838;
+    color: #fff;
+    position: relative
+  }
+  .code_copy_btn {
+    background: #6371C7;
+    border: 1px dotted #c6cdf7;
+    color: #fff !important;
+    border-radius: 5px!important;
+    /*     margin: 73px -15px 2px 0!important; */
+    width: auto!important;
+    /* height: 40px!important; */
+    font-weight: 600!important;
+    font-size: 15px!important;
+    padding: 3px 10px 5px;
+    font-family: sans-serif;
+    display: flex;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    cursor:pointer;
+  }
+  .close_windows{
+    background: #d6d6d6;
+    border: 1px solid #cecccc!important;
+    color: #000!important;
+    border-radius: 5px!important;
+    margin: 5px 0px 5px 0!important;
+    width: auto!important;
+    /* height: 40px!important; */
+    font-weight: 600!important;
+    font-size: 15px!important;
+    font-family: sans-serif;
+    padding: 5px 10px;
+    cursor:pointer;
+
+  }  
+
+
+  .reset_btn{
+    background:  #d6d6d6; !important;
+    border: 1px solid #cecccc !important;
+    color: #000!important;
+    border-radius: 5px!important;
+    margin: 5px 10px 0px!important;
+    width: auto!important;
+    /* height: 40px!important; */
+    font-weight: 600!important;
+    font-size: 15px!important;
+    padding: 5px 10px;
+    font-family: sans-serif;
+    cursor:pointer;
+
+  }
+
+  .codeblock_copy_btn
+  {
+    display: flex!important;
+    align-items: center!important;
+
+  }
+
+  .codeblock_content
+  {
+    display: flex;
+    flex: 80;
+    padding: 15px 50px 10px 20px;
+    min-height: 85px;
+  }
+
+  .elem_picker_savebar {
+    display:flex;
+    justify-content: space-between;
+    background : #202123;
+    height:59px;
+    padding : 0 20px;
+    top:0%;
+
+  }
+
+  .elem_picker_buttons {
+    display:flex;
+    align-items: center;
+  }
+
+  .elem_reset
+  {
+    background: #202123;
+    color: #fafbfb;
+    border: 1px solid #82878b;
+    margin-right:5px;
+  }
+
+  .elem_reset:hover
+  {
+    background : #54575b; 
+  }
+
+  .elem_save{
+    border-color: #6371C7;
+    background:#6371C7;
+    border-radius:5px;
+    padding: 10px 36px;
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.00em;
+    margin: 0 15px;
+  }
+
+  .elem_save:hover
+  {
+    -webkit-animation: hover 1200ms linear 2 alternate;
+    animation: hover 1200ms linear 2 alternate;
+  }
+
+  .elem_picker_buttons  button 
+  {
+    align-items: center;
+    justify-content: center;
+    padding: 7px 16px;
+    font-size: 14px;
+    height: 36px;
+    line-height: 1;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+
+  .elem_picker_savebar
+  {
+    position: fixed;
+    width: 100%;
+    z-index: 9999999999999999;
+  }
+
+  .elem_picker_msg_wrapper h2{
+    color : #e3e5e7;
+    font-size:19px;
+    margin: unset!important;
+
+  }
+
+  .elem_picker_msg_wrapper{
+    display: flex;
+    align-items: center;
+  } 
+
+</style>
+
+<script>
+  
+  var loadScript = function (url, callback) {
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+    if (script.readyState) {
+      script.onreadystatechange = function () {
+        if (script.readyState == 'loaded' || script.readyState == 'complete') {
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {
+      script.onload = function () {
+        callback();
+      };
+    }
+    script.src = url;
+    document.getElementsByTagName('head') [0].appendChild(script);
+  };
+
+  if ((typeof jQuery === 'undefined') || (parseFloat(jQuery.fn.jquery) < 1.7)) {
+    loadScript('//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js', function () {
+      jQuery191 = jQuery.noConflict(true);
+      RAQ_element_picker(jQuery191);
+      console.log("If");
+    });
+  } else {
+    RAQ_element_picker(jQuery);
+    console.log("Else");
+  }
+
+
+
+  function RAQ_element_picker($)
+  {
+    var elem_selector;
+    shop = Shopify.shop;
+          let page=" ";
+
+    if (window.location.href.indexOf('elem_pickerhd8ewhy9832r832hr4ur432uhyr30289er') !== -1) { 
+      $('.picker_icon_wrap').html('<img src="https://setubridgeapps.com/coming-soon-product/app/admin/source/element_picker.gif" alt="Element Picker" class="picker_image">');
+      console.log("WELCOME TO ELEMENT PICKER");
+      
+      $('body').append(`<style>
+      div a:after {content: none;} 
+      a:after{content:none;}
+      .card__heading a:after{content:none;}
+.card-wrapper .full-unstyled-link:after{content:none;}
+        </style>`);
+        
+      var elem_picker_controller = `<div class="elem_picker_savebar" style="display:none;">
+      <div id="elementPickerPopup">
+      <a href="#popup1" class="btn">Open Pickerbox</a>
+      <div id="popup1" class="popup">
+      <a href="#" class="close">&times;</a>
+      <div class="pop-up-data">
+      <div class="picker_title"><p> Welcome to Coming soon Picker </p></div>
+      <div> <img src="https://setubridgeapps.com/coming-soon-product/app/admin/source/element_picker.gif" alt="Pineapple" class="picker_image">
+        </div> 
+      <div> 
+      <a href="#"><button class="elem_save start_stop_eLem_picker " id="start_stop_eLem_picker" data-curr-event="START">START PICKING</button></a>
+        </div>
+        </div>
+        </div>
+      <a href="#" class="close-popup"></a>
+      <div id="popup2" class="popup codeblock_content pop-up2">
+      <a href="#" class="close">&times;</a>
+      <div>
+      <h2 class="pop2_title"> COPY CLIPBOARD </h2>
+      <button onclick=directapply() class="direct_apply"> Automatically Apply Classes </button>
+        </div>
+      <div class="class_copy_codeblock_border">
+      <span class="copy_class"> </span>
+      <div>
+      <div style="float:left"><button class="code_copy_btn"><img class="copy_img"src="https://cdn.shopify.com/s/files/1/0259/8135/4043/files/file.png?v=1638521783">Copy </button></div>
+        </div>
+        </div>
+      <div class="flex-container">
+      <div style="float:left"><div  class="redirectadmin"><button class="close_windows"> Back To Admin </button></div></div>
+      <div style="float:right">
+      <a href="#" style="float:left"><button class="reset_btn start_stop_eLem_picker " id="reset_eLem_picker" data-curr-event="START">Re-Pick Element</button></a>
+        </div>
+        </div>
+        </div>
+      <a href="#" class="close-popup"></a>
+        </div>
+        </div>`;
+      //         $('body').after(elem_picker_controller);
+      $(".elem_picker_savebar").show();
+      
+          
+      function getSelector(el,jQuery){
+        var $el = jQuery(el);
+
+        var id = $el.attr("id");
+        if (id) { //"should" only be one of these if theres an ID
+          return "#"+ id;
+        }
+
+        var selector = $el.parents()
+        .map(function() { return this.tagName; })
+        .get().reverse().join(" ");
+
+        if (selector) {
+          selector += " "+ $el[0].nodeName;
+        }
+
+        var classNames = $el.attr("class");
+        if (classNames) {
+          selector += "." + jQuery.trim(classNames).replace(/\s/gi, ".");
+        }
+
+        var name = $el.attr('name');
+        if (name) {
+          selector += "[name='" + name + "']";
+        }
+        if (!name){
+          var index = $el.index();
+          if (index) {
+            index = index + 1;
+            selector += ":nth-child(" + index + ")";
+          }
+        }
+        return selector;
+      }
+
+      const loadCssStyleScript = (random) => {
+        var cssId = 'myCss';  // you could encode the css path itself to generate id..
+        if (!document.getElementById(cssId))
+        {
+          var head  = document.getElementsByTagName('head')[0];
+          var link  = document.createElement('link');
+          link.id   = cssId;
+          link.rel  = 'stylesheet';
+          link.type = 'text/css';
+          link.href = 'https://www.setubridgeapps.com/Element-Picker/dist/picker.min.css?'+random;
+          link.media = 'all';
+          head.appendChild(link);
+        }
+      }
+
+      
+      $(document).on("click","#reset_eLem_picker",function()
+                     {
+                       picker();
+        for ( elem of selectedClass_Data)
+        {
+          $(elem).show(200);
+        }
+        selectedClass_Data=[];
+        
+        $('.class_copy_codeblock').hide(600);
+
+      });
+
+      $(document).on("click",".code_copy_btn",function()
+                     {
+        var copied_data = $('.codeblock_content span').text();
+        var tempInput = document.createElement("input");
+        tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+        tempInput.value = copied_data.trim();
+        document.body.appendChild(tempInput);
+        tempInput.select();
+        document.execCommand("copy");
+        document.body.removeChild(tempInput);
+      });
+      //https://www.setubridgeapps.com/Element-Picker/dist/picker.min.js
+//       loadScript('', function () {
+//         loadCssStyleScript("raq399");
+//         window.selectedClass_Data = [];
+//         window.elem_picker = new Picker({
+//           elm: document.getElementsByTagName("body")[0],  
+//           mode: 'cover',
+//           events: [{
+//             key: 'contextmenu',
+//             fn(event) {
+//               console.log('Diy contextmenu Event', event.target, event);
+//               event.preventDefault();
+//             },
+//           }],
+//           onInit() {
+
+//           },
+//           onClick(event) {
+//             var selected_tag = $(event.target).prop("tagName");
+//             selected_tag=selected_tag.toLowerCase();
+//             if(selected_tag!="img" && selected_tag!="head" && selected_tag!="body" && selected_tag!="html") {  
+//               var elem_selector = getSelector(event.target,$);
+//               selectedClass_Data.push(elem_selector);
+//               $(elem_selector).hide();
+
+//               $('.class_copy_codeblock').show(600);
+//             }
+//             $('.codeblock_content span').text(selectedClass_Data.toString());
+//           },
+//           onHover(event) {
+//           },
+//         });
+//       });
+
+//       picker();
+      $('.elem_picker_savebar').show();
+      var codecopyBlock = `<div class="class_copy_codeblock">
+      <div class="class_copy_codeblock_border">
+      <div class="codeblock_content">
+      <span></span>
+      </div>
+      <div class="codeblock_copy_btn">
+      <button class="code_copy_btn">Copy Class</button>
+      </div>
+      </div>  
+      </div>`;
+      console.log("1111111111")           
+      $('body').after(codecopyBlock);
+      
+      $(document).on("click","#start_stop_eLem_picker",function()
+                     {
+        var curr_control_event = $("#start_stop_eLem_picker").attr("data-curr-event");
+        console.log("curr_control_event",curr_control_event)
+        if(curr_control_event=="stop")
+        {
+          console.log("off")
+          window.elem_picker.off();
+          $(this).attr("data-curr-event","stop");
+          $(this).text("STOP PICKING");
+          $('.class_copy_codeblock').hide(600);
+        }
+        else
+        {
+          console.log("11111111111111")
+          picker()
+          $(this).attr("data-curr-event","start");
+          $('.class_copy_codeblock').hide(600);
+        }
+      });
+      
+       
+      
+      $(document).on('click','.redirectadmin',function(){
+        redirectHref='https://'+shop+'/admin/apps/coming-soon-products-2'
+        window.location.href =redirectHref;
+      })
+      if (window.location.href.indexOf('#popup2') !== -1) {
+        window.location.href = window.location.href.replace('#popup2','')
+      }
+      if (window.location.href.indexOf('#popup1') === -1) {
+        window.location.href = window.location.href+'#popup1'
+      }
+
+      let locationwindow = window.location.href;
+      let split ='';
+      if(locationwindow.indexOf("#popup1") !== -1 ){
+        split = '/';
+      }else{
+        split = '?';
+      }
+      let hrefArray = locationwindow.split(split);
+
+      console.log("ssssss",hrefArray)
+      for (const [key, value] of Object.entries(hrefArray)) {
+        console.log(`${key}: ${value}`);
+        if (`${value}` =='products'){
+          page='product'
+        }
+        else if(`${value}` =='collections')
+        {
+          page='collection'
+        }
+        else if(`${value}` =='search')
+        {
+          page= 'search'
+        }
+        else if(`${value}` == window.location.origin)
+        {
+          page= 'home'
+        }
+      }
+      console.log(".....",page)
+
+      loadCssStyleScript("raq399");
+      
+      function picker()
+      {
+        //console.log("999999999999")
+        loadScript('https://www.setubridgeapps.com/Element-Picker/dist/picker.min.js', function () {
+          
+//           var cssId = 'myCss';  // you could encode the css path itself to generate id..
+//           if (!document.getElementById(cssId))
+//           {
+//             var head  = document.getElementsByTagName('head')[0];
+//             var link  = document.createElement('link');
+//             link.id   = cssId;
+//             link.rel  = 'stylesheet';
+//             link.type = 'text/css';
+//             link.href = 'https://www.setubridgeapps.com/Element-Picker/dist/picker.min.css?'+"raq399";
+//             link.media = 'all';
+//             head.appendChild(link);
+//           }
+           
+          window.selectedClass_Data = [];
+
+          window.elem_picker = new Picker({
+            elm: document.getElementsByTagName("body")[0],  
+            mode: 'cover',
+            events: [{
+              key: 'contextmenu',
+              fn(event) { 
+                console.log('Diy contextmenu Event', event.target, event);
+                event.preventDefault();
+              },
+            }],
+            onInit() {
+
+            },
+            onClick(event) {
+              console.log("+++++++++++++++++++++++++onclick")
+//               var selected_tag = $(event.target).prop("tagName");
+//               selected_tag=selected_tag.toLowerCase();
+//               if(selected_tag!="img" && selected_tag!="head" && selected_tag!="body" && selected_tag!="html") {  
+//                 elem_selector = getSelector(event.target,$);
+//                 selectedClass_Data.push(elem_selector);
+//                 $(elem_selector).hide();
+//                 //$('.class_copy_codeblock').show(600);
+//               }
+//               console.log("%%%%%",elem_selector);
+
+              getDivLendth = event.path.length;
+
+              	/* get target div class */
+                for(i=0; i<getDivLendth;i++){
+                  target_class = event.path[i]['className'];
+                  if(target_class != ''){
+                    break;
+                  }
+                }
+              	target_class = target_class.replaceAll(' ','.');
+              	target_class = '.'+target_class;
+              	
+              	/* get target div class */
+              	
+              	/* get target parent div class */
+              	check_parent = $(target_class).parents('div'); 
+              
+                 for(i=0; i<check_parent.length;i++){
+                  target_parent_class = $(target_class).parents('div')[i]['className'];
+                  if(target_parent_class != ''){
+                    
+                    target_parent_class= target_parent_class.trim();
+                  
+                    var rule=/\s{1,}/g;
+
+                    target_parent_class = target_parent_class.split(rule).join(" "); 
+                    target_parent_class = target_parent_class.replaceAll(' ','.');
+                  
+                     if(target_parent_class != ' '){
+                   target_class = '.'+target_parent_class+' '+target_class;                    
+                    break;
+                     }
+                  }
+                } 
+              
+              if(target_class!="img" && target_class!="head" && target_class!="body" && target_class!="html") {  
+//                 elem_selector = getSelector(event.target,$);
+                elem_selector =target_class;
+                selectedClass_Data.push(elem_selector);
+//                 $(elem_selector).hide();
+              }
+
+
+              window.location.href = window.location.href+'popup2';
+              $('.reset_btn').show();
+              var copied_data = $('.codeblock_content span').text(elem_selector)
+              window.elem_picker.off()                                                  
+              $(document).on("click",".code_copy_btn",function()
+                             {
+
+                console.log("copied")
+                $(this).text('Copied!');
+                setTimeout(() => { $(this).html('<img class="copy_img"src="https://cdn.shopify.com/s/files/1/0259/8135/4043/files/file.png?v=1638521783">Copy'); }, 1400);
+              console.log("111",elem_selector)
+              var copied_data = elem_selector
+              console.log("2222",copied_data)
+              var tempInput = document.createElement("input");
+              tempInput.style = "position: absolute; left: -1000px; top: -1000px";
+              tempInput.value = copied_data.trim();
+              document.body.appendChild(tempInput);
+              tempInput.select();
+              document.execCommand("copy");
+              document.body.removeChild(tempInput);
+
+            })                            
+            //                 $('.codeblock_content span').text(selectedClass_Data.toString());
+          },
+          onHover(event) { 
+           },
+          });
+        });
+
+      }
+         $(document).on('click','.direct_apply',function(){
+            page = `{{request.page_type}}`;
+        directapply();
+      })
+      
+      function directapply(){
+        console.log(page,shop,elem_selector);
+        if (page !=''){
+          $.ajax({
+            url: "https://www.setubridgeapps.com/coming-soon-product/app/src/public/directPriceApply",
+            type: "POST", //Use "PUT" for HTTP PUT methods
+            data: {
+              page :page,
+              shop : shop,
+              priceValue:elem_selector,
+            },
+          })
+          .done (function(data,response, textStatus, jqXHR) { 
+            console.log("Success: " + response); 
+            window.location ='https://'+shop+'/admin/apps/coming-soon-products-2'
+          })
+        }
+      }
+      
+
+    }else{
+      $(".elem_picker_savebar").hide();
+    }
+
+  }
+
+  
+  
+
+
+</script>

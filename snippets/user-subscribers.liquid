@@ -1,0 +1,80 @@
+
+{% assign userCounterStart = product.metafields.custom.user_counter_start %}
+
+<div class="user-subscribers" counter-start={{ userCounterStart }} date-start={{ product.metafields.custom.user_counter | date: "%Y-%m-%d %H:%M:%S" }}>
+    <div class="user-counter">
+        <span>0</span>
+        <span>0</span>
+        <span>0</span>
+        <span>0</span>
+        <span>0</span>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("StartAsyncLoading", function(event) {
+        const userCounterWrap = document.querySelector('.user-subscribers');
+
+        if (userCounterWrap) {
+            const startDate = Date.parse(new Date(userCounterWrap.getAttribute('date-start')).toLocaleString("en-US", { timeZone: "Europe/Paris" }));
+            const currentDate = Date.parse(new Date().toLocaleString("en-US", { timeZone: "Europe/Paris" }));
+
+            const timeDifferenceMilliseconds = currentDate - startDate;
+            const timeDifferenceHours = Math.round(timeDifferenceMilliseconds / (1000 * 60 * 60));
+
+            const itemUserHTML = userCounterWrap.querySelectorAll('.user-counter span');
+
+            let counterStart = +userCounterWrap.getAttribute('counter-start');
+            const increaseNumber = () => counterStart += 17;
+
+            function animateNumber(element, num) {
+                const duration = 1200;
+                const startTimestamp = performance.now();
+                const startValue = parseInt(element.innerHTML) || 0;
+
+                function step(timestamp) {
+                    const progress = (timestamp - startTimestamp) / duration;
+
+                    if (progress < 1) {
+                        const value = Math.round(startValue - progress * (startValue - num));
+                        element.innerHTML = value;
+                        requestAnimationFrame(step);
+                    } else {
+                        element.innerHTML = num;
+                    }
+                }
+
+                requestAnimationFrame(step);
+            }
+
+            const paintUserSubscribe = () => {
+                const pointNum = String(counterStart).split('');
+                let countArrayDate = pointNum.length - 1;
+                const animationDelay = 500;
+
+                function animateNext() {
+                    if (countArrayDate >= 0) {
+                        animateNumber(itemUserHTML[itemUserHTML.length - (pointNum.length - countArrayDate)], +pointNum[countArrayDate], 0);
+                        countArrayDate--;
+                        setTimeout(animateNext, animationDelay);
+                    }
+                }
+
+                animateNext();
+            };
+
+            if (timeDifferenceHours >= 1) {
+                for (let k = 0; k <= timeDifferenceHours; k++) {
+                    increaseNumber();
+                }
+            }
+
+            paintUserSubscribe();
+
+            setInterval(() => {
+                increaseNumber();
+                paintUserSubscribe();
+            }, 60 * 60 * 1000);
+        }
+    });
+</script>

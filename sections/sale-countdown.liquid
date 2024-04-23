@@ -1,0 +1,393 @@
+{{ 'countdown.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'countdown-timezone.js' | asset_url }}" defer="defer"></script>
+<section id="shopify-section-{{ section.id }}" class="shopify-section section-{{ section.id }}-padding" data-section="{{ section.id }}">
+        {%- style -%}
+        .wdp-ribbon {
+            background-color: {{ section.settings.ribbon_background_color }};
+        }
+        .wdp-ribbon-two:before, .wdp-ribbon-two:before {
+            border-right-color: {{ section.settings.ribbon_background_color }};
+        }
+        .wdp-ribbon-two:before {
+            border-color:  {{ section.settings.ribbon_background_color }};
+            border-left-color: transparent!important;
+        }
+        .sale-badge {
+            background-color: {{ section.settings.badge_background_color }};
+            font-size: {{ section.settings.badge_font_size }}px;
+            color: {{ section.settings.badge_text_color }};
+            font-weight: {{ section.settings.badge_font_weight }};
+        }
+        .sale-ends {
+            font-family: {{ section.settings.sale_ends_font_family }};
+            font-weight: {{ section.settings.sale_ends_font_weight }};
+            font-size: {{ section.settings.sale_ends_font_size }}px;
+            color: {{ section.settings.sale_ends_text_color }};
+        }
+        .timer {
+            color: {{ section.settings.timer_text_color }};
+            font-family: {{ section.settings.timer_font_family }};
+            font-weight: {{ section.settings.timer_font_weight }};
+            font-size: {{ section.settings.timer_font_size }}px;
+        }
+        .countdown-title {
+            font-family: {{ section.settings.title_font_family }};
+            font-weight: {{ section.settings.title_font_weight }};
+            font-size: {{ section.settings.title_font_size }}px;
+            color: {{ section.settings.title_color }};
+        }
+        .countdown-topic {
+            font-family: {{ section.settings.topic_font_family }};
+            font-weight: {{ section.settings.topic_font_weight }};
+            font-size: {{ section.settings.topic_font_size }}px;
+            color: {{ section.settings.topic_color }};
+        }
+        .countdown-description {
+            font-family: {{ section.settings.description_font_family }};
+            font-weight: {{ section.settings.description_font_weight }};
+            font-size: {{ section.settings.description_font_size }}px;
+            color: {{ section.settings.description_color }};
+        }
+        {%- endstyle -%}
+    
+        <div class="sale-celebration countdown-container box" style="background-color: {{ section.settings.background_color }};"> 
+            <span class="wdp-ribbon wdp-ribbon-two">{{ section.settings.sale_text }}</span>
+            <div class="center">
+                <p class="uppercase countdown-title">{{ section.settings.title }}</p>
+                <p class="uppercase countdown-topic">{{ section.settings.topic }}</p>
+                <p class="uppercase countdown-description">{{ section.settings.description }}</p>
+            </div>
+            <div class="sale-ends">
+                {{ section.settings.sale_ends_text }} 
+                <p id="timer" class="font-body-bold timer"></p> 
+                <span class="sale-badge">{{ section.settings.bought_today }}</span>
+            </div>
+        </div>
+
+</section>
+{% schema %}
+{
+  "name": "Sale Countdown",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+        "type": "text",
+        "id": "background_color",
+        "label": "Background Color",
+        "default": "#f0f6ff"
+    },
+    {
+        "type": "color",
+        "id": "ribbon_background_color",
+        "label": "Ribbon Background Color",
+        "default": "#cb2236"
+    },
+    {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Sale Celebration"
+    },
+    {
+        "type": "text",
+        "id": "title_font_family",
+        "label": "Title Font Family",
+        "default": "Harmonia Sans, sans-serif"
+    },
+    {
+        "type": "select",
+        "id": "title_font_weight",
+        "label": "Title Font Weight",
+        "default": "normal",
+        "options": [
+            { "value": "normal", "label": "Normal" },
+            { "value": "bold", "label": "Bold" },
+            { "value": "bolder", "label": "Bolder" },
+            { "value": "lighter", "label": "Lighter" },
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+        ]
+    },
+    {
+        "type": "range",
+        "id": "title_font_size",
+        "label": "Title Font Size",
+        "min": 6,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+    },
+    {
+        "type": "color",
+        "id": "title_color",
+        "label": "Title Color",
+        "default": "#000000"
+    },
+    {
+        "type": "text",
+        "id": "topic",
+        "label": "Topic",
+        "default": "Sale Topic"
+    },
+    {
+        "type": "text",
+        "id": "topic_font_family",
+        "label": "Topic Font Family",
+        "default": "Harmonia Sans, sans-serif"
+    },
+    {
+        "type": "select",
+        "id": "topic_font_weight",
+        "label": "Topic Font Weight",
+        "default": "normal",
+        "options": [
+            { "value": "normal", "label": "Normal" },
+            { "value": "bold", "label": "Bold" },
+            { "value": "bolder", "label": "Bolder" },
+            { "value": "lighter", "label": "Lighter" },
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+        ]
+    },
+    {
+        "type": "range",
+        "id": "topic_font_size",
+        "label": "Topic Font Size",
+        "min": 6,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+    },
+    {
+        "type": "color",
+        "id": "topic_color",
+        "label": "Topic Color",
+        "default": "#5E3653"
+    },
+    {
+        "type": "text",
+        "id": "description",
+        "label": "Description",
+        "default": "Sale Description"
+    },
+    {
+        "type": "text",
+        "id": "description_font_family",
+        "label": "Description Font Family",
+        "default": "Harmonia Sans, sans-serif"
+    },
+    {
+        "type": "select",
+        "id": "description_font_weight",
+        "label": "Description Font Weight",
+        "default": "normal",
+        "options": [
+            { "value": "normal", "label": "Normal" },
+            { "value": "bold", "label": "Bold" },
+            { "value": "bolder", "label": "Bolder" },
+            { "value": "lighter", "label": "Lighter" },
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+        ]
+    },
+    {
+        "type": "range",
+        "id": "description_font_size",
+        "label": "Description Font Size",
+        "min": 6,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+    },
+    {
+        "type": "color",
+        "id": "description_color",
+        "label": "Description Color",
+        "default": "#000000"
+    },
+    {
+        "type": "text",
+        "id": "timer",
+        "label": "Timer",
+        "default": "24H : 00M : 00S"
+    },
+    {
+        "type": "text",
+        "id": "bought_today",
+        "label": "Bought Today",
+        "default": "19,000 Bought Today"
+    },
+    {
+        "type": "text",
+        "id": "sale_text",
+        "label": "Sale Text",
+        "default": "Sale"
+    },
+    {
+        "type": "text",
+        "id": "badge_background_color",
+        "label": "Badge Background Color",
+        "default": "#5E3653"
+    },
+    {
+        "type": "range",
+        "id": "badge_font_size",
+        "label": "Badge Font Size",
+        "min": 6,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+    },
+    {
+        "type": "color",
+        "id": "badge_text_color",
+        "label": "Badge Text Color",
+        "default": "#FFFFFF"
+    },
+    {
+        "type": "select",
+        "id": "badge_font_weight",
+        "label": "Badge Font Weight",
+        "default": "normal",
+        "options": [
+            { "value": "normal", "label": "Normal" },
+            { "value": "bold", "label": "Bold" },
+            { "value": "bolder", "label": "Bolder" },
+            { "value": "lighter", "label": "Lighter" },
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+        ]
+    },
+    {
+        "type": "text",
+        "id": "sale_ends_text",
+        "label": "Sale Ends Text",
+        "default": "Sale Ends:"
+    },
+    {
+        "type": "text",
+        "id": "sale_ends_font_family",
+        "label": "Sale Ends Font Family",
+        "default": "Harmonia Sans, sans-serif"
+    },
+    {
+        "type": "select",
+        "id": "sale_ends_font_weight",
+        "label": "Sale Ends Font Weight",
+        "default": "normal",
+        "options": [
+            { "value": "normal", "label": "Normal" },
+            { "value": "bold", "label": "Bold" },
+            { "value": "bolder", "label": "Bolder" },
+            { "value": "lighter", "label": "Lighter" },
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+        ]
+    },
+    {
+        "type": "range",
+        "id": "sale_ends_font_size",
+        "label": "Sale Ends Font Size",
+        "min": 6,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+    },
+    {
+        "type": "color",
+        "id": "sale_ends_text_color",
+        "label": "Sale Ends Text Color",
+        "default": "#000000"
+    },
+    {
+        "type": "text",
+        "id": "timer_font_family",
+        "label": "Timer Font Family",
+        "default": "Harmonia Sans, sans-serif"
+    },
+    {
+        "type": "select",
+        "id": "timer_font_weight",
+        "label": "Timer Font Weight",
+        "default": "normal",
+        "options": [
+            { "value": "normal", "label": "Normal" },
+            { "value": "bold", "label": "Bold" },
+            { "value": "bolder", "label": "Bolder" },
+            { "value": "lighter", "label": "Lighter" },
+            { "value": "100", "label": "100" },
+            { "value": "200", "label": "200" },
+            { "value": "300", "label": "300" },
+            { "value": "400", "label": "400" },
+            { "value": "500", "label": "500" },
+            { "value": "600", "label": "600" },
+            { "value": "700", "label": "700" },
+            { "value": "800", "label": "800" },
+            { "value": "900", "label": "900" }
+        ]
+    },
+    {
+        "type": "range",
+        "id": "timer_font_size",
+        "label": "Timer Font Size",
+        "min": 6,
+        "max": 30,
+        "step": 1,
+        "unit": "px",
+        "default": 16
+    },
+    {
+        "type": "color",
+        "id": "timer_text_color",
+        "label": "Timer Text Color",
+        "default": "#5e3653"
+    }
+  ],
+  "presets": [
+    {
+        "name": "Sale Countdown"
+    }
+]
+}
+{% endschema %}

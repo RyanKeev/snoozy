@@ -1,0 +1,85 @@
+
+{% if section.settings.show_section %}
+	<section class="section-brands-logo" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container-fluid">
+			<div class="section-heading">
+				<span>silk pillowcases has been</span>
+				<span>seen on</span>
+			</div>
+			<div class="gallery-container" style=" --gap: 30px;" data-scroll>
+				<div class="gallery-layout">
+					{%- for block in section.blocks -%}
+						{% if block.settings.gallery_images != blank %}
+							<div class="gallery-item img-wrap">
+								{{ block.settings.gallery_images | image_url: width: 300
+								| image_tag: alt: "gallery image", loading: 'lazy', class: 'lazyload' }}
+							</div>
+						{% endif %}
+					{% endfor %}
+				</div>
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+<script>
+    document.addEventListener("StartAsyncLoading", function(event) {
+        const galleryLogo = document.querySelector('.gallery-logo_init');
+
+        if(galleryLogo){
+            new Swiper('.gallery-logo_init', {
+                slidesPerView:'auto',
+                allowTouchMove: false,
+                disableOnInteraction: true,
+                centeredSlides: true,
+                loop: true,
+                speed: 4000,
+                preloadImages: false,
+                lazy: true,
+                autoplay: {
+                    delay: 1,
+                },
+            });
+        }
+    });
+</script>
+
+{% schema %}
+{
+	"name": "Section Brands Logo",
+	"class": "shopify-section-brand-logo",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		}
+	],
+	"blocks": [
+		{
+		"type": "image_picker",
+		"name": "Gallery Images",
+		"settings": [
+				{
+					"type": "image_picker",
+					"id": "gallery_images",
+					"label": "Gallery Image"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Brand Logo"
+		}
+	]
+}
+{% endschema %}

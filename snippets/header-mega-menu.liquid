@@ -1,0 +1,45 @@
+{% comment %}
+  Renders a megamenu for the header.
+
+  Usage:
+  {% render 'header-mega-menu' %}
+{% endcomment %}
+
+<nv class="header__inline-menu 2222">
+  <ul class="list-menu list-menu--inline" role="list">
+      {% for link in linklists.main-menu.links %}
+          {% assign link_url = link.url | split: "/" %}
+          {% assign product_handle = link_url | last %}
+          {% assign prod = all_products[product_handle] %}
+
+          {% assign show_label_one = false %}
+          {% assign show_label_two = false %}
+
+          {% if section_settings.link_title_1th != blank and section_settings.label_text_1th != blank %}
+              {% assign menu_link = link.title | downcase %}
+              {% assign link_title = section_settings.link_title_1th | downcase %}
+              {% if menu_link == link_title %}
+                  {% assign show_label_one = true %}
+              {% endif %}
+          {% endif %}
+
+          {% if section_settings.link_title_2th != blank and section_settings.label_text_2th != blank %}
+              {% assign menu_link = link.title | downcase %}
+              {% assign link_title = section_settings.link_title_2th | downcase %}
+              {% if menu_link == link_title %}
+                  {% assign show_label_two = true %}
+              {% endif %}
+          {% endif %}
+
+          <li class="mega-menu__link link{% if childlink.current %} mega-menu__link--active{% endif %} {% if show_label_one or show_label_two %}show-label{% endif %}">
+              <a class="header__menu-item list-menu__item link link--text" href="{{ link.url }}">{{ link.title }}</a>
+              {% if show_label_one %}
+                  <div class="menu-label" style="background:{{ section_settings.label_bg_1th }}">{{ section_settings.label_text_1th }}</div>
+              {% endif %}
+              {% if show_label_two %}
+                  <div class="menu-label" style="background:{{ section_settings.label_bg_2th }}">{{ section_settings.label_text_2th }}</div>
+              {% endif %}
+          </li>
+      {% endfor %}
+  </ul>
+</nv>

@@ -1,0 +1,50 @@
+
+{% if section.settings.show_section %}
+	<section class="section-text-content" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container">
+			{% if section.settings.section_title != blank %}
+				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+			{% endif %}
+
+			{% if section.settings.section_content != blank %}
+				<div class="content-block box-content">{{ section.settings.section_content }}</div>
+			{% endif %}
+		</div>
+	</section>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Section Text Content",
+	"class": "shopify-section-text-content",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "richtext",
+			"id": "section_title",
+			"label": "Section Title"
+		},
+		{
+			"type": "richtext",
+			"id": "section_content",
+			"label": "Section Content"
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Text Content"
+		}
+	]
+}
+{% endschema %}

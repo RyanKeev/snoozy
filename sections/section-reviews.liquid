@@ -1,0 +1,172 @@
+
+{% if section.settings.show_section %}
+	<section class="section-reviews" style="--background-section: {{ section.settings.section_background }};">
+		<div class="container">
+			{% if section.settings.section_title != blank %}
+				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+			{% endif %}
+  
+			<div class="swiper-container reviews-init_js">
+				<div class="swiper-wrapper reviews-layout">
+					{%- for block in section.blocks -%}
+						<div class="swiper-slide reviews-item">
+							{% if block.settings.reviews_title != blank or block.settings.reviews_title != blank %}
+								<div class="reviews-card-content">
+									{% if block.settings.reviews_title != blank %}
+										<div class="reviews-title">{{ block.settings.reviews_title }}</div>
+									{% endif %}
+
+									{% if block.settings.reviews_content != blank %}
+										<div class="reviews-content box-content">{{ block.settings.reviews_content }}</div>
+									{% endif %}
+								</div>
+							{% endif %}
+
+							<div class="reviews-card-author">
+								{% if block.settings.reviews_image_author != blank %}
+									<div class="author-image img-wrap">
+										{{ block.settings.reviews_image_author | image_url: width: 80
+										| image_tag: alt: "author image", loading: 'lazy', class: 'lazyload' }}
+									</div>
+								{% endif %}
+
+								<div class="author-info">
+									{% if block.settings.reviews_author_name != blank %}
+										<div class="author-name">{{ block.settings.reviews_author_name }}</div>
+									{% endif %}
+
+									{% if block.settings.reviews_author_city != blank %}
+										<div class="author-city">{{ block.settings.reviews_author_city }}</div>
+									{% endif %}
+								</div>
+
+							</div>
+						</div>
+					{% endfor %}
+				</div>
+
+				<div class="swiper-pagination"></div>
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+
+<script>
+    document.addEventListener("StartAsyncLoading", function(event) {
+        const reviewsSliderInit = document.querySelector('.reviews-init_js');
+
+        if(reviewsSliderInit){
+            const reviewsCount = reviewsSliderInit.querySelectorAll('.swiper-slide').length;
+
+            const sliderReviews = () =>{
+                new Swiper('.reviews-init_js', {
+                    slidesPerView: 1.5,
+                    spaceBetween: 15,
+                    centeredSlides: true,
+                    speed: 1000,
+                    loop: true,
+                    preloadImages: false,
+                    lazy: true,
+                    autoplay: {
+                        delay: 3000
+                    },
+                    pagination: {
+                        el: ".swiper-pagination",
+                        clickable: true
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                            centeredSlides: false,
+                            spaceBetween: 30,
+                        },
+                        992: {
+                            slidesPerView: 3,
+                            centeredSlides: false,
+                            spaceBetween: 30,
+                        },
+                        1200: {
+                            slidesPerView: 4,
+                            centeredSlides: false,
+                            spaceBetween: 30,
+                        }
+                    }
+                });
+            }
+
+            if (window.innerWidth >= 1200) {
+                reviewsCount > 4 ? sliderReviews() : '';
+            }else if (window.innerWidth >= 992) {
+                reviewsCount > 3 ? sliderReviews() : '';
+            }else if (window.innerWidth <= 991) {
+                reviewsCount > 1 ? sliderReviews() : '';
+            }
+        }
+    });
+</script>
+
+{% schema %}
+{
+	"name": "Section Reviews",
+	"class": "shopify-section-reviews",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "richtext",
+			"id": "section_title",
+			"label": "Section Title"
+		}
+	],
+	"blocks": [
+		{
+			"type": "image_picker",
+			"name": "Reviews Item",
+			"settings": [
+				{
+					"type": "text",
+					"id": "reviews_title",
+					"label": "Reviews Title"
+				},
+				{
+					"type": "richtext",
+					"id": "reviews_content",
+					"label": "Reviews Content"
+				},
+				{
+					"type": "image_picker",
+					"id": "reviews_image_author",
+					"label": "Reviews Author Image"
+				},
+				{
+					"type": "text",
+					"id": "reviews_author_name",
+					"label": "Benefits Author Name"
+				},
+				{
+					"type": "text",
+					"id": "reviews_author_city",
+					"label": "Benefits Author City"
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Reviews"
+		}
+	]
+}
+{% endschema %}

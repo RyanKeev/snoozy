@@ -1,0 +1,195 @@
+
+{% if section.settings.show_section %}
+	<section class="section-table {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container">
+			{% if section.settings.section_title != blank %}
+				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+			{% endif %}
+
+			<div class="table-wrapper">
+				<div class="table-inner">
+					{% comment %} =====================================================
+						Table head
+					===================================================={% endcomment %}
+					{% for block in section.blocks %}
+						{% case block.type %}
+							{% when 'table_header' %}
+								<div class="table-header">
+									{% comment %} =====================================================
+										Header Column One
+									===================================================={% endcomment %}
+									<div class="table-header-list"></div>
+
+									{% comment %} =====================================================
+										Header Column Two
+									===================================================={% endcomment %}
+									{% if block.settings.header_cell_two_image != blank %}
+										<div class="table-header-list img-wrap">
+											{{ block.settings.header_cell_two_image | image_url: width: 149 | image_tag: alt: "column logo", loading: 'lazy' }}
+										</div>
+									{% elsif block.settings.header_cell_two_title != blank %}
+										<div class="table-header-list">{{ block.settings.header_cell_two_title }}</div>
+									{% endif %}
+
+									{% comment %} =====================================================
+										Header Column Third
+									===================================================={% endcomment %}
+									{% if block.settings.header_cell_third_image != blank %}
+										<div class="table-header-list img-wrap">
+											{{ block.settings.header_cell_third_image | image_url: width: 149 | image_tag: alt: "column logo", loading: 'lazy' }}
+										</div>
+									{% elsif block.settings.header_cell_third_title != blank %}
+										<div class="table-header-list">{{ block.settings.header_cell_third_title }}</div>
+									{% endif %}
+
+								</div>
+						{% endcase %}
+					{% endfor %}
+
+					{% comment %} =====================================================
+						Table Body
+					===================================================={% endcomment %}
+					<div class="table-body">
+						{% for block in section.blocks %}
+							{% case block.type %}
+								{% when 'table_body' %}
+									{% if block.settings.row_title != blank %}
+										<div class="table-body-row">
+											{% if block.settings.row_title != blank %}
+												<div class="table-body-col">{{ block.settings.row_title }}</div>
+											{% endif %}
+
+											<div class="table-body-col" data-check="{{ block.settings.row_cell_two }}"></div>
+											<div class="table-body-col" data-check="{{ block.settings.row_cell_third }}"></div>
+										</div>
+									{% endif %}
+							{% endcase %}
+						{% endfor %}
+					</div>
+				</div>
+			</div>
+		</div>
+
+		{% if section.settings.show_section_decor %}
+			<div class="section-decor" style="--color-decor:{{ section.settings.section_decor_color }}">
+				<svg width="40" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg"><g stroke="currentColor" stroke-width="2"><path d="M7 8C7 9.65685 5.65685 11 4 11C2.34315 11 1 9.65685 1 8C1 6.34315 2.34315 5 4 5C5.65685 5 7 6.34315 7 8Z"></path><path d="M27 8C27 11.866 23.866 15 20 15C16.134 15 13 11.866 13 8C13 4.13401 16.134 1 20 1C23.866 1 27 4.13401 27 8Z"></path><path d="M39 8C39 9.65685 37.6569 11 36 11C34.3431 11 33 9.65685 33 8C33 6.34315 34.3431 5 36 5C37.6569 5 39 6.34315 39 8Z"></path></g></svg>
+			</div>
+		{% endif %}
+	</section>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Section Comparison Table",
+	"class": "shopify-section-comparison-table",
+	"tag": "section",
+	"max_blocks": 8,
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "show_section_decor",
+			"label": "Show Section Decor",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "color",
+			"id": "section_decor_color",
+			"label": "Section Decor Color",
+			"default": "#f7f3eb"
+		},
+		{
+			"type": "richtext",
+			"id": "section_title",
+			"label": "Section Title"
+		}
+	],
+	"blocks": [
+		{
+			"type": "table_header",
+			"name": "Header",
+			"limit": 1,
+			"settings": [
+				{
+					"type": "header",
+					"content": "Inform block",
+					"info": "You can choose to add: upload a logo or added a header for the column"
+				},
+				{
+					"type": "header",
+					"content": "Table Header Two",
+					"info": "Leave empty to disable"
+				},
+				{
+					"type": "image_picker",
+					"id": "header_cell_two_image",
+					"label": "Cell Two: Image"
+				},
+				{
+					"type": "text",
+					"id": "header_cell_two_title",
+					"label": "Cell Two: title"
+				},
+				{
+					"type": "header",
+					"content": "Table Header Third",
+					"info": "Leave empty to disable"
+				},
+				{
+					"type": "image_picker",
+					"id": "header_cell_third_image",
+					"label": "Cell Third: Image"
+				},
+				{
+					"type": "text",
+					"id": "header_cell_third_title",
+					"label": "Cell Third: Title"
+				}
+			]
+		},
+		{
+			"type": "table_body",
+			"name": "Row",
+			"settings": [
+				{
+					"type": "text",
+					"id": "row_title",
+					"label": "Row Title"
+				},
+				{
+					"type": "header",
+					"content": "Checkboxes"
+				},
+				{
+					"type": "checkbox",
+					"id": "row_cell_two",
+					"label": "Cell Two",
+					"default": false
+				},
+				{
+					"type": "checkbox",
+					"id": "row_cell_third",
+					"label": "Cell Third",
+					"default": false
+				}
+			]
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Comparison Table"
+		}
+	]
+}
+{% endschema %}

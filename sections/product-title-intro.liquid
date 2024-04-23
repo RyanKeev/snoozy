@@ -1,0 +1,42 @@
+
+{% if section.settings.show_section %}
+	<section class="product-title-intro" style="--background-section: {{ section.settings.section_background }}">
+		<div class="container">
+			{% if section.settings.title_intro %}
+				<div class="product-rich-title">{{ section.settings.title_intro }}</div>
+			{% endif %}
+		</div>
+	</section>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Product Title Intro",
+	"class": "shopify-product-title-intro",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section",
+			"default": true
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "text",
+			"id": "title_intro",
+			"label": "Title Intro"
+		}
+	],
+	"presets": [
+		{
+			"name": "Product Title Intro"
+		}
+	]
+}
+{% endschema %}

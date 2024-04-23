@@ -1,0 +1,77 @@
+{% comment %}
+  Usage:
+                {%- render 'sale-countdown-sp' with sale_text: 'Sale', title: 'SAVE UP TO 43% RIGHT NOW', topic: 'APRIL SALE', description: "GRAB THE CHANCE OF GETTING UP TO 43% OFF ON THE PERFECT PILLOW. DON'T MISS OUT—THIS DEAL ENDS SOON, AND STOCK IS RUNNING LOW.", sale_ends_text: 'Sale Ends:', bought_today: '182 Bought today'  -%}
+{% endcomment %}
+{%- liquid
+assign sale_text = sale_text  
+assign title = title
+assign topic = topic 
+assign description = description
+assign sale_ends_text = sale_ends_text
+assign bought_today = bought_today
+
+-%}
+{{ 'countdown.css' | asset_url | stylesheet_tag }}
+<script src="{{ 'countdown-timezone.js' | asset_url }}" defer="defer"></script>
+        {%- style -%}
+            .wdp-ribbon {
+                background-color: #CB2236;
+            }
+            .wdp-ribbon-two:before, .wdp-ribbon-two:before {
+                border-right-color: #CB2236;
+            }
+            .wdp-ribbon-two:before {
+                border-color:  #CB2236;
+                border-left-color: transparent!important;
+            }
+            .sale-badge {
+                background-color: #5E3653;
+                font-size: 9px;
+                color: #FFFFFF;
+                font-weight: bold;
+            }
+            .sale-ends {
+                font-family: Harmonia Sans, sans-serif;
+                font-weight: 500;
+                font-size: 12px;
+                color: #000000;
+            }
+            .timer {
+                color: #5E3653;
+                font-family: Harmonia Sans, sans-serif;
+                font-weight: bold;
+                font-size: 12px;
+            }
+            .countdown-title {
+                font-family: Harmonia Sans, sans-serif;
+                font-weight: 600;
+                font-size: 13px;
+                color: #CB2236;
+            }
+            .countdown-topic {
+                font-family: Harmonia Sans, sans-serif;
+                font-weight: 700;
+                font-size: 17px;
+                color: #5E3653;
+            }
+            .countdown-description {
+                font-family: Harmonia Sans, sans-serif;
+                font-weight: 500;
+                font-size: 13px;
+                color: #000000;
+            }
+        {%- endstyle -%}
+    
+        <div class="sale-celebration countdown-container box" style="background-color: #f0f6ff;"> 
+            <span class="wdp-ribbon wdp-ribbon-two">{{ sale_text }}</span>
+            <div class="center">
+                <p class="uppercase countdown-title">{{ title }}</p>
+                <p class="uppercase countdown-topic">{{ topic }}</p>
+                <p class="uppercase countdown-description">{{ description }}</p>
+            </div>
+            <div class="sale-ends">
+                {{ sale_ends_text }} 
+                <p id="timer" class="font-body-bold timer"></p> 
+                <span class="sale-badge">{{ bought_today }}</span>
+            </div>
+        </div>

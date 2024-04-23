@@ -1,0 +1,112 @@
+
+{% if section.settings.show_section %}
+	<section class="section-recommend {% if section.settings.show_recommended_automatically %}section-recommend-auto{% endif %}"
+			 style="--bg-section: {{ section.settings.section_background }}; --pt:{{ section.settings.section_padding_top }}px; --pb:{{ section.settings.section_padding_bottom }}px;"
+			 data-section-id="{{ section.id }}"
+			 data-section-type="product-recommendations"
+			 data-section-settings='{{ section_settings }}'
+			 data-url="{{ routes.product_recommendations_url }}?section_id={{ section.id }}&product_id={{ product.id }}&limit={{ section.settings.recommendations_count }}">
+
+		<div class="container">
+			{% if section.settings.section_title != blank %}
+				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+			{% endif %}
+
+			<div class="swiper-container slider-recommend-init">
+			<div class="swiper-wrapper recommend-layout">
+				{% if section.settings.show_recommended_automatically %}
+					{%- for product in recommendations.products -%}
+						<div class="swiper-slide">
+							<a href="{{ product.url }}" class="recommend-item">
+								<span class="recommend-card-media"><img src="{{ product.media[0] | img_url: 'master' }}" alt="recommend card"></span>
+								<span class="recommend-card-info">
+									<span class="recommend-card-title">{{ product.title }}</span>
+									<span class="recommend-card-price">{%- render 'price', product: product, use_variant: false, show_badges: false -%}</span>
+								</span>
+							</a>
+						</div>
+					{% endfor %}
+				{% else %}
+					{% for product in product.metafields.custom.others_also_bought.value %}
+						<div class="swiper-slide">
+							<a href="{{ product.url }}" class="recommend-item">
+								<span class="recommend-card-media"><img src="{{ product.media[0] | img_url: 'master' }}" alt="recommend card"></span>
+								<span class="recommend-card-info">
+									<span class="recommend-card-title">{{ product.title }}</span>
+									<span class="recommend-card-price">{%- render 'price', product: product, use_variant: false, show_badges: false -%}</span>
+								</span>
+							</a>
+						</div>
+					{% endfor %}
+				{% endif %}
+			</div>
+			</div>
+		</div>
+	</section>
+{% endif %}
+
+{% schema %}
+{
+	"name": "Section Recommend",
+	"class": "shopify-section-recommend",
+	"tag": "section",
+	"settings": [
+		{
+			"type": "checkbox",
+			"id": "show_section",
+			"label": "Show Section:",
+			"default": true
+		},
+		{
+			"type": "range",
+			"id": "recommendations_count",
+			"min": 1,
+			"max": 10,
+			"label": "Recommendations count:s",
+			"default": 5
+		},
+		{
+			"type": "checkbox",
+			"id": "show_recommended_automatically",
+			"label": "Show recommended products automatically:",
+			"default": false
+		},
+		{
+			"type": "color",
+			"id": "section_background",
+			"label": "Section Background:",
+			"default": "#FFFFFF"
+		},
+		{
+			"type": "text",
+			"id": "section_title",
+			"label": "Section Title:"
+		},
+		{
+			"type": "range",
+			"id": "section_padding_top",
+			"min": 0,
+			"max": 100,
+			"step": 10,
+			"unit": "px",
+			"label": "Section padding top.",
+			"default": 80
+		},
+		{
+			"type": "range",
+			"id": "section_padding_bottom",
+			"min": 0,
+			"max": 100,
+			"step": 10,
+			"unit": "px",
+			"label": "Section padding bottom.",
+			"default": 80
+		}
+	],
+	"presets": [
+		{
+			"name": "Section Recommend"
+		}
+	]
+}
+{% endschema %}

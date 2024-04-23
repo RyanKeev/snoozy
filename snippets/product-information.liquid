@@ -1,0 +1,49 @@
+{% if settings.show_product_information %}
+	<div class="product-icons-list">
+		{% if settings.product_icon_list_one != blank and settings.product_text_list_one != blank %}
+			<div class="list-item">
+				<div class="image img-wrap">
+					{{ settings.product_icon_list_one | image_url: width: 35 | image_tag: alt: "image", loading: 'lazy', class: 'lazyload' }}
+				</div>
+				<div class="text-wrap">{{ settings.product_text_list_one }}</div>
+			</div>
+		{% endif %}
+
+		{% if settings.product_icon_list_two != blank and settings.product_text_list_two != blank %}
+			<div class="list-item">
+				<div class="image img-wrap">
+					{{ settings.product_icon_list_two | image_url: width: 35 | image_tag: alt: "image", loading: 'lazy', class: 'lazyload' }}
+				</div>
+				<div class="text-wrap">{{ settings.product_text_list_two }}</div>
+			</div>
+		{% endif %}
+
+		{% if settings.product_icon_list_third != blank and settings.product_text_list_third != blank %}
+			<div class="list-item">
+				<div class="image img-wrap">
+					{{ settings.product_icon_list_third | image_url: width: 35 | image_tag: alt: "image", loading: 'lazy', class: 'lazyload' }}
+				</div>
+				<div class="text-wrap">{{ settings.product_text_list_third }}</div>
+			</div>
+		{% endif %}
+
+		{% if settings.product_icon_list_fourth != blank and settings.product_text_list_fourth != blank %}
+			<div class="list-item">
+				<div class="image img-wrap">
+					{{ settings.product_icon_list_fourth | image_url: width: 35 | image_tag: alt: "image", loading: 'lazy', class: 'lazyload' }}
+				</div>
+				<div class="text-wrap">{{ settings.product_text_list_fourth }}</div>
+			</div>
+		{% endif %}
+
+		{% if settings.product_icon_list_fifth != blank and settings.product_text_list_fifth != blank %}
+			<div class="list-item">
+				<div class="image img-wrap">
+					{{ settings.product_icon_list_fifth | image_url: width: 35 | image_tag: alt: "image", loading: 'lazy', class: 'lazyload' }}
+				</div>
+				<div class="text-wrap text-bold">{{ settings.product_text_list_fifth }}</div>
+			</div>
+		{% endif %}
+	</div>
+
+{% endif %}

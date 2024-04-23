@@ -1,0 +1,107 @@
+{% comment %}
+  Renders product custom variant swatches
+
+  Accepts:
+  - product: {Object} product object.
+  - block: {Object} passing the block information.
+  - product_form_id: {String} Id of the product form to which the variant picker is associated.
+  - update_url: {Boolean} whether or not to update url when changing variants. If false, the url isn't updated. Default: true (optional).
+  Usage:
+  {% render 'product-variant-picker', product: product, block: block, product_form_id: product_form_id %}
+{% endcomment %}
+
+<product-variant-swatches id="product-variant-swatches-{{ section.id }}" data-section="{{ section.id }}" data-url="{{ product.url }}"
+    {% if update_url == false %} data-update-url="false"{% endif %} {{ block.shopify_attributes }} class="product-variant-swatches">
+    {%- for option in product.options_with_values -%}
+        {% assign option_handle = option.name | handleize %}
+        <fieldset class="product-form__input {% if option_handle == 'color' %}color-swatch-wrapper{% else %}size-swatch-wrapper{% endif %}">
+            <legend class="form__label swatch-option__label" data-option-handle="{{ option_handle }}">
+                {{ option.name }} <span class="swatch-option__label-value visibility-hidden"></span>
+            </legend>
+            {% render 'product-variant-swatches-options', product: product, variants: product.variants, option: option, block: block, option_handle: option_handle %}
+        </fieldset>
+    {%- endfor -%}
+    <script type="application/json">
+        {{ product.variants | json }}
+      </script>
+</product-variant-swatches>
+
+<style>
+    /**
+     * Fix variant selectors being hidden for too long.
+     */
+    html:not(.nojs):not(.no-js) variant-radios {
+        opacity: 1;
+        max-height: none;
+    }
+</style>
+
+<script type="text/javascript">
+    document.addEventListener('DOMContentLoaded', () =>{
+        let colorSwatchLabel = Array.from(document.querySelectorAll('.color-swatch-wrapper label'));
+
+        const sizeSwatchWrap = document.querySelector('.size-swatch-wrapper');
+        let sizeSwatchInputs = Array.from(sizeSwatchWrap.querySelectorAll('input'));
+        let sizeSwatchActive = sizeSwatchInputs.filter(swatch => swatch.checked ? swatch : '');
+
+        let dataVariants = new Array();
+        {% for variant in product.variants %}
+            dataVariants.push({
+                {{ variant.id }} : {
+                    'options': {{ variant.options | json }},
+                    'label': '{{ variant.metafields.custom.variant_label }}',
+                    'inventory': '{{ variant.metafields.custom.variant_pre_order }}'
+                }
+            });
+        {% endfor %}
+
+        const removeLabel = () =>{
+            colorSwatchLabel.forEach(swatchLabel =>{
+                const span = swatchLabel.querySelector('span');
+                span ? span.remove() : '';
+            })
+        }
+
+        const createElement = (value) =>{
+            const span = document.createElement('span');
+            span.innerHTML = value;
+            return span;
+        }
+
+        const implementLabel = () => {
+            const filteredData = dataVariants.filter(item => Object.values(item)[0].label !== "");
+
+            filteredData.forEach(object =>{
+                const objectValues = Object.values(object)
+
+                if(objectValues[0].options[0] === sizeSwatchActive[0].value){
+
+                    colorSwatchLabel.forEach(swatchLabel =>{
+                        if(swatchLabel.getAttribute('title') === objectValues[0].options[1]){
+
+                            if(swatchLabel.querySelector('span') !== null){
+                                swatchLabel.querySelector('span').remove();
+                            }
+
+                            swatchLabel.append(createElement(objectValues[0].label))
+                        }
+                    })
+                }
+            });
+        }
+        implementLabel();
+
+        sizeSwatchWrap.addEventListener('click', ({target}) =>{
+            if(target.classList.contains('product-variant-swatch')){
+                setTimeout(() => {
+                    sizeSwatchInputs = Array.from(sizeSwatchWrap.querySelectorAll('input'));
+                    sizeSwatchActive = sizeSwatchInputs.filter(swatch => swatch.checked ? swatch : '');
+                    removeLabel();
+                    implementLabel();
+                }, 500);
+            }
+        });
+    });
+</script>
+
+{% comment %}<script data-src="{{ 'product-variant-swatches.js' | asset_url }}" defer="defer"></script>{% endcomment %}

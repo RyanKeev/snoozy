@@ -1,0 +1,52 @@
+<div class="payments-icons">
+    {% if block.settings.icon_pay_1th != blank or block.settings.icon_pay_1th_img %}
+        <div class="icon-wrap">
+            {% if block.settings.icon_pay_1th != blank %}
+                {{ block.settings.icon_pay_1th }}
+            {% else %}
+                {{ block.settings.icon_pay_1th_img | image_url: width: 42
+                | image_tag: alt: "gallery image", loading: 'lazy', class: 'lazyload' }}
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if block.settings.icon_pay_2th != blank or block.settings.icon_pay_2th_img %}
+        <div class="icon-wrap">
+            {% if block.settings.icon_pay_2th != blank %}
+                {{ block.settings.icon_pay_2th }}
+            {% else %}
+                {{ block.settings.icon_pay_2th_img | image_url: width: 42
+                | image_tag: alt: "gallery image", loading: 'lazy', class: 'lazyload' }}
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if block.settings.icon_pay_3th != blank or block.settings.icon_pay_3th_img %}
+        <div class="icon-wrap">
+            {% if block.settings.icon_pay_3th != blank %}
+                {{ block.settings.icon_pay_3th }}
+            {% else %}
+                {{ block.settings.icon_pay_3th_img | image_url: width: 42
+                | image_tag: alt: "gallery image", loading: 'lazy', class: 'lazyload' }}
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if block.settings.icon_pay_4th != blank or block.settings.icon_pay_4th_img %}
+        <div class="icon-wrap">
+            {% if block.settings.icon_pay_4th != blank %}
+                {{ block.settings.icon_pay_4th }}
+            {% else %}
+                {{ block.settings.icon_pay_4th_img | image_url: width: 42
+                | image_tag: alt: "gallery image", loading: 'lazy', class: 'lazyload' }}
+            {% endif %}
+        </div>
+    {% endif %}
+    {% if block.settings.icon_pay_5th != blank or block.settings.icon_pay_5th_img %}
+        <div class="icon-wrap">
+            {% if block.settings.icon_pay_5th != blank %}
+                {{ block.settings.icon_pay_5th }}
+            {% else %}
+                {{ block.settings.icon_pay_5th_img | image_url: width: 42
+                | image_tag: alt: "gallery image", loading: 'lazy', class: 'lazyload' }}
+            {% endif %}
+        </div>
+    {% endif %}
+</div>

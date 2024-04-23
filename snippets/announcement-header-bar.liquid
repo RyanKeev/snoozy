@@ -1,0 +1,62 @@
+<div class="announcement-bar" style="--bg-color:{{ settings.announcement_bg }}; --text-color:{{ settings.announcement_text_color }}">
+    <div class="container">
+        <div class="announcement-bar-group" style=" --gap: 30px;" data-scroll>
+            <div class="announcement-bar-layout">
+                {% if settings.item_text_1th != blank %}
+                    <div class="announcement-bar-item">
+                        {%- if settings.item_link_1th != blank -%}
+                            <a href="{{ settings.item_link_1th }}">{{ settings.item_text_1th | escape }}</a>
+                        {%- else -%}
+                            <p>{{ settings.item_text_1th | escape }}</p>
+                        {%- endif -%}
+                    </div>
+                {% endif %}
+                {% if settings.item_text_2th != blank %}
+                    <div class="announcement-bar-item">
+                        {%- if settings.item_link_2th != blank -%}
+                            <a href="{{ settings.item_link_2th }}">{{ settings.item_text_2th | escape }}</a>
+                        {%- else -%}
+                            <p>{{ settings.item_text_2th | escape }}</p>
+                        {%- endif -%}
+                    </div>
+                {% endif %}
+                {% if settings.item_text_3th != blank %}
+                    <div class="announcement-bar-item">
+                        {%- if settings.item_link_3th != blank -%}
+                            <a href="{{ settings.item_link_3th }}">{{ settings.item_text_3th | escape }}</a>
+                        {%- else -%}
+                            <p>{{ settings.item_text_3th | escape }}</p>
+                        {%- endif -%}
+                    </div>
+                {% endif %}
+                {% if settings.item_text_4th != blank %}
+                    <div class="announcement-bar-item">
+                        {%- if settings.item_link_4th != blank -%}
+                            <a href="{{ settings.item_link_4th }}">{{ settings.item_text_4th | escape }}</a>
+                        {%- else -%}
+                            <p>{{ settings.item_text_4th | escape }}</p>
+                        {%- endif -%}
+                    </div>
+                {% endif %}
+                {% if settings.item_text_5th != blank %}
+                    <div class="announcement-bar-item">
+                        {%- if settings.item_link_5th != blank -%}
+                            <a href="{{ settings.item_link_5th }}">{{ settings.item_text_5th | escape }}</a>
+                        {%- else -%}
+                            <p>{{ settings.item_text_5th | escape }}</p>
+                        {%- endif -%}
+                    </div>
+                {% endif %}
+                {% if settings.item_text_6th != blank %}
+                    <div class="announcement-bar-item">
+                        {%- if settings.item_link_6th != blank -%}
+                            <a href="{{ settings.item_link_6th }}">{{ settings.item_text_6th | escape }}</a>
+                        {%- else -%}
+                            <p>{{ settings.item_text_6th | escape }}</p>
+                        {%- endif -%}
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</div>
