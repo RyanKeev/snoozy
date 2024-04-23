@@ -1,0 +1,60 @@
+<style>
+    .wavy-section {
+        background: linear-gradient(to right, {{ section.settings.background_start_color }}, {{ section.settings.background_end_color }});
+        clip-path: polygon(
+            0% 15%, 20% 0%, 80% 0%, 100% 15%, /* Wavy top */
+            100% 85%, 80% 100%, 20% 100%, 0% 85% /* Wavy bottom */
+        );
+        padding: {{ section.settings.padding }}px;
+        text-align: center;
+    }
+</style>
+
+<div class="wavy-section">
+    <h1>{{ section.settings.heading }}</h1>
+    <p>{{ section.settings.content }}</p>
+</div>
+
+{% schema %}
+{
+    "name": "Wavy Section",
+    "tag": "section",
+    "class": "section",
+    "disabled_on": {
+      "groups": ["header", "footer"]
+    },
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Wavy Section"
+        },
+        {
+            "type": "richtext",
+            "id": "content",
+            "label": "Content",
+            "default": "<p>This is the content inside the wavy section.</p>"
+        },
+        {
+            "type": "color",
+            "id": "background_start_color",
+            "label": "Background Start Color",
+            "default": "#ff9a9e"
+        },
+        {
+            "type": "color",
+            "id": "background_end_color",
+            "label": "Background End Color",
+            "default": "#fecfef"
+        },
+        {
+            "type": "number",
+            "id": "padding",
+            "label": "Padding",
+            "default": 50
+        }
+    ],
+    "presets": []
+}
+{% endschema %}
