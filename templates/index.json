@@ -388,61 +388,6 @@
         "section_title": ""
       }
     },
-    "rich_text_H48HGr": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_Ct64Mr": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "heading_size": "h1"
-          }
-        },
-        "text_Td7dj7": {
-          "type": "text",
-          "settings": {
-            "text": ""
-          }
-        },
-        "button_QeBMt4": {
-          "type": "button",
-          "settings": {
-            "button_label": "",
-            "button_link": "",
-            "button_style_secondary": false,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
-          }
-        }
-      },
-      "block_order": [
-        "heading_Ct64Mr",
-        "text_Td7dj7",
-        "button_QeBMt4"
-      ],
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "scheme-e2b7a9dd-97d0-4cb5-b1c4-c88f0f19d581",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 20
-      }
-    },
-    "rich_text_mXwBRa": {
-      "type": "rich-text",
-      "disabled": true,
-      "settings": {
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 40,
-        "padding_bottom": 20
-      }
-    },
     "rich_text_r6kyEa": {
       "type": "rich-text",
       "blocks": {
@@ -471,6 +416,29 @@
         "color_scheme": "",
         "full_width": true,
         "padding_top": 20,
+        "padding_bottom": 20
+      }
+    },
+    "rich_text_mXwBRa": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_fgWAVd": {
+          "type": "heading",
+          "settings": {
+            "heading": "Snoozy in the wild",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_fgWAVd"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 60,
         "padding_bottom": 20
       }
     },
@@ -542,14 +510,19 @@
         "color_scheme": "",
         "columns_mobile": "1",
         "swipe_on_mobile": false,
-        "padding_top": 36,
+        "padding_top": 16,
         "padding_bottom": 36
       }
     },
-    "1713756030d04ac3ae": {
-      "type": "apps",
+    "rich_text_H48HGr": {
+      "type": "rich-text",
       "settings": {
-        "include_margins": true
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "background-1",
+        "full_width": true,
+        "padding_top": 4,
+        "padding_bottom": 20
       }
     },
     "rich_text_MzX8qd": {
@@ -618,11 +591,10 @@
     "multicolumn_r6bHAD",
     "featured_collection_L6dPDQ",
     "section_image_with_text_4cXHF9",
-    "rich_text_H48HGr",
-    "rich_text_mXwBRa",
     "rich_text_r6kyEa",
+    "rich_text_mXwBRa",
     "multicolumn_nTcJzB",
-    "1713756030d04ac3ae",
+    "rich_text_H48HGr",
     "rich_text_MzX8qd",
     "1713757839ddfccfc4",
     "rich_text_r9ket6"
