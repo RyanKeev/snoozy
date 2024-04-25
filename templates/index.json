@@ -19,7 +19,8 @@
         "heading_TQHkda": {
           "type": "heading",
           "settings": {
-            "heading": "<em><strong>For clearer, healthier skin in your sleep<\/strong><\/em>",
+            "heading": "<em><strong>The Pillowcase That Fights<\/strong><\/em>",
+            "name_string": "Dry Skin\nBlackheads\nAcne\nBreakouts",
             "heading_size": "h0"
           }
         },
@@ -42,6 +43,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/lp-4-4-sale-banner.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/frontpage-2024-top-1_e0dbecdc-3c04-42ab-ace2-dabb735e9e1a.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-left",
@@ -50,8 +52,8 @@
         "color_scheme": "accent-1",
         "image_behavior": "none",
         "mobile_content_alignment": "center",
-        "stack_images_on_mobile": true,
-        "show_text_below": true
+        "stack_images_on_mobile": false,
+        "show_text_below": false
       }
     },
     "multicolumn_eVggbb": {
