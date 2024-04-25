@@ -104,7 +104,7 @@
           "type": "image_picker",
           "settings": {
             "image_first": true,
-            "info_block_background_color": "#f7f3eb",
+            "info_block_background_color": "#fdf5ed",
             "info_block_color": "#000000",
             "caption": "",
             "title": "<p><strong>Snoozy stands apart<\/strong><\/p>",
@@ -191,6 +191,7 @@
         "column_XRWUCP",
         "column_gJzTkh"
       ],
+      "disabled": true,
       "custom_css": [
 
       ],
@@ -354,7 +355,7 @@
           "type": "image_picker",
           "settings": {
             "image_first": false,
-            "info_block_background_color": "#c0e0f7",
+            "info_block_background_color": "#fdf5ed",
             "info_block_color": "#000000",
             "caption": "Add a tagline",
             "title": "<p><strong>The Beauty of Unboxing<\/strong><\/p>",
