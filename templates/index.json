@@ -218,13 +218,13 @@
         "featured_collection_D48A3k": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "all-products"
           }
         },
         "featured_collection_WJzPVz": {
           "type": "featured_collection",
           "settings": {
-            "collection": ""
+            "collection": "frontpage"
           }
         },
         "featured_collection_8W3D8L": {
