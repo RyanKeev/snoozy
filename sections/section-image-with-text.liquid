@@ -1,7 +1,7 @@
 <script src="{{ 'section-before-after.js' | asset_url }}" defer="defer"></script>
 
 {% if section.settings.show_section %}
-	<section class="section-image-content {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
+	<section id="section-image-with-text-{{ section.id }}" class="section-image-content {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
 		<div class="container">
 			{% if section.settings.section_title != blank %}
 				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
@@ -10,7 +10,7 @@
 			<div class="chess-layout">
 				{%- for block in section.blocks -%}
 					<style>
-						.wrap-rounded {
+						#shopify-section-{{ section.id }} .wrap-rounded {
 							height: 100%;
 							background: {{ block.settings.info_block_background_color }};
 							padding: 5rem;
@@ -22,12 +22,12 @@
 							-ms-border-radius: 5%;
 							-o-border-radius: 5%;
 						}
-						.info-color {
+						#shopify-section-{{ section.id }} .info-color {
 							color: {{ block.settings.info_block_color  }} !important;
 							text-align: center;
 							margin: 7px 0;
 						}
-						.box-content p {
+						#shopify-section-{{ section.id }} .box-content p {
 							text-align: center;
 							margin: 7px 0;
 							color: {{ block.settings.info_block_color  }} !important;
