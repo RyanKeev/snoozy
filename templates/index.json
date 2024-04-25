@@ -69,14 +69,15 @@
         "review_zyzmXB": {
           "type": "review",
           "settings": {
-            "review_text": "This silver-infused pillowcase changed our hair and skin forever",
+            "review_text": "In as little as four weeks, the pillowcase works to prevent breakouts",
             "image": "shopify:\/\/shop_images\/7_news_logo_b4f60392-1170-40d3-91ea-3df6d24a7ba9.png"
           }
         },
         "review_g7d4wN": {
           "type": "review",
           "settings": {
-            "review_text": "An amazing addition to beds everywhere to help promote the well-being of your skin"
+            "review_text": "An amazing addition to beds everywhere to help promote the well-being of your skin",
+            "image": "shopify:\/\/shop_images\/refinery29_logo_a73a1ccf-5994-4178-b4aa-8930a04db752.png"
           }
         }
       },
