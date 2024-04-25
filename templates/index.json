@@ -132,7 +132,7 @@
       "settings": {
         "show_section": true,
         "show_section_decor": true,
-        "section_background": "#f7f3eb",
+        "section_background": "#fff",
         "section_decor_color": "#f7f3eb",
         "section_title": ""
       }
@@ -211,6 +211,46 @@
         "padding_bottom": 36
       }
     },
+    "collection_list_AJMB9L": {
+      "type": "collection-list",
+      "blocks": {
+        "featured_collection_D48A3k": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_WJzPVz": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": ""
+          }
+        },
+        "featured_collection_8W3D8L": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "other-products"
+          }
+        }
+      },
+      "block_order": [
+        "featured_collection_D48A3k",
+        "featured_collection_WJzPVz",
+        "featured_collection_8W3D8L"
+      ],
+      "settings": {
+        "title": "Shop Collections",
+        "heading_size": "h1",
+        "image_ratio": "square",
+        "columns_desktop": 3,
+        "color_scheme": "scheme-3e67202a-86ca-4178-993a-f35dbb979c3c",
+        "show_view_all": false,
+        "columns_mobile": "1",
+        "swipe_on_mobile": true,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "custom_liquid_mUpGHp": {
       "type": "custom-liquid",
       "settings": {
@@ -218,6 +258,65 @@
         "color_scheme": "scheme-3e67202a-86ca-4178-993a-f35dbb979c3c",
         "padding_top": 0,
         "padding_bottom": 52
+      }
+    },
+    "multicolumn_r6bHAD": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_JpCjXp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/nucleus.svg",
+            "rating": "",
+            "title": "<em><strong>Infused with silver<\/strong><\/em>",
+            "text": "<p>Silver's been used for years as a natural, safe way to stop bacterial spread. <\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zKrzMT": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/bacteria.svg",
+            "rating": "",
+            "title": "<em><strong>Stops bad bacteria<\/strong><\/em>",
+            "text": "<p>We're talking P. Acnes and Staph, shown to trigger acne and other skin concerns.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_ahxBa9": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/approved_test.svg",
+            "rating": "",
+            "title": "Lab-tested",
+            "text": "<p>Antibacterial for over two years, you can sleep easy knowing your silver's working.<\/p>",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_JpCjXp",
+        "column_zKrzMT",
+        "column_ahxBa9"
+      ],
+      "settings": {
+        "title": "",
+        "heading_size": "h0",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "primary",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-3e67202a-86ca-4178-993a-f35dbb979c3c",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
       }
     },
     "featured_collection_L6dPDQ": {
@@ -229,12 +328,12 @@
         "show_description": false,
         "description_style": "subtitle",
         "collection": "all-products",
-        "products_to_show": 4,
-        "columns_desktop": 4,
+        "products_to_show": 12,
+        "columns_desktop": 3,
         "full_width": false,
         "show_view_all": true,
         "view_all_style": "link",
-        "enable_desktop_slider": false,
+        "enable_desktop_slider": true,
         "color_scheme": "scheme-3e67202a-86ca-4178-993a-f35dbb979c3c",
         "image_ratio": "adapt",
         "image_shape": "default",
@@ -246,6 +345,46 @@
         "swipe_on_mobile": false,
         "padding_top": 36,
         "padding_bottom": 36
+      }
+    },
+    "section_image_with_text_4cXHF9": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_picker_pr3GDC": {
+          "type": "image_picker",
+          "settings": {
+            "image_first": true,
+            "info_block_background_color": "#f2efe9",
+            "info_block_color": "#000000",
+            "caption": "Add a tagline",
+            "title": "<p><strong>The Beauty of Unboxing<\/strong><\/p>",
+            "content": "<p>Every Snoozy product comes in beautiful, specially made packaging that's designed to make unboxing feel like a luxurious experience, whether it's for you or someone special.<\/p>",
+            "author": "",
+            "button_label": "Learn More →",
+            "button_link": "",
+            "active_before_after": false,
+            "before_text": "Before",
+            "after_text": "After",
+            "drag_initial_position": 50,
+            "video": "shopify:\/\/files\/videos\/deep-sleep-maske-beige-video.MOV",
+            "show_benefits_block": false,
+            "benefits_background": "#ffffff",
+            "benefits_title_one": "",
+            "benefits_title_two": "",
+            "benefits_title_third": "",
+            "benefits_title_fourth": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_pr3GDC"
+      ],
+      "settings": {
+        "show_section": true,
+        "show_section_decor": true,
+        "section_background": "#ffffff",
+        "section_decor_color": "#f7f3eb",
+        "section_title": ""
       }
     },
     "rich_text_H48HGr": {
@@ -281,50 +420,19 @@
         "text_Td7dj7",
         "button_QeBMt4"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
-        "color_scheme": "",
+        "color_scheme": "scheme-e2b7a9dd-97d0-4cb5-b1c4-c88f0f19d581",
         "full_width": true,
         "padding_top": 40,
         "padding_bottom": 20
       }
     },
-    "17137536546713cb9c": {
-      "type": "apps",
-      "blocks": {
-        "loox_reviews_loox_testimonial_carousel_section_RC8Fhd": {
-          "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-testimonial-carousel-section\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
-          "settings": {
-            "maxWidth": 1100,
-            "desktopFontSize": 32,
-            "mobileFontSize": 20,
-            "maxNumberOfCharacters": 100,
-            "quoteMarkIcon": "style-2",
-            "reviewerNameColor": "#000000",
-            "textColor": "#000000",
-            "starsColor": "",
-            "quotesIconColor": "#eaeaea",
-            "arrows_iconColor": "#000000",
-            "arrows_hideOnMobile": true,
-            "pagination_active": true,
-            "pagination_selectedDotColor": "#000000",
-            "pagination_dotColor": "#000000",
-            "autoplay_active": false,
-            "autoplay_duration": 2,
-            "productIds": ""
-          }
-        }
-      },
-      "block_order": [
-        "loox_reviews_loox_testimonial_carousel_section_RC8Fhd"
-      ],
-      "settings": {
-        "include_margins": true
-      }
-    },
     "rich_text_mXwBRa": {
       "type": "rich-text",
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -355,6 +463,7 @@
         "text_iY4c9T",
         "heading_DJ8YzG"
       ],
+      "disabled": true,
       "settings": {
         "desktop_content_position": "center",
         "content_alignment": "center",
@@ -418,6 +527,7 @@
         "column_CBbKqE",
         "column_Ac4CMf"
       ],
+      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
@@ -439,46 +549,6 @@
       "type": "apps",
       "settings": {
         "include_margins": true
-      }
-    },
-    "section_image_with_text_4cXHF9": {
-      "type": "section-image-with-text",
-      "blocks": {
-        "image_picker_pr3GDC": {
-          "type": "image_picker",
-          "settings": {
-            "image_first": true,
-            "info_block_background_color": "#f2efe9",
-            "info_block_color": "#000000",
-            "caption": "Add a tagline",
-            "title": "<p><strong>The Beauty of Unboxing<\/strong><\/p>",
-            "content": "<p>Every Snoozy product comes in beautiful, specially made packaging that's designed to make unboxing feel like a luxurious experience, whether it's for you or someone special.<\/p>",
-            "author": "",
-            "button_label": "Learn More →",
-            "button_link": "",
-            "active_before_after": false,
-            "before_text": "Before",
-            "after_text": "After",
-            "drag_initial_position": 50,
-            "video": "shopify:\/\/files\/videos\/deep-sleep-maske-beige-video.MOV",
-            "show_benefits_block": false,
-            "benefits_background": "#ffffff",
-            "benefits_title_one": "",
-            "benefits_title_two": "",
-            "benefits_title_third": "",
-            "benefits_title_fourth": ""
-          }
-        }
-      },
-      "block_order": [
-        "image_picker_pr3GDC"
-      ],
-      "settings": {
-        "show_section": true,
-        "show_section_decor": true,
-        "section_background": "#ffffff",
-        "section_decor_color": "#f7f3eb",
-        "section_title": ""
       }
     },
     "rich_text_MzX8qd": {
@@ -542,15 +612,16 @@
     "wavy_recommendation_Qyb9wz",
     "section_image_with_text_kyhAzY",
     "multicolumn_eVggbb",
+    "collection_list_AJMB9L",
     "custom_liquid_mUpGHp",
+    "multicolumn_r6bHAD",
     "featured_collection_L6dPDQ",
+    "section_image_with_text_4cXHF9",
     "rich_text_H48HGr",
-    "17137536546713cb9c",
     "rich_text_mXwBRa",
     "rich_text_r6kyEa",
     "multicolumn_nTcJzB",
     "1713756030d04ac3ae",
-    "section_image_with_text_4cXHF9",
     "rich_text_MzX8qd",
     "1713757839ddfccfc4",
     "rich_text_r9ket6"
