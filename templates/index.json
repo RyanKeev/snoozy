@@ -56,6 +56,46 @@
         "show_text_below": false
       }
     },
+    "wavy_recommendation_Qyb9wz": {
+      "type": "wavy-recommendation",
+      "blocks": {
+        "review_iG7fKT": {
+          "type": "review",
+          "settings": {
+            "review_text": "This silver-infused pillowcase changed our hair and skin forever",
+            "image": "shopify:\/\/shop_images\/vice-logo-transparent.png"
+          }
+        },
+        "review_zyzmXB": {
+          "type": "review",
+          "settings": {
+            "review_text": "This silver-infused pillowcase changed our hair and skin forever",
+            "image": "shopify:\/\/shop_images\/7_news_logo_b4f60392-1170-40d3-91ea-3df6d24a7ba9.png"
+          }
+        },
+        "review_g7d4wN": {
+          "type": "review",
+          "settings": {
+            "review_text": "An amazing addition to beds everywhere to help promote the well-being of your skin"
+          }
+        }
+      },
+      "block_order": [
+        "review_iG7fKT",
+        "review_zyzmXB",
+        "review_g7d4wN"
+      ],
+      "settings": {
+        "heading": "Over 50,000 sleepers have spoken",
+        "fans_comment": "What our fans say",
+        "rating": "★★★★★ (4.8)",
+        "content": "<p>based 2,814 Reviews<\/p>",
+        "background_start_color": "#ff9a9e",
+        "background_end_color": "#FDFBF7",
+        "text_color": "#ffffff",
+        "padding": 50
+      }
+    },
     "multicolumn_eVggbb": {
       "type": "multicolumn",
       "blocks": {
@@ -498,6 +538,7 @@
   "order": [
     "pagefly-home",
     "image_banner_WqKFzc",
+    "wavy_recommendation_Qyb9wz",
     "multicolumn_eVggbb",
     "custom_liquid_mUpGHp",
     "featured_collection_L6dPDQ",
