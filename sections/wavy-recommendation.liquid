@@ -1,40 +1,239 @@
 <style>
-    .wavy-section {
-        background: linear-gradient(to right, {{ section.settings.background_start_color }}, {{ section.settings.background_end_color }});
-        clip-path: polygon(
-            0% 15%, 20% 0%, 80% 0%, 100% 15%, /* Wavy top */
-            100% 85%, 80% 100%, 20% 100%, 0% 85% /* Wavy bottom */
-        );
-        padding: {{ section.settings.padding }}px;
+    .wavy-background {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        z-index: 2;
+    }
+    .wavy-background svg {
+        {% comment %} position: absolute;
+        top: 0;
+        left: 0; {% endcomment %}
+        width: 100%;
+        {% comment %} height: 100%; {% endcomment %}
+    }
+    .wavy-background .content-container {
+        position: relative;
+        z-index: 1;
+        padding: 20px {{ section.settings.padding }}px;
         text-align: center;
+        background-color: {{ section.settings.background_start_color }};
+        border-radius: 0;
+        margin-top: -20px;
+        width: 100%;
+    }
+    .content-container .grid {
+        display: grid;  
+        margin: 0 auto;
+        max-width: 1300px;
+    }
+    .content-container .grid-cols-2 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+        /* Positioning the carousel relative */
+    .owl-carousel {
+        position: relative;
+    }
+
+    .owl-carousel .owl-nav {
+        transition: opacity 0.5s ease;
+        opacity: 0; 
+        display: none;
+    }
+
+    .owl-carousel:hover .owl-nav {
+        display: flex;
+        opacity: 1;
+    }
+
+    .owl-carousel .owl-nav button {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+    
+    .owl-carousel .owl-nav .owl-prev {
+        left: 35px; /* Adjust the left positioning of the previous button */
+        top: 140px;
+    }
+    
+    .owl-carousel .owl-nav .owl-next {
+        right: 35px; /* Adjust the right positioning of the next button */
+        top: 140px;
+    }
+
+    .owl-carousel .owl-item {
+        width: 485px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .owl-carousel .owl-item img {
+        height: 40px;
+        width: auto;
+        margin: 30px auto 10px auto;
+    }
+
+    .content-carousel {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: left;
+        padding:10px 50px;    
+    }
+
+    .content-carousel span p {
+        margin: 2px 0;
+    }
+
+    .content-carousel h1 {
+        font-size: 4rem;
+        margin-top: 0;
+    }
+
+    .item {
+        padding: 10px 30px;
+    }
+
+    .item h1 {
+        margin-top: 10px;
+        margin-bottom: 20px;
+        font-size: 3.2rem;
+        font-style: italic;
+        letter-spacing: 2px;
+        color:{{ section.settings.text_color }};
+    }
+
+    .nav-carousel {
+        color: #000;
+        background: {{ section.settings.text_color }};
+        font-weight: bold;
+        border-radius: 5px;
+        padding: 18px 20px;
+    }
+    .on-mobile {
+        display: none;
+    }
+    .on-desktop {
+        display: block;
+    }
+    {% if template == 'index' %}
+        .banner {
+            padding-bottom: 0;
+        }
+    {% endif %}
+    @media screen and (max-width: 750px) {
+        .grid-cols-2 {
+            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
+        }
+        .on-mobile {
+            display: block !important;
+        }
+        .on-desktop {
+            display: none !important;
+        }
+        .item {
+            padding: 0;
+        }
+        {% if template == 'index' %}
+        .banner {
+            padding-bottom: 350px !important;
+        }
+        {% endif %}
     }
 </style>
 
-<div class="wavy-section">
-    <h1>{{ section.settings.heading }}</h1>
-    <p>{{ section.settings.content }}</p>
+<script>
+    $(document).ready(function() {
+        $(".owl-carousel").owlCarousel({
+            items: 1, // Display one item per slide
+            loop: true,
+            nav: true, // Enable navigation arrows
+            navText: ['<span class="nav-carousel">&lt;</span>', '<span class="nav-carousel">&gt;</span>'], // HTML content for the navigation arrows
+            autoplay: false,
+            autoplayTimeout: 3000
+        });
+    });
+</script>
+
+                
+<div class="wavy-background">
+    {% comment %} <svg style="margin-top: -200px;" width="100%" height="100%" id="svg" viewBox="0 70 1440 180" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 28.118637339195352,138.41227543944083 56.237274678390705,126.82455087888165 83,120 C 109.7627253216093,113.17544912111835 135.1695386256325,111.1140719239142 175,125 C 214.8304613743675,138.8859280760858 269.0845708190793,168.71916142546166 302,190 C 334.9154291809207,211.28083857453834 346.49217809805026,224.00928237423904 376,214 C 405.50782190194974,203.99071762576096 452.94671678871987,171.24370907758214 491,159 C 529.0532832112801,146.75629092241786 557.7209547470701,155.0158813154323 580,158 C 602.2790452529299,160.9841186845677 618.1694642229997,158.6927656606885 655,147 C 691.8305357770003,135.3072343393115 749.6011883609308,114.2130560418137 781,99 C 812.3988116390692,83.7869439581863 817.425782333277,74.45501017205666 848,107 C 878.574217666723,139.54498982794334 934.6956823059613,213.96690326995966 968,220 C 1001.3043176940387,226.03309673004034 1011.7914884428778,163.67737674810473 1040,120 C 1068.2085115571222,76.32262325189527 1114.1383639225273,51.323589737621404 1147,86 C 1179.8616360774727,120.6764102623786 1199.655055867012,215.02826430140962 1232,214 C 1264.344944132988,212.97173569859038 1309.241412609425,116.56335305674011 1346,90 C 1382.758587390575,63.436646943259895 1411.3792936952875,106.71832347162994 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="{{ section.settings.background_start_color }}" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0"></path></svg> {% endcomment %}
+    <div class="content-container">
+        <div class="grid grid-cols-2 gap-4">
+            <div class="content-carousel" style="color:{{ section.settings.text_color }}">
+                <h1 class="on-desktop" style="font-style:italic;color:{{ section.settings.text_color }};">{{ section.settings.heading }}</h1>
+                <div class="on-desktop">
+                    <span style="font-weight:bold; font-size: 24px;">{{ section.settings.rating }}</span>
+                    <span style="font-weight: 600;">{{ section.settings.content }}</span>
+                </div>
+                <span class="on-mobile" style="text-align:center; font-weight:bold; text-transform: uppercase;">{{ section.settings.fans_comment }}</span>
+            </div>
+
+            <div>
+                <div class="owl-carousel">
+                    {%- for block in section.blocks -%}
+                        {% case block.type %}
+                        {%- when 'review' -%}
+                            <div class="item" {{ block.shopify_attributes }}>
+                                <h1>"{{ block.settings.review_text }}"</h1>
+                                {% if block.settings.image != blank %}
+                                    {{
+                                        block.settings.image
+                                        | image_url: height: 50
+                                        | image_tag:
+                                        loading: 'lazy'
+                                    }}
+                                {% endif  %}
+                            </div>
+                        {% endcase %}
+                    {%- endfor -%}
+                </div>
+
+            </div>
+          </div>
+    </div> 
+    {% comment %} <svg style="background: {{section.settings.background_end_color}};margin-bottom: -20px;" width="100%" height="100%" id="svg" viewBox="0 0 1440 390" xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150"><path d="M 0,400 L 0,150 C 40.17875170893976,184.91153066917872 80.35750341787951,219.8230613383574 107,217 C 133.6424965821205,214.1769386616426 146.74873803742176,173.61928531574907 177,167 C 207.25126196257824,160.38071468425093 254.64754443243345,187.69979739864627 294,166 C 333.35245556756655,144.30020260135373 364.6610842328443,73.58152508966585 396,81 C 427.3389157671557,88.41847491033415 458.70811863618906,173.97410224269035 487,180 C 515.291881363811,186.02589775730965 540.5064412223993,112.52206593957284 571,81 C 601.4935587776007,49.47793406042716 637.2661164742135,59.9376339990183 668,90 C 698.7338835257865,120.0623660009817 724.4290928807469,169.72739806435405 755,195 C 785.5709071192531,220.27260193564595 821.0175120027986,221.1527737435656 852,218 C 882.9824879972014,214.8472262564344 909.5008591080584,207.6615069613836 946,188 C 982.4991408919416,168.3384930386164 1028.979051564968,136.2011984109 1062,141 C 1095.020948435032,145.7988015891 1114.5829346320704,187.53369939501653 1141,202 C 1167.4170653679296,216.46630060498347 1200.6892099067502,203.664004009034 1237,203 C 1273.3107900932498,202.335995990966 1312.6602257409284,213.8102845688474 1347,207 C 1381.3397742590716,200.1897154311526 1410.6698871295357,175.0948577155763 1440,150 L 1440,400 L 0,400 Z" stroke="none" stroke-width="0" fill="{{ section.settings.background_start_color }}" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-0" transform="rotate(-180 720 200)"></path></svg> {% endcomment %}
 </div>
 
 {% schema %}
 {
-    "name": "Wavy Section",
+    "name": "Wavy Background Section",
     "tag": "section",
     "class": "section",
     "disabled_on": {
-      "groups": ["header", "footer"]
+        "groups": ["header", "footer"]
     },
     "settings": [
         {
             "type": "text",
             "id": "heading",
             "label": "Heading",
-            "default": "Wavy Section"
+            "default": "Over 50,000 sleepers have spoken"
+        },
+        {
+            "type": "text",
+            "id": "fans_comment",
+            "label": "Fan Say",
+            "default": "What our fans say"
+        },
+        {
+            "type": "text",
+            "id": "rating",
+            "label": "Rating",
+            "default": "★★★★★ (4.8)"
         },
         {
             "type": "richtext",
             "id": "content",
             "label": "Content",
-            "default": "<p>This is the content inside the wavy section.</p>"
+            "default": "<p>based 2,814 Reviews</p>"
         },
         {
             "type": "color",
@@ -46,7 +245,13 @@
             "type": "color",
             "id": "background_end_color",
             "label": "Background End Color",
-            "default": "#fecfef"
+            "default": "#FDFBF7"
+        },
+        {
+            "type": "color",
+            "id": "text_color",
+            "label": "Text Color",
+            "default": "#ffffff"
         },
         {
             "type": "number",
@@ -55,6 +260,30 @@
             "default": 50
         }
     ],
-    "presets": []
+    "blocks": [
+        {
+            "type": "review",
+            "name": "Review",
+            "limit": 5,
+            "settings": [
+              {
+                "type": "inline_richtext",
+                "id": "review_text",
+                "default": "This silver-infused pillowcase changed our hair and skin forever",
+                "label": "Review"
+              },
+              {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Upload image"
+              }
+            ]
+          }
+    ],
+    "presets": [
+        {
+            "name": "Wavy Recommendation"
+        }
+    ]
 }
 {% endschema %}

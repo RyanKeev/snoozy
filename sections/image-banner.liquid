@@ -1,5 +1,80 @@
 {{ 'section-image-banner.css' | asset_url | stylesheet_tag }}
 
+    <script>
+      // Function to detect device width
+      function detectDeviceWidth() {
+          return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      }
+      function detectDeviceWidth() {
+        return window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      }
+    
+      // Call the function and set the appropriate image
+      function setSlideshowImage() {
+          var deviceWidth = detectDeviceWidth();
+          var desktopImage = document.querySelector('.desktop-image');
+          var mobileImage = document.querySelector('.mobile-image');
+      
+          if (deviceWidth < 768) {
+              desktopImage.style.display = 'none';
+              mobileImage.style.display = 'block';
+          } else {
+              mobileImage.style.display = 'none';
+              desktopImage.style.display = 'block';
+          }
+      }
+      
+      // Call the function initially
+      setSlideshowImage();
+      
+      // Add event listener for window resize to update the image when the window size changes
+      window.addEventListener('resize', setSlideshowImage);
+    </script>
+
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'heading' -%}
+            <script>
+              document.addEventListener('DOMContentLoaded', function() {
+                // Retrieve the names array from the Shopify schema using Liquid
+                // Fetching names as a newline-separated string
+                const namesString = `{{ block.settings.name_string }}`;
+            
+                // Split the namesString into an array of names, trimming whitespace
+                const names = namesString.trim().split('\n');
+            
+                // Validate the names array
+                if (!Array.isArray(names) || names.length === 0) {
+                    console.error('Invalid names array:', names);
+                    return;
+                }
+            
+                // Select the element where the name will be displayed
+                const namePlaceholder = document.getElementById('name-placeholder');
+            
+                // Initialize the current index and interval time
+                let currentIndex = 0;
+                const intervalTime = 2000; // 2 seconds
+            
+                // Function to change the name
+                function changeName() {
+                    // Update the name placeholder with the current name
+                    namePlaceholder.textContent = names[currentIndex];
+                    
+                    // Increment the index and wrap around if it reaches the end of the array
+                    currentIndex = (currentIndex + 1) % names.length;
+                }
+            
+                // Immediately call the function to change the name upon page load
+                changeName();
+            
+                // Set an interval to call the changeName function every 2 seconds
+                setInterval(changeName, intervalTime);
+              });            
+            </script>
+      {% endcase %}
+    {% endfor %}
+
 {%- if section.settings.image_height == 'adapt' and section.settings.image != blank -%}
   {%- style -%}
     @media screen and (max-width: 749px) {
@@ -26,6 +101,13 @@
 {%- style -%}
   #Banner-{{ section.id }}::after {
     opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
+  }
+  @media (max-width: 750px){
+    {% if template == 'index' %}
+    #Banner-{{ section.id }} {
+        padding-bottom: 380px !important;
+    }
+  {% endif %}
   }
 {%- endstyle -%}
 
@@ -55,9 +137,6 @@
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
       {%- liquid
         assign image_height = section.settings.image.width | divided_by: section.settings.image.aspect_ratio
-        if section.settings.image_2 != blank
-          assign image_class = 'banner__media-image-half'
-        endif
         if section.settings.image_2 != blank and section.settings.stack_images_on_mobile
           assign sizes = stacked_sizes
         elsif section.settings.image_2 != blank
@@ -73,10 +152,23 @@
           loading: 'lazy',
           width: section.settings.image.width,
           height: image_height,
-          class: image_class,
+          class: 'desktop-image',
           sizes: sizes,
           widths: widths
       }}
+      {%- if section.settings.mobile_image != blank -%}
+      {{
+        section.settings.mobile_image
+        | image_url: width: 768
+        | image_tag:
+          loading: 'lazy',
+          width: section.settings.image.width,
+          height: image_height,
+          class: 'mobile-image',
+          sizes: sizes,
+          widths: widths
+      }}
+    {%- endif -%}
     </div>
   {%- elsif section.settings.image_2 == blank -%}
     <div class="banner__media media{% if section.settings.image == blank and section.settings.image_2 == blank %} placeholder{% endif %}{% if section.settings.image_2 != blank %} banner__media-half{% endif %}{% if section.settings.image_behavior != 'none' %} animate--{{ section.settings.image_behavior }}{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--fade-in{% endif %}">
@@ -120,7 +212,7 @@
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.heading }}
+              {{ block.settings.heading }} <span id="name-placeholder"></span>
             </h2>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -180,6 +272,16 @@
       "type": "image_picker",
       "id": "image_2",
       "label": "t:sections.image-banner.settings.image_2.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image",
+      "label": "Mobile Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "mobile_image_2",
+      "label": "Mobile Image 2"
     },
     {
       "type": "range",
@@ -364,6 +466,13 @@
           "id": "heading",
           "default": "Image banner",
           "label": "t:sections.image-banner.blocks.heading.settings.heading.label"
+        },
+        {
+          "type": "textarea",
+          "id": "name_string",
+          "label": "Names List",
+          "info": "Enter names, one per line",
+          "default": "Dry Skin\nBlackheads\nAcne\nChris\nBreakouts"
         },
         {
           "type": "select",

@@ -2,7 +2,12 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
 {% render 'replo-head' %}
-{% include "starapps-core" %}
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"  async></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"  async></script>
+
+{% render "starapps-core" %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -281,10 +286,10 @@
   
   {% render 'qikify-apps' %}
 
-{% comment %} PRODUCT PAGE SLIDER APP CODE START {% endcomment %}{% render 'pmslider_inline.liquid' %}{% comment %} PRODUCT PAGE SLIDER APP CODE END {% endcomment %}
+{% comment %} PRODUCT PAGE SLIDER APP CODE START {% endcomment %} render 'pmslider_inline.liquid' {% comment %} PRODUCT PAGE SLIDER APP CODE END {% endcomment %}
 {% comment %}<link rel="stylesheet" href="https://use.typekit.net/tgg2nfw.css">{% endcomment %}
 	{{ shop.metafields.loox["global_html_head"] }}
-{% capture boostersnippet %}{% include "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
+{% capture boostersnippet %}{% render "booster-apps-common" %}{% endcapture %}{% unless boostersnippet contains "Liquid error" %}{{ boostersnippet }}{% endunless %}
 <meta name="facebook-domain-verification" content="d0qzzhy7dmve8vr16cw1d9fk4jz7td" />
   <!-- Hotjar Tracking Code for Snoozy -->
 <script>
@@ -299,7 +304,7 @@
 
 </script>
 
-{% include 'pagefly-app-header' %}</head>
+{% render 'pagefly-app-header' %}{{ content_for_header }}</head>
 
   <body data-route="{{ template.name }}" class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
@@ -390,7 +395,7 @@
                     var ProIDsCollections =`{{ProIDsCollections}}`;
                 </script><!-- sb csp code -->
 
-    <script src="https://a.klaviyo.com/media/js/onsite/onsite.js"></script>
+    <script src="https://a.klaviyo.com/media/js/onsite/onsite.js" defer></script>
     <script>
       var klaviyo = klaviyo || [];
       klaviyo.init({

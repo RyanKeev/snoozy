@@ -35,7 +35,7 @@
   .banner--content-align-left.banner--desktop-transparent .banner__box,
   .banner--content-align-right.banner--desktop-transparent .banner__box,
   .banner--medium.banner--desktop-transparent .banner__box {
-    max-width: 56rem;
+    max-width: 70rem;
   }
 }
 
@@ -463,5 +463,25 @@
   .banner--desktop-transparent .inline-richtext a:hover,
   .banner--desktop-transparent .rte a:hover {
     color: currentColor;
+  }
+}
+
+/* Styles for desktop */
+.desktop-image {
+  display: block !important;
+}
+
+/* Styles for mobile */
+.mobile-image {
+  display: none !important;
+}
+
+/* Media query to show mobile image and hide desktop image on smaller screens */
+@media screen and (max-width: 768px) {
+  .desktop-image {
+      display: none !important;
+  }
+  .mobile-image {
+      display: block !important;
   }
 }

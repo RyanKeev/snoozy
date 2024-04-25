@@ -6172,19 +6172,3 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   -ms-border-radius: 5%;
   -o-border-radius: 5%;
 }
-
-.wavy-background {
-  background: linear-gradient(90deg, #ff9a9e, #fecfef);
-  clip-path: polygon(
-      0% 20%,   /* Top left curve */
-      20% 0%,   /* Top left */
-      80% 0%,   /* Top right */
-      100% 20%, /* Top right curve */
-      100% 80%, /* Bottom right curve */
-      80% 100%, /* Bottom right */
-      20% 100%, /* Bottom left */
-      0% 80%    /* Bottom left curve */
-  );
-  padding: 50px;
-  text-align: center;
-}
