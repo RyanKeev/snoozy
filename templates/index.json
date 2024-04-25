@@ -91,7 +91,7 @@
         "fans_comment": "What our fans say",
         "rating": "★★★★★ (4.8)",
         "content": "<p>based 2,814 Reviews<\/p>",
-        "background_start_color": "#ff9a9e",
+        "background_start_color": "#f25f90",
         "background_end_color": "#fdfbf7",
         "text_color": "#ffffff",
         "padding": 50
@@ -132,7 +132,7 @@
       "settings": {
         "show_section": true,
         "show_section_decor": true,
-        "section_background": "#fff",
+        "section_background": "#fdf5ed",
         "section_decor_color": "#f7f3eb",
         "section_title": ""
       }
@@ -353,8 +353,8 @@
         "image_picker_pr3GDC": {
           "type": "image_picker",
           "settings": {
-            "image_first": true,
-            "info_block_background_color": "#f2efe9",
+            "image_first": false,
+            "info_block_background_color": "#c0e0f7",
             "info_block_color": "#000000",
             "caption": "Add a tagline",
             "title": "<p><strong>The Beauty of Unboxing<\/strong><\/p>",
@@ -382,7 +382,7 @@
       "settings": {
         "show_section": true,
         "show_section_decor": true,
-        "section_background": "#ffffff",
+        "section_background": "#c0e0f7",
         "section_decor_color": "#f7f3eb",
         "section_title": ""
       }
