@@ -481,9 +481,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Samantha_before_after_2_81ca1fc7-806c-4be0-9844-4bd33f997ce5.webp",
-            "rating": "★★★★★",
+            "rating": "<strong>Samantha B.<\/strong>",
             "title": "\"I'M ACTUALLY SHOCKED",
-            "text": "<p>\"I’m actually so shocked at how well this pillowcase has helped my skin in such a short period of time\"<\/p><p><strong>Samantha B.<\/strong><\/p>",
+            "text": "<p>\"I’m actually so shocked at how well this pillowcase has helped my skin in such a short period of time\"<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -492,9 +492,9 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Captura_de_pantalla_2022-03-20_a_las_10.42.11_a._m..webp",
-            "rating": "★★★★★",
+            "rating": "<strong>Rebecca C.<\/strong>",
             "title": "<strong>\"THANK YOU\"<\/strong>",
-            "text": "<p>\"It's working for me. I normally get acne on the side I sleep & my skin has been so clear. Thank you thank you thank you\"<\/p><p><strong>Rebecca<\/strong><\/p>",
+            "text": "<p>\"It's working for me. I normally get acne on the side I sleep & my skin has been so clear. Thank you thank you thank you\"<\/p>",
             "link_label": "",
             "link": ""
           }
@@ -503,15 +503,16 @@
           "type": "column",
           "settings": {
             "image": "shopify:\/\/shop_images\/Grace_Colarusso_2.webp",
-            "rating": "★★★★★",
+            "rating": "<strong>Grace C.<\/strong>",
             "title": "\"<strong>IT'S ONLY BEEN A WEEK\"<\/strong>",
-            "text": "<p>Have seen an improvement and it's only been a week!<\/p><p><strong>Grace C.<\/strong><\/p>",
+            "text": "<p>Have seen an improvement and it's only been a week!<\/p>",
             "link_label": "",
             "link": ""
           }
         },
         "column_Ac4CMf": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/Captura_de_pantalla_2022-03-24_a_las_2.13.38_a._m..webp",
             "rating": "★★★★★",
@@ -528,13 +529,12 @@
         "column_CBbKqE",
         "column_Ac4CMf"
       ],
-      "disabled": true,
       "settings": {
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 4,
+        "columns_desktop": 3,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "READ ALL 2,000+ REVIEWS →",
