@@ -196,6 +196,7 @@
 
       ],
       "settings": {
+        "disabled_fullwidth": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
@@ -327,6 +328,7 @@
         "column_ahxBa9"
       ],
       "settings": {
+        "disabled_fullwidth": true,
         "title": "",
         "heading_size": "h0",
         "image_width": "third",
@@ -521,6 +523,7 @@
         "column_Ac4CMf"
       ],
       "settings": {
+        "disabled_fullwidth": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
