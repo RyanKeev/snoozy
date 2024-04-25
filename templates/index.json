@@ -540,6 +540,125 @@
         "padding_bottom": 36
       }
     },
+    "rich_text_6iUbWP": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_zQkKFM": {
+          "type": "heading",
+          "settings": {
+            "heading": "Made For Everyone",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_zQkKFM"
+      ],
+      "settings": {
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "scheme-97e0205c-f84f-4e6a-926b-ee03c45956ad",
+        "full_width": true,
+        "padding_top": 20,
+        "padding_bottom": 16
+      }
+    },
+    "multicolumn_MMebUB": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_jBeP9R": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/perfect_fit_50x50_f03f1f2d-3204-430e-95ec-036e9fb75937.svg",
+            "rating": "",
+            "title": "All Skin Types",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_zqekBk": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/fair_price_50x50_72e0ae56-5399-4c5e-97ec-c42744657290.svg",
+            "rating": "",
+            "title": "Affordable",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xKNFYK": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/premium_quality_50x50_fe157f57-95c0-42c7-a0d7-867b82de1b2b.svg",
+            "rating": "",
+            "title": "Vegan Options",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_twVeWB": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ultra_soft_50x50_6b83f63f-9a13-4257-ac4d-e71472007361.svg",
+            "rating": "",
+            "title": "Ultra Soft",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_xPQPFH": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/easy_care_50x50_d6edacc7-f6cf-4592-bbfb-037567c11829.svg",
+            "rating": "",
+            "title": "Easy Care",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_PJDGf6": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/150k_reviews_50x50_ca444d0b-4b2d-4f1a-9aaf-1298bb74c2f8.svg",
+            "rating": "",
+            "title": "Top Rated",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_jBeP9R",
+        "column_zqekBk",
+        "column_xKNFYK",
+        "column_twVeWB",
+        "column_xPQPFH",
+        "column_PJDGf6"
+      ],
+      "settings": {
+        "disabled_fullwidth": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "third",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "scheme-97e0205c-f84f-4e6a-926b-ee03c45956ad",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "rich_text_H48HGr": {
       "type": "rich-text",
       "settings": {
@@ -621,6 +740,8 @@
     "rich_text_r6kyEa",
     "rich_text_mXwBRa",
     "multicolumn_nTcJzB",
+    "rich_text_6iUbWP",
+    "multicolumn_MMebUB",
     "rich_text_H48HGr",
     "rich_text_MzX8qd",
     "1713757839ddfccfc4",
