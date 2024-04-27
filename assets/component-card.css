@@ -185,6 +185,15 @@
   margin-bottom: 0;
 }
 
+.collection-list .card--standard .card__heading{
+  font-size: 32px !important;
+  line-height: 1.6em !important;
+  letter-spacing: 0px !important;
+  font-style: italic;
+  color: #1a1a1a !important;
+  text-transform: none !important;
+}
+
 .card__heading:last-child {
   margin-bottom: 0;
 }
@@ -357,7 +366,7 @@
 }
 
 .card--horizontal .card-information > .price {
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
 }
 
 .card-information > .rating {

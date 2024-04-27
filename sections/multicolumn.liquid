@@ -28,7 +28,8 @@
   endif
 -%}
 
-<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.disabled_fullwidth == true %} disabled-fullwidth{% endif %}">
+<div class="multicolumn color-{{ section.settings.color_scheme }} gradient{% unless section.settings.background_style == 'none' and settings.text_boxes_border_thickness > 0 or settings.text_boxes_shadow_opacity > 0 %} background-{{ section.settings.background_style }}{% endunless %}{% if section.settings.title == blank %} no-heading{% endif %}{% if section.settings.disabled_fullwidth == true %} disabled-fullwidth{% endif %} {% if section.settings.show_desktop %} on-desktop {% elsif section.settings.show_mobile %} on-mobile {% else %} {% endif %}"
+>
   <div
     class="page-width section-{{ section.id }}-padding isolate{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
     {% if settings.animations_reveal_on_scroll %}
@@ -88,9 +89,7 @@
                 <div class="multicolumn-card__image-wrapper multicolumn-card__image-wrapper--{{ section.settings.image_width }}-width{% if section.settings.image_width != 'full' or spaced_image %} multicolumn-card-spacing{% endif %}">
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
-                    {% if section.settings.image_ratio == 'adapt' %}
-                      style="padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%;"
-                    {% endif %}
+                      style="{% if section.settings.image_width == 'small' and section.settings.image_ratio == 'adapt' %} padding-bottom: 0; height:59px; {% elsif section.settings.image_ratio == 'adapt' %} padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%; {% else %} {% endif %}"
                   >
                     {%- liquid
                       assign number_of_columns = section.settings.columns_desktop
@@ -215,6 +214,18 @@
       "label": "Do you want to disable fullwidth ?"
     },
     {
+      "type": "checkbox",
+      "id": "show_desktop",
+      "default": false,
+      "label": "Show on desktop"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_mobile",
+      "default": false,
+      "label": "Show on mobile"
+    },
+    {
       "type": "inline_richtext",
       "id": "title",
       "default": "Multicolumn",
@@ -244,6 +255,10 @@
       "type": "select",
       "id": "image_width",
       "options": [
+        {
+          "value": "small",
+          "label": "Small Icon"
+        },
         {
           "value": "third",
           "label": "t:sections.multicolumn.settings.image_width.options__1.label"

@@ -22,20 +22,13 @@
         margin-top: -20px;
         width: 100%;
     }
-    .content-container .grid {
-        display: grid;  
-        margin: 0 auto;
-        max-width: 1300px;
-    }
-    .content-container .grid-cols-2 {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-    }
-
-        /* Positioning the carousel relative */
+</style>
+<style>
+    /* Positioning the carousel relative */
     .owl-carousel {
         position: relative;
     }
-
+{% comment %} 
     .owl-carousel .owl-nav {
         transition: opacity 0.5s ease;
         opacity: 0; 
@@ -45,7 +38,7 @@
     .owl-carousel:hover .owl-nav {
         display: flex;
         opacity: 1;
-    }
+    } {% endcomment %}
 
     .owl-carousel .owl-nav button {
         position: absolute;
@@ -58,12 +51,12 @@
     }
     
     .owl-carousel .owl-nav .owl-prev {
-        left: 35px; /* Adjust the left positioning of the previous button */
+        left: 0; /* Adjust the left positioning of the previous button */
         top: 140px;
     }
     
     .owl-carousel .owl-nav .owl-next {
-        right: 35px; /* Adjust the right positioning of the next button */
+        right: 0; /* Adjust the right positioning of the next button */
         top: 140px;
     }
 
@@ -104,7 +97,6 @@
     .item h1 {
         margin-top: 10px;
         margin-bottom: 20px;
-        font-size: 3.2rem;
         font-style: italic;
         letter-spacing: 2px;
         color:{{ section.settings.text_color }};
@@ -117,27 +109,13 @@
         border-radius: 5px;
         padding: 18px 20px;
     }
-    .on-mobile {
-        display: none;
-    }
-    .on-desktop {
-        display: block;
-    }
+    
     {% if template == 'index' %}
         .banner {
             padding-bottom: 0;
         }
     {% endif %}
     @media screen and (max-width: 750px) {
-        .grid-cols-2 {
-            grid-template-columns: repeat(1, minmax(0, 1fr)) !important;
-        }
-        .on-mobile {
-            display: block !important;
-        }
-        .on-desktop {
-            display: none !important;
-        }
         .item {
             padding: 0;
         }
@@ -148,28 +126,54 @@
         {% endif %}
     }
     /* Adjust width and padding for mobile */
-@media screen and (max-width: 750px) {
-    .owl-carousel {
-        width: 100%; /* Set width to full container */
+    @media screen and (max-width: 750px) {
+        .owl-carousel {
+            width: 100%; /* Set width to full container */
+        }
+
+        .owl-carousel .owl-item {
+            width: 100%; /* Each item should take up the full width */
+            padding: 0; /* Remove padding to avoid partial display of other items */
+        }
     }
     
-    .owl-carousel .owl-item {
-        width: 100%; /* Each item should take up the full width */
-        padding: 0; /* Remove padding to avoid partial display of other items */
-    }
+/* Define the initial state of the navigation buttons */
+.owl-prev, .owl-next {
+    opacity: 0; /* Initially hidden */
+    transform: translateY(-20px); /* Initially translated up */
+    transition: all 0.3s ease-in-out; /* Transition for smooth effects */
+}
+
+/* Apply fade-in and slide-in effects when hovering over the carousel */
+.fade-in-slide-in {
+    opacity: 1; /* Fade in */
+    transform: translateY(0); /* Slide down */
 }
 </style>
 
 <script>
     $(document).ready(function() {
+        // Initialize Owl Carousel
         $(".owl-carousel").owlCarousel({
-            items: 1, // Display one item per slide
+            items: 1,
             loop: true,
-            nav: true, // Enable navigation arrows
-            navText: ['<span class="nav-carousel">&lt;</span>', '<span class="nav-carousel">&gt;</span>'], // HTML content for the navigation arrows
+            nav: true,
+            navText: ['<span class="nav-carousel">&lt;</span>', '<span class="nav-carousel">&gt;</span>'],
             autoplay: true,
-            autoplayTimeout: 4000
+            autoplayTimeout: 4000,
         });
+    
+        // Add hover event handler to the carousel container
+        $(".owl-carousel").hover(
+            function() {
+                // Add the class to the navigation buttons when hovering over the carousel
+                $(this).find('.owl-prev, .owl-next').addClass('fade-in-slide-in');
+            },
+            function() {
+                // Remove the class when the hover ends
+                $(this).find('.owl-prev, .owl-next').removeClass('fade-in-slide-in');
+            }
+        );
     });
   </script>
 

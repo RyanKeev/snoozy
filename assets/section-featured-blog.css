@@ -30,7 +30,7 @@
 
 .blog-placeholder .rte-width {
   margin-top: 1.2rem;
-  color: rgba(var(--color-foreground), 0.75);
+  color: rgba(var(--color-foreground), 1);
 }
 
 @media screen and (min-width: 990px) {

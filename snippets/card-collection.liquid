@@ -130,10 +130,19 @@
                 {{ 'onboarding.collection_title' | t }}
               {%- endif -%}
               {%- if card_collection.featured_image or card_collection.description == blank -%}
+                {% comment %} 
                 <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+                 {% endcomment %}
               {%- endif %}
             </a>
           </h3>
+          <a
+            class="button button--primary font-body-bold"
+            style="align-self: flex-start;margin-top:15px;"
+            href="{{ card_collection.url }}"
+          >
+            Shop Here <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+          </a>
           {%- if card_collection.featured_image == null and card_collection.description != blank -%}
             <p class="card__caption">
               {{- card_collection.description | strip_html | truncatewords: 12 -}}

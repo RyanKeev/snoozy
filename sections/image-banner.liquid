@@ -212,7 +212,7 @@
               class="banner__heading inline-richtext {{ block.settings.heading_size }}"
               {{ block.shopify_attributes }}
             >
-              {{ block.settings.heading }} <span id="name-placeholder"></span>
+              {{ block.settings.heading }} <em><span id="name-placeholder"></span></em>
             </h2>
           {%- when 'text' -%}
             <div class="banner__text rte {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
@@ -232,7 +232,7 @@
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_1 %} button--secondary{% else %} button--primary{% endif %}"
                 >
-                  {{- block.settings.button_label_1 | escape -}}
+                 <b> {{- block.settings.button_label_1 | escape -}}</b>
                 </a>
               {%- endif -%}
               {%- if block.settings.button_label_2 != blank -%}
@@ -244,7 +244,7 @@
                   {% endif %}
                   class="button{% if block.settings.button_style_secondary_2 %} button--secondary{% else %} button--primary{% endif %}"
                 >
-                  {{- block.settings.button_label_2 | escape -}}
+                 <b> {{- block.settings.button_label_2 | escape -}}</b>
                 </a>
               {%- endif -%}
             </div>

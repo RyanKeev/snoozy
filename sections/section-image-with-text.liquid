@@ -26,7 +26,7 @@
 							#shopify-section-{{ section.id }} .wrap-rounded {
 								height: 100%;
 								background: {{ block.settings.info_block_background_color }};
-								padding: 2rem 1rem;
+								padding: 2rem 0rem;
 								align-items: center;
 								justify-content: center;
 								border-radius: 5%;
@@ -38,17 +38,24 @@
 						}
 						#shopify-section-{{ section.id }} .info-color {
 							color: {{ block.settings.info_block_color  }} !important;
-							text-align: center;
+							text-align: left;
 							margin: 7px 0;
 						}
 						#shopify-section-{{ section.id }} .box-content p {
-							text-align: center;
-							margin: 7px 0;
+							text-align: left;
+							font-size: inherit !important;
+							font-family: inherit !important;
+							text-align: inherit !important;
+							margin: 0 !important;
+							padding: 0 !important;
 							color: {{ block.settings.info_block_color  }} !important;
 						}
+						.info-block .item-title h1 {
+							margin:0 !important;
+						}
 					</style>
-					<div class="chess-item">
-						<div class="media-block">
+					<div class="{% if block.settings.video != blank or block.settings.image != blank %} {% if block.settings.image_first %} grid-cols-2-lap {% else %} grid-cols-2-lap-reverse {% endif %} {% else %} chess-item{% endif %}">
+						<div class="media-block" style="order:{% if block.settings.image_first %} 1 {% else %} 2 {% endif %};">
 							{% if block.settings.active_before_after and block.settings.before_image and block.settings.after_image %}
 								<div class="before-after" style="--before-after-initial-drag-position: {{ block.settings.drag_initial_position }}%; --clip-path-offset: 0px;">
 									<div class="before-image-wrap">
@@ -107,6 +114,7 @@
 							{%- if block.settings.button_label != blank -%}
 								<a
 								  class="button button--primary font-body-bold"
+								  style="align-self: flex-start;"
 								  {% if block.settings.button_link == blank %}
 									role="link" aria-disabled="true"
 								  {% else %}
