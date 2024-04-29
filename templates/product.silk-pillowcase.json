@@ -151,6 +151,11 @@
           "settings": {
             "share_label": "Share"
           }
+        },
+        "rating_pWV7pe": {
+          "type": "rating",
+          "settings": {
+          }
         }
       },
       "block_order": [
@@ -166,7 +171,8 @@
         "fdf08dd9-0177-4af9-b553-89e9fec6efed",
         "buy_buttons",
         "description",
-        "share"
+        "share",
+        "rating_pWV7pe"
       ],
       "settings": {
         "enable_sticky_info": true,
