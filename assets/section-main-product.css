@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 990px) {
   .product__info-wrapper {
-    padding: 0 0 0 40px;
+    padding: 0 40px 0 40px;
   }
 
   .product--large:not(.product--no-media) .product__media-wrapper {
@@ -373,7 +373,9 @@ a.product__text {
 }
 
 .product .price .badge {
-  margin-bottom: 0.5rem;
+  /* margin-bottom: 0.5rem; */
+  /* display: flex; */
+  align-items: center;
 }
 
 /*.product .price__container {

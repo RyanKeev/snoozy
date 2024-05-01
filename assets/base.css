@@ -3840,6 +3840,7 @@ header.header .menu-label{
 
 .product-main-section .price{
   display: flex;
+  align-items: center;
 }
 
 .product-main-section .price > *{
@@ -3859,8 +3860,8 @@ header.header .menu-label{
 }
 
 .product-main-section .price-item--sale{
-  font-size: 19px;
-  font-weight: 600;
+  font-size: 28px;
+  font-weight: 400;
 }
 
 .product-main-section .product-icons-list{
@@ -4083,7 +4084,7 @@ header.header .menu-label{
 }
 
 .product__info-wrapper .product-buttons-wrap{
-  width: calc(100% - 117px);
+  /* width: calc(100% - 117px); */
   min-width: calc(100% - 117px);
   flex-grow: 1;
   order: 1;
@@ -4091,9 +4092,9 @@ header.header .menu-label{
 
 .product-form__buttons .product-form__submit{
   transition: all .3s ease-in-out;
-  border-color: #000000;
-  background: #000000;
-  color: #ffffff;
+  border-color: #FC95CF;
+  background: #FC95CF;
+  color: #000000;
   min-height: 46px;
 }
 
@@ -6222,11 +6223,13 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
         .grid-cols-12 {
           grid-template-columns: repeat(12, minmax(0, 1fr));
         }
+        .open-grid-cols-12 {
+          grid-template-columns: repeat(12, minmax(0, 1fr));
+        }
         .grid-cols-2-lap {
           display: grid;
           grid-template-columns: 65% 35%; /* Define column widths for larger screens */
         }
-
         .grid-cols-2-lap-reverse {
           display: grid;
           grid-template-columns: 35% 65%; /* Define column widths for larger screens */
@@ -6258,4 +6261,29 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
       }
 
 
-  
+  .flex {
+    display: flex;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .items-start {
+    align-items: flex-start;
+  }
+
+ /* Wrap the loox-rating and customize its content */
+.loox-rating-wrapper {
+  /* Use flexbox to stack the star icons and the text vertically */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center elements horizontally */
+}
+
+/* Customize the loox-rating-label */
+.loox-rating span.loox-rating-label {
+  margin-top: 5px; /* Adjust margin as needed */
+  display: block; /* Ensure the label is on its own line */
+}
