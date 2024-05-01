@@ -105,13 +105,13 @@
             {% when 'jumbotron' %}
               <div class="open-grid open-grid-cols-12 jumbotron" style="place-items: center;">
                 {% if block.settings.jumbotron_image %}
-                <div class="col-span-3" style="border:none;text-align:center;">
-                  <img src="{{ block.settings.jumbotron_image | image_url: 'master' }}" alt="logo-sleep" width="auto" height="auto" style="max-width:120px;" />
+                <div class="col-span-4" style="border:none;text-align:center;">
+                  <img src="{{ block.settings.jumbotron_image | img_url: 'master' }}" alt="logo-sleep" width="auto" height="auto" style="max-width:110px;width:100%;" />
                 </div>
                 {% endif %}
-                <div class="col-span-9" style="display:flex; flex-direction:column;padding:5px;">
+                <div class="col-span-8" style="display:flex; flex-direction:column;padding:5px;">
                   <p class="title">{{ block.settings.jumbotron_heading }}</p>
-                  <p class="content">{{ block.settings.jumbotron_content }}</p>
+                  <p class="content" style="margin-top:10px;">{{ block.settings.jumbotron_content }}</p>
                 </div>
               </div>
             {%- when 'collapsible_tab' -%}

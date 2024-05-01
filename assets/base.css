@@ -6238,7 +6238,12 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
           grid-column: span 3 / span 3;
           border-right:1px solid rgba(26,26,26,.12);
         }
-
+        .col-span-4 {
+          grid-column: span 4 / span 4;
+        }
+        .col-span-8 {
+          grid-column: span 8 / span 8;
+        }
         .col-span-9 {
           grid-column: span 9 / span 9;
         }
