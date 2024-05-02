@@ -277,6 +277,7 @@
         "image_picker_bY3DR4": {
           "type": "image_picker",
           "settings": {
+            "half_width": true,
             "image_first": false,
             "info_block_background_color": "#fbf5f4",
             "info_block_color": "#000000",
@@ -292,7 +293,7 @@
             "after_text": "After",
             "drag_initial_position": 50,
             "show_benefits_block": false,
-            "benefits_background": "#FFFFFF",
+            "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
             "benefits_title_third": "",
@@ -302,6 +303,7 @@
         "image_picker_g9yyE6": {
           "type": "image_picker",
           "settings": {
+            "half_width": false,
             "image_first": true,
             "info_block_background_color": "#fbf5f4",
             "info_block_color": "#000000",
@@ -317,7 +319,7 @@
             "after_text": "After",
             "drag_initial_position": 50,
             "show_benefits_block": false,
-            "benefits_background": "#FFFFFF",
+            "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
             "benefits_title_third": "",
