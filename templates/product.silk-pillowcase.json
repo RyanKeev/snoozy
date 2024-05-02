@@ -272,6 +272,100 @@
         "padding_bottom": 24
       }
     },
+    "rich_text_3kKKa6": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_7crGEz": {
+          "type": "heading",
+          "settings": {
+            "heading": "Real Results in Just 30 Days",
+            "heading_size": "h1"
+          }
+        },
+        "text_AzpbJM": {
+          "type": "text",
+          "settings": {
+            "text": "<p>See why 150k+ choose Snoozy<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "heading_7crGEz",
+        "text_AzpbJM"
+      ],
+      "settings": {
+        "show_desktop": false,
+        "show_mobile": false,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 40,
+        "padding_bottom": 24
+      }
+    },
+    "multicolumn_XXj866": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_kznqcU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Grace_Colarusso__with_photo__copia.jpg",
+            "rating": "",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_cWp4CG": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Rebecca_Richard_review.jpg",
+            "rating": "",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        },
+        "column_g7ceMb": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Scarlett_Benham__with_photo__copia.jpg",
+            "rating": "",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_kznqcU",
+        "column_cWp4CG",
+        "column_g7ceMb"
+      ],
+      "settings": {
+        "disabled_fullwidth": false,
+        "show_desktop": false,
+        "show_mobile": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "portrait",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 36,
+        "padding_bottom": 36
+      }
+    },
     "section_image_with_text_cgYrLq": {
       "type": "section-image-with-text",
       "blocks": {
@@ -543,6 +637,8 @@
   "order": [
     "0cd25557-8cef-42a6-991a-1a57bf82fee5",
     "main",
+    "rich_text_3kKKa6",
+    "multicolumn_XXj866",
     "section_image_with_text_cgYrLq",
     "8f25fb51-6152-4228-93dc-0f38bf14c7ff",
     "3d977cfe-9935-4362-bb26-63085b713377",
