@@ -276,7 +276,7 @@
         "image_picker_bY3DR4": {
           "type": "image_picker",
           "settings": {
-            "image_first": true,
+            "image_first": false,
             "info_block_background_color": "#FFFFFF",
             "info_block_color": "#000000",
             "image": "shopify:\/\/shop_images\/433527531_700796275314809_7357413864218591350_n.jpg",
@@ -297,10 +297,36 @@
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
+        },
+        "image_picker_g9yyE6": {
+          "type": "image_picker",
+          "settings": {
+            "image_first": true,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "image": "shopify:\/\/shop_images\/lp-4-4-sale-perfectpillow.jpg",
+            "caption": "",
+            "title": "<h1>The Perfect Gift<\/h1>",
+            "content": "<p>Stumped for Christmas? We've got you sorted.<\/p>",
+            "author": "",
+            "button_label": "",
+            "button_link": "",
+            "active_before_after": false,
+            "before_text": "Before",
+            "after_text": "After",
+            "drag_initial_position": 50,
+            "show_benefits_block": false,
+            "benefits_background": "#FFFFFF",
+            "benefits_title_one": "",
+            "benefits_title_two": "",
+            "benefits_title_third": "",
+            "benefits_title_fourth": ""
+          }
         }
       },
       "block_order": [
-        "image_picker_bY3DR4"
+        "image_picker_bY3DR4",
+        "image_picker_g9yyE6"
       ],
       "settings": {
         "show_section": true,
