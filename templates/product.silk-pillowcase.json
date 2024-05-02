@@ -521,7 +521,7 @@
         "f591aed1-1b24-4d17-ac3d-be1800d26353": {
           "type": "image_picker",
           "settings": {
-            "question_background": "#f7f3eb",
+            "question_background": "#fff",
             "faq_question": "What Materials Are Used?",
             "faq_answer": "<p>All the pillows from Snoozy is made of 100% 22-Momme 6A Grade Mulberry Silk to ensure maximum pleasure.<\/p>"
           }
