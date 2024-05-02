@@ -27,6 +27,7 @@
         },
         "loox-rating": {
           "type": "shopify:\/\/apps\/loox-reviews\/blocks\/loox-rating\/5c3b337f-fd14-4df5-b1d6-80ec13e6e28e",
+          "disabled": true,
           "settings": {
             "contentSize": 16,
             "pattern": "",
@@ -93,6 +94,7 @@
         },
         "2fad7fee-1e4e-4bbd-a33a-b6131ab0b772": {
           "type": "product-information",
+          "disabled": true,
           "settings": {
             "show_product_information": true,
             "product_icon_list_one": "shopify:\/\/shop_images\/quality-usp-transparent.svg",
@@ -140,6 +142,33 @@
             "icon_pay_5th_img": "shopify:\/\/shop_images\/paypal.svg"
           }
         },
+        "icon_with_text_cW8XfL": {
+          "type": "icon-with-text",
+          "settings": {
+            "layout": "horizontal",
+            "icon_1": "box",
+            "heading_1": "Free shipping <br>\nover $50",
+            "icon_2": "return",
+            "heading_2": "Only 4 x $9.75 <br>\nwith Afterpay",
+            "icon_3": "truck",
+            "heading_3": "We ship from <br>\nLos Angeles"
+          }
+        },
+        "description_capture_U3W9GV": {
+          "type": "description-capture",
+          "settings": {
+            "paragraph_1_title": "Why Snoozy's special?",
+            "paragraph_1_content": "Prepare yourself for love at first sleep with the world's first satin pillowcase treated with natural silver, scientifically shown to eliminate 99.7% of bacteria linked to acne & breakouts.",
+            "paragraph_2_title": "How can Snoozy help you?",
+            "paragraph_2_content": "Safe for all skin types, ages, and chemical-free. In 30 days, Argie works to prevent and improve:",
+            "paragraph_3_title": "You'll also love that:",
+            "paragraph_3_content": "Snoozy's vegan, sustainable, and 4.5x more breathable & cooling than cotton (goodbye midnight sweats). It's so soft you'll think you're sleeping on a cloud.",
+            "list_1_title": "<strong>Skin concerns<\/strong>",
+            "list_1_content": "Acne & breakouts,\nClogged pores,\nDry skin & redness,\nFine lines & wrinkles",
+            "list_2_title": "<strong>Hair concerns<\/strong>",
+            "list_2_content": "Split ends,\nTangles & knots,\nFrizziness,\nBreakages"
+          }
+        },
         "description": {
           "type": "description",
           "settings": {
@@ -154,7 +183,52 @@
         },
         "rating_pWV7pe": {
           "type": "rating",
+          "disabled": true,
           "settings": {
+          }
+        },
+        "jumbotron_Qe34dC": {
+          "type": "jumbotron",
+          "settings": {
+            "jumbotron_heading": "100 Night Risk Free Trial",
+            "jumbotron_content": "If for any reason you're not loving your Argie, send it back within 100 days from purchase for a full refund.",
+            "jumbotron_image": "shopify:\/\/shop_images\/download.png"
+          }
+        },
+        "collapsible_tab_hJhFDM": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Material Specs",
+            "icon": "none",
+            "content": "<p><strong>Fabric: <\/strong>97% polyester, 3% spandex<br\/><strong>Closure: <\/strong>Hidden zipper<br\/><strong>Treatment: <\/strong>Antibacterial silver ions<br\/><strong>Manufactured: <\/strong>Spun, woven, and sewn in China<br\/><strong>Ethically Certified: <\/strong>Yes (Oeko-Tex®)<\/p><p><strong>Vegan: <\/strong>Yes<br\/><strong>Animal Tested:<\/strong> No<br\/><strong>Artificial Chemicals:<\/strong> None<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_YRGhLB": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Care Instructions",
+            "icon": "none",
+            "content": "<p>•   Machine delicate wash or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<br\/><\/p><p>Silver keeps your Argie fresher for longer, meaning you only need to wash it every 10-14 days (3x less frequent than cotton!).<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_iqnnB7": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "Shipping",
+            "icon": "none",
+            "content": "<p><strong>USA<\/strong><br\/>All orders are shipped by USPS from our L.A. warehouse.<\/p><p><strong>Shipping fee: <\/strong>$5 under $50 spend, free over $50<\/p><p><\/p><p><strong>ALL OTHER COUNTRIES<\/strong><br\/>All orders are shipped regular by DHL from our LA warehouse in the USA.<\/p>",
+            "page": ""
+          }
+        },
+        "collapsible_tab_cnjdcd": {
+          "type": "collapsible_tab",
+          "settings": {
+            "heading": "100 Day Money Back Guarantee",
+            "icon": "none",
+            "content": "<p>We know some things take time, that's why we offer a 100 night trial. If for any reason you're not loving your Argie, even after 100 days, send it back for a full refund + return postage.<br\/><\/p><p>Note: This is not applicable for colour exchanges.<\/p>",
+            "page": ""
           }
         }
       },
@@ -170,9 +244,16 @@
         "quantity_selector",
         "fdf08dd9-0177-4af9-b553-89e9fec6efed",
         "buy_buttons",
+        "icon_with_text_cW8XfL",
+        "description_capture_U3W9GV",
         "description",
         "share",
-        "rating_pWV7pe"
+        "rating_pWV7pe",
+        "jumbotron_Qe34dC",
+        "collapsible_tab_hJhFDM",
+        "collapsible_tab_YRGhLB",
+        "collapsible_tab_iqnnB7",
+        "collapsible_tab_cnjdcd"
       ],
       "settings": {
         "enable_sticky_info": true,
