@@ -270,6 +270,46 @@
         "padding_bottom": 24
       }
     },
+    "section_image_with_text_cgYrLq": {
+      "type": "section-image-with-text",
+      "blocks": {
+        "image_picker_bY3DR4": {
+          "type": "image_picker",
+          "settings": {
+            "image_first": true,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "image": "shopify:\/\/shop_images\/433527531_700796275314809_7357413864218591350_n.jpg",
+            "caption": "",
+            "title": "<h1>The Science Explained<\/h1>",
+            "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
+            "author": "",
+            "button_label": "",
+            "button_link": "",
+            "active_before_after": false,
+            "before_text": "Before",
+            "after_text": "After",
+            "drag_initial_position": 50,
+            "show_benefits_block": false,
+            "benefits_background": "#FFFFFF",
+            "benefits_title_one": "",
+            "benefits_title_two": "",
+            "benefits_title_third": "",
+            "benefits_title_fourth": ""
+          }
+        }
+      },
+      "block_order": [
+        "image_picker_bY3DR4"
+      ],
+      "settings": {
+        "show_section": true,
+        "show_section_decor": true,
+        "section_background": "#FFFFFF",
+        "section_decor_color": "#f7f3eb",
+        "section_title": ""
+      }
+    },
     "8f25fb51-6152-4228-93dc-0f38bf14c7ff": {
       "type": "section-brand-logo",
       "blocks": {
@@ -345,6 +385,7 @@
         "ae25b1c1-f952-4a8b-8766-7f388983b0c2",
         "0b82228a-eb4e-4e4d-b759-e6e2a0ff4dd6"
       ],
+      "disabled": true,
       "settings": {
         "show_section": true,
         "section_background": "#ffffff"
@@ -402,7 +443,7 @@
         "a45422fb-336d-4598-bcfd-ddab8fbd0d6c"
       ],
       "settings": {
-        "show_section": false,
+        "show_section": true,
         "show_section_decor": true,
         "section_background": "#ffffff",
         "section_title": "Have a Question? We Have Answers"
@@ -410,6 +451,7 @@
     },
     "replo_silk_pillowcase_pdp_wpT88X": {
       "type": "replo-silk-pillowcase-pdp",
+      "disabled": true,
       "settings": {
       }
     },
@@ -434,6 +476,7 @@
     },
     "section_recommend_C3HdWr": {
       "type": "section-recommend",
+      "disabled": true,
       "settings": {
         "show_section": true,
         "recommendations_count": 10,
@@ -470,6 +513,7 @@
   "order": [
     "0cd25557-8cef-42a6-991a-1a57bf82fee5",
     "main",
+    "section_image_with_text_cgYrLq",
     "8f25fb51-6152-4228-93dc-0f38bf14c7ff",
     "3d977cfe-9935-4362-bb26-63085b713377",
     "replo_silk_pillowcase_pdp_wpT88X",
