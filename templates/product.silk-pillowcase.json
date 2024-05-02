@@ -303,7 +303,7 @@
         "image_picker_g9yyE6": {
           "type": "image_picker",
           "settings": {
-            "half_width": false,
+            "half_width": true,
             "image_first": true,
             "info_block_background_color": "#fbf5f4",
             "info_block_color": "#000000",
