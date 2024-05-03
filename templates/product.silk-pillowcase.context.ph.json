@@ -1,1 +1,26 @@
-{"parent":"product.silk-pillowcase.json","context":{"market":"ph"},"sections":{"main":{"settings":{},"blocks":{"sale_countdown_nH4rnn":{"settings":{"topic":"APRIL SALE"}}}}}}
+{
+  "parent": "product.silk-pillowcase.json",
+  "context": {
+    "market": "ph"
+  },
+  "sections": {
+    "main": {
+      "settings": {
+      },
+      "blocks": {
+        "sale_countdown_nH4rnn": {
+          "settings": {
+            "topic": "APRIL SALE"
+          }
+        }
+      }
+    },
+    "multicolumn_XXj866": {
+      "settings": {
+        "show_shadow": true
+      },
+      "blocks": {
+      }
+    }
+  }
+}
