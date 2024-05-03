@@ -12,7 +12,7 @@
         "text_mmJb9V": {
           "type": "text",
           "settings": {
-            "text": "<strong>SKIN SIDEKICK™ PILLOWCASE<\/strong>",
+            "text": "<strong>MULBERRY SILK PILLOWCASES<\/strong>",
             "text_style": "body"
           }
         },
@@ -43,7 +43,7 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/lp-4-4-sale-banner.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/frontpage-2024-top-1_e0dbecdc-3c04-42ab-ace2-dabb735e9e1a.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/frontpage-new-hero-banner-1500x1881_8825b1c2-1b35-46dd-b2f8-0a06547a6845.jpg",
         "image_overlay_opacity": 0,
         "image_height": "large",
         "desktop_content_position": "middle-left",
@@ -103,13 +103,14 @@
         "image_picker_UAmcrY": {
           "type": "image_picker",
           "settings": {
+            "half_width": false,
             "image_first": true,
             "info_block_background_color": "#fdf5ed",
             "info_block_color": "#000000",
             "image": "shopify:\/\/shop_images\/pink-pillow-kylie-web.jpg",
             "caption": "",
             "title": "<p><strong>Snoozy x Kylie<\/strong><\/p>",
-            "content": "<p>Hi lovlies! Join me on this dreamy adventure to prioritize self-love and true beauty sleep.<\/p><p>- Kylie Verzosa<\/p><p><\/p>",
+            "content": "<p>Introducing our very first collab, we've partnered with superstar, Kylie Verzosa, known for her class and always feeling and looking the best. Spice up your bedroom with beautiful silk essentials, and experience true beauty sleep.<\/p>",
             "author": "",
             "button_label": "Learn More →",
             "button_link": "shopify:\/\/products\/snoozy-pillow",
@@ -388,6 +389,7 @@
         "image_picker_pr3GDC": {
           "type": "image_picker",
           "settings": {
+            "half_width": false,
             "image_first": false,
             "info_block_background_color": "#c0e0f7",
             "info_block_color": "#000000",
