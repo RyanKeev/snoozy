@@ -4720,7 +4720,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   line-height: 23px;
   letter-spacing: -1px;
   color: #000;
-  text-transform: uppercase;
+  text-transform: none;
 }
 
 .section-image-content .item-title p{
