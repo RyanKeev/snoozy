@@ -244,29 +244,29 @@
     "collection_list_AJMB9L": {
       "type": "collection-list",
       "blocks": {
-        "featured_collection_D48A3k": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "all-products"
-          }
-        },
         "featured_collection_WJzPVz": {
           "type": "featured_collection",
           "settings": {
-            "collection": "frontpage"
+            "collection": "19-momme-pillowcase"
           }
         },
         "featured_collection_8W3D8L": {
           "type": "featured_collection",
           "settings": {
-            "collection": "other-products"
+            "collection": "22-momme-pillowcase"
+          }
+        },
+        "featured_collection_D48A3k": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "all-products"
           }
         }
       },
       "block_order": [
-        "featured_collection_D48A3k",
         "featured_collection_WJzPVz",
-        "featured_collection_8W3D8L"
+        "featured_collection_8W3D8L",
+        "featured_collection_D48A3k"
       ],
       "settings": {
         "show_desktop": false,
@@ -276,7 +276,7 @@
         "image_ratio": "adapt",
         "columns_desktop": 3,
         "color_scheme": "scheme-3e67202a-86ca-4178-993a-f35dbb979c3c",
-        "show_view_all": true,
+        "show_view_all": false,
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 0,
