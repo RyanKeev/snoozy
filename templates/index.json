@@ -2,6 +2,7 @@
   "sections": {
     "pagefly-home": {
       "type": "pagefly-home",
+      "disabled": true,
       "settings": {
       }
     },
@@ -196,6 +197,7 @@
 
       ],
       "settings": {
+        "show_shadow": false,
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
@@ -334,6 +336,7 @@
         "column_ahxBa9"
       ],
       "settings": {
+        "show_shadow": false,
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
@@ -537,6 +540,7 @@
         "column_Ac4CMf"
       ],
       "settings": {
+        "show_shadow": false,
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
@@ -660,6 +664,7 @@
         "column_PJDGf6"
       ],
       "settings": {
+        "show_shadow": false,
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": true,
