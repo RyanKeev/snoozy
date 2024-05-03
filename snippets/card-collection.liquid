@@ -8,7 +8,7 @@
   - extend_height: {Boolean} Card height extends to available container space. Default: false (optional)
   - wrapper_class: {String} Wrapper class for card (optional)
   - placeholder_image: {String} Placeholder image when collection is empty (optional)
-
+  - button_text : {String} text title
   Usage:
   {% render 'card-collection' %}
 {% endcomment %}
@@ -141,7 +141,7 @@
             style="align-self: flex-start;margin-top:15px;"
             href="{{ card_collection.url }}"
           >
-            Shop Here <span class="icon-wrap">{% render 'icon-arrow' %}</span>
+            {{ button_text }} <span class="icon-wrap">{% render 'icon-arrow' %}</span>
           </a>
           {%- if card_collection.featured_image == null and card_collection.description != blank -%}
             <p class="card__caption">
