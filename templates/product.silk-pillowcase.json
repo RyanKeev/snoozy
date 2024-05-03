@@ -434,6 +434,69 @@
         "section_title": ""
       }
     },
+    "rich_text_PyB7yH": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_wTck7F": {
+          "type": "heading",
+          "settings": {
+            "heading": "Snoozy Versus  Regular Pillowcases",
+            "heading_size": "h1"
+          }
+        }
+      },
+      "block_order": [
+        "heading_wTck7F"
+      ],
+      "settings": {
+        "show_desktop": false,
+        "show_mobile": false,
+        "desktop_content_position": "center",
+        "content_alignment": "center",
+        "color_scheme": "",
+        "full_width": true,
+        "padding_top": 64,
+        "padding_bottom": 4
+      }
+    },
+    "multicolumn_mNrjRH": {
+      "type": "multicolumn",
+      "blocks": {
+        "column_Cx8gQp": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/final_comparison.png",
+            "rating": "",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "column_Cx8gQp"
+      ],
+      "settings": {
+        "disabled_fullwidth": false,
+        "show_desktop": false,
+        "show_mobile": false,
+        "title": "",
+        "heading_size": "h1",
+        "image_width": "full",
+        "image_ratio": "adapt",
+        "columns_desktop": 3,
+        "column_alignment": "center",
+        "background_style": "none",
+        "button_label": "",
+        "button_link": "",
+        "color_scheme": "",
+        "columns_mobile": "1",
+        "swipe_on_mobile": false,
+        "padding_top": 0,
+        "padding_bottom": 36
+      }
+    },
     "8f25fb51-6152-4228-93dc-0f38bf14c7ff": {
       "type": "section-brand-logo",
       "blocks": {
@@ -640,6 +703,8 @@
     "rich_text_3kKKa6",
     "multicolumn_XXj866",
     "section_image_with_text_cgYrLq",
+    "rich_text_PyB7yH",
+    "multicolumn_mNrjRH",
     "8f25fb51-6152-4228-93dc-0f38bf14c7ff",
     "3d977cfe-9935-4362-bb26-63085b713377",
     "replo_silk_pillowcase_pdp_wpT88X",
