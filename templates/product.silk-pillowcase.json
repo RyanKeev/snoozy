@@ -278,7 +278,7 @@
         "heading_7crGEz": {
           "type": "heading",
           "settings": {
-            "heading": "Real Results <br\/> in Just 30 Days",
+            "heading": "Real Results <br> in Just 30 Days",
             "heading_size": "h1"
           }
         },
@@ -347,6 +347,7 @@
         "column_g7ceMb"
       ],
       "settings": {
+        "show_shadow": false,
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
@@ -440,7 +441,7 @@
         "heading_wTck7F": {
           "type": "heading",
           "settings": {
-            "heading": "Snoozy Versus  Regular Pillowcases",
+            "heading": "Snoozy Versus <br>  Regular Pillowcases",
             "heading_size": "h1"
           }
         }
@@ -478,6 +479,7 @@
         "column_Cx8gQp"
       ],
       "settings": {
+        "show_shadow": false,
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
@@ -485,7 +487,7 @@
         "heading_size": "h1",
         "image_width": "full",
         "image_ratio": "adapt",
-        "columns_desktop": 3,
+        "columns_desktop": 1,
         "column_alignment": "center",
         "background_style": "none",
         "button_label": "",
