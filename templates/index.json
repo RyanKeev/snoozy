@@ -361,7 +361,7 @@
       "settings": {
         "title": "<em>Shop our best sellers<\/em>",
         "heading_size": "h1",
-        "description": "<h5>Made from a unique blend of satin & spandex, Argie feels identical to silk - but half the price<\/h5>",
+        "description": "<p>12 iterations later, we've created the perfect pillowcase - from fit to functionality - and new products to supplement your beauty sleep.<\/p>",
         "show_description": false,
         "description_style": "subtitle",
         "collection": "all-products",
@@ -492,8 +492,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/frontpage-ugc-2_1c54edfb-06ed-4453-b2e6-b4ccec3b7246.jpg",
             "rating": "<strong>Sam<\/strong>",
-            "title": "<strong>\"I'M ACTUALLY SHOCKED<\/strong>",
-            "text": "<p>\"I’m actually so shocked at how well this pillowcase has helped my skin in such a short period of time\"<\/p>",
+            "title": "<em><strong>\"Sleeping will and protecting my skin with Snoozy\"<\/strong><\/em>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -503,8 +503,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/frontpage-ugc-1.jpg",
             "rating": "<strong>Zoe<\/strong>",
-            "title": "<strong>\"THANK YOU\"<\/strong>",
-            "text": "<p>\"It's working for me. I normally get acne on the side I sleep & my skin has been so clear. Thank you thank you thank you\"<\/p>",
+            "title": "<em><strong>\"Thank you to Snoozy for a good, worry-free night's sleep\"<\/strong><\/em>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
@@ -514,8 +514,8 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/frontpage-ugc-3.jpg",
             "rating": "<strong>Kezia<\/strong>",
-            "title": "\"<strong>IT'S ONLY BEEN A WEEK\"<\/strong>",
-            "text": "<p>Have seen an improvement and it's only been a week!<\/p>",
+            "title": "<em><strong>\"Thank you, thank you, thank you!\"<\/strong><\/em>",
+            "text": "",
             "link_label": "",
             "link": ""
           }
