@@ -307,7 +307,7 @@
 
 </script>
 
-{% render 'pagefly-app-header' %}{{ content_for_header }}</head>
+{% render 'pagefly-app-header' %}{{ content_for_header }}{% include 'pagefly-app-header' %}</head>
 
   <body data-route="{{ template.name }}" class="gradient{% if settings.animations_hover_elements != 'none' %} animate--hover-{{ settings.animations_hover_elements }}{% endif %}">
     <a class="skip-to-content-link button visually-hidden" href="#MainContent">
