@@ -29,7 +29,7 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                {{ block.settings.heading | escape }}
+                <p>{{ block.settings.heading | escape }}</p>
               </h2>
             {%- when 'caption' -%}
               <p
