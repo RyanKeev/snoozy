@@ -248,19 +248,22 @@
         "featured_collection_WJzPVz": {
           "type": "featured_collection",
           "settings": {
-            "collection": "19-momme-pillowcase"
+            "collection": "19-momme-pillowcase",
+            "button_text": "Save 25% Now"
           }
         },
         "featured_collection_8W3D8L": {
           "type": "featured_collection",
           "settings": {
-            "collection": "22-momme-pillowcase"
+            "collection": "22-momme-pillowcase",
+            "button_text": "Save 38% Now"
           }
         },
         "featured_collection_D48A3k": {
           "type": "featured_collection",
           "settings": {
-            "collection": "all-products"
+            "collection": "all-products",
+            "button_text": "Shop here"
           }
         }
       },
@@ -396,8 +399,8 @@
             "info_block_background_color": "#c0e0f7",
             "info_block_color": "#000000",
             "caption": "",
-            "title": "<p><strong>The Beauty of Unboxing<\/strong><\/p>",
-            "content": "<p>Every Snoozy product comes in beautiful, specially made packaging that's designed to make unboxing feel like a luxurious experience, whether it's for you or someone special.<\/p>",
+            "title": "<p><em><strong>Repels Bacteria Like An Invisible Forcefield<\/strong><\/em><\/p>",
+            "content": "<p>Our pillowcases can have 1000x more bacteria than your toilet seat, shown to clog pores and trigger breakouts. Like an invisible forcefield, Argie's silver stops 99.7% of the nasties before they affect your skin.<\/p>",
             "author": "",
             "button_label": "Learn More →",
             "button_link": "shopify:\/\/products\/the-deep-sleep-mask",
@@ -405,7 +408,7 @@
             "before_text": "Before",
             "after_text": "After",
             "drag_initial_position": 50,
-            "video": "shopify:\/\/files\/videos\/202401190904.mp4",
+            "video": "shopify:\/\/files\/videos\/3f01789f15174b24bc27502d01c9547d (1)_639c4879-ee00-41b6-ab0e-eb63c7eb8349.mov",
             "show_benefits_block": false,
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
