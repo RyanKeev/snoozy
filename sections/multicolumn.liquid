@@ -62,7 +62,28 @@
             endif
           endfor
         -%}
-
+        <style>
+          .image-60-width {
+            width:60% !important;
+            height: auto !important;
+          }
+          .shadow-card {
+            height: 100% !important;
+            width: 90% !important;
+            box-shadow: 0 0 10px #cecece !important;
+            border-radius: 10px !important;
+          }
+          .background-none .multicolumn-card__image-wrapper {
+            margin-left: 0;
+            margin-right: 0;
+          }
+          @media (max-width: 768px) { 
+            .image-60-width {
+              width:100% !important;
+              height: auto !important;
+            }
+          }
+        </style>
         {%- for block in section.blocks -%}
           {%- assign empty_column = '' -%}
           {%- if block.settings.image == blank
@@ -72,18 +93,7 @@
           -%}
             {%- assign empty_column = ' multicolumn-list__item--empty' -%}
           {%- endif -%}
-          <style>
-            .image-60-width {
-              width:60% !important;
-              height: auto !important;
-            }
-            @media (max-width: 768px) { 
-              .image-60-width {
-                width:100% !important;
-                height: auto !important;
-              }
-            }
-          </style>
+
           <li
             id="Slide-{{ section.id }}-{{ forloop.index }}"
             class="multicolumn-list__item grid__item{% if section.settings.swipe_on_mobile %} slider__slide{% endif %}{% if section.settings.column_alignment == 'center' %} center{% endif %}{{ empty_column }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
@@ -119,9 +129,16 @@
                     (min-width: 750px) calc((100vw - {{ grid_space_tablet }}) * {{ image_width }} / {{ number_of_columns_mobile }}),
                     calc((100vw - {{ grid_space_mobile }}) * {{ image_width }} / {{ number_of_columns_mobile }})
                   {% endcapture %}
+                  {%- assign image_class = 'multicolumn-card__image' -%}
+                {%- if number_of_columns == 1 -%}
+                  {%- assign image_class = 'multicolumn-card__image image-60-width' -%}
+                {%- endif -%}
+                {%- if section.settings.show_shadow -%}
+                  {%- assign image_class = image_class | append: ' shadow-card' -%}
+              {%- endif -%}
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
-                      style="{% if number_of_columns == 1 %} padding-bottom: 100% !important; {% endif %} {% if section.settings.image_width == 'small' and section.settings.image_ratio == 'adapt' %} padding-bottom: 0; height:59px; {% elsif section.settings.image_ratio == 'adapt' %} padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%; {% else %} {% endif %}"
+                      style="{% if number_of_columns == 1 %} padding-bottom: 100% !important;{% endif %}{% if section.settings.image_width == 'small' and section.settings.image_ratio == 'adapt' %} padding-bottom: 0; height:59px; {% elsif section.settings.image_ratio == 'adapt' %} padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%; {% else %} {% endif %}"
                   >
                     {{
                       block.settings.image
@@ -130,7 +147,7 @@
                         loading: 'lazy',
                         widths: '50, 75, 100, 150, 200, 300, 400, 500, 750, 1000, 1250, 1500, 1750, 2000, 2250, 2500, 2750, 3000, 3200',
                         sizes: sizes,
-                        class: 'multicolumn-card__image {% if number_of_columns == 1 %} image-60-width {% endif %}'
+                        class: image_class
                     }}
                   </div>
                 </div>
@@ -219,6 +236,12 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "show_shadow",
+      "default": false,
+      "label": "Show shadow card"
+    },
     {
       "type": "checkbox",
       "id": "disabled_fullwidth",
