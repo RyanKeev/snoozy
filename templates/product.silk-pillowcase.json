@@ -347,7 +347,7 @@
         "column_g7ceMb"
       ],
       "settings": {
-        "show_shadow": false,
+        "show_shadow": true,
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
