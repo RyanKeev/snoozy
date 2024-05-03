@@ -21,7 +21,6 @@
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
-              {% assign heading = section.settings.heading | replace: "\n", "<br/>" %}
               <h2
                 class="rich-text__heading rte inline-richtext {{ block.settings.heading_size }}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
@@ -30,7 +29,7 @@
                   style="--animation-order: {{ forloop.index }};"
                 {% endif %}
               >
-                <p>{{ heading | escape }}</p>
+                {{ block.settings.heading | newline_to_br }}
               </h2>
             {%- when 'caption' -%}
               <p
@@ -201,7 +200,7 @@
       "limit": 3,
       "settings": [
         {
-          "type": "richtext",
+          "type": "text",
           "id": "heading",
           "default": "Talk about your brand",
           "label": "t:sections.rich-text.blocks.heading.settings.heading.label"
