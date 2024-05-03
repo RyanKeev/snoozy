@@ -2,6 +2,7 @@
   "sections": {
     "pagefly-home": {
       "type": "pagefly-home",
+      "disabled": true,
       "settings": {
       }
     },
@@ -489,8 +490,8 @@
         "column_a4izQ8": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Samantha_before_after_2_81ca1fc7-806c-4be0-9844-4bd33f997ce5.webp",
-            "rating": "<strong>Samantha B.<\/strong>",
+            "image": "shopify:\/\/shop_images\/frontpage-ugc-2_1c54edfb-06ed-4453-b2e6-b4ccec3b7246.jpg",
+            "rating": "<strong>Sam<\/strong>",
             "title": "<strong>\"I'M ACTUALLY SHOCKED<\/strong>",
             "text": "<p>\"I’m actually so shocked at how well this pillowcase has helped my skin in such a short period of time\"<\/p>",
             "link_label": "",
@@ -500,8 +501,8 @@
         "column_pjCGdy": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Captura_de_pantalla_2022-03-20_a_las_10.42.11_a._m..webp",
-            "rating": "<strong>Rebecca C.<\/strong>",
+            "image": "shopify:\/\/shop_images\/frontpage-ugc-1.jpg",
+            "rating": "<strong>Zoe<\/strong>",
             "title": "<strong>\"THANK YOU\"<\/strong>",
             "text": "<p>\"It's working for me. I normally get acne on the side I sleep & my skin has been so clear. Thank you thank you thank you\"<\/p>",
             "link_label": "",
@@ -511,8 +512,8 @@
         "column_CBbKqE": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Grace_Colarusso_2.webp",
-            "rating": "<strong>Grace C.<\/strong>",
+            "image": "shopify:\/\/shop_images\/frontpage-ugc-3.jpg",
+            "rating": "<strong>Kezia<\/strong>",
             "title": "\"<strong>IT'S ONLY BEEN A WEEK\"<\/strong>",
             "text": "<p>Have seen an improvement and it's only been a week!<\/p>",
             "link_label": "",
