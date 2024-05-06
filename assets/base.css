@@ -4843,9 +4843,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     margin: 10px -10px 0;
   }
 
-  .section-image-content .benefits-item{
+  /* .section-image-content .benefits-item{
     width: 33.33%;
-  }
+  } */
 
   .section-image-content .info-block{
     gap: 2px;
@@ -4861,9 +4861,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     grid-column-gap: 30px;
   }
 
-  .section-image-content .benefits-item{
+  /* .section-image-content .benefits-item{
     padding: 0 10px;
-  }
+  } */
 
   .section-image-content .item-author{
     font-size: 22px;
@@ -4884,9 +4884,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     justify-content: center;
   }
 
-  .section-image-content .benefits-item{
+  /* .section-image-content .benefits-item{
     width: 25%;
-  }
+  } */
 }
 
 /*=========================
@@ -6348,7 +6348,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 @media (max-width: 749px) {
   #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .media-block {
-    order: 1 !important;
+    order: 1 !important; 
   }
   #Banner-template--22565320327473__image_banner_WqKFzc h2,
   #Banner-template--22565320327473__image_banner_WqKFzc p,
