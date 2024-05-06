@@ -4782,12 +4782,11 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   display: flex;
   align-items: center;
   justify-content: center;
-
-  width: 50px;
+  width: 100%;
   min-width: 50px;
-  height: 50px;
-  background: var(--background-image);
-  border-radius: 50%;
+  height: auto;
+  /* background: var(--background-image); */
+  /* border-radius: 50%; */
   overflow: hidden;
 }
 
