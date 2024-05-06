@@ -226,6 +226,9 @@
 									{% endif %}
 								</div>
 							{% endif %}
+							{% if block.settings.note != blank %}
+								<p class="note">{{ block.settings.note }} </p>
+							{% endif %}
 						</div>
 					</div>
 				{% endfor %}
@@ -310,6 +313,11 @@
 					"id": "info_block_color",
 					"label": "Info Text Color",
 					"default": "#000000"
+				},
+				{
+					"type": "text",
+					"id": "note",
+					"label":"note"
 				},
 				{
 					"type": "image_picker",
