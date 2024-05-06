@@ -6361,6 +6361,14 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   #name-placeholder {
   color: #1a1a1a !important;
   }
+  .note {
+    font-size: 13px !important;
+    font-family: inherit !important;
+    text-align: center !important;
+    color: inherit !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
 }
 
 .icon-color {
