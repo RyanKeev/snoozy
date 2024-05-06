@@ -1671,7 +1671,7 @@ a.product__text {
     padding: 0 !important;
   }
 }
-#MainProduct-template--22565319016753__main .loox-rating-content .loox-rating-label {
+ .product-main-section .loox-rating-content .loox-rating-label {
   display: none;
 }
 
