@@ -13,7 +13,7 @@
 						#shopify-section-{{ section.id }} .wrap-rounded {
 							height: 100%;
 							background: {{ block.settings.info_block_background_color }};
-							padding: 5rem;
+							padding: 0 40px;
 							align-items: left;
 							justify-content: start;
 							border-radius: 5%;
@@ -22,7 +22,23 @@
 							-ms-border-radius: 5%;
 							-o-border-radius: 5%;
 						}
+					  
+						#shopify-section-{{ section.id }} .button {
+							font-size: 16px !important;
+							text-transform: none !important;
+							font-weight: 600 !important;
+							background-color: {{ block.settings.info_block_color  }} !important;
+							color: #fff !important;
+					  	}
+						#section-image-with-text-template--22385366565169__section_image_with_text_4cXHF9 .wrap-rounded {
+							padding: 0 40px !important;
+							justify-content: center !important;
+						}
 						@media (max-width: 750px){
+							#section-image-with-text-template--22385366565169__section_image_with_text_4cXHF9 .wrap-rounded {
+								padding: 0px !important;
+								justify-content: center !important;
+							}
 							#shopify-section-{{ section.id }} .wrap-rounded {
 								height: 100%;
 								background: {{ block.settings.info_block_background_color }};
@@ -41,13 +57,20 @@
 							text-align: left;
 							margin: 7px 0;
 						}
-						#shopify-section-{{ section.id }} .box-content p {
+						#shopify-section-{{ section.id }} .info-color h1 {
+							color: {{ block.settings.info_block_color  }} !important;
 							text-align: left;
-							font-size: inherit !important;
-							font-family: inherit !important;
-							text-align: inherit !important;
-							margin: 0 !important;
-							padding: 0 !important;
+							margin: 7px 0;
+							line-height: 1.1em !important;
+							letter-spacing: 0px !important;
+							text-transform: none !important;
+						}
+						#shopify-section-{{ section.id }} .box-content p {
+							font-size: 18px !important;
+							line-height: 1.6em !important;
+							letter-spacing: 0px !important;
+							text-transform: none !important;
+							font-weight: 400 !important;
 							color: {{ block.settings.info_block_color  }} !important;
 						}
 						.info-block .item-title h1 {

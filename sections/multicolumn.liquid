@@ -12,12 +12,53 @@
       padding-top: {{ section.settings.padding_top }}px;
       padding-bottom: {{ section.settings.padding_bottom }}px;
     }
+    #shopify-section-template--22385366565169__multicolumn_r6bHAD .multicolumn {
+      padding-left: 20px;
+      padding-right: 20px;
   }
+  #shopify-section-template--22385366565169__multicolumn_nTcJzB .multicolumn {
+    padding-left: 0px;
+      padding-right: 0px;
+  }
+  #shopify-section-template--22385366565169__multicolumn_nTcJzB .multicolumn-list li {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  }
+   @media screen and (max-width: 750px) {
+    #shopify-section-template--22385366565169__multicolumn_MMebUB .heading-title {
+      font-size: inherit !important;
+      font-family: inherit !important;
+      text-align: inherit !important;
+      color: inherit !important;
+      margin: 0 !important;
+      padding: 0 !important;
+      font-weight: 300 !important;
+    }
+    #shopify-section-template--22385366565169__multicolumn_MMebUB .multicolumn-card__info,#shopify-section-template--22385366565169__multicolumn_MMebUB .multicolumn-list li{
+      padding-left: 0;
+      padding-right: 0;
+    }
+    #shopify-section-template--22385366565169__multicolumn_r6bHAD .multicolumn {
+      padding-left: 10px;
+      padding-right: 10px;
+  }
+  #shopify-section-template--22385366565169__multicolumn_nTcJzB .multicolumn {
+    padding-left: 0px;
+      padding-right: 0px;
+  }
+  #shopify-section-template--22385366565169__multicolumn_nTcJzB .multicolumn-list li {
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+   }
+
   .disabled-fullwidth {
       width: 95%;
       margin: 0 auto;
       border-radius: 15px;
   }
+
 {%- endstyle -%}
 
 {%- liquid
@@ -69,7 +110,7 @@
           }
           .shadow-card {
             height: 100% !important;
-            width: 90% !important;
+            width: 100% !important;
             box-shadow: 0 0 10px #cecece !important;
             border-radius: 10px !important;
           }
@@ -86,12 +127,12 @@
             font-weight: 400 !important;
           }
           .heading-title {
-            font-size: 32px !important;
+            font-size: 31px !important;
             line-height: 1.1em !important;
             letter-spacing: 0px !important;
             color: #1a1a1a !important;
             text-transform: none !important;
-            font-weight: 400 !important;
+            margin-top:20px;
           }
           @media (max-width: 768px) { 
             .image-60-width {
@@ -154,7 +195,7 @@
               {%- endif -%}
                   <div
                     class="media media--transparent media--{{ section.settings.image_ratio }}"
-                      style="{% if number_of_columns == 1 %} padding-bottom: 100% !important;{% endif %}{% if section.settings.image_width == 'small' and section.settings.image_ratio == 'adapt' %} padding-bottom: 0; height:59px; {% elsif section.settings.image_ratio == 'adapt' %} padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%; {% else %} {% endif %}"
+                      style="{% if number_of_columns == 1 %} padding-bottom: 100% !important;{% endif %}{% if section.settings.image_width == 'small' and section.settings.image_ratio == 'adapt' %} padding-bottom: 0; height:45px; {% elsif section.settings.image_ratio == 'adapt' %} padding-bottom: {{ 1 | divided_by: highest_ratio | times: 100 }}%; {% else %} {% endif %}"
                   >
                     {{
                       block.settings.image
@@ -168,8 +209,8 @@
                   </div>
                 </div>
               {%- endif -%}
-              <div class="multicolumn-card__info" style="text-wrap: pretty;">
-                {% if block.settings.rating  %}
+              <div class="multicolumn-card__info">
+                {% if block.settings.rating != ''  %}
                   <h3  class="inline-richtext rating" >
                     {{ block.settings.rating }}
                   </h3>
