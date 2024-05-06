@@ -20,6 +20,12 @@
             "text_style": "uppercase"
           }
         },
+        "custom_liquid_MQbiPd": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": ""
+          }
+        },
         "title": {
           "type": "title",
           "settings": {
@@ -236,6 +242,7 @@
       },
       "block_order": [
         "vendor",
+        "custom_liquid_MQbiPd",
         "title",
         "loox-rating",
         "price",
