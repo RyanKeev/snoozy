@@ -1629,6 +1629,9 @@ a.product__text {
     max-width: 1300px;
     margin: 0 auto;
   }
+  #shopify-section-template--22565319016753__section_image_with_text_cgYrLq .benefits-item  .img-wrap img {
+    width: 30% !important;
+  }
 }
 @media (max-width: 749px){
   #MainProduct-template--22565319016753__main .container {
@@ -1659,6 +1662,10 @@ a.product__text {
   #MainProduct-template--22565319016753__main .product {
     max-width: 1300px;
     margin: 0 auto;
+  }
+
+  #shopify-section-template--22565319016753__section_image_with_text_cgYrLq .benefits-item  .img-wrap img {
+    width: 50% !important;
   }
 }
 #MainProduct-template--22565319016753__main .loox-rating-content .loox-rating-label {
