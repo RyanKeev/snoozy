@@ -155,37 +155,37 @@
 								<div class="benefits-layout" style="--background-image: {{ block.settings.benefits_background }}">
 									{% if block.settings.benefits_image_one != blank and block.settings.benefits_title_one != blank %}
 										<div class="benefits-item">
-											<div class="icon-wrap img-wrap">
-												{{ block.settings.benefits_image_one | image_url: width: 50 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
-											</div>
 											<div class="benefits-title">{{ block.settings.benefits_title_one }}</div>
+											<div class="icon-wrap img-wrap">
+												{{ block.settings.benefits_image_one | image_url: width: 100 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
+											</div>
 										</div>
 									{% endif %}
 
 									{% if block.settings.benefits_image_two != blank and block.settings.benefits_title_two != blank %}
 										<div class="benefits-item">
-											<div class="icon-wrap img-wrap">
-												{{ block.settings.benefits_image_two | image_url: width: 50 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
-											</div>
 											<div class="benefits-title">{{ block.settings.benefits_title_two }}</div>
+											<div class="icon-wrap img-wrap">
+												{{ block.settings.benefits_image_two | image_url: width: 100 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
+											</div>
 										</div>
 									{% endif %}
 
 									{% if block.settings.benefits_image_third != blank and block.settings.benefits_title_third != blank %}
 										<div class="benefits-item">
+											<div class="benefits-title">{{ block.settings.benefits_title_third }}</div>
 											<div class="icon-wrap img-wrap">
 												{{ block.settings.benefits_image_third | image_url: width: 50 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
 											</div>
-											<div class="benefits-title">{{ block.settings.benefits_title_third }}</div>
 										</div>
 									{% endif %}
 
 									{% if block.settings.benefits_image_fourth != blank and block.settings.benefits_title_fourth != blank %}
 										<div class="benefits-item">
+											<div class="benefits-title">{{ block.settings.benefits_title_fourth }}</div>
 											<div class="icon-wrap img-wrap">
 												{{ block.settings.benefits_image_fourth | image_url: width: 50 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
 											</div>
-											<div class="benefits-title">{{ block.settings.benefits_title_fourth }}</div>
 										</div>
 									{% endif %}
 								</div>
