@@ -6356,6 +6356,14 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .benefits-layout {
     display: grid !important; 
   }
+  #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .benefits-layout {
+    font-size: 28px !important;
+    line-height: 1.2em !important;
+    letter-spacing: 0px !important;
+    color: #1a1a1a !important;
+    text-transform: none !important;
+    display: grid !important; 
+  }
   #Banner-template--22565320327473__image_banner_WqKFzc h2,
   #Banner-template--22565320327473__image_banner_WqKFzc p,
   #name-placeholder {
