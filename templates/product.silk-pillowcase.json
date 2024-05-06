@@ -148,7 +148,7 @@
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "icon_1": "box",
+            "icon_1": "arg_map-pin",
             "heading_1": "Free shipping <br>\non all orders",
             "icon_2": "none",
             "image_2": "shopify:\/\/shop_images\/afterpay_1611164662.png",
