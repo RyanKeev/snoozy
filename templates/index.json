@@ -340,7 +340,7 @@
       ],
       "settings": {
         "show_shadow": false,
-        "disabled_fullwidth": false,
+        "disabled_fullwidth": true,
         "show_desktop": false,
         "show_mobile": false,
         "title": "",
