@@ -4776,6 +4776,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   gap: 12px;
   width: 100%;
   padding: 0 5px;
+  grid-column: span 6 / span 6;
 }
 
 .section-image-content .icon-wrap{
