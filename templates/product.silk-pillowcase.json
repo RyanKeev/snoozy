@@ -148,12 +148,12 @@
           "type": "icon-with-text",
           "settings": {
             "layout": "horizontal",
-            "icon_1": "arg_map-pin",
+            "icon_1": "arg_cart",
             "heading_1": "Free shipping <br>\non all orders",
             "icon_2": "none",
             "image_2": "shopify:\/\/shop_images\/afterpay_1611164662.png",
             "heading_2": "150 nights <br>\nMoney Back Guarantee",
-            "icon_3": "map_pin",
+            "icon_3": "arg_map-pin",
             "heading_3": "We ship from <br>\nMetro Manila"
           }
         },
