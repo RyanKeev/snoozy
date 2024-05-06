@@ -163,7 +163,7 @@
 									{% endif %}
 
 									{% if block.settings.benefits_image_two != blank and block.settings.benefits_title_two != blank %}
-										<div class="benefits-item">
+										<div class="benefits-item col-span-6">
 											<div class="benefits-title">{{ block.settings.benefits_title_two }}</div>
 											<div class="icon-wrap img-wrap">
 												{{ block.settings.benefits_image_two | image_url: width: 250 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
