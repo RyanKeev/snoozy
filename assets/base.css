@@ -4762,6 +4762,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   grid-column-gap: 19px;
   width: 100%;
   grid-template-columns: repeat(12, minmax(0, 1fr));
+  padding-top:  30px!important;
 }
 
 .section-image-content .benefits-layout:empty{
