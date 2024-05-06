@@ -1323,7 +1323,7 @@ a.product__text {
 
 /* Icon with text */
 .icon-with-text {
-  --icon-size: calc(var(--font-heading-scale) * 3rem);
+  --icon-size: calc(var(--font-heading-scale) * 4rem);
   --icon-spacing: calc(var(--font-heading-scale) * 1rem);
 }
 
