@@ -1635,10 +1635,13 @@ a.product__text {
 
 }
 @media (max-width: 749px){
+  #ProductInfo-template--22565319016753__main {
+    margin-top: 40px;
+  }
   #MainProduct-template--22565319016753__main .loox-rating-label {
     display: none;
   }
-  
+
   #MainProduct-template--22565319016753__main .product__title h1 {
     text-decoration: none;
     line-height: 1.2em !important;
