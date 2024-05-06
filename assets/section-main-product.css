@@ -1630,7 +1630,7 @@ a.product__text {
     margin: 0 auto;
   }
   #MainProduct-template--22565319016753__main .container {
-    padding: 50px 15px 0;
+    padding: 50px 15px 0 !important;
   }
 
 }
