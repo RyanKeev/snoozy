@@ -1664,3 +1664,7 @@ a.product__text {
 #MainProduct-template--22565319016753__main .loox-rating-content .loox-rating-label {
   display: none;
 }
+
+#section-image-with-text-template--22565319016753__section_image_with_text_cgYrLq .benefits-title {
+  order: 2;
+}
