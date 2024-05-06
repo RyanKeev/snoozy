@@ -6356,7 +6356,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .benefits-layout {
     display: grid !important; 
   }
-  #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .benefits-layout {
+  #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .benefits-layout h1 {
     font-size: 28px !important;
     line-height: 1.2em !important;
     letter-spacing: 0px !important;
