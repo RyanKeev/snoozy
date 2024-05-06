@@ -1667,6 +1667,9 @@ a.product__text {
   #shopify-section-template--22565319016753__section_image_with_text_cgYrLq .benefits-item  .img-wrap img {
     width: 50% !important;
   }
+  #shopify-section-template--22565319016753__section_image_with_text_cgYrLq .wrap-rounded {
+    padding: 0 !important;
+  }
 }
 #MainProduct-template--22565319016753__main .loox-rating-content .loox-rating-label {
   display: none;
