@@ -6343,5 +6343,5 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 #shopify-section-template--22385366565169__section_image_with_text_kyhAzY {
-  margin-top: -50px;
+  margin-top: -50px !important;
 }
