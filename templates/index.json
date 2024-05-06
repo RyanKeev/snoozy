@@ -92,7 +92,7 @@
         "rating": "★★★★★ (4.8)",
         "content": "<p>based 2,814 Reviews<\/p>",
         "background_start_color": "#f35f90",
-        "background_end_color": "#fdfbf7",
+        "background_end_color": "rgba(0,0,0,0)",
         "text_color": "#ffffff",
         "padding": 50
       }
