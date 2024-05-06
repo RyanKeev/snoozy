@@ -1635,9 +1635,9 @@ a.product__text {
 
 }
 @media (max-width: 749px){
-  /* #MainProduct-template--22565319016753__main .loox-rating-label {
+  #MainProduct-template--22565319016753__main .loox-rating-label {
     display: none;
-  } */
+  }
 
   #MainProduct-template--22565319016753__main .product__title h1 {
     text-decoration: none;
