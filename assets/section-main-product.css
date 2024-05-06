@@ -1629,15 +1629,10 @@ a.product__text {
     max-width: 1300px;
     margin: 0 auto;
   }
-
 }
 @media (max-width: 749px){
   #MainProduct-template--22565319016753__main .container {
     padding: 50px 15px 0 !important;
-  }
-
-  #MainProduct-template--22565319016753__main .loox-rating-content .loox-rating-label {
-    display: none;
   }
   
   #MainProduct-template--22565319016753__main .product__title h1 {
@@ -1665,4 +1660,7 @@ a.product__text {
     max-width: 1300px;
     margin: 0 auto;
   }
+}
+#MainProduct-template--22565319016753__main .loox-rating-content .loox-rating-label {
+  display: none;
 }
