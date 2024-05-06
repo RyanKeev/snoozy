@@ -369,7 +369,7 @@
         "description_style": "subtitle",
         "collection": "all-products",
         "products_to_show": 10,
-        "columns_desktop": 3,
+        "columns_desktop": 4,
         "full_width": true,
         "show_view_all": true,
         "view_all_style": "solid",
