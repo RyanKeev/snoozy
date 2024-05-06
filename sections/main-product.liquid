@@ -106,7 +106,7 @@
               <div class="open-grid open-grid-cols-12 jumbotron" style="place-items: center;">
                 {% if block.settings.jumbotron_image %}
                 <div class="col-span-4" style="border:none;text-align:center;">
-                  <img src="{{ block.settings.jumbotron_image | image_url: 'master' }}" alt="logo-sleep" width="auto" height="auto" style="max-width:110px;width:100%;" />
+                  <img src="{{ block.settings.jumbotron_image | img_url: 'master' }}" alt="logo-sleep" width="auto" height="auto" style="max-width:110px;width:100%;" />
                 </div>
                 {% endif %}
                 <div class="col-span-8" style="display:flex; flex-direction:column;padding:5px;">
@@ -587,7 +587,7 @@
             <div class="open-grid open-grid-cols-12 jumbotron" style="place-items: center;">
               {% if block.settings.jumbotron_image %}
               <div class="col-span-4" style="border:none;text-align:center;">
-                <img src="{{ block.settings.jumbotron_image | image_url: 'master' }}" alt="logo-sleep" width="auto" height="auto" style="max-width:110px;width:100%;" />
+                <img src="{{ block.settings.jumbotron_image | img_url: 'master' }}" alt="logo-sleep" width="auto" height="auto" style="max-width:110px;width:100%;" />
               </div>
               {% endif %}
               <div class="col-span-8" style="display:flex; flex-direction:column;padding:5px;">
