@@ -6354,7 +6354,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   }
 }
 @media (max-width: 749px) {
-  #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .media-block {
+  _text_4cXHF9 .media-block {
     order: 1 !important; 
   }
   #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .benefits-layout {
