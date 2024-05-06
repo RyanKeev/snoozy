@@ -1632,7 +1632,7 @@ a.product__text {
 }
 @media (max-width: 749px){
   #MainProduct-template--22565319016753__main .container {
-    padding: 50px 15px 0 !important;
+    padding: 0px 15px 0 !important;
   }
   
   #MainProduct-template--22565319016753__main .product__title h1 {
