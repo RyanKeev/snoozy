@@ -4794,7 +4794,6 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 .section-image-content .benefits-title{
   font-size: 15px;
   line-height: 1.2;
-  text-transform: uppercase;
   line-height: 1.4em !important;
   letter-spacing: 0px !important;
   color: #1a1a1a !important;
