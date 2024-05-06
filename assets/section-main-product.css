@@ -1606,25 +1606,51 @@ a.product__text {
 }
 
 /* ARGIE */
-#MainProduct-template--22565319016753__main .product__title h1 {
-  text-decoration: none;
-  line-height: 1.2em !important;
-  font-style: normal;
-  font-size: 38px !important;
-  color: #121212 !important;
-  letter-spacing: normal !important;
+@media (min-width: 750px){
+  #MainProduct-template--22565319016753__main .product__title h1 {
+    text-decoration: none;
+    line-height: 1.2em !important;
+    font-style: normal;
+    font-size: 38px !important;
+    color: #121212 !important;
+    letter-spacing: normal !important;
+  }
+  #MainProduct-template--22565319016753__main .product .product__info-wrapper,
+  #MainProduct-template--22565319016753__main .product .grid__item.product__media-wrapper
+  {
+    padding: 0 31px !important;
+  }
+  
+  #MainProduct-template--22565319016753__main .product__text {
+    font-size: 14px;
+  }
+  
+  #MainProduct-template--22565319016753__main .product {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 }
-#MainProduct-template--22565319016753__main .product .product__info-wrapper,
-#MainProduct-template--22565319016753__main .product .grid__item.product__media-wrapper
-{
-  padding: 0 31px !important;
-}
-
-#MainProduct-template--22565319016753__main .product__text {
-  font-size: 14px;;
-}
-
-#MainProduct-template--22565319016753__main .product {
-  max-width: 1300px;
-  margin: 0 auto;
+@media (max-width: 749px){
+  #MainProduct-template--22565319016753__main .product__title h1 {
+    text-decoration: none;
+    line-height: 1.2em !important;
+    font-style: normal;
+    font-size: 28px !important;
+    color: #121212 !important;
+    letter-spacing: -.5 !important;
+  }
+  #MainProduct-template--22565319016753__main .product .product__info-wrapper,
+  #MainProduct-template--22565319016753__main .product .grid__item.product__media-wrapper
+  {
+    padding: 0!important;
+  }
+  
+  #MainProduct-template--22565319016753__main .product__text {
+    font-size: 14px;
+  }
+  
+  #MainProduct-template--22565319016753__main .product {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
 }
