@@ -158,6 +158,7 @@
                 </a>
               </div>
               {% comment %} lox reviews widget {% endcomment %}
+              {% if product.metafields.loox.num_reviews  %}
               <div class="loox-rating-wrapper">
                 <div class="loox-rating" data-id="{{ product.id }}" data-rating="{{ product.metafields.loox.avg_rating }}" data-raters="{{ product.metafields.loox.num_reviews }}">
                 </div>
@@ -165,7 +166,7 @@
                   {{ product.metafields.loox.num_reviews }} reviews
                 </div>
               </div>
-              
+              {% endif %}
             </div>
             {% comment %} {%- when 'title' -%}
               <div class="product__title" {{ block.shopify_attributes }}>
