@@ -267,10 +267,10 @@
           "background": "#f25f90",
           "background_gradient": "",
           "text": "#ffffff",
-          "button": "#f25f90",
-          "button_label": "#ffffff",
+          "button": "#fff",
+          "button_label": "#1a1a1a",
           "secondary_button_label": "#ffffff",
-          "shadow": "#fff"
+          "shadow": "#ffffff"
         }
       },
       "accent-2": {
