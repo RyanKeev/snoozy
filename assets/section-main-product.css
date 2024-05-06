@@ -1651,9 +1651,11 @@ a.product__text {
   #MainProduct-template--22565319016753__main .product .grid__item.product__media-wrapper
   {
     padding: 0!important;
+  }
+  #MainProduct-template--22565319016753__main .product .product__info-wrapper {
     margin-top: 40px !important;
   }
-  
+
   #MainProduct-template--22565319016753__main .product__text {
     font-size: 14px;
   }
