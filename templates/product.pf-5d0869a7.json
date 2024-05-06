@@ -3,7 +3,7 @@
     "0cd25557-8cef-42a6-991a-1a57bf82fee5": {
       "type": "product-title-intro",
       "settings": {
-        "show_section": true,
+        "show_section": false,
         "section_background": "#ffffff",
         "title_intro": "Sleep Better, Sleep Cooler, and Wake Up With Clear Skin and Beautiful Hair!"
       }
@@ -69,6 +69,7 @@
         "a019fdc3-26d6-4ade-90fd-e1c7c0cc5707": {
           "type": "variant_swatches",
           "settings": {
+            "variant_swatches_title": "Size & Color"
           }
         },
         "quantity_selector": {
@@ -321,10 +322,18 @@
         "8eada7a7-8ac6-49c4-a915-89c8c3944abe": {
           "type": "image_picker",
           "settings": {
+            "half_width": false,
+            "image_first": true,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "note": "",
             "image": "shopify:\/\/shop_images\/snoozy-pillowcase-dreams-web.jpg",
+            "caption": "Add a tagline",
             "title": "<p>VISIBLE RESULTS IN ONLY 4 NIGHTS<\/p>",
             "content": "<p>Wake up with smooth, wrinkle-free skin and perfectly styled, nurtured hair. Sleeping on silk minimizes friction, offering real results and undeniable benefits. Not only will your skin be clean and hair styled for the day but nurtured for the long run too. Feel and see the difference in just a few nights. Your beauty routine will get so much easier, without lifting a finger.<\/p>",
             "author": "",
+            "button_label": "Button label",
+            "button_link": "",
             "active_before_after": false,
             "before_text": "Before",
             "after_text": "After",
@@ -340,10 +349,18 @@
         "3fc130a5-f914-4b25-98e1-2af2472e55e1": {
           "type": "image_picker",
           "settings": {
+            "half_width": false,
+            "image_first": true,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "note": "",
             "image": "shopify:\/\/shop_images\/snoozy-kylie-goodday-2-block.jpg",
+            "caption": "Add a tagline",
             "title": "<p>“A good day starts with <em>a good beauty sleep...<\/em><\/p>",
             "content": "<p>Ever since I've changed to my silk pillowcase, everything has changed. My day is immediately better! My skin feels clean, my hair is not an utter mess (girls, you know what I mean), and I'm just refreshed differently. It's simple, but it's the truth. And I truly want you to experience it as well!<\/p>",
             "author": "Kylie Verzosa",
+            "button_label": "Button label",
+            "button_link": "",
             "active_before_after": false,
             "before_text": "Before",
             "after_text": "After",
@@ -359,10 +376,18 @@
         "1dd3c7fd-8a95-4614-8a76-2edc4e0c894b": {
           "type": "image_picker",
           "settings": {
+            "half_width": false,
+            "image_first": true,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "note": "",
             "image": "shopify:\/\/shop_images\/snoozy-productpage-before-after-2.jpg",
+            "caption": "Add a tagline",
             "title": "<p>FROM MESSY TO FABOULOUS<\/p>",
             "content": "<p>Bid farewell to bedhead and frizzy hair! Snoozy makes mornings a breeze by preventing friction and maintaining natural oils. Effortlessly beautiful, tangle-free hair is just one sleep away. It's not magic, it's Snoozy.<\/p>",
             "author": "",
+            "button_label": "Button label",
+            "button_link": "",
             "active_before_after": true,
             "before_image": "shopify:\/\/shop_images\/snoozy-hair-before-web_c1c2125a-17ca-46d2-80fa-dbcdb1b73ee1.jpg",
             "after_image": "shopify:\/\/shop_images\/snoozy-hair-after-web_c0068a5c-f636-4472-950a-30e27907153f.jpg",
@@ -384,10 +409,18 @@
         "73962bad-734b-42ea-80a8-20ad64a4ce5b": {
           "type": "image_picker",
           "settings": {
+            "half_width": false,
+            "image_first": true,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "note": "",
             "image": "shopify:\/\/shop_images\/snoozy-kylie-skinsaving-block.jpg",
+            "caption": "Add a tagline",
             "title": "<p>SKIN SAVING BENEFITS<\/p>",
             "content": "<p>Sleeping on silk is the best-kept beauty secret to silky smooth skin. Don't irritate your skin and lose nutrients to absorbent pillowcases like cotton and satin. Silk lets you get rid of sleep wrinkles while it preserves your skin's moisture. It's time to wake up like the glowing beauty you are.<\/p>",
             "author": "",
+            "button_label": "Button label",
+            "button_link": "",
             "active_before_after": false,
             "before_text": "Before",
             "after_text": "After",
@@ -456,7 +489,8 @@
         "show_section_decor": false,
         "section_background": "#ffffff",
         "section_decor_color": "#f7f3eb",
-        "section_title": "<p>WE MAKE IT <em>EASY<\/em> FOR YOU<\/p>"
+        "section_title": "<p>WE MAKE IT <em>EASY<\/em> FOR YOU<\/p>",
+        "count_column": "three-columns"
       }
     },
     "bc577967-8f81-475a-ae47-b2105ef65942": {
@@ -532,10 +566,18 @@
         "6ca9b236-ed09-41b2-8b51-680f889c054e": {
           "type": "image_picker",
           "settings": {
+            "half_width": false,
+            "image_first": true,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "note": "",
             "image": "shopify:\/\/shop_images\/snoozy-kylie-web-11.jpg",
+            "caption": "Add a tagline",
             "title": "<p>\"Snoozy has been <em>life-changing<\/em> to say the least...<\/p>",
             "content": "<p>Silk pillowcases transformed my nights – waking up with smoother skin and frizz-free hair has been an absolute game-changer.\"<\/p>",
             "author": "Kylie Verzosa",
+            "button_label": "Button label",
+            "button_link": "",
             "active_before_after": false,
             "before_text": "Before",
             "after_text": "After",
@@ -714,7 +756,8 @@
             "aggregated": false,
             "limit": 20,
             "hide_thumbnails": false,
-            "maxwidth": 1080
+            "maxwidth": 1080,
+            "is_sample": true
           }
         }
       },
