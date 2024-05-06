@@ -468,7 +468,7 @@
         "heading_fgWAVd": {
           "type": "heading",
           "settings": {
-            "heading": "Snoozy In The Wild",
+            "heading": "<i>Snoozy In The Wild<\/i>",
             "heading_size": "h1"
           }
         }
