@@ -543,7 +543,7 @@
         "column_Ac4CMf"
       ],
       "settings": {
-        "show_shadow": false,
+        "show_shadow": true,
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
@@ -569,7 +569,7 @@
         "heading_zQkKFM": {
           "type": "heading",
           "settings": {
-            "heading": "Made For Everyone",
+            "heading": "<i>Made For Everyone<\/i>",
             "heading_size": "h1"
           }
         }
