@@ -1665,6 +1665,6 @@ a.product__text {
   display: none;
 }
 
-#section-image-with-text-template--22565319016753__section_image_with_text_cgYrLq .benefits-title {
-  order: 2;
+#shopify-section-template--22565319016753__section_image_with_text_cgYrLq .benefits-title {
+  order: 2 !important;
 }
