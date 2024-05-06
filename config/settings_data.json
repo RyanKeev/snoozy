@@ -266,7 +266,7 @@
         "settings": {
           "background": "#f25f90",
           "background_gradient": "",
-          "text": "#ffffff",
+          "text": "#fff",
           "button": "#fff",
           "button_label": "#1a1a1a",
           "secondary_button_label": "#ffffff",
