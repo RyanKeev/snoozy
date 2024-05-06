@@ -198,6 +198,13 @@
 
 							{% if block.settings.show_benefits_block %}
 								<div class="benefits-layout" style="--background-image: {{ block.settings.benefits_background }}">
+									{% if block.settings.general_benefit_image %}
+										<div class="benefits-item col-span-12">
+											<div class="icon-wrap img-wrap">
+												{{ block.settings.general_benefit_image | image_url: width: 250 | image_tag: alt: "benefits icon", loading: 'lazy', class: 'lazyload' }}
+											</div>
+										</div>
+									{% endif %}
 									{% if block.settings.benefits_image_one != blank and block.settings.benefits_title_one != blank %}
 										<div class="benefits-item col-span-6">
 											<div class="benefits-title">{{ block.settings.benefits_title_one }}</div>
@@ -431,6 +438,11 @@
 					"id": "show_benefits_block",
 					"label": "Show Benefits block",
 					"default": false
+				},
+				{
+					"type": "image_picker",
+					"id": "general_benefit_image",
+					"label": "General Image for Benefit"
 				},
 				{
 					"type": "color",
