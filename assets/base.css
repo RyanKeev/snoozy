@@ -4799,6 +4799,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   color: #1a1a1a !important;
   text-transform: none !important;
   font-weight: 600 !important;
+  margin-bottom: 10px;
 }
 
 .section-image-content .section-decor svg path{
