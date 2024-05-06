@@ -203,7 +203,7 @@
                 {%- endif -%} {% endcomment %}
 
             {%- when 'price' -%}
-              <div class="price-wrapper" style="margin-top:20px;">
+              <div class="price-wrapper" style="margin-top:15px;">
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                   {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
                 </div>
