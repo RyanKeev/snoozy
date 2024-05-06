@@ -6270,6 +6270,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
         .col-span-10 {
           grid-column: span 10 / span 10;
         }
+        .col-span-12 {
+          grid-column: span 12 / span 12;
+        }
         
         .items-center {
           height: 100%;
