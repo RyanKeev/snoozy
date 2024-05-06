@@ -6342,3 +6342,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   color: #1a1a1a !important;
   }
 }
+
+.icon-color {
+  color : #fc95cf !important;
+}
