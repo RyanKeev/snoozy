@@ -558,7 +558,7 @@
         "button_link": "shopify:\/\/blogs\/news",
         "color_scheme": "",
         "columns_mobile": "1",
-        "swipe_on_mobile": false,
+        "swipe_on_mobile": true,
         "padding_top": 16,
         "padding_bottom": 36
       }
