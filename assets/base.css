@@ -5415,7 +5415,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 .section-faq .section-title{
-  text-align: center;
+  text-align: left;
 }
 
 .section-faq  .faq-layout{
