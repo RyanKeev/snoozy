@@ -4660,6 +4660,14 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   grid-row-gap: 20px;
 }
 
+.section-image-content .chess-item .media-block img{
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
+}
+
 .section-image-content .media-block .media-video-wrap{
   /* padding-top: 65%; */
   width: 100%;
