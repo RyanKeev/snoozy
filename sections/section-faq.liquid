@@ -1,6 +1,6 @@
 
 {% if section.settings.show_section %}
-	<section class="section-faq {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
+	<section id="faqCenter" class="section-faq {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
 		<div class="container">
 			{% if section.settings.section_title != blank %}
 				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
