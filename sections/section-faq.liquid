@@ -1,12 +1,13 @@
 
 {% if section.settings.show_section %}
 	<section id="faqCenter" class="section-faq {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
-		<div class="container">
-			{% if section.settings.section_title != blank %}
-				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
-			{% endif %}
-
-			<div class="faq-layout">
+		<div class="container open-grid open-grid-cols">
+			<div class="col-6">
+				{% if section.settings.section_title != blank %}
+					<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
+				{% endif %}
+			</div>
+			<div class="faq-layout col-6">
 				{%- for block in section.blocks -%}
 					{% if block.settings.faq_question != blank and block.settings.faq_answer != blank  %}
 						<div class="faq-item">
@@ -59,6 +60,11 @@
 			"type": "text",
 			"id": "section_title",
 			"label": "Section Title"
+		},
+		{
+			"type": "text",
+			"id": "section_description",
+			"label": "Section Description"
 		}
 	],
 	"blocks": [
