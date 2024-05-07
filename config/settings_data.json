@@ -233,11 +233,11 @@
         "settings": {
           "background": "#ffffff",
           "background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1) 100%, rgba(241, 235, 226, 1) 100%)",
-          "text": "#2e2a39",
-          "button": "#000000",
+          "text": "#1a1a1a",
+          "button": "#1a1a1a",
           "button_label": "#ffffff",
-          "secondary_button_label": "#000000",
-          "shadow": "#2e2a39"
+          "secondary_button_label": "#1a1a1a",
+          "shadow": "#1a1a1a"
         }
       },
       "background-2": {
