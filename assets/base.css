@@ -4402,9 +4402,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   }
 
   product-variant-swatches .product-form__input label.color-swatch{
-    width: 35px;
-    min-width: 35px;
-    height: 36px;
+    width: 50px;
+    min-width: 50px;
+    height: 51px;
   }
 
   product-variant-swatches .product-form__input{
