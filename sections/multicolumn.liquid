@@ -49,7 +49,7 @@
       </div>
     {%- endunless -%}
     {% if section.settings.image_banner %}
-    <img src="{{ section.settings.image_banner | img_url: 'master' }}" alt="banner-img" width="auto" height="auto"/>
+    <img class="multicolumn-center-banner" src="{{ section.settings.image_banner | img_url: 'master' }}" alt="banner-img" width="auto" height="auto"/>
     {% endif %}
     <slider-component class="slider-mobile-gutter">
       <ul
