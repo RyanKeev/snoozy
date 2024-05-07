@@ -52,7 +52,9 @@
     {% if option_handle == 'color' %}
         <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
                class="product-variant-swatch color-swatch" style="background: {{ shop.metaobjects.color[value_handle].color }}" title="{{ value }}">
-               {{ shop.metaobjects.color[value_handle].image }}
+            </label>
+        <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+               class="product-variant-swatch color-swatch" style="background-image: url('{{ "beige.png" | asset_url }}')" title="{{ value }}">
             </label>
     {% else %}
         <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">{{ value -}}
