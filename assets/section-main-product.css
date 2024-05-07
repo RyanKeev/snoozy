@@ -54,7 +54,7 @@
 
 @media screen and (min-width: 990px) {
   .product__info-wrapper {
-    padding: 0 40px 0 40px;
+    padding: 0 31px 0 31px;
   }
 
   .product--large:not(.product--no-media) .product__media-wrapper {
@@ -1323,7 +1323,7 @@ a.product__text {
 
 /* Icon with text */
 .icon-with-text {
-  --icon-size: calc(var(--font-heading-scale) * 3rem);
+  --icon-size: calc(var(--font-heading-scale) * 4rem);
   --icon-spacing: calc(var(--font-heading-scale) * 1rem);
 }
 
@@ -1603,4 +1603,94 @@ a.product__text {
   .recipient-form > input[type='checkbox']:checked + label .icon-checkmark {
     border: none;
   }
+}
+
+/* ARGIE */
+@media (min-width: 750px){
+  #MainProduct-template--22565319016753__main .product__title h1 {
+    text-decoration: none;
+    line-height: 1.2em !important;
+    font-style: normal;
+    font-size: 38px !important;
+    color: #121212 !important;
+    letter-spacing: normal !important;
+  }
+  #MainProduct-template--22565319016753__main .product .product__info-wrapper,
+  #MainProduct-template--22565319016753__main .product .grid__item.product__media-wrapper
+  {
+    padding: 0 31px !important;
+  }
+  
+  #MainProduct-template--22565319016753__main .product__text {
+    font-size: 14px;
+  }
+  
+  #MainProduct-template--22565319016753__main .product {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+  #shopify-section-template--22565319016753__section_image_with_text_cgYrLq .benefits-item  .img-wrap img {
+    width: 30% !important;
+  }
+}
+@media (max-width: 749px){
+  #MainProduct-template--22565319016753__main .container {
+    padding: 0px 15px 0 !important;
+  }
+  
+  #MainProduct-template--22565319016753__main .product__title h1 {
+    text-decoration: none;
+    line-height: 1.2em !important;
+    font-style: normal;
+    font-size: 28px !important;
+    color: #121212 !important;
+    letter-spacing: -.5 !important;
+  }
+  #MainProduct-template--22565319016753__main .product .product__info-wrapper,
+  #MainProduct-template--22565319016753__main .product .grid__item.product__media-wrapper
+  {
+    padding: 0!important;
+  }
+  #MainProduct-template--22565319016753__main .product .product__info-wrapper {
+    margin-top: 40px !important;
+  }
+
+  #MainProduct-template--22565319016753__main .product__text {
+    font-size: 14px;
+  }
+  
+  #MainProduct-template--22565319016753__main .product {
+    max-width: 1300px;
+    margin: 0 auto;
+  }
+
+  #shopify-section-template--22565319016753__section_image_with_text_cgYrLq .benefits-item  .img-wrap img {
+    width: 50% !important;
+  }
+  #shopify-section-template--22565319016753__section_image_with_text_cgYrLq .wrap-rounded {
+    padding: 0 !important;
+  }
+}
+ .product-main-section .loox-rating-content .loox-rating-label {
+  display: none;
+}
+
+#shopify-section-template--22565319016753__section_image_with_text_cgYrLq .benefits-title {
+  order: 2 !important;
+  font-size: 18px !important;
+  line-height: 1.3em !important;
+  letter-spacing: 0px !important;
+  color: #000 !important;
+  text-transform: none !important;
+}
+
+#shopify-section-template--22565319016753__section_image_with_text_cgYrLq .info-color h1 {
+  text-align: center !important;
+}
+#shopify-section-template--22565319016753__section_image_with_text_cgYrLq .chess-item .media-block img{
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
 }
