@@ -5431,6 +5431,8 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 @media (max-width:749px){
   .faq-text {
     text-align: center;
+  }
+  #faq-center .col-span-6 {
     grid-column: span 12 / span 12 !important;
   }
   .section-faq .section-title{
