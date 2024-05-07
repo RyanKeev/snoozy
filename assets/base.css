@@ -4257,9 +4257,10 @@ product-variant-swatches fieldset{
 }
 
 product-variant-swatches .form__label{
-  font-size: 14px;
+  font-size: 16px;
   margin: 0 0 10px!important;
   padding: 0;
+  font-weight: 600;
 }
 
 product-variant-swatches .product-form__input{
