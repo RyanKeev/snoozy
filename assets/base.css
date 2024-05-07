@@ -5431,7 +5431,11 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 .section-faq .faq-item{
   background: #ffffff;
   border: 1px solid #a1a1a14d;
-  border-radius: 6px;
+  border-radius: 0px;
+  -webkit-border-radius: 0px;
+  -moz-border-radius: 0px;
+  -ms-border-radius: 0px;
+  -o-border-radius: 0px;
 }
 
 .section-faq .faq-item.active .icon svg {
