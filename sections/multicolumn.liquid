@@ -77,6 +77,9 @@
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
+    {% if section.settings.image_banner %}
+      style="text-align:center;"
+    {% endif %}
   >
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
@@ -90,6 +93,9 @@
         {%- endif -%}
       </div>
     {%- endunless -%}
+    {% if section.settings.image_banner %}
+      <img class="multicolumn-center-banner" src="{{ section.settings.image_banner | img_url: 'master' }}" alt="banner-img" width="auto" height="auto"/>
+      {% endif %}
     <slider-component class="slider-mobile-gutter">
       <ul
         class="multicolumn-list contains-content-container grid grid--{{ section.settings.columns_mobile }}-col-tablet-down grid--{{ section.settings.columns_desktop }}-col-desktop{% if show_mobile_slider %} slider slider--mobile grid--peek{% endif %}"
@@ -294,6 +300,11 @@
     "groups": ["header", "footer"]
   },
   "settings": [
+    {
+      "type": "image_picker",
+      "id": "image_banner",
+      "label": "Image center banner"
+    },
     {
       "type": "checkbox",
       "id": "show_shadow",
