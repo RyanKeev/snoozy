@@ -50,12 +50,15 @@
            {% if option.selected_value == value %}checked{% endif %} {% if option_disabled %}class="disabled"{% endif %}
            data-option-handle="{{ option_handle }}">
     {% if option_handle == 'color' %}
-        {% comment %} <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
-               class="product-variant-swatch color-swatch" style="background: {{ shop.metaobjects.color[value_handle].color }}" title="{{ value }}">
-            </label> {% endcomment %}
-        <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
-               class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
-        </label>
+        {% if shop.metaobjects.color[value_handle].image  %}
+            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+                class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+            </label>
+        {% else %}
+            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+                class="product-variant-swatch color-swatch" style="background: {{ shop.metaobjects.color[value_handle].color }}" title="{{ value }}">
+            </label>
+        {% endif %}
     {% else %}
         <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">{{ value -}}
             {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
