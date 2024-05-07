@@ -438,6 +438,7 @@
         },
         "image_picker_WpAiTw": {
           "type": "image_picker",
+          "disabled": true,
           "settings": {
             "half_width": true,
             "image_first": false,
@@ -456,7 +457,7 @@
             "after_text": "After",
             "drag_initial_position": 50,
             "show_benefits_block": true,
-            "benefits_background": "#FFFFFF",
+            "benefits_background": "#ffffff",
             "benefits_image_one": "shopify:\/\/shop_images\/snoozy-fewer-pores-icon.png",
             "benefits_title_one": "title one",
             "benefits_image_two": "shopify:\/\/shop_images\/snoozy-eliminate-bacteria-icon.png",
