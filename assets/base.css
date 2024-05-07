@@ -5463,7 +5463,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     color: inherit !important;
     margin: 0 !important;
     padding: 0 !important;
+    margin-bottom: 28px !important;
   }
+  
   #faqCenter .container {
     gap: inherit;
   }
