@@ -401,9 +401,9 @@
             "show_benefits_block": true,
             "benefits_background": "rgba(0,0,0,0)",
             "benefits_image_one": "shopify:\/\/shop_images\/snoozy-eliminate-bacteria-icon.png",
-            "benefits_title_one": "Bacteria naturally   eliminated",
+            "benefits_title_one": "Bacteria naturally <br> eliminated",
             "benefits_image_two": "shopify:\/\/shop_images\/snoozy-fewer-pores-icon.png",
-            "benefits_title_two": "Fewer clogged   pores and breakouts",
+            "benefits_title_two": "Fewer clogged <br> pores and breakouts",
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
