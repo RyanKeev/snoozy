@@ -56,6 +56,7 @@
         <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
                class="product-variant-swatch color-swatch" style="background-image: url('{{ "beige.png" | asset_url }}'); background-size: cover;" title="{{ value }}">
             </label>
+            {{ value_handle }}
     {% else %}
         <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">{{ value -}}
             {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
