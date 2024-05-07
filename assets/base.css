@@ -5424,8 +5424,14 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     text-transform: none !important;
     font-weight: 600 !important;
   }
+  .faq-text {
+    text-align: left;
+  }
 }
 @media (max-width:749px){
+  .faq-text {
+    text-align: center;
+  }
   .section-faq .section-title{
     font-size: 34px !important;
     line-height: 1.2em !important;
