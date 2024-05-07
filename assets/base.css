@@ -2758,6 +2758,7 @@ details[open] > .header__menu-item .icon-caret {
   justify-content: space-between;
   padding: 0.8rem 2.4rem;
   text-align: left;
+  font-weight: 400;
 }
 
 .header__submenu .header__submenu .header__menu-item {
