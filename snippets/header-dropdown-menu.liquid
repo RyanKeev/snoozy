@@ -50,7 +50,9 @@
                           id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                           class="header__menu-item link link--text list-menu__item focus-inset caption-large"
                         >
-                          <span>{{ childlink.title | escape }}</span>
+                          {% comment %} <span> {% endcomment %}
+                            {{ childlink.title | escape }}
+                          {% comment %} </span> {% endcomment %}
                           {% render 'icon-caret' %}
                         </summary>
                         <ul
