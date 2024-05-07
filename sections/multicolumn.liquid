@@ -35,6 +35,9 @@
     {% if settings.animations_reveal_on_scroll %}
       data-cascade
     {% endif %}
+    {% if section.settings.image_banner %}
+      style="text-align:center;"
+    {% endif %}
   >
     {%- unless section.settings.title == blank -%}
       <div class="title-wrapper-with-link title-wrapper--self-padded-mobile title-wrapper--no-top-margin">
