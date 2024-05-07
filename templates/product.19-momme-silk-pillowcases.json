@@ -387,7 +387,7 @@
             "info_block_background_color": "#fbf5f4",
             "info_block_color": "#000000",
             "note": "",
-            "image": "shopify:\/\/shop_images\/433527531_700796275314809_7357413864218591350_n.jpg",
+            "image": "shopify:\/\/shop_images\/snoozy-science-expained-19-momme.jpg",
             "caption": "",
             "title": "<h1>The Science Explained<\/h1>",
             "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
@@ -649,7 +649,8 @@
         "show_section": true,
         "show_section_decor": true,
         "section_background": "#f6b1df",
-        "section_title": "Have a Question? We Have Answers"
+        "section_title": "Have a Question? We Have Answers",
+        "section_description": ""
       }
     },
     "replo_silk_pillowcase_pdp_wpT88X": {
