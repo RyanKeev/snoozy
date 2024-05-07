@@ -65,7 +65,7 @@
 
 <script>
     // Assign the Liquid data to a JavaScript variable
-    var colorMetaobject = {{ shop.metaobjects.color }};
+    var colorMetaobject = {{ shop.metaobjects | json }};
     
     // Log the value of the metaobject to the console
     console.log('Color Metaobject:', colorMetaobject);
