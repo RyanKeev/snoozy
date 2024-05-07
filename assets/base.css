@@ -3564,9 +3564,16 @@ div[data-animated="true"] > div{
 
 @media (min-width: 992px) {
   .section-title{
-    font-size: 40px;
-    line-height: 36px;
-    margin: 0 0 24px;
+    text-align: left;
+    font-size: 38px !important;
+    line-height: 1.2em !important;
+    letter-spacing: 0px !important;
+    color: #000 !important;
+    text-transform: none !important;
+    font-weight: 600 !important;
+    /* font-size: 40px; */
+    /* line-height: 36px; */
+    /* margin: 0 0 24px; */
   }
 
   .box-content p{
