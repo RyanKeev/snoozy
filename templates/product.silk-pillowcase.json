@@ -465,6 +465,7 @@
       "blocks": {
         "column_Cx8gQp": {
           "type": "column",
+          "disabled": true,
           "settings": {
             "image": "shopify:\/\/shop_images\/final_comparison.png",
             "rating": "",
@@ -479,6 +480,7 @@
         "column_Cx8gQp"
       ],
       "settings": {
+        "image_banner": "shopify:\/\/shop_images\/snoozy-table-smaller.jpg",
         "show_shadow": false,
         "disabled_fullwidth": false,
         "show_desktop": false,

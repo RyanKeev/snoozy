@@ -6294,3 +6294,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   margin-top: 5px; /* Adjust margin as needed */
   display: block; /* Ensure the label is on its own line */
 }
+
+@media (max-width: 749px){
+  .multicolumn-center-banner {
+    width: 100%;
+  }
+}
