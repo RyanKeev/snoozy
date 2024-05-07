@@ -35,8 +35,12 @@
                   <li>
                     {%- if childlink.links == blank -%}
                       <a
+                        id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                         href="{{ childlink.url }}"
-           
+                        class="header__menu-item list-menu__item link link--text focus-inset caption-large{% if childlink.current %} list-menu__item--active{% endif %}"
+                        {% if childlink.current %}
+                          aria-current="page"
+                        {% endif %}
                       >
                         {{ childlink.title | escape }}
                       </a>
@@ -46,9 +50,9 @@
                           id="HeaderMenu-{{ link.handle }}-{{ childlink.handle }}"
                           class="header__menu-item link link--text list-menu__item focus-inset caption-large"
                         >
-                          {% comment %} <span> {% endcomment %}
+                          <span>
                             {{ childlink.title | escape }}
-                          {% comment %} </span> {% endcomment %}
+                          </span>
                           {% render 'icon-caret' %}
                         </summary>
                         <ul
@@ -86,13 +90,13 @@
               aria-current="page"
             {% endif %}
           >
-            <span
+            {% comment %} <span
               {%- if link.current %}
                 class="header__active-menu-item"
               {% endif %}
-            >
+            > {% endcomment %}
               {{- link.title | escape -}}
-            </span>
+            {% comment %} </span> {% endcomment %}
           </a>
         {%- endif -%}
       </li>
