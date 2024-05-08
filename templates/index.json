@@ -234,6 +234,7 @@
       "block_order": [
         "heading_cJMKYb"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -275,6 +276,7 @@
         "featured_collection_8W3D8L",
         "featured_collection_D48A3k"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
