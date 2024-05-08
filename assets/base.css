@@ -6557,7 +6557,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 
 @media (max-width: 749px) { 
   .order-image {
-    order: 1 !important;
+    order: 2 !important;
   }
   .order-info {
     order: 1 !important;
