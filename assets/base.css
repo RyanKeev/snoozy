@@ -4797,7 +4797,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 .section-image-content .item-author{
-  font-family: "ParisScript", sans-serif;
+  /* font-family: "ParisScript", sans-serif; */
+  font-family: var(--ff-harmonia-pro-regular);
+
   font-weight: normal;
   font-style: italic;
   font-size: 20px;
@@ -6126,8 +6128,8 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   align-items: center;
   justify-content: center;
   flex-grow: 1;
-
-  font-family: sans-serif;
+  font-family: var(--ff-harmonia-pro-regular);
+  /* font-family: sans-serif; */
   font-style: normal;
   font-weight: 500;
   color: #2E2A39;
