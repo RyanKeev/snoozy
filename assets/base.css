@@ -3441,7 +3441,7 @@ h1 {
 
   --ff-harmonia-regular: 'HarmoniaSansRegular';
   --fs-harmonia-regular: normal;
-  --fw-harmonia-regular: 500;
+  --fw-harmonia-regular: normal;
 
   --ff-harmonia-semibold: 'HarmoniaSansSemiBold';
   --fs-harmonia-semibold: normal;
@@ -3450,7 +3450,7 @@ h1 {
 
   --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular';
   --fs-harmonia-pro-regular: normal;
-  --fw-harmonia-pro-regular: normal;
+  --fw-harmonia-pro-regular: 500;
 
 
   --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold';
