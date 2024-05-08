@@ -28,15 +28,6 @@
 							margin: 7px 0;
 						}
 
-						#shopify-section-{{ section.id }} .info-color h1 {
-							color: {{ block.settings.info_block_color  }} !important;
-							text-align: left !important;
-							margin: 7px 0;
-							line-height: 1.1em !important;
-							letter-spacing: 0px !important;
-							text-transform: none !important;
-						}
-
 						@media (max-width: 749px){
 							#shopify-section-{{ section.id }} .button {
 								font-size: 16px !important;
@@ -86,6 +77,15 @@
 						}
 
 						@media (min-width: 750px){
+							#shopify-section-{{ section.id }} .info-color h1 {
+								color: {{ block.settings.info_block_color  }} !important;
+								text-align: {{ block.settings.content_alignment }} !important;
+								margin: 7px 0;
+								line-height: 1.1em !important;
+								letter-spacing: 0px !important;
+								text-transform: none !important;
+							}
+							
 							#shopify-section-{{ section.id }} .button {
 								font-size: 16px !important;
 								text-transform: none !important;
@@ -164,7 +164,7 @@
 								<div class="item-caption info-color center font-body-bold">{{ block.settings.caption }}</div>
 							{% endif %}
 							{% if block.settings.title != blank  %}
-								<div class="item-title info-color center" {% if section.settings.use_style_2_benefits_icon %} style="text-align:center !important;" {% endif %}>{{ block.settings.title }}</div>
+								<div class="item-title info-color center">{{ block.settings.title }}</div>
 							{% endif %}
 							{% if block.settings.content != blank  %}
 								<div class="item-content box-content info-color center">{{ block.settings.content }}</div>
@@ -326,6 +326,26 @@
 					"label": "Info Text Color",
 					"default": "#000000"
 				},
+				{
+					"type": "select",
+					"id": "content_alignment",
+					"options": [
+						{
+						"value": "left",
+						"label": "t:sections.rich-text.settings.content_alignment.options__1.label"
+						},
+						{
+						"value": "center",
+						"label": "t:sections.rich-text.settings.content_alignment.options__2.label"
+						},
+						{
+						"value": "right",
+						"label": "t:sections.rich-text.settings.content_alignment.options__3.label"
+						}
+					],
+					"default": "center",
+					"label": "t:sections.rich-text.settings.content_alignment.label"
+					},
 				{
 					"type": "text",
 					"id": "note",
