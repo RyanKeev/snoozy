@@ -115,7 +115,7 @@
 							}
 					</style>
 					<div class="{% if block.settings.video != blank or block.settings.image != blank %} {% if block.settings.image_first %} grid-cols-2-lap {% if block.settings.half_width %} chess-item {% endif %} {% else %} grid-cols-2-lap-reverse {% if block.settings.half_width %} chess-item {% endif %} {% endif %} {% else %} chess-item{% endif %}">
-						<div class="media-block" >
+						<div class="media-block order-info" style="order:{% if block.settings.image_first %} 1 {% else %} 2 {% endif %};">
 							{% if block.settings.active_before_after and block.settings.before_image and block.settings.after_image %}
 								<div class="before-after" style="--before-after-initial-drag-position: {{ block.settings.drag_initial_position }}%; --clip-path-offset: 0px;">
 									<div class="before-image-wrap">
@@ -157,7 +157,7 @@
 								</div>
 							{% endif %}
 						</div>
-						<div class="info-block wrap-rounded order-image-first">
+						<div class="info-block wrap-rounded order-image" style="order:{% if block.settings.image_first %} 2 {% else %} 1 {% endif %};">
 
 							{% if block.settings.caption != blank  %}
 								<div class="item-caption info-color center font-body-bold">{{ block.settings.caption }}</div>
