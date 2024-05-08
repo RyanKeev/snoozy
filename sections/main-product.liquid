@@ -15,7 +15,7 @@
   });
   
 </script>
-<section id="MainProduct-{{ section.id }}" class="section-{{ section.id }}-padding product-main-section" data-section="{{ section.id }}">
+<section id="MainProduct-{{ section.id }} {% if use_product_template_style_2 %} ProductTemplate2 {% endif %}" class="section-{{ section.id }}-padding product-main-section" data-section="{{ section.id }}">
   <div class="container">
   {{ 'countdown.css' | asset_url | stylesheet_tag }}
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
@@ -2659,6 +2659,12 @@
     }
   ],
   "settings": [
+    {
+      "type": "checkbox",
+      "id": "use_product_template_style_2",
+      "default": false,
+      "label": "Use Product Template Style 2?"
+    },
     {
       "type": "checkbox",
       "id": "enable_sticky_info",
