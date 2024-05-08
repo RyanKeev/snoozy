@@ -3416,6 +3416,10 @@ h1 {
   --ff-harmonia-semibold: 'HarmoniaSansSemiBold', sans-serif;
   --fs-harmonia-semibold: normal;
   --fw-harmonia-semibold: 600;
+
+  --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', sans-serif;
+  --fs-harmonia-bold: normal;
+  --fw-harmonia-bold: bold;
 }
 
 *{
