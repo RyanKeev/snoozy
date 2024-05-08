@@ -4560,7 +4560,8 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 .section-brand-content .ps-author{
-  font-family: "ParisScript", sans-serif;
+  /* font-family: "ParisScript", sans-serif; */
+  font-family: var(--ff-harmonia-pro-regular);
   font-weight: normal;
   font-style: italic;
   font-size: 20px;
