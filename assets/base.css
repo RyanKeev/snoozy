@@ -3364,13 +3364,19 @@ h1 {
 =========================*/
 @font-face {
   font-family: 'HarmoniaSansRegular';
-  src: url('./HarmoniaSansProCyrRegular.eot');
   src: url('./HarmoniaSansProCyrRegular.eot') format('embedded-opentype'),
-  url('./HarmoniaSansProCyr-Regular.woff2') format('woff2'),
   url('./HarmoniaSansProCyrRegular.woff2') format('woff2'),
   url('./HarmoniaSansProCyrRegular.woff') format('woff'),
   url('./HarmoniaSansProCyrRegular.ttf') format('truetype'),
   url('./HarmoniaSansProCyrRegular.svg#HarmoniaSansProCyrRegular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'HarmoniaSansProCyr-Regular';
+  src: url('./HarmoniaSansProCyr-Regular.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -3416,6 +3422,12 @@ h1 {
   --ff-harmonia-semibold: 'HarmoniaSansSemiBold', sans-serif;
   --fs-harmonia-semibold: normal;
   --fw-harmonia-semibold: 600;
+
+
+  --ff-harmonia-regular: 'HarmoniaSansProCyr-Regular', sans-serif;
+  --fs-harmonia-regular: normal;
+  --fw-harmonia-regular: normal;
+
 
   --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', sans-serif;
   --fs-harmonia-bold: normal;
