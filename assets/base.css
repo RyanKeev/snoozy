@@ -3398,10 +3398,12 @@ h1 {
 
 @font-face {
   font-family: 'HarmoniaSansProCyr-Bold';
-  src: url('./HarmoniaSansProCyr-Regular.woff2')) format('woff2'),
-       url('{{ "HarmoniaSansProCyr-Bold.woff" | asset_url }}') format('woff'),
-       url('{{ "HarmoniaSansProCyr-Bold.ttf" | asset_url }}') format('truetype'),
-       url('{{ "HarmoniaSansProCyr-Bold.otf" | asset_url }}') format('opentype');
+  src: url('./HarmoniaSansProCyr-Bold.woff2') format('woff2'),
+       url('./HarmoniaSansProCyr-Bold.woff') format('woff'),
+       url('./HarmoniaSansProCyr-Bold.ttf') format('truetype'),
+       url('./HarmoniaSansProCyr-Bold.otf') format('opentpe'),
+Bold
+
   font-weight: 700;
   font-style: normal;
 }
