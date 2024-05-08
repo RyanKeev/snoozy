@@ -3441,6 +3441,14 @@ h1 {
   --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', sans-serif;
   --fs-harmonia-bold: normal;
   --fw-harmonia-bold: bold;
+
+  --ff-harmonia-bold-italic: 'HarmoniaSansProCyr-Bold-Italic', sans-serif;
+  --fs-harmonia-bold-italic: normal;
+  --fw-italic-bold: bold;
+}
+font-family: HarmoniaSansProCyr-Regular, sans-serif !important;
+    font-weight: 300;
+
 }
 
 *{
