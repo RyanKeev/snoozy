@@ -3377,7 +3377,7 @@ h1 {
 @font-face {
   font-family: 'HarmoniaSansProCyr-Regular';
   src: url('./HarmoniaSansProCyr-Regular.woff2') format('woff2');
-  font-weight: 500;
+  font-weight: 400 !important;
   font-style: normal;
   font-display: swap;
 }
