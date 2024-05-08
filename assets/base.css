@@ -6547,9 +6547,18 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   .note {
     display: none;
   }
+  /* .order-image-first {
+    order: 1;
+  } */
+  /* .order-image-second {
+    order: 2;
+  } */
 }
 
 @media (max-width: 749px) { 
+  .order-image-first {
+    order: 1;
+  }
   .note {
     display: block;
     font-size: 13px !important;
@@ -6561,3 +6570,5 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     margin-top: 30px !important;
   }
 }
+
+
