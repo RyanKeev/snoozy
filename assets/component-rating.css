@@ -25,7 +25,9 @@
   font-size: calc(var(--font-size) * 1rem);
   line-height: 1;
   display: inline-block;
-  font-family: Times;
+  /* font-family: Times; */
+  font-family: var(--ff-harmonia-pro-regular);
+
   margin: 0;
 }
 
