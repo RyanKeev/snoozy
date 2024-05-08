@@ -3446,10 +3446,6 @@ h1 {
   --fs-harmonia-bold-italic: normal;
   --fw-italic-bold: bold;
 }
-font-family: HarmoniaSansProCyr-Regular, sans-serif !important;
-    font-weight: 300;
-
-}
 
 *{
   box-sizing: border-box;
