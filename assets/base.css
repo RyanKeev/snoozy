@@ -3429,6 +3429,7 @@ h1 {
        url('{{ "HarmoniaSansProCyr-Bold.otf" | asset_url }}') format('opentype');
   font-weight: 600;
   font-style: italic;
+  transform: skewX(5deg);
 }
 
 :root{
