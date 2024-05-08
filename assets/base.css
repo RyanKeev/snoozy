@@ -4740,6 +4740,22 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   object-fit: cover;
 }
 
+@media (min-width: 750px){
+  .section-image-content .media-block .image{
+    /* padding-top: 100%; */
+    width: 100%;
+    position: relative;
+    height: 473px;
+  }
+}
+@media (max-width: 749px){
+  .section-image-content .media-block .image{
+    /* padding-top: 100%; */
+    width: 100%;
+    position: relative;
+    height: 340px;
+  }
+}
 .section-image-content .media-block video img{
   width: 100%;
   height: auto;
@@ -4747,12 +4763,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   max-height: 100%;
 }
 
-.section-image-content .media-block .image{
-  /* padding-top: 100%; */
-  width: 100%;
-  position: relative;
-  height: 473px;
-}
+
 
 .section-image-content .media-block .image img{
   position: absolute;
