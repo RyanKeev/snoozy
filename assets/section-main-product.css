@@ -1619,6 +1619,7 @@ a.product__text {
     color: #121212 !important;
     letter-spacing: normal !important;
   }
+  
   #MainProduct-template--22580800684337__main .product .product__info-wrapper,
   #MainProduct-template--22580800684337__main .product .grid__item.product__media-wrapper
   {
@@ -1633,7 +1634,7 @@ a.product__text {
     max-width: 1300px;
     margin: 0 auto;
   }
-  
+
   #shopify-section-template--22580800684337__section_image_with_text_cgYrLq .benefits-item  .img-wrap img {
     width: 30% !important;
   }
