@@ -376,6 +376,7 @@
 
 .banner__text p {
   font-size: 18px;
+  font-family: var(--ff-harmonia-bold);
 }
 
 @media screen and (min-width: 750px) {
@@ -385,6 +386,7 @@
 
 .banner__text p {
   font-size: 18px;
+  font-family: var(--ff-harmonia-bold);
 }
 }
 
