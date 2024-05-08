@@ -3366,6 +3366,7 @@ h1 {
   font-family: 'HarmoniaSansRegular';
   src: url('./HarmoniaSansProCyrRegular.eot');
   src: url('./HarmoniaSansProCyrRegular.eot') format('embedded-opentype'),
+  url('./HarmoniaSansProCyr-Regular.woff2') format('woff2'),
   url('./HarmoniaSansProCyrRegular.woff2') format('woff2'),
   url('./HarmoniaSansProCyrRegular.woff') format('woff'),
   url('./HarmoniaSansProCyrRegular.ttf') format('truetype'),
@@ -3388,6 +3389,17 @@ h1 {
   font-style: normal;
   font-display: swap;
 }
+
+@font-face {
+  font-family: 'CustomFontName';
+  src: url('{{ "your-bold-font-file.woff2"| asset_url }}') format('woff2'),
+       url('{{ "your-bold-font-file.woff" | asset_url }}') format('woff'),
+       url('{{ "your-bold-font-file.ttf" | asset_url }}') format('truetype'),
+       url('{{ "your-bold-font-file.otf" | asset_url }}') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
 :root{
 /*  --heading-font-family: 'DidotRegular', sans-serif;
   --heading-font-weight: normal;
