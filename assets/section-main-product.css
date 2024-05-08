@@ -1636,7 +1636,7 @@ a.product__text {
     margin: 0 auto;
   }
 
-  #shopify-section-template--22580800684337__section_image_with_text_cgYrLq .benefits-item  .img-wrap img {
+  #SectionImageWithTextTemplate2 .benefits-item  .img-wrap img {
     width: 30% !important;
   }
 }
@@ -1672,15 +1672,15 @@ a.product__text {
     margin: 0 auto;
   }
 
-  #shopify-section-template--22580800684337__section_image_with_text_cgYrLq .benefits-item  .img-wrap img {
+  #SectionImageWithTextTemplate2 .benefits-item  .img-wrap img {
     width: 50% !important;
   }
-  #shopify-section-template--22580800684337__section_image_with_text_cgYrLq .wrap-rounded {
+  #SectionImageWithTextTemplate2 .wrap-rounded {
     padding: 0 !important;
   }
 }
 
-#shopify-section-template--22580800684337__section_image_with_text_cgYrLq .benefits-title {
+#SectionImageWithTextTemplate2 .benefits-title {
   order: 2 !important;
   font-size: 18px !important;
   line-height: 1.3em !important;
@@ -1689,13 +1689,13 @@ a.product__text {
   text-transform: none !important;
 }
 
-#shopify-section-template--22580800684337__section_image_with_text_cgYrLq .info-color h1, 
-#shopify-section-template--22580800684337__section_image_with_text_cgYrLq .info-color p,
-#shopify-section-template--22580800684337__section_image_with_text_cgYrLq .box-content p {
+#SectionImageWithTextTemplate2 .info-color h1, 
+#SectionImageWithTextTemplate2 .info-color p,
+#SectionImageWithTextTemplate2 .box-content p {
   text-align: center !important;
 }
 
-#shopify-section-template--22580800684337__section_image_with_text_cgYrLq .chess-item .media-block img{
+#SectionImageWithTextTemplate2 .chess-item .media-block img{
   border-radius: 0;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
