@@ -6548,7 +6548,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     display: none;
   }
   .order-image {
-    order: 2;
+    order: 1;
   } 
   .order-info {
     order: 1;
@@ -6560,7 +6560,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     order: 1;
   }
   .order-info {
-    order: 2;
+    order: 1;
   }
   .note {
     display: block;
