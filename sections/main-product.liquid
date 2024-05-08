@@ -15,7 +15,7 @@
   });
   
 </script>
-<section id="MainProduct-{{ section.id }} {% if use_product_template_style_2 %} ProductTemplate2 {% endif %}" class="section-{{ section.id }}-padding product-main-section" data-section="{{ section.id }}">
+<section id="MainProduct-{{ section.id }} {% if section.settings.use_product_template_style_2 %} ProductTemplate2 {% endif %}" class="section-{{ section.id }}-padding product-main-section" data-section="{{ section.id }}">
   <div class="container">
   {{ 'countdown.css' | asset_url | stylesheet_tag }}
   {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
