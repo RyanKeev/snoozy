@@ -1,7 +1,7 @@
 <script src="{{ 'section-before-after.js' | asset_url }}" defer="defer"></script>
 
 {% if section.settings.show_section %}
-	<section id="section-image-with-text-{{ section.id }} {% if section.settings.use_style_2_benefits_icon %} SectionImageWithTextTemplate2 {% endif %}" class="section-image-content {% if section.settings.show_section_decor %}has-decor{% endif %}" style="--background-section: {{ section.settings.section_background }}">
+	<section id="section-image-with-text-{{ section.id }}" class="section-image-content {% if section.settings.show_section_decor %}has-decor{% endif %} {% if section.settings.use_style_2_benefits_icon %} SectionImageWithTextTemplate2 {% endif %}" style="--background-section: {{ section.settings.section_background }}">
 		<div class="container">
 			{% if section.settings.section_title != blank %}
 				<h2 class="section-title h2-title">{{ section.settings.section_title }}</h2>
@@ -263,15 +263,15 @@
 	"settings": [
 		{
 			"type": "checkbox",
-			"id": "use_style_2_benefits_icon",
-			"label": "Use Style 2 Benefits Icon",
-			"default": false
-		},
-		{
-			"type": "checkbox",
 			"id": "show_section",
 			"label": "Show Section",
 			"default": true
+		},
+		{
+			"type": "checkbox",
+			"id": "use_style_2_benefits_icon",
+			"label": "Use Style 2 Benefits Icon?",
+			"default": false
 		},
 		{
 			"type": "checkbox",
