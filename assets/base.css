@@ -4918,7 +4918,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   }
 
   .section-image-content .chess-layout{
-    gap: 80px;
+    gap: 100px;
   }
 
   .section-image-content .benefits-layout{
