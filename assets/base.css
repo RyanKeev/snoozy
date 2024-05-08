@@ -3353,7 +3353,8 @@ details-disclosure > details {
 }
 
 tagname or .classname or #id {
-  font-family: 'ParisScript', sans-serif;
+  /* font-family: 'ParisScript', sans-serif; */
+  font-family: var(--ff-harmonia-pro-regular);
 }
 
 .product-section .product__title {
