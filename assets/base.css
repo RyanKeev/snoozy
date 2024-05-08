@@ -3457,7 +3457,7 @@ h1 {
   --fs-harmonia-bold: normal;
   --fw-harmonia-bold: bold;
 
-  --ff-harmonia-bold-pro-italic: 'HarmoniaSansProCyr-Bold-Italic', sans-serif;
+  --ff-harmonia-bold-pro-italic: 'HarmoniaSansProCyr-Bold-Italic';
   --fs-harmonia-bold-pro-italic: italic;
   --fw-harmonia-bold-pro-italic: bold;
 }
