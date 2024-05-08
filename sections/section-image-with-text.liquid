@@ -164,7 +164,7 @@
 								<div class="item-caption info-color center font-body-bold">{{ block.settings.caption }}</div>
 							{% endif %}
 							{% if block.settings.title != blank  %}
-								<div class="item-title info-color center">{{ block.settings.title }}</div>
+								<div class="item-title info-color center" {% if section.settings.use_style_2_benefits_icon %} style="text-align:center !important;" {% endif %}>{{ block.settings.title }}</div>
 							{% endif %}
 							{% if block.settings.content != blank  %}
 								<div class="item-content box-content info-color center">{{ block.settings.content }}</div>
