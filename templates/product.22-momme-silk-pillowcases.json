@@ -709,6 +709,12 @@
         "section_padding_bottom": 80
       }
     },
+    "1715132442c2f542d4": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    },
     "loox-product-reviews-app-section": {
       "type": "apps",
       "blocks": {
@@ -745,6 +751,7 @@
     "replo_silk_pillowcase_pdp_wpT88X",
     "related-products",
     "section_recommend_C3HdWr",
+    "1715132442c2f542d4",
     "loox-product-reviews-app-section"
   ]
 }
