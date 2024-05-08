@@ -5991,9 +5991,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 #UpcartPopup .upCart-info-price{
-  font-family: var(--ff-harmonia-regular);
-  font-style: var(--fs-harmonia-regular);
-  font-weight: var(--fw-harmonia-regular);
+  font-family: var(--ff-harmonia-pro-regular);
+  font-style: var(--fs-harmonia-pro-regular);
+  font-weight: var(--fw-harmonia-pro-regular);
   font-size: 16px;
   line-height: 1.1;
   color: #000000;
