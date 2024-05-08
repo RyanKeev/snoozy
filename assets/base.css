@@ -3392,7 +3392,7 @@ h1 {
 @font-face {
   font-family: 'HarmoniaSansProCyr-Regular';
   src: url('./HarmoniaSansProCyr-Regular.woff2') format('woff2');
-  font-weight: 400 !important;
+  font-weight: 500 !important;
   font-style: normal;
   font-display: swap;
 }
@@ -3417,7 +3417,7 @@ h1 {
        url('./HarmoniaSansProCyr-Bold.woff') format('woff'),
        url('./HarmoniaSansProCyr-Bold.ttf') format('truetype'),
        url('./HarmoniaSansProCyr-Bold.otf') format('opentpe');
-  font-weight: 700;
+  font-weight: 600;
   font-style: normal;
 }
 @font-face {
@@ -3426,7 +3426,7 @@ h1 {
        url('{{ "HarmoniaSansProCyr-Bold.woff" | asset_url }}') format('woff'),
        url('{{ "HarmoniaSansProCyr-Bold.ttf" | asset_url }}') format('truetype'),
        url('{{ "HarmoniaSansProCyr-Bold.otf" | asset_url }}') format('opentype');
-  font-weight: 700;
+  font-weight: 600;
   font-style: italic;
 }
 
@@ -3439,25 +3439,25 @@ h1 {
   --text-font-weight: 300;
   --text-font-style: normal;*/
 
-  --ff-harmonia-regular: 'HarmoniaSansRegular';
+  --ff-harmonia-regular: 'HarmoniaSansRegular', sans-serif;
   --fs-harmonia-regular: normal;
-  --fw-harmonia-regular: normal;
+  --fw-harmonia-regular: 500;
 
-  --ff-harmonia-semibold: 'HarmoniaSansSemiBold';
+  --ff-harmonia-semibold: 'HarmoniaSansSemiBold', sans-serif;
   --fs-harmonia-semibold: normal;
   --fw-harmonia-semibold: 600;
 
 
-  --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular';
+  --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular', sans-serif;
   --fs-harmonia-pro-regular: normal;
-  --fw-harmonia-pro-regular: 500;
+  --fw-harmonia-pro-regular: normal;
 
 
-  --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold';
+  --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', sans-serif;
   --fs-harmonia-bold: normal;
-  --fw-harmonia-bold: 400;
+  --fw-harmonia-bold: bold;
 
-  --ff-harmonia-bold-pro-italic: 'HarmoniaSansProCyr-Bold-Italic';
+  --ff-harmonia-bold-pro-italic: 'HarmoniaSansProCyr-Bold-Italic', sans-serif;
   --fs-harmonia-bold-pro-italic: italic;
   --fw-harmonia-bold-pro-italic: bold;
 }
