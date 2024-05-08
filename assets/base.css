@@ -6560,7 +6560,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     order: 1 !important;
   }
   .order-info {
-    order: 2 !important;
+    order: 1 !important;
   }
   .note {
     display: block;
