@@ -3401,9 +3401,7 @@ h1 {
   src: url('./HarmoniaSansProCyr-Bold.woff2') format('woff2'),
        url('./HarmoniaSansProCyr-Bold.woff') format('woff'),
        url('./HarmoniaSansProCyr-Bold.ttf') format('truetype'),
-       url('./HarmoniaSansProCyr-Bold.otf') format('opentpe'),
-Bold
-
+       url('./HarmoniaSansProCyr-Bold.otf') format('opentpe');
   font-weight: 700;
   font-style: normal;
 }
