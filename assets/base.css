@@ -3433,18 +3433,18 @@ h1 {
   --fw-harmonia-semibold: 600;
 
 
-  --ff-harmonia-regular: 'HarmoniaSansProCyr-Regular', sans-serif;
-  --fs-harmonia-regular: normal;
-  --fw-harmonia-regular: normal;
+  --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular', sans-serif;
+  --fs-harmonia-pro-regular: normal;
+  --fw-harmonia-pro-regular: normal;
 
 
   --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', sans-serif;
   --fs-harmonia-bold: normal;
   --fw-harmonia-bold: bold;
 
-  --ff-harmonia-bold-italic: 'HarmoniaSansProCyr-Bold-Italic', sans-serif;
-  --fs-harmonia-bold-italic: normal;
-  --fw-italic-bold: bold;
+  --ff-harmonia-bold-pro-italic: 'HarmoniaSansProCyr-Bold-Italic', sans-serif;
+  --fs-harmonia-bold-pro-italic: italic;
+  --fw-harmonia-bold-pro-italic: bold;
 }
 
 *{
