@@ -3450,7 +3450,7 @@ h1 {
 
   --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular', sans-serif;
   --fs-harmonia-pro-regular: normal;
-  --fw-harmonia-pro-regular: normal;
+  --fw-harmonia-pro-regular: 500;
 
 
   --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', sans-serif;
