@@ -6548,19 +6548,19 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     display: none;
   }
   .order-image {
-    order: 1;
+    order: 1 !important;
   } 
   .order-info {
-    order: 1;
+    order: 1 !important;
   }
 }
 
 @media (max-width: 749px) { 
   .order-image {
-    order: 1;
+    order: 1 !important;
   }
   .order-info {
-    order: 1;
+    order: 1 !important;
   }
   .note {
     display: block;
