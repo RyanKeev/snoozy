@@ -5821,8 +5821,10 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   UPCART PAGE
 =========================*/
 #UpcartPopup h2, #UpcartPopup h3, #UpcartPopup h4{
-  font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
+  /* font-family: var(--font-body-family);
+  font-style: var(--font-body-style); */
+  font-family: var(--ff-harmonia-pro-regular);
+  font-style: var(--fs-harmonia-pro-regular);
   font-weight: bold;
   line-height: 1.2;
   color: #000000;
