@@ -507,7 +507,7 @@ h6:empty {
   font-size: 1.61rem;
   font-weight: 600;
   /* font-family: inherit; */
-  font-family: var(--ff-harmonia-bold);
+  font-family: var(--ff-harmonia-semibold);
 }
 
 .link--text {
