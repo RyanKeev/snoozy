@@ -6547,17 +6547,20 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   .note {
     display: none;
   }
-  /* .order-image-first {
-    order: 1;
-  } */
-  /* .order-image-second {
+  .order-image {
     order: 2;
-  } */
+  } 
+  .order-info {
+    order: 1;
+  }
 }
 
 @media (max-width: 749px) { 
-  .order-image-first {
+  .order-image {
     order: 1;
+  }
+  .order-info {
+    order: 2;
   }
   .note {
     display: block;
