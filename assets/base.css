@@ -5982,9 +5982,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 #UpcartPopup .upCart-info-label{
-  font-family: var(--ff-harmonia-regular);
-  font-style: var(--fs-harmonia-regular);
-  font-weight: var(--fw-harmonia-regular);
+  font-family: var(--ff-harmonia-pro-regular);
+  font-style: var(--fs-harmonia-pro-regular);
+  font-weight: var(--fw-harmonia-pro-regular);
   font-size: 15px;
   line-height: 1.1;
   color: #000000;
@@ -6007,9 +6007,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 
 #UpcartPopup .icart-total .upCart-info-label,
 #UpcartPopup .icart-total .upCart-info-price{
-  font-family: var(--ff-harmonia-semibold);
-  font-style: var(--fs-harmonia-semibold);
-  font-weight: var(--fw-harmonia-semibold);
+  font-family: var(--ff-harmonia-bold);
+  font-style: var(--fs-harmonia-bold);
+  font-weight: var(--fw-harmonia-bold);
 }
 
 #UpcartPopup #up-upsell-carousel h4{
