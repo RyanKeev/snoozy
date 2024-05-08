@@ -21,14 +21,6 @@
 							-ms-border-radius: 5%;
 							-o-border-radius: 5%;
 						}
-
-						#shopify-section-template--22565320327473__section_image_with_text_kyhAzY {
-							margin-top: -61px !important;
-						}
-						#section-image-with-text-template--22385366565169__section_image_with_text_4cXHF9 .wrap-rounded {
-							padding: 0 40px !important;
-							justify-content: center !important;
-						}
 						#shopify-section-{{ section.id }} .info-color {
 							color: {{ block.settings.info_block_color  }} !important;
 							text-align: left;
@@ -56,10 +48,6 @@
 								color: #fff !important;
 								align-self: center !important;
 							  }
-							#section-image-with-text-template--22385366565169__section_image_with_text_4cXHF9 .wrap-rounded {
-								padding: 0px !important;
-								justify-content: center !important;
-							}
 							#shopify-section-{{ section.id }} .wrap-rounded {
 								height: 100%;
 								background: {{ block.settings.info_block_background_color }};
@@ -124,10 +112,10 @@
 								font-weight: 400 !important;
 								color: {{ block.settings.info_block_color  }} !important;
 							}
-						}
-						.info-block .item-title h1 {
-							margin:0 !important;
-						}
+							}
+							.info-block .item-title h1 {
+								margin:0 !important;
+							}
 					</style>
 					<div class="{% if block.settings.video != blank or block.settings.image != blank %} {% if block.settings.image_first %} grid-cols-2-lap {% if block.settings.half_width %} chess-item {% endif %} {% else %} grid-cols-2-lap-reverse {% if block.settings.half_width %} chess-item {% endif %} {% endif %} {% else %} chess-item{% endif %}">
 						<div class="media-block" style="order:{% if block.settings.image_first %} 1 {% else %} 2 {% endif %};">
