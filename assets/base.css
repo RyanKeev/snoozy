@@ -3439,16 +3439,16 @@ h1 {
   --text-font-weight: 300;
   --text-font-style: normal;*/
 
-  --ff-harmonia-regular: 'HarmoniaSansRegular', sans-serif;
+  --ff-harmonia-regular: 'HarmoniaSansRegular';
   --fs-harmonia-regular: normal;
   --fw-harmonia-regular: 500;
 
-  --ff-harmonia-semibold: 'HarmoniaSansSemiBold', sans-serif;
+  --ff-harmonia-semibold: 'HarmoniaSansSemiBold';
   --fs-harmonia-semibold: normal;
   --fw-harmonia-semibold: 600;
 
 
-  --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular', sans-serif;
+  --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular';
   --fs-harmonia-pro-regular: normal;
   --fw-harmonia-pro-regular: normal;
 
