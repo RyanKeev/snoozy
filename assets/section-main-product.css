@@ -1701,6 +1701,9 @@ a.product__text {
   -moz-border-radius: 0;
   -ms-border-radius: 0;
   -o-border-radius: 0;
+  width: 550px;
+  margin: 0 auto;
+  height: auto;
 }
 
 
