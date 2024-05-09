@@ -19,6 +19,14 @@
             "menu": "footer"
           }
         },
+        "link_list_FmEy9T": {
+          "type": "link_list",
+          "disabled": true,
+          "settings": {
+            "heading": "Quick links",
+            "menu": "footer"
+          }
+        },
         "df7d35c2-7624-476b-b3aa-bd3fa92d1a41": {
           "type": "text",
           "settings": {
@@ -30,6 +38,7 @@
       "block_order": [
         "bf38cdce-d953-40eb-bd68-5784f6a94beb",
         "54291d32-885e-4d8f-bcc8-3e08b42000f4",
+        "link_list_FmEy9T",
         "df7d35c2-7624-476b-b3aa-bd3fa92d1a41"
       ],
       "settings": {
