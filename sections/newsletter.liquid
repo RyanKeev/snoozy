@@ -45,51 +45,67 @@
           </div>
         {%- when 'email_form' -%}
           <script>
-            document.addEventListener('DOMContentLoaded', function() {
+            function submitToKlaviyo(email, klaviyoPublicApiKey, klaviyoListId, attempt = 1) {
+              const url = `https://a.klaviyo.com/api/v2/list/${klaviyoListId}/members?api_key=${klaviyoPublicApiKey}`;
+          
+              fetch(url, {
+                  method: 'POST',
+                  headers: {
+                      'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                      profiles: [
+                          {
+                              email: email
+                          }
+                      ]
+                  }),
+              })
+              .then(response => {
+                  if (!response.ok) {
+                      return response.json().then(result => {
+                          throw new Error(`Error adding to Klaviyo: ${result.message}`);
+                      });
+                  }
+                  return response.json();
+              })
+              .then(result => {
+                  console.log('Successfully added to Klaviyo:', result);
+                  // Optional: Display a success message to the user
+              })
+              .catch(error => {
+                  console.error('Error:', error);
+          
+                  // Implement retry strategy with exponential backoff
+                  if (attempt <= 3) {
+                      const delay = Math.pow(2, attempt) * 1000; // Exponential backoff
+                      console.log(`Retrying in ${delay / 1000} seconds...`);
+                      setTimeout(() => {
+                          submitToKlaviyo(email, klaviyoPublicApiKey, klaviyoListId, attempt + 1);
+                      }, delay);
+                  } else {
+                      console.error('Max retries reached. Could not complete the request.');
+                      // Optional: Display an error message to the user
+                  }
+              });
+          }
+          
+          document.addEventListener('DOMContentLoaded', function() {
               const form = document.getElementById('klaviyo-form');
               
               form.addEventListener('submit', function(event) {
-                  event.preventDefault(); // Prevent the form from submitting normally
+                  event.preventDefault();
                   
                   // Gather the email from the form
                   const formData = new FormData(form);
-                  const email = formData.get('contact[email]'); // Adjust the key if necessary
+                  const email = formData.get('contact[email]');
           
                   // Public API key and List ID from Klaviyo
-                  const klaviyoPublicApiKey = 'WZJixx'; // Replace with your Klaviyo public API key
-                  const klaviyoListId = 'QZjUhS'; // Replace with your Klaviyo list ID
+                  const klaviyoPublicApiKey = 'WZJixx';
+                  const klaviyoListId = 'QZjUhS';
           
-                  // Prepare the Klaviyo API URL
-                  const url = `https://a.klaviyo.com/api/v2/list/${klaviyoListId}/members?api_key=${klaviyoPublicApiKey}`;
-          
-                  // Send the email data directly to Klaviyo
-                  fetch(url, {
-                      method: 'POST',
-                      headers: {
-                          'Content-Type': 'application/json',
-                      },
-                      body: JSON.stringify({
-                          profiles: [
-                              {
-                                  email: email
-                              }
-                          ]
-                      }),
-                  })
-                  .then(response => response.json())
-                  .then(result => {
-                      // Handle the API response
-                      if (response.ok) {
-                          console.log('Successfully added to Klaviyo:', result);
-                          // Optional: Display a success message to the user
-                      } else {
-                          console.error('Error adding to Klaviyo:', result);
-                          // Optional: Display an error message to the user
-                      }
-                  })
-                  .catch(error => {
-                      console.error('Error:', error);
-                  });
+                  // Submit the email data to Klaviyo with retry strategy
+                  submitToKlaviyo(email, klaviyoPublicApiKey, klaviyoListId);
               });
           });
           
