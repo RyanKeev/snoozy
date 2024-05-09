@@ -89,7 +89,7 @@
                 {% if card_collection == blank %}
                   role="link" aria-disabled="true"
                 {% else %}
-                  {% if button_link %}
+                  {% if button_link != blank %}
                   href="{{ button_link }}"
                   {% else %}
                   href="{{ card_collection.url }}"
@@ -148,7 +148,9 @@
           <a
             class="button button--primary font-body-bold"
             style="align-self: flex-start;margin-top:25px;"
-            href="{% if button_link != blank %}{{ button_link }}{% endif %}"
+            {% if button_link != blank %}
+            href="{{ button_link }}"
+          {% endif %}
             {% comment %}{% if button_link %}{{ button_link }}{% else %}{{ card_collection.url }}{% endif %}  {% endcomment %}
           >
             {{ button_text }} <span class="icon-wrap">{% render 'icon-arrow' %}</span>
