@@ -10,7 +10,12 @@
   .footer__aside-bottom {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: end;
+  }
+  .footer__aside-bottom p {
+    margin: 0;
+    padding: 0;
+    line-height: normal;
   }
   .footer-wrap {
     display: flex;
