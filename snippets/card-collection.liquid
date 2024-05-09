@@ -9,6 +9,7 @@
   - wrapper_class: {String} Wrapper class for card (optional)
   - placeholder_image: {String} Placeholder image when collection is empty (optional)
   - button_text : {String} text title
+  - button_link : {Link} text link
   Usage:
   {% render 'card-collection' %}
 {% endcomment %}
@@ -139,7 +140,7 @@
           <a
             class="button button--primary font-body-bold"
             style="align-self: flex-start;margin-top:25px;"
-            href="{{ card_collection.url }}"
+            href="{% if button_link %}{{ button_link }}{% else %}{{ card_collection.url }}{% endif %}"
           >
             {{ button_text }} <span class="icon-wrap">{% render 'icon-arrow' %}</span>
           </a>
