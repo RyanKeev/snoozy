@@ -427,7 +427,7 @@
   .footer-block__details-content .list-menu__item--link {
     display: inline-block;
     font-size: 1.6rem;
-    line-height: normal
+    line-height: normal;
     font-weight: 300;
   }
 
