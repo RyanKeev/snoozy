@@ -775,12 +775,13 @@
         "heading_QKzVXa": {
           "type": "heading",
           "settings": {
-            "heading": "Subscribe to our emails",
-            "heading_size": "h1"
+            "heading": "<em>Enter your email for 20% off your first order, plus the latest Snoozy news.<\/em>",
+            "heading_size": "h2"
           }
         },
         "paragraph_QrGkqF": {
           "type": "paragraph",
+          "disabled": true,
           "settings": {
             "text": "<p>Be the first to know about new collections and exclusive offers.<\/p>"
           }
