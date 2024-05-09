@@ -36,11 +36,11 @@ body {
   margin: 0 auto;
   flex: 1 0 auto;
   /* font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight); */
+  font-style: var(--font-body-style);  */
+  font-weight: var(--font-body-weight);
   font-family: var(--ff-harmonia-pro-regular);
   font-style: var(--fs-harmonia-pro-regular);
-  font-weight: var(--fw-harmonia-pro-regular);  
+  /* font-weight: var(--fw-harmonia-pro-regular);   */
 }
 
 @media only screen and (min-width: 750px) {
