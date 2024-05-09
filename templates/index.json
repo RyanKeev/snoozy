@@ -789,6 +789,7 @@
         "email_form_YWHHtY": {
           "type": "email_form",
           "settings": {
+            "label": "Sign Up →"
           }
         }
       },
