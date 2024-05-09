@@ -44,6 +44,54 @@
             {{ block.settings.text }}
           </div>
         {%- when 'email_form' -%}
+          <script>
+            document.addEventListener('DOMContentLoaded', function() {
+              const form = document.getElementById('klaviyo-form');
+              
+              form.addEventListener('submit', function(event) {
+                  event.preventDefault(); // Prevent the form from submitting normally
+                  
+                  // Gather the email from the form
+                  const formData = new FormData(form);
+                  const email = formData.get('email');
+          
+                  // Public API key and List ID from Klaviyo
+                  const klaviyoPublicApiKey = 'WZJixx'; // Replace with your Klaviyo public API key
+                  const klaviyoListId = 'QZjUhS'; // Replace with your Klaviyo list ID
+          
+                  // Prepare the Klaviyo API URL
+                  const url = `https://a.klaviyo.com/api/v2/list/${klaviyoListId}/members?api_key=${klaviyoPublicApiKey}`;
+          
+                  // Send the data directly to Klaviyo
+                  fetch(url, {
+                      method: 'POST',
+                      headers: {
+                          'Content-Type': 'application/json',
+                      },
+                      body: JSON.stringify({
+                          profiles: [
+                              {
+                                  email: email
+                              }
+                          ]
+                      }),
+                  })
+                  .then(response => response.json())
+                  .then(result => {
+                      if (response.ok) {
+                          console.log('Successfully added to Klaviyo:', result);
+                          // Handle successful response (e.g., display a success message)
+                      } else {
+                          console.error('Error adding to Klaviyo:', result);
+                          // Handle error (e.g., display an error message)
+                      }
+                  })
+                  .catch(error => {
+                      console.error('Error:', error);
+                  });
+              });
+          });
+          </script>
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form', id:'klaviyo-form' %}
               <input type="hidden" name="contact[tags]" value="newsletter">
