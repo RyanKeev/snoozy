@@ -7,11 +7,6 @@
   display: flex;
 }
 @media (min-width: 750px){
-  .footer-block__details-content .list-menu__item--link {
-    font-weight: 300;
-    line-height: normal;
-    font-size: 1.7rem;
-  }
   .footer__aside-bottom {
     display: flex;
     justify-content: space-between;
@@ -431,7 +426,7 @@
 @media screen and (min-width: 750px) {
   .footer-block__details-content .list-menu__item--link {
     display: inline-block;
-    font-size: 1.4rem;
+    font-size: 1.7rem;
   }
 
   .footer-block__details-content > :first-child .list-menu__item--link {
