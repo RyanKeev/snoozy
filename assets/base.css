@@ -1243,6 +1243,7 @@ button.shopify-payment-button__button--unbranded {
   padding: 0 3rem;
   cursor: pointer;
   font: inherit;
+  font-family: var(--ff-harmonia-bold) !important;
   font-size: 1.5rem;
   text-decoration: none;
   color: rgb(var(--color-button-text));
@@ -2701,7 +2702,7 @@ details[open] > .header__submenu {
   padding: 1.8rem 1.2rem 1.2rem 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 1);
-  font-family: 'HarmoniaSansSemiBold' !important;
+  font-family: var(--ff-harmonia-semibold) !important;
 }
 
 .header__menu-item:hover {
