@@ -2701,7 +2701,7 @@ details[open] > .header__submenu {
   padding: 1.8rem 1.2rem 1.2rem 1.2rem;
   text-decoration: none;
   color: rgba(var(--color-foreground), 1);
-  font-family: 'HarmoniaSansSemiBold';
+  font-family: 'HarmoniaSansSemiBold' !important;
 }
 
 .header__menu-item:hover {
