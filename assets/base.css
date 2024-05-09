@@ -6048,7 +6048,8 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 #UpcartPopup .icart-total .upCart-info-price{
   font-family: var(--ff-harmonia-bold);
   font-style: var(--fs-harmonia-bold);
-  font-weight: var(--fw-harmonia-bold);
+  /* font-weight: var(--fw-harmonia-bold); */
+  font-weight: var(--font-heading-weight);
 }
 
 #UpcartPopup #up-upsell-carousel h4{
