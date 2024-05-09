@@ -13,6 +13,13 @@
             "enable_signup": false
           }
         },
+        "link_list_YBp3H3": {
+          "type": "link_list",
+          "settings": {
+            "heading": "Shop",
+            "menu": "footer"
+          }
+        },
         "bf38cdce-d953-40eb-bd68-5784f6a94beb": {
           "type": "link_list",
           "settings": {
@@ -45,6 +52,7 @@
       },
       "block_order": [
         "newsletter_rCzcNi",
+        "link_list_YBp3H3",
         "bf38cdce-d953-40eb-bd68-5784f6a94beb",
         "54291d32-885e-4d8f-bcc8-3e08b42000f4",
         "link_list_FmEy9T",
