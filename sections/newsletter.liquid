@@ -81,12 +81,12 @@
                 </div>
                 <button
                   type="submit"
-                  class="button button--primary font-body-bold"
+                  class="newsletter-form__button button button--primary font-body-bold"
                   name="commit"
                   id="Subscribe"
                   aria-label="{{ 'newsletter.button_label' | t }}"
                 >
-                 Sign Up {% render 'icon-arrow' %}
+                  {% render 'icon-arrow' %}
                 </button>
                 {%- if form.errors -%}
                   <small class="newsletter-form__message form__message" id="Newsletter-error--{{ section.id }}">
