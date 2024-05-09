@@ -325,13 +325,13 @@
       },
       "scheme-6d4b1e10-6e49-4120-b0e8-c82bf22261c1": {
         "settings": {
-          "background": "#ffffff",
-          "background_gradient": "linear-gradient(180deg, rgba(255, 255, 255, 1) 100%, rgba(241, 235, 226, 1) 100%)",
-          "text": "#2e2a39",
-          "button": "#352b27",
-          "button_label": "#fdfbf7",
-          "secondary_button_label": "#000000",
-          "shadow": "#2e2a39"
+          "background": "#e68e58",
+          "background_gradient": "",
+          "text": "#fff",
+          "button": "#1a1a1a",
+          "button_label": "#ffffff",
+          "secondary_button_label": "#1a1a1a",
+          "shadow": "#1a1a1a"
         }
       },
       "scheme-8ae57a57-310e-4e40-a309-497c124dd4c1": {
