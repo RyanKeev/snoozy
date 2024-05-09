@@ -4791,11 +4791,11 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 
 .section-image-content .item-title{
   /* font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style);
-  font-weight: var(--font-heading-weight); */
+  font-style: var(--font-heading-style);  */
+  font-weight: var(--font-heading-weight);
   font-family: var(--ff-harmonia-bold);
   font-style: var(--fs-harmonia-bold);
-  font-weight: var(--fw-harmonia-bold);
+  /* font-weight: var(--fw-harmonia-bold); */
 
   font-size: 27px;
   line-height: 23px;
