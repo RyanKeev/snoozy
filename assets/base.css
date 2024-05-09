@@ -1637,11 +1637,11 @@ details[open] > .share-button__fallback {
 
 .select__select {
   /* font-family: var(--font-body-family);
-  font-style: var(--font-body-style);
-  font-weight: var(--font-body-weight); */
+  font-style: var(--font-body-style); */
+  font-weight: var(--font-body-weight); 
   font-family: var(--ff-harmonia-pro-regular);
   font-style: var(--fs-harmonia-pro-regular);
-  font-weight: var(--fw-harmonia-pro-regular);  
+  /* font-weight: var(--fw-harmonia-pro-regular);   */
   font-size: 1.2rem;
   color: rgba(var(--color-foreground), 1);
 }
