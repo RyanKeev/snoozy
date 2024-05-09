@@ -8,6 +8,10 @@
     flex-wrap: nowrap;
     gap: 70px;
   }
+  .footer-wrap .newsletter__heading {
+    font-size: 3.6rem;
+    line-height: normal;
+  }
 }
 @media (max-width: 749px){
   .footer-wrap {
