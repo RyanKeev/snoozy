@@ -3418,7 +3418,7 @@ h1 {
        url('./HarmoniaSansProCyr-Bold.woff') format('woff'),
        url('./HarmoniaSansProCyr-Bold.ttf') format('truetype'),
        url('./HarmoniaSansProCyr-Bold.otf') format('opentpe');
-  font-weight: 600;
+  /* font-weight: 600; */
   font-style: normal;
 }
 @font-face {
@@ -3427,7 +3427,7 @@ h1 {
        url('{{ "HarmoniaSansProCyr-Bold.woff" | asset_url }}') format('woff'),
        url('{{ "HarmoniaSansProCyr-Bold.ttf" | asset_url }}') format('truetype'),
        url('{{ "HarmoniaSansProCyr-Bold.otf" | asset_url }}') format('opentype');
-  font-weight: 600;
+  /* font-weight: 600; */
   font-style: italic;
   transform: skewX(5deg);
 }
