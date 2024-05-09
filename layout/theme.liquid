@@ -448,48 +448,6 @@
 
     <script src="{{ 'optimization.min.js' | asset_url }}" defer="defer"></script>
                 {% render 'quantity-breaks-now', customer: customer, template: template, product: product, cart: cart %}
-    <script>
-      const form = document.getElementById('klaviyo-form');
 
-      form.addEventListener('submit', function(event) {
-          event.preventDefault();
-          
-          const formData = new FormData(form);
-          const email = formData.get('email');
-
-          const klaviyoPublicApiKey = 'WZJixx'; // Replace with your Klaviyo public API key
-          const klaviyoListId = 'QZjUhS'; // Replace with your Klaviyo list ID
-
-          // Klaviyo API URL to add subscribers to the list
-          const url = `https://a.klaviyo.com/api/v2/list/${klaviyoListId}/members?api_key=${klaviyoPublicApiKey}`;
-
-          fetch(url, {
-              method: 'POST',
-              headers: {
-                  'Content-Type': 'application/json',
-              },
-              body: JSON.stringify({
-                  profiles: [
-                      {
-                          email: email
-                      }
-                  ]
-              }),
-          })
-          .then(response => response.json())
-          .then(result => {
-              if (response.ok) {
-                  console.log('Successfully added to Klaviyo:', result);
-                  // Handle success
-              } else {
-                  console.error('Error adding to Klaviyo:', result);
-                  // Handle error
-              }
-          })
-          .catch(error => {
-              console.error('Error:', error);
-          });
-      });
-    </script>
         </body>
 </html>
