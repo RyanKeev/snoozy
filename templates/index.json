@@ -800,8 +800,8 @@
       "settings": {
         "color_scheme": "scheme-6d4b1e10-6e49-4120-b0e8-c82bf22261c1",
         "full_width": true,
-        "padding_top": 12,
-        "padding_bottom": 100
+        "padding_top": 112,
+        "padding_bottom": 112
       }
     }
   },
