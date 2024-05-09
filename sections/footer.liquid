@@ -70,11 +70,11 @@
           >
             {%- for block in section.blocks -%}
               <div
-                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu{% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
+                class="footer-block grid__item{% if block.type == 'link_list' %} footer-block--menu {% endif %}{% if settings.animations_reveal_on_scroll %} scroll-trigger animate--slide-in{% endif %}"
                 {{ block.shopify_attributes }}
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
-                  style="--animation-order: {{ forloop.index }};"
+                  style="--animation-order: {{ forloop.index }};{% if block.type == 'link_list' %} max-width: 150px; {% endif %}"
                 {% endif %}
               >
                 {%- if block.settings.heading != blank -%}
