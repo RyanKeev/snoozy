@@ -14,6 +14,10 @@
   }
 }
 @media (max-width: 749px){
+  .footer-wrap .newsletter__heading {
+    font-size: 2.4rem !important;
+    line-height: normal;
+  }
   .footer-wrap {
     display: block;
   }
