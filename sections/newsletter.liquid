@@ -86,7 +86,7 @@
                   id="Subscribe"
                   aria-label="{{ 'newsletter.button_label' | t }}"
                 >
-                    <h4> {{  block.settings.label}} {% render 'icon-arrow' %} </h4>
+                    <p> {{  block.settings.label}} {% render 'icon-arrow' %} </p>
                     {% comment %}  {% endcomment %}
                 </button>
                 {%- if form.errors -%}
@@ -220,7 +220,7 @@
         {
           "type": "text",
           "id": "label",
-          "default": "<p>Sign Up →</p>",
+          "default": "Sign Up",
           "label": "Button Label"
         }
       ]
