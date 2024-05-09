@@ -6491,6 +6491,10 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     margin-top: -61px !important;
   }
 
+  #section-image-with-text-template--22385366565169__section_image_with_text_4cXHF9 .grid-cols-2-lap-reverse .media-block {
+    order: 2 !important; 
+  }
+
   #Banner-template--22565320327473__image_banner_WqKFzc h2,
   #name-placeholder {
     font-size: 68px !important;
@@ -6528,8 +6532,8 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     justify-content: center !important;
   }
 
-  #section-image-with-text-template--22385366565169__section_image_with_text_4cXHF9 .container .chess-layout .grid-cols-2-lap-reverse .media-block {
-    order: 2 !important; 
+  #section-image-with-text-template--22385366565169__section_image_with_text_4cXHF9 .grid-cols-2-lap-reverse .media-block {
+    order: 1 !important; 
   }
 
   #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .benefits-layout {
