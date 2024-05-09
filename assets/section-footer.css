@@ -15,6 +15,7 @@
     display: flex;
     flex-wrap: nowrap;
     gap: 70px;
+    overflow: hidden;
   }
   .footer-wrap .newsletter__heading {
     font-size: 3.6rem !important;
