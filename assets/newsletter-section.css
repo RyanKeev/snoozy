@@ -3,7 +3,8 @@
   padding-left: calc(4rem / var(--font-body-scale));
 }
 .newsletter__wrapper *{
-  max-width: 600px; 
+  max-width: 600px;
+  margin: 0 auto; 
 }
 
 @media screen and (min-width: 750px) {
