@@ -29,6 +29,11 @@
   }
 }
 @media (max-width: 749px){
+  .footer-block__details-content .list-menu__item--link {
+    font-weight: 300;
+    line-height: normal;
+    font-size: 1.4rem;
+  }
   .footer__aside-bottom {
     display: block;
     justify-content: space-between;
