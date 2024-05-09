@@ -50,9 +50,9 @@
           
               fetch(url, {
                   method: 'POST',
+                  mode: 'no-cors', 
                   headers: {
                       'Content-Type': 'application/json',
-                      'Origin': window.location.origin
                   },
                   body: JSON.stringify({
                       profiles: [
