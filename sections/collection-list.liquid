@@ -75,6 +75,7 @@
             {% render 'card-collection',
               card_collection: block.settings.collection,
               button_text: block.settings.button_text,
+              button_link: block.settings.button_link,
               media_aspect_ratio: section.settings.image_ratio,
               columns: columns,
               placeholder_image: placeholder_image
@@ -287,6 +288,11 @@
           "id": "button_text",
           "default": "Shop here",
           "label": "Button text"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Button link"
         }
       ]
     }
