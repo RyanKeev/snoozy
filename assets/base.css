@@ -284,6 +284,9 @@ h5,
   word-break: break-word;
 }
 
+em {
+  font-family: var(--ff-harmonia-bold-pro-italic) !important;
+}
 .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
 }
