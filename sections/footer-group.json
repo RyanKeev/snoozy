@@ -23,14 +23,14 @@
         "bf38cdce-d953-40eb-bd68-5784f6a94beb": {
           "type": "link_list",
           "settings": {
-            "heading": "Help",
+            "heading": "Eplore",
             "menu": "footer-menu-help"
           }
         },
         "54291d32-885e-4d8f-bcc8-3e08b42000f4": {
           "type": "link_list",
           "settings": {
-            "heading": "Info",
+            "heading": "Support",
             "menu": "footer"
           }
         },
