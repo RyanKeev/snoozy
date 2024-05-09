@@ -53,7 +53,7 @@
                   
                   // Gather the email from the form
                   const formData = new FormData(form);
-                  const email = formData.get('email');
+                  const email = formData.get('contact[email]'); // Adjust the key if necessary
           
                   // Public API key and List ID from Klaviyo
                   const klaviyoPublicApiKey = 'WZJixx'; // Replace with your Klaviyo public API key
@@ -62,7 +62,7 @@
                   // Prepare the Klaviyo API URL
                   const url = `https://a.klaviyo.com/api/v2/list/${klaviyoListId}/members?api_key=${klaviyoPublicApiKey}`;
           
-                  // Send the data directly to Klaviyo
+                  // Send the email data directly to Klaviyo
                   fetch(url, {
                       method: 'POST',
                       headers: {
@@ -78,12 +78,13 @@
                   })
                   .then(response => response.json())
                   .then(result => {
+                      // Handle the API response
                       if (response.ok) {
                           console.log('Successfully added to Klaviyo:', result);
-                          // Handle successful response (e.g., display a success message)
+                          // Optional: Display a success message to the user
                       } else {
                           console.error('Error adding to Klaviyo:', result);
-                          // Handle error (e.g., display an error message)
+                          // Optional: Display an error message to the user
                       }
                   })
                   .catch(error => {
@@ -91,6 +92,7 @@
                   });
               });
           });
+          
           </script>
           <div {{ block.shopify_attributes }}>
             {% form 'customer', class: 'newsletter-form', id:'klaviyo-form' %}
