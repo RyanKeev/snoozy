@@ -252,21 +252,24 @@
           "type": "featured_collection",
           "settings": {
             "collection": "19-momme-pillowcase",
-            "button_text": "Save 25% Now"
+            "button_text": "Save 25% Now",
+            "button_link": ""
           }
         },
         "featured_collection_8W3D8L": {
           "type": "featured_collection",
           "settings": {
             "collection": "22-momme-pillowcase",
-            "button_text": "Save 38% Now"
+            "button_text": "Save 38% Now",
+            "button_link": ""
           }
         },
         "featured_collection_D48A3k": {
           "type": "featured_collection",
           "settings": {
             "collection": "all-products",
-            "button_text": "Shop here"
+            "button_text": "Shop here",
+            "button_link": ""
           }
         }
       },
@@ -275,7 +278,6 @@
         "featured_collection_8W3D8L",
         "featured_collection_D48A3k"
       ],
-      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
