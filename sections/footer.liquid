@@ -431,9 +431,9 @@
       "name": "Newsletter",
       "settings": [
         {
-          "type": "inline_richtext",
+          "type": "richtext",
           "id": "heading",
-          "default": "Heading",
+          "default": "<h2>Heading<h2>",
           "label": "t:sections.footer.blocks.text.settings.heading.label"
         },
         {
@@ -441,6 +441,12 @@
           "id": "subtext",
           "default": "<p>Share contact information, store details, and brand content with your customers.</p>",
           "label": "t:sections.footer.blocks.text.settings.subtext.label"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_signup",
+          "default": false,
+          "label": "Enable email signup"
         }
       ]
     },
