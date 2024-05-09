@@ -1,1 +1,54 @@
-{"name":"t:sections.footer.name","type":"footer","sections":{"footer":{"type":"footer","blocks":{"bf38cdce-d953-40eb-bd68-5784f6a94beb":{"type":"link_list","settings":{"heading":"HELP","menu":"footer-menu-help"}},"54291d32-885e-4d8f-bcc8-3e08b42000f4":{"type":"link_list","settings":{"heading":"INFO","menu":"footer"}},"df7d35c2-7624-476b-b3aa-bd3fa92d1a41":{"type":"text","settings":{"heading":"BEAUTY SLEEP REINVENTED.","subtext":"<p>Snoozy is the ultimate hidden gem among supermodels, beauty experts, hair stylists,  and dermatologists worldwide.<\/p>"}}},"block_order":["bf38cdce-d953-40eb-bd68-5784f6a94beb","54291d32-885e-4d8f-bcc8-3e08b42000f4","df7d35c2-7624-476b-b3aa-bd3fa92d1a41"],"settings":{"color_scheme":"scheme-e2b7a9dd-97d0-4cb5-b1c4-c88f0f19d581","newsletter_enable":false,"newsletter_heading":"Newsletter","enable_follow_on_shop":false,"show_social":true,"enable_country_selector":false,"enable_language_selector":false,"payment_enable":false,"show_policy":false,"margin_top":0,"padding_top":64,"padding_bottom":0}}},"order":["footer"]}
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "bf38cdce-d953-40eb-bd68-5784f6a94beb": {
+          "type": "link_list",
+          "settings": {
+            "heading": "HELP",
+            "menu": "footer-menu-help"
+          }
+        },
+        "54291d32-885e-4d8f-bcc8-3e08b42000f4": {
+          "type": "link_list",
+          "settings": {
+            "heading": "INFO",
+            "menu": "footer"
+          }
+        },
+        "df7d35c2-7624-476b-b3aa-bd3fa92d1a41": {
+          "type": "text",
+          "settings": {
+            "heading": "BEAUTY SLEEP REINVENTED.",
+            "subtext": "<p>Snoozy is the ultimate hidden gem among supermodels, beauty experts, hair stylists,  and dermatologists worldwide.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "bf38cdce-d953-40eb-bd68-5784f6a94beb",
+        "54291d32-885e-4d8f-bcc8-3e08b42000f4",
+        "df7d35c2-7624-476b-b3aa-bd3fa92d1a41"
+      ],
+      "settings": {
+        "color_scheme": "background-1",
+        "newsletter_enable": false,
+        "newsletter_heading": "Newsletter",
+        "enable_follow_on_shop": false,
+        "show_social": true,
+        "enable_country_selector": false,
+        "enable_language_selector": false,
+        "payment_enable": false,
+        "show_policy": false,
+        "margin_top": 0,
+        "padding_top": 64,
+        "padding_bottom": 0
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}
