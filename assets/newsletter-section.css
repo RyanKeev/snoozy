@@ -6,6 +6,9 @@
   max-width: 600px;
   margin: 0 auto; 
 }
+.newsletter__wrapper button {
+  padding: 0;
+}
 .newsletter__wrapper h2{
   font-size: 32px !important;
   line-height: 1.1em !important;
