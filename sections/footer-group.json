@@ -44,7 +44,7 @@
       "settings": {
         "color_scheme": "background-1",
         "newsletter_enable": false,
-        "newsletter_heading": "Newsletter",
+        "newsletter_heading": "<strong>Great emails only<\/strong>",
         "enable_follow_on_shop": false,
         "show_social": true,
         "enable_country_selector": false,
