@@ -192,6 +192,7 @@
   font-style: italic;
   color: #1a1a1a !important;
   text-transform: none !important;
+  font-family: var(--ff-harmonia-bold-pro-italic) !important;
 }
 
 .card__heading:last-child {
