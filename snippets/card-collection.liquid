@@ -150,7 +150,9 @@
             style="align-self: flex-start;margin-top:25px;"
             {% if button_link != blank %}
             href="{{ button_link }}"
-          {% endif %}
+            {% else %}
+            href="{{ card_collection.url }}"
+            {% endif %}
             {% comment %}{% if button_link %}{{ button_link }}{% else %}{{ card_collection.url }}{% endif %}  {% endcomment %}
           >
             {{ button_text }} <span class="icon-wrap">{% render 'icon-arrow' %}</span>
