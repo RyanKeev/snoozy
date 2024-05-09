@@ -1746,9 +1746,10 @@ details[open] > .share-button__fallback {
   pointer-events: none;
   position: absolute;
   transition: top var(--duration-short) ease, font-size var(--duration-short) ease;
-  color: rgba(var(--color-foreground), 1);
+  /* color: rgba(var(--color-foreground), 1); */
   letter-spacing: 0.1rem;
   line-height: 1.5;
+  color : #9ca4b0;
 }
 
 .field__input:focus ~ .field__label,
