@@ -75,7 +75,7 @@
                 {% if settings.animations_reveal_on_scroll %}
                   data-cascade
                   style="--animation-order: {{ forloop.index }};
-                  {% if block.type == 'link_list' %} max-width: 200px; {% endif %}
+                  {% if block.type == 'link_list' %} max-width: 200px; width: auto; {% endif %}
                   {% if block.type == 'newsletter' %} flex-basis: 20%; {% endif %}
                   {% if block.type == 'text' %} flex-basis: 17%; {% endif %}
                   "
