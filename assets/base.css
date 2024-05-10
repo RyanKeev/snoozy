@@ -3899,7 +3899,8 @@ header.header .menu-label{
 @media (max-width: 749px){
   .product-main-section .container{
     max-width: 1400px;
-    padding: 50px 10px 0 !important;
+    padding: 0px 10px 0 !important;
+    overflow: hidden;
   }
 }
 
