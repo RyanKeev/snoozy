@@ -5518,8 +5518,10 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     gap:40px;
   }
   .section-faq p {
-    font-size: 21px !important;
-    font-family: inherit !important;
+    font-size: 16px !important;
+    letter-spacing: 0px;
+    font-weight: 300 !important;
+    font-family: var(--ff-harmonia-pro-regular);
     line-height: inherit !important;
     text-align: inherit !important;
     color: inherit !important;
