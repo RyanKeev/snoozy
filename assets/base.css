@@ -6629,41 +6629,13 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 
-
-/* Base styles for links */
 a {
-  position: relative; /* Required for pseudo-element positioning */
-  display: inline-block;
-  /* Initially hide the underline by setting the text-shadow */
-  text-shadow: 0 1px transparent; /* You can adjust the offset (0 1px) */
+  text-decoration: none; /* Remove default underline */
+  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 0 1px no-repeat; /* Initially 0 width */
+  transition: background-size 0.3s ease-in-out; /* Transition for the slide-in effect */
 }
 
-/* Add an underline effect to links on hover */
-/* a:hover {
-  text-decoration: underline; 
-} */
-
-/* Customize the underline appearance */
-/* a:hover {
-  text-decoration-color: black;
-  text-decoration-thickness: 1px;
-  text-decoration-style: solid;
-  -moz-text-decoration-color: black;
-} */
-
-a {
-  position: relative;
-  display: inline-block;
-  /* Set initial text-decoration and background image */
-  text-decoration: none; /* No underline initially */
-  background-image: linear-gradient(to right, black, black);
-  background-repeat: no-repeat;
-  background-size: 0% 2px; /* Start with no visible underline */
-  background-position: bottom left;
-  transition: background-size 0.3s ease-in-out; /* Set transition for slide-in effect */
-}
-
-/* Hover effect to slide-in the underline */
 a:hover {
-  background-size: 100% 2px; /* Expand the underline */
+  background-size: 100% 1px; /* Expands the underline to the full width */
+  text-decoration: underline; /* Optionally, add text underline on hover */
 }
