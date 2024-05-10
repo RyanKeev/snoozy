@@ -6636,6 +6636,6 @@ a {
 }
 
 a:hover {
-  /* background-size: 100% 1px; */
+  background-size: 80% 1px;
   text-decoration: underline; /* Optionally, add text underline on hover */
 }
