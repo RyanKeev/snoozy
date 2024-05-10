@@ -6628,14 +6628,18 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   }
 }
 
-
+/* Base styles for links */
 a {
-  text-decoration: none; /* Remove default underline */
-  background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 0 1px no-repeat; /* Initially 0 width */
+  position: relative;
+  display: inline-block; /* Allows the background to wrap exactly around the text */
+  text-decoration: none; /* No underline initially */
+  background: linear-gradient(currentColor, currentColor) no-repeat; /* Linear gradient to create the underline */
+  background-size: 0% 1px; /* Initially set the background size to zero width */
+  background-position: 0% bottom; /* Position the underline at the bottom */
   transition: background-size 0.3s ease-in-out; /* Transition for the slide-in effect */
 }
 
+/* Hover effect to slide-in the underline */
 a:hover {
-  background-size: 100% 1px; /* Expands the underline to the full width */
-  text-decoration: underline; /* Optionally, add text underline on hover */
+  background-size: 100% 1px; /* Expands the underline to the full text width */
 }
