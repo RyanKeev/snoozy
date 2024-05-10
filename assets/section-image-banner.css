@@ -356,6 +356,10 @@
   .banner--mobile-bottom .banner__media::after {
     display: none;
   }
+  .banner__text p {
+    font-size: 18px;
+    font-family: var(--ff-harmonia-semibold) !important;
+  }
 }
 
 .banner::after,
@@ -374,10 +378,6 @@
   margin-top: 1.5rem;
 }
 
-.banner__text p {
-  font-size: 18px;
-  font-family: var(--ff-harmonia-bold);
-}
 
 @media screen and (min-width: 750px) {
   .banner__box > * + .banner__text {
