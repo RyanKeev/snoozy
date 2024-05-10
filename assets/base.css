@@ -6629,3 +6629,33 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 
+
+/* Base styles for links */
+a {
+  position: relative; /* Required for pseudo-element positioning */
+  display: inline-block;
+  /* Initially hide the underline by setting the text-shadow */
+  text-shadow: 0 1px transparent; /* You can adjust the offset (0 1px) */
+}
+
+/* Pseudo-element for the underline */
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px; /* Adjust height as needed */
+  background-color: black; /* Set the underline color */
+  transition: width 0.3s ease-in-out; /* Set transition properties */
+}
+
+/* Hover effect for slide-in underline */
+a:hover::after {
+  width: 100%; /* Expands the underline */
+}
+
+/* Enable text-decoration: underline for a */
+a:hover {
+  text-shadow: none; /* Show the underline */
+}
