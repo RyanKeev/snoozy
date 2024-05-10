@@ -547,7 +547,7 @@
                           {% assign array1 = list1String | split: "," %}
                           {% assign array2 = list2String | split: "," %}
                           <p class="tle" style='margin:15px 0 10px;'>{{ block.settings.list_1_title }}</p>
-                          <ul style="list-style: none; padding: 0;margin: 0">
+                          <ul style="list-style: none; padding: 0;margin: 0;">
                             {% for item in array1 %}
                             <li><i class="fa fa-check-circle-o icon-color" aria-hidden="true"></i>
                             {{item}}</li>
@@ -555,8 +555,8 @@
                           </ul>
                         </div>
                         <div>
-                          <p class="tle">{{ block.settings.list_2_title }}</p>
-                          <ul style="list-style: none; padding: 0;">
+                          <p class="tle" style='margin:15px 0 10px;'>{{ block.settings.list_2_title }}</p>
+                          <ul style="list-style: none; padding: 0;margin: 0;">
                               {% for item in array2 %}
                                 <li><i class="fa fa-check-circle-o icon-color" aria-hidden="true"></i>
                                 {{item}}</li>
