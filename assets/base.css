@@ -5559,7 +5559,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     padding: 0 !important;
   }
   .product-card-wrapper .card__heading {
-    font-family: var(--ff-harmonia-bold-pro-italic);
+    font-family: var(--ff-harmonia-bold-pro-italic) !important;
   }
 }
 @media (max-width:749px){
@@ -5592,7 +5592,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     gap: inherit;
   }
   .product-card-wrapper .card__heading {
-    font-family: var(--ff-harmonia-bold-pro-italic);
+    font-family: var(--ff-harmonia-bold-pro-italic) !important;
   }
 }
 
