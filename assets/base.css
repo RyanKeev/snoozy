@@ -366,10 +366,10 @@ h3,
 
 h4,
 .h4 {
-  /* font-family: var(--font-heading-family);
-  font-style: var(--font-heading-style); */
+  font-family: var(--font-body-family);
+  /* font-style: var(--font-heading-style); */
   /* font-family: var(--ff-harmonia-bold); */
-  font-family: var(--ff-harmonia-pro-regular);
+  /* font-family: var(--ff-harmonia-pro-regular); */
   font-style: var(--fs-harmonia-bold);
   font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
