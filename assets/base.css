@@ -6638,24 +6638,14 @@ a {
   text-shadow: 0 1px transparent; /* You can adjust the offset (0 1px) */
 }
 
-/* Pseudo-element for the underline */
-a::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  width: 0;
-  height: 2px; /* Adjust height as needed */
-  background-color: black; /* Set the underline color */
-  transition: width 0.3s ease-in-out; /* Set transition properties */
-}
-
-/* Hover effect for slide-in underline */
-a:hover::after {
-  width: 100%; /* Expands the underline */
-}
-
-/* Enable text-decoration: underline for a */
+/* Add an underline effect to links on hover */
 a:hover {
-  text-shadow: none; /* Show the underline */
+  text-decoration: underline; /* Underlines the text */
+}
+
+/* Customize the underline appearance */
+a:hover {
+  text-decoration-color: black; /* Customize the underline color */
+  text-decoration-thickness: 2px; /* Customize the thickness */
+  text-decoration-style: solid; /* Customize the style (solid, double, dotted, etc.) */
 }
