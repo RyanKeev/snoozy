@@ -148,7 +148,7 @@
 								</div>
 							{% elsif block.settings.video != blank %}
 								<div class="media-video-wrap">
-									{{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, image_size: '555x',  loading: 'lazy', class: 'lazyload rounded-5' }}
+									{{ block.settings.video | video_tag: autoplay: true, loop: true, muted: true, controls: false, image_size: '555x',  loading: 'lazy', class: 'lazyload', style: 'border-radius:10px;' }}
 								</div>
 
 							{% elsif block.settings.image != blank %}
