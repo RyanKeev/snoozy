@@ -394,7 +394,7 @@
 }
 
 .footer-block__details-content .list-menu__item--link,
-.copyright__content a {
+.copyright__content a, .footer-block__details-content {
   color: rgba(var(--color-foreground), .7);
 }
 
