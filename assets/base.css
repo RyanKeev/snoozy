@@ -298,6 +298,11 @@ p {
   margin: 0;
 }
 
+button p {
+  letter-spacing: 0;
+  line-height: 1;
+}
+
 .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
 }
