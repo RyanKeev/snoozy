@@ -3475,21 +3475,21 @@ h1 {
   --fs-harmonia-regular: normal;
   --fw-harmonia-regular: 500;
 
-  --ff-harmonia-semibold: 'HarmoniaSansSemiBold', sans-serif;
+  --ff-harmonia-semibold: 'HarmoniaSansSemiBold', var(--font-body-family), sans-serif;
   --fs-harmonia-semibold: normal;
   --fw-harmonia-semibold: 600;
 
 
-  --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular', sans-serif;
+  --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular', var(--font-body-family), sans-serif;
   --fs-harmonia-pro-regular: normal;
   --fw-harmonia-pro-regular: normal;
 
 
-  --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', sans-serif;
+  --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', var(--font-heading-family), sans-serif;
   --fs-harmonia-bold: normal;
   --fw-harmonia-bold: bold;
 
-  --ff-harmonia-bold-pro-italic: 'HarmoniaSansProCyr-Bold-Italic', sans-serif;
+  --ff-harmonia-bold-pro-italic: 'HarmoniaSansProCyr-Bold-Italic', var(--font-heading-family), sans-serif;
   --fs-harmonia-bold-pro-italic: italic;
   --fw-harmonia-bold-pro-italic: bold;
 }
