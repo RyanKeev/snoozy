@@ -6645,7 +6645,8 @@ a:hover {
 
 /* Customize the underline appearance */
 a:hover {
-  text-decoration-color: black; /* Customize the underline color */
-  text-decoration-thickness: 2px; /* Customize the thickness */
-  text-decoration-style: solid; /* Customize the style (solid, double, dotted, etc.) */
+  text-decoration-color: black;
+  text-decoration-thickness: 1px;
+  text-decoration-style: solid;
+  -moz-text-decoration-color: black;
 }
