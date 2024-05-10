@@ -6628,29 +6628,55 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   }
 }
 
-/* Create slide-in underline effect on link hover */
-.header__submenu li a {
+
+/* Apply slide-in underline effect to all links */
+a {
   position: relative; /* Required for pseudo-element positioning */
+  display: inline-block; /* Required to correctly calculate text width */
 }
 
 /* Pseudo-element for the underline */
-.header__submenu li a::after {
+a::before {
   content: "";
   position: absolute;
   left: 0;
   bottom: 0;
-  width: 0;
   height: 2px; /* Adjust height as needed */
+  width: 0; /* Start with zero width */
   background-color: black; /* Set the underline color */
   transition: width 0.3s ease-in-out; /* Set transition properties */
 }
 
 /* Hover effect to slide-in the underline */
-.header__submenu li a:hover::after {
-  width: 100%; /* Expands the underline to the text width */
+a:hover::before {
+  width: 100%; /* Expands the underline */
 }
 
-/* To match underline to text width */
-.header__submenu li a {
+/* Customizing text underline for each character */
+/* Enable white-space and character break for each letter */
+a {
+  white-space: nowrap; /* Prevents wrapping */
+}
+
+a span {
   display: inline-block;
+  position: relative;
+}
+
+/* Add underline to each span on hover */
+a span::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; /* Match the width of the text */
+  height: 2px; /* Adjust height as needed */
+  background-color: black; /* Set the underline color */
+  transition: width 0.3s ease-in-out; /* Set transition properties */
+  width: 0; /* Start with zero width */
+}
+
+/* Add hover effect for each span */
+a span:hover::before {
+  width: 100%; /* Expands the underline */
 }
