@@ -398,7 +398,7 @@ document.addEventListener('DOMContentLoaded', function() {
       {{ content_for_layout }}
     </main>
 
-    {% sections 'footer-group' %}
+    
 
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
@@ -459,15 +459,15 @@ document.addEventListener('DOMContentLoaded', function() {
 	{{ shop.metafields.loox["global_html_body"] }}
 
 <!-- Back in Stock helper snippet -->
-{% render 'back-in-stock-helper' %}
+
 <!-- End Back in Stock helper snippet -->
 
                 <!-- sb csp code --><script>
                 var is_theme_extension = '1';
                 {% capture ProIDsCollections %}
-                {% render 'csp-collectionProductIDS_sb' %}
+                
                 {% endcapture %}
-                {% render 'sb-csp-productCollectionData2' %}
+                
                     var ProIDsCollectionsTest = { {{ProIDsCollections}} }
                     var ProIDsCollections =`{{ProIDsCollections}}`;
                 </script><!-- sb csp code -->
@@ -513,7 +513,7 @@ document.addEventListener('DOMContentLoaded', function() {
     </script>
 
     <script src="{{ 'optimization.min.js' | asset_url }}" defer="defer"></script>
-                {% render 'quantity-breaks-now', customer: customer, template: template, product: product, cart: cart %}
+                
 
         </body>
 </html>
