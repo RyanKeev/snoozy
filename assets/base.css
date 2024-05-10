@@ -4258,7 +4258,8 @@ header.header .menu-label{
 @media (min-width: 992px) {
   .product-main-section .product__title h1{
     font-size: 40px;
-    line-height: 36px;
+    /* line-height: 36px; */
+    line-height: 1.2em;
   }
 
   .product-form__buttons .product-form__submit:hover{
