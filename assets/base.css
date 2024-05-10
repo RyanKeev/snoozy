@@ -5595,6 +5595,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   font-size: 18px;
   line-height: 1.4;
   color: #000000;
+  font-family: var(--ff-harmonia-bold);
 }
 
 .section-faq .faq-question .icon {
@@ -5638,6 +5639,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 
   .section-faq .faq-question span {
     font-size: 20px;
+    font-family: var(--ff-harmonia-bold);
   }
 
   .section-faq .faq-question {
