@@ -285,7 +285,7 @@ h5,
 }
 
 em {
-  font-family: var(--ff-harmonia-bold-pro-italic) !important;
+  font-family: var(--ff-harmonia-pro-regular),var(--ff-harmonia-bold-pro-italic) !important;
 }
 
 b, strong {
