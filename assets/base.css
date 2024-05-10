@@ -295,6 +295,11 @@ em , i{
     font-family: var(--ff-harmonia-bold) !important;
   }
 }
+@media (max-width:749px) {
+  b, strong {
+    font-family: var(--ff-harmonia-semibold) !important;
+  }
+}
 
 p {
   letter-spacing: 0;
