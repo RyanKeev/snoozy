@@ -5558,11 +5558,11 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     margin: 0 !important;
     padding: 0 !important;
   }
-}
-@media (max-width:749px){
   .product-card-wrapper .card__heading {
     font-family: var(--ff-harmonia-bold-pro-italic);
   }
+}
+@media (max-width:749px){
   .faq-text {
     text-align: center;
   }
@@ -5590,6 +5590,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   
   #faqCenter .container {
     gap: inherit;
+  }
+  .product-card-wrapper .card__heading {
+    font-family: var(--ff-harmonia-bold-pro-italic);
   }
 }
 
