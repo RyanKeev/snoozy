@@ -6640,12 +6640,17 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   left: 0;
   bottom: 0;
   width: 0;
-  height: 2px;
+  height: 2px; /* Adjust height as needed */
   background-color: black; /* Set the underline color */
   transition: width 0.3s ease-in-out; /* Set transition properties */
 }
 
 /* Hover effect to slide-in the underline */
 .header__submenu li a:hover::after {
-  width: 100%; /* Expands the underline */
+  width: 100%; /* Expands the underline to the text width */
+}
+
+/* To match underline to text width */
+.header__submenu li a {
+  display: inline-block;
 }
