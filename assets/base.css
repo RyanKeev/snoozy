@@ -5593,6 +5593,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   }
   .product-card-wrapper .card__heading {
     font-family: var(--ff-harmonia-bold-pro-italic) !important;
+    font-style: var(--fs-harmonia-bold-pro-italic) !important;
   }
 }
 
