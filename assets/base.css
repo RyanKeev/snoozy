@@ -5817,10 +5817,10 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 .section-brands-logo .section-heading span:last-child{
-  /* font-family: var(--font-heading-family);
-  font-style: italic; */
+   font-family: var(--font-heading-family);
+  /* font-style: italic; */
   font-weight: var(--font-heading-weight);
-  font-family: var(--ff-harmonia-bold-pro-italic);
+  /* font-family: var(--ff-harmonia-bold-pro-italic); */
   font-style: var(--fs-harmonia-bold-pro-italic);
   /* font-weight: var(--fw-harmonia-bold-pro-italic); */
 
