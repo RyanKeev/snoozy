@@ -6612,7 +6612,6 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     order: 2 !important;
   }
 
- 
   .note {
     display: block;
     font-size: 13px !important;
@@ -6622,7 +6621,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     margin: 0 !important;
     padding: 0 !important;
     margin-top: 30px !important;
+    margin-bottom: 30px !important;
   }
+
   .media-block {
     padding: 0;
   }
