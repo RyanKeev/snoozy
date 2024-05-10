@@ -480,23 +480,8 @@
     },
     "multicolumn_mNrjRH": {
       "type": "multicolumn",
-      "blocks": {
-        "column_Cx8gQp": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/snoozy-table.jpg",
-            "rating": "",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "column_Cx8gQp"
-      ],
       "settings": {
+        "image_banner": "shopify:\/\/shop_images\/snoozy-table-smaller.jpg",
         "show_shadow": false,
         "disabled_fullwidth": false,
         "show_desktop": false,
