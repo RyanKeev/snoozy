@@ -1687,6 +1687,7 @@ a.product__text {
   letter-spacing: 0px !important;
   color: #000 !important;
   text-transform: none !important;
+  font-family: var(--ff-harmonia-bold);
 }
 
 .SectionImageWithTextTemplate2 .info-color h1, 
