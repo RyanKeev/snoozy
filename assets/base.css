@@ -303,6 +303,11 @@ button p {
   line-height: 1 !important;
 }
 
+.banner__buttons a b {
+  letter-spacing: 0;
+  margin-top: 1px;
+}
+
 .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
 }
