@@ -6629,13 +6629,13 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 
-a {
+.header__submenu .header__menu-item {
   text-decoration: none; /* Remove default underline */
   background: linear-gradient(to right, currentColor, currentColor) 0 min(100%, 1.35em) / 0 1px no-repeat; /* Initially 0 width */
   transition: background-size 0.3s ease-in-out; /* Transition for the slide-in effect */
 }
 
-a:hover {
+.header__submenu .header__menu-item:hover {
   /* background-size: 80% 1px; */
   text-decoration: underline; /* Optionally, add text underline on hover */
 }
