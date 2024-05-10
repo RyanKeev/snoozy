@@ -347,7 +347,7 @@
       "settings": {
         "show_shadow": false,
         "disabled_fullwidth": true,
-        "show_desktop": false,
+        "show_desktop": true,
         "show_mobile": false,
         "title": "",
         "heading_size": "h0",
