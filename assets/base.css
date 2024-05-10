@@ -6591,6 +6591,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   #Banner-template--22565320327473__image_banner_WqKFzc p,
   #name-placeholder {
   color: #1a1a1a !important;
+  letter-spacing: -1px !important;
   }
 }
 /* FRONT PAGE END */
