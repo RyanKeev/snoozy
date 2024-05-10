@@ -292,6 +292,11 @@ b, strong {
   font-family: var(--ff-harmonia-bold) !important;
 }
 
+p {
+  letter-spacing: 0;
+  line-height: 1.5;
+}
+
 .hxl {
   font-size: calc(var(--font-heading-scale) * 5rem);
 }
