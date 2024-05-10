@@ -6600,8 +6600,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   #name-placeholder {
   color: #1a1a1a !important;
   letter-spacing: -1px !important;
-  font-weight: var(--font-heading-weight);
-  font-family: var(--ff-harmonia-bold);
+  font-family: var(--ff-harmonia-semibold);
   }
 }
 /* FRONT PAGE END */
