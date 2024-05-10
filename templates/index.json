@@ -45,7 +45,7 @@
         "image": "shopify:\/\/shop_images\/hero-banner-desktop-1.jpg",
         "mobile_image": "shopify:\/\/shop_images\/snoozy-mobile-desktop.jpg",
         "image_overlay_opacity": 0,
-        "image_height": "large",
+        "image_height": "medium",
         "desktop_content_position": "middle-left",
         "show_text_box": false,
         "desktop_content_alignment": "left",
