@@ -5,7 +5,73 @@
 <!-- Load jQuery and Owl Carousel -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+<script>
+  function submitToKlaviyo(email, klaviyoPublicApiKey, klaviyoListId, attempt = 1) {
+    const url = `https://a.klaviyo.com/api/v2/list/${klaviyoListId}/members?api_key=${klaviyoPublicApiKey}`;
 
+    fetch(url, {
+        method: 'POST',
+        mode: 'no-cors', 
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            profiles: [
+                {
+                    email: email
+                }
+            ]
+        }),
+    })
+    .then(response => {
+        if (!response.ok) {
+            return response.json().then(result => {
+                throw new Error(`Error adding to Klaviyo: ${result.message}`);
+            });
+        }
+        return response.json();
+    })
+    .then(result => {
+        console.log('Successfully added to Klaviyo:', result);
+        // Optional: Display a success message to the user
+    })
+    .catch(error => {
+        console.error('Error:', error);
+
+        // Implement retry strategy with exponential backoff
+        if (attempt <= 3) {
+            const delay = Math.pow(2, attempt) * 1000; // Exponential backoff
+            console.log(`Retrying in ${delay / 1000} seconds...`);
+            setTimeout(() => {
+                submitToKlaviyo(email, klaviyoPublicApiKey, klaviyoListId, attempt + 1);
+            }, delay);
+        } else {
+            console.error('Max retries reached. Could not complete the request.');
+            // Optional: Display an error message to the user
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('klaviyo-form');
+    
+    form.addEventListener('submit', function(event) {
+        event.preventDefault();
+        
+        // Gather the email from the form
+        const formData = new FormData(form);
+        const email = formData.get('contact[email]');
+
+        // Public API key and List ID from Klaviyo
+        const klaviyoPublicApiKey = 'WZJixx';
+        const klaviyoListId = 'QZjUhS';
+
+        // Submit the email data to Klaviyo with retry strategy
+        submitToKlaviyo(email, klaviyoPublicApiKey, klaviyoListId);
+    });
+});
+
+</script>
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
