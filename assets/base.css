@@ -253,11 +253,11 @@ body:has(.section-header .drawer-menu) .announcement-bar-section slideshow-compo
   font-size: 1.5rem;
   letter-spacing: 0.06rem;
   line-height: calc(1 + 0.8 / var(--font-body-scale));
-  /* font-family: var(--font-body-family);
-  font-style: var(--font-body-style); */
+  font-family: var(--font-body-family);
+  font-style: var(--font-body-style);
   font-weight: var(--font-body-weight); 
-  font-family: var(--ff-harmonia-pro-regular);
-  font-style: var(--fs-harmonia-pro-regular);
+  /* font-family: var(--ff-harmonia-pro-regular);
+  font-style: var(--fs-harmonia-pro-regular); */
   /* font-weight: var(--fw-harmonia-pro-regular);   */
 }
 
@@ -366,10 +366,10 @@ h3,
 
 h4,
 .h4 {
-  font-family: var(--font-body-family);
-  /* font-style: var(--font-heading-style); */
+  /* font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style); */
   /* font-family: var(--ff-harmonia-bold); */
-  /* font-family: var(--ff-harmonia-pro-regular); */
+  font-family: var(--ff-harmonia-pro-regular);
   font-style: var(--fs-harmonia-bold);
   font-size: calc(var(--font-heading-scale) * 1.5rem);
 }
@@ -3479,9 +3479,11 @@ h1 {
   --fs-harmonia-semibold: normal;
   --fw-harmonia-semibold: 600;
 
+
   --ff-harmonia-pro-regular: 'HarmoniaSansProCyr-Regular', sans-serif;
   --fs-harmonia-pro-regular: normal;
   --fw-harmonia-pro-regular: normal;
+
 
   --ff-harmonia-bold: 'HarmoniaSansProCyr-Bold', sans-serif;
   --fs-harmonia-bold: normal;
@@ -4825,10 +4827,10 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 .section-image-content .item-title{
-  font-family: var(--font-heading-family);
-  /* font-style: var(--font-heading-style);  */
+  /* font-family: var(--font-heading-family);
+  font-style: var(--font-heading-style);  */
   font-weight: var(--font-heading-weight);
-  /* font-family: var(--ff-harmonia-bold); */
+  font-family: var(--ff-harmonia-bold);
   font-style: var(--fs-harmonia-bold);
   /* font-weight: var(--fw-harmonia-bold); */
 
@@ -5817,10 +5819,10 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
 }
 
 .section-brands-logo .section-heading span:last-child{
-   font-family: var(--font-heading-family);
-  /* font-style: italic; */
+  /* font-family: var(--font-heading-family);
+  font-style: italic; */
   font-weight: var(--font-heading-weight);
-  /* font-family: var(--ff-harmonia-bold-pro-italic); */
+  font-family: var(--ff-harmonia-bold-pro-italic);
   font-style: var(--fs-harmonia-bold-pro-italic);
   /* font-weight: var(--fw-harmonia-bold-pro-italic); */
 
