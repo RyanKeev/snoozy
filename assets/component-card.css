@@ -185,16 +185,6 @@
   margin-bottom: 0;
 }
 
-.collection-list .card--standard .card__heading{
-  font-size: 32px !important;
-  line-height: 1.6em !important;
-  letter-spacing: 0px !important;
-  font-style: italic;
-  color: #1a1a1a !important;
-  text-transform: none !important;
-  font-family: var(--ff-harmonia-bold-pro-italic) !important;
-}
-
 .card__heading:last-child {
   margin-bottom: 0;
 }
@@ -219,7 +209,29 @@
   .card--horizontal__quick-add {
     font-size: calc(var(--font-heading-scale) * 1.3rem);
   }
+  .collection-list .card--standard .card__heading{
+  font-size: 32px !important;
+  line-height: 1.6em !important;
+  letter-spacing: 0px !important;
+  font-style: italic;
+  color: #1a1a1a !important;
+  text-transform: none !important;
+  font-family: var(--ff-harmonia-bold-pro-italic) !important;
+  }
 }
+
+@media (max-width: 749px) {
+  .collection-list .card--standard .card__heading{
+    font-size: 28px !important;
+    line-height: 1.1em !important;
+    letter-spacing: 0px !important;
+    font-style: italic;
+    color: #1a1a1a !important;
+    text-transform: none !important;
+    font-family: var(--ff-harmonia-bold-pro-italic) !important;
+  }
+}
+
 
 .card--card.card--media > .card__content {
   margin-top: calc(0rem - var(--image-padding));
