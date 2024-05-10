@@ -6628,3 +6628,24 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   }
 }
 
+/* Create slide-in underline effect on link hover */
+a {
+  position: relative; /* Required for pseudo-element positioning */
+}
+
+/* Pseudo-element for the underline */
+a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: black; /* Set the underline color */
+  transition: width 0.3s ease-in-out; /* Set transition properties */
+}
+
+/* Hover effect to slide-in the underline */
+a:hover::after {
+  width: 100%; /* Expands the underline */
+}
