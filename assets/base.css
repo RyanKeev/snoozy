@@ -6590,6 +6590,9 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   .order-image {
     order: 1 !important;
   }
+  .media-block {
+    padding: 0 40px;
+  }
 }
 
 @media (max-width: 749px) { 
@@ -6608,8 +6611,8 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
     padding: 0 !important;
     margin-top: 30px !important;
   }
+  .media-block {
+    padding: 0;
+  }
 }
 
-.media-block {
-  padding: 0 40px;
-}
