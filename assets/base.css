@@ -6639,14 +6639,31 @@ a {
 }
 
 /* Add an underline effect to links on hover */
-a:hover {
-  text-decoration: underline; /* Underlines the text */
-}
+/* a:hover {
+  text-decoration: underline; 
+} */
 
 /* Customize the underline appearance */
-a:hover {
+/* a:hover {
   text-decoration-color: black;
   text-decoration-thickness: 1px;
   text-decoration-style: solid;
   -moz-text-decoration-color: black;
+} */
+
+a {
+  position: relative;
+  display: inline-block;
+  /* Set initial text-decoration and background image */
+  text-decoration: none; /* No underline initially */
+  background-image: linear-gradient(to right, black, black);
+  background-repeat: no-repeat;
+  background-size: 0% 2px; /* Start with no visible underline */
+  background-position: bottom left;
+  transition: background-size 0.3s ease-in-out; /* Set transition for slide-in effect */
+}
+
+/* Hover effect to slide-in the underline */
+a:hover {
+  background-size: 100% 2px; /* Expand the underline */
 }
