@@ -299,8 +299,8 @@ p {
 }
 
 button p {
-  letter-spacing: 0;
-  line-height: 1;
+  letter-spacing: 0 !important;
+  line-height: 1 !important;
 }
 
 .hxl {
