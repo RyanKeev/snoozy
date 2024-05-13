@@ -4413,7 +4413,7 @@ product-variant-swatches input[type=radio]:checked+label.size-swatch{
   }
 
   product-variant-swatches label.size-swatch{
-    min-width: 150px;
+    min-width: 100px;
     border-radius: 12px!important;
     font-size: 14px!important;
   }
