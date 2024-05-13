@@ -535,6 +535,19 @@
                         .bundle_swatch {
                           margin-bottom: 8px;
                           margin-right: 0px;
+                          flex: 1;
+                          align-items: center;
+                        }
+                        @media (min-widtH:750px){
+                          padding-left: 24px !important;
+                          padding-right: 24px !important;
+                          border-color: #edeeee !important;
+                          border-radius: 4px 4px 4px 40px !important;
+                          height: 100px !important;
+                          line-height: 100px !important;
+                          border-radius: 4px !important;
+                          font-size: 16px !important;
+                          font-family: var(--ff-harmonia-bold);
                         }
                       </style>
                       <div id="Quantity-Form-{{ section.id }} bundle_swatches_custom" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} bundle-swatches"
