@@ -738,6 +738,15 @@
     }
   </script>
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("quantity-bundle-selector").addEventListener("change", function() {
+        var selectedQuantity = document.querySelector('input[name="quantity-bundle-selector"]:checked').value;
+        document.getElementById("quantity").value = selectedQuantity;
+      });
+    });
+  </script>
+  
 </section>
 
 {% schema %}
@@ -1200,7 +1209,19 @@
     {
       "type": "quantity_bundle_selector",
       "name": "Quantity Bundle Selector",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "radio",
+          "id": "default_quantity",
+          "label": "Default Quantity",
+          "options": [
+            {"value": "option1", "label": "Buy 1"},
+            {"value": "option2", "label": "Buy 2"},
+            {"value": "option3", "label": "Buy 4"}
+          ]
+        }
+      ]
     },
     {
       "type": "variant_swatches",
