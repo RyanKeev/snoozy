@@ -4385,7 +4385,7 @@ product-variant-swatches{
   flex-wrap: wrap;
   flex-direction: column;
   gap: 20px;
-  margin: 0 0 25px!important;
+  margin: 0 0 45px!important;
 }
 
 product-variant-swatches fieldset{
