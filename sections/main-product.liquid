@@ -525,16 +525,19 @@
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
                       <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                          const quantityRadios = document.querySelectorAll('input[name="quantity"]');
-                          quantityRadios.forEach(function(radio) {
-                              radio.addEventListener('change', function() {
-                                  const selectedQuantity = this.value;
-                                  // Update the hidden quantity input field
-                                  document.getElementById('Quantity-{{ section.id }}').value = selectedQuantity;
-                              });
-                          });
-                      });
+     
+document.addEventListener("DOMContentLoaded", function() {
+  const quantityRadios = document.querySelectorAll('input[name="quantity"]');
+  const visibleQuantityInput = document.getElementById('Quantity-{{ section.id }}');
+
+  quantityRadios.forEach(function(radio) {
+      radio.addEventListener('change', function() {
+          const selectedQuantity = this.value;
+          // Update the visible quantity input field
+          visibleQuantityInput.value = selectedQuantity;
+      });
+  });
+});
                       </script>
                       <div id="Quantity-Form-{{ section.id }}" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
                         style="max-width: 150px;"
