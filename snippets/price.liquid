@@ -67,7 +67,11 @@
         </span>
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
-        {{ money_price * (100 - discount) / 100 | remove: 'From ' }}
+          {%if extra_discount %} 
+          {{ extra_discount | remove: 'From' }}
+          {% else %}
+          {{ money_price | remove: 'From ' }}
+          {% endif %}
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
