@@ -15,9 +15,29 @@
     block: block
   %}
 {% endcomment %}
-
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const labels = document.querySelectorAll(".product-form__input input[type='radio'] + label.size-swatch");
+        labels.forEach((label, index) => {
+            let content;
+            switch (index) {
+                case 0:
+                    content = "Buy 1";
+                    break;
+                case 1:
+                    content = "Buy 2";
+                    break;
+                case 2:
+                    content = "Buy 4";
+                    break;
+                default:
+                    content = "Default Content"; // Change as needed
+            }
+            label.style.setProperty('--content', `'${content}'`);
+        });
+    });    
+</script>
 <style>
-
 .product-form__input input[type='radio'] + label.size-swatch {
     flex: 1;
     align-items: center;
@@ -64,17 +84,9 @@
     content: attr(data-content); /* Use the 'data-content' attribute value */
 }
 
-/* Apply specific content to the first, second, and third child */
-.product-form__input input[type='radio'] + label.size-swatch:nth-child(1)::before {
-    content: 'Buy 1' !important;
-}
-
-.product-form__input input[type='radio'] + label.size-swatch:nth-child(2)::before {
-    content: 'Buy 2' !important;
-}
-
-.product-form__input input[type='radio'] + label.size-swatch:nth-child(3)::before {
-    content: 'Buy 4' !important;
+.product-form__input input[type='radio'] + label.size-swatch::before {
+    content: var(--content);
+    /* Other styles */
 }
 
 </style>
