@@ -524,16 +524,37 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
-<!-- Add this code where you want to display the quantity bundle options -->
-<div class="quantity-bundle-options">
-  {% assign quantity_options = '1,2,4' | split: ',' %}
-  {% for option in quantity_options %}
-    <label>
-      <input type="radio" name="quantity" value="{{ option }}" data-price="{{ product.price | times: option | money }}">
-      {{ option }} item{% if option != '1' %}s{% endif %}
-    </label>
-  {% endfor %}
-</div>
+                      
+                      <!-- Add this script at the end of the file -->
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    // Get the Add to Cart button
+    var addToCartButton = document.querySelector('.product_AddToCart');
+
+    // Add event listener to Add to Cart button
+    addToCartButton.addEventListener('click', function(event) {
+      // Prevent default form submission
+      event.preventDefault();
+      // Get the selected quantity
+      var selectedQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value);
+      // Get the selected variant ID
+      var variantId = document.querySelector('input[name="quantity"]:checked').dataset.variantId;
+      // Add the selected variant and quantity to the cart
+      Shopify.addItem(variantId, selectedQuantity);
+    });
+  });
+</script>
+
+                    <!-- Add this code where you want to display the quantity bundle options -->
+                    <div class="quantity-bundle-options">
+                    {% assign quantity_options = '1,2,4' | split: ',' %}
+                    {% for option in quantity_options %}
+                      <label>
+                        <input type="radio" name="quantity" value="{{ option }}" data-price="{{ product.price | times: option | money }}">
+                        {{ option }} item{% if option != '1' %}s{% endif %}
+                      </label>
+                    {% endfor %}
+                    </div>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
                   {%- when 'description-capture' -%}
@@ -748,25 +769,6 @@
     }
   </script>
   </div>
-<!-- Add this script at the end of the file -->
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    // Get the Add to Cart button
-    var addToCartButton = document.querySelector('.product_AddToCart');
-
-    // Add event listener to Add to Cart button
-    addToCartButton.addEventListener('click', function(event) {
-      // Prevent default form submission
-      event.preventDefault();
-      // Get the selected quantity
-      var selectedQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value);
-      // Get the selected variant ID
-      var variantId = document.querySelector('input[name="quantity"]:checked').dataset.variantId;
-      // Add the selected variant and quantity to the cart
-      Shopify.addItem(variantId, selectedQuantity);
-    });
-  });
-</script>
 
 </section>
 
