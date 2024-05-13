@@ -3058,9 +3058,6 @@ details-disclosure > details {
   }
 }
 
-.font-body-bold {
-  font-weight: var(--font-body-weight-bold);
-}
 
 /* outline and border styling for Windows High Contrast Mode */
 @media (forced-colors: active) {
