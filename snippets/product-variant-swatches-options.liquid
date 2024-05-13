@@ -54,7 +54,7 @@
         transform: translateY(-50%);
     }
     .size-swatch:nth-child(1):before {
-        content: "Buy 1" !important;
+        content: "Buy 1" !im;
     }
 </style>
 {%- liquid
@@ -104,7 +104,7 @@
         {% endif %}
     {% else %}
         <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">   
-            <span>{{ value -}}</span>
+            <span>{{ value }}</span>
             {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
         </label>
     {% endif %}
