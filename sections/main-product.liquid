@@ -493,18 +493,7 @@
                           <span class="visually-hidden">{{- 'products.product.quantity.decrease' | t: product: product.title | escape -}}</span>
                           {% render 'icon-minus' %}
                         </button>
-                        <input class="quantity__input" type="number" name="quantity" id="Quantity-{{ section.id }}"
-                               data-cart-quantity="{{ cart_qty }}"
-                               data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                               min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                                {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                                  data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                                  max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                                {% endif %}
-                               step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
-                               value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                               form="{{ product_form_id }}"
-                        />
+
                         <button class="quantity__button no-js-hidden" name="plus" type="button">
                           <span class="visually-hidden">{{- 'products.product.quantity.increase' | t: product: product.title | escape -}}</span>
                           {% render 'icon-plus' %}
@@ -549,7 +538,18 @@ document.addEventListener("DOMContentLoaded", function() {
                         {% # theme-check-enable %}
                     
                         <label for="quantity">Quantity:</label><br>
-                    
+                        <input class="quantity__input" type="hidden" name="quantity" id="Quantity-{{ section.id }}"
+                          data-cart-quantity="{{ cart_qty }}"
+                          data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                          min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                           {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
+                             data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                             max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                           {% endif %}
+                          step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
+                          value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                          form="{{ product_form_id }}"
+                   />
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
                         <label for="quantity1">1</label>
                     
