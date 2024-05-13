@@ -136,6 +136,11 @@
             "show_inventory_quantity": false
           }
         },
+        "quantity_bundle_selector_V3NWMz": {
+          "type": "quantity_bundle_selector",
+          "settings": {
+          }
+        },
         "buy_buttons": {
           "type": "buy_buttons",
           "settings": {
@@ -254,6 +259,7 @@
         "a019fdc3-26d6-4ade-90fd-e1c7c0cc5707",
         "quantity_selector",
         "fdf08dd9-0177-4af9-b553-89e9fec6efed",
+        "quantity_bundle_selector_V3NWMz",
         "buy_buttons",
         "icon_with_text_cW8XfL",
         "description_capture_U3W9GV",
