@@ -552,18 +552,18 @@
                           value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                           form="{{ product_form_id }}"
                    />
-                        <label class="bundle_swatch" for="quantity1">
+                      <span>
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
-                        1</label>
-                          
-                        <label class="bundle_swatch" for="quantity2">
+                        <label for="quantity1">1</label>
+                      </span>
+                      <span>
                         <input type="radio" id="quantity2" name="quantity" value="2">
-                        2</label>
-                    
-                        <label class="bundle_swatch" for="quantity4">
+                        <label for="quantity2">2</label>
+                      </span>
+                      <span>
                         <input type="radio" id="quantity4" name="quantity" value="4">
-                        4</label>
-                    
+                        <label for="quantity4">4</label>
+                      </span>
                         <div class="quantity__rules caption no-js-hidden">
                             {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
                             <span class="divider">{{- 'products.product.quantity.multiples_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.increment -}}</span>
