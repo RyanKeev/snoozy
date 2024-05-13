@@ -528,6 +528,7 @@
                         <!-- other product details -->
                         
                         <label for="quantity_radio">Select Quantity:</label><br>
+                        <input type="hidden" name="quantity" id="quantity" value="1">
                         <input type="radio" name="quantity" value="1" onclick="updateQuantity(1)"> 1
                         <input type="radio" name="quantity" value="2" onclick="updateQuantity(2)"> 2
                         <!-- Add more radio inputs for other quantities as needed -->
@@ -748,14 +749,10 @@
   </script>
   </div>
   <script>
-    document.addEventListener('DOMContentLoaded', function() {
-      document.getElementById("quantity-bundle-selector").addEventListener("change", function() {
-        var selectedQuantity = document.querySelector('input[name="quantity-bundle-selector"]:checked').value;
-        document.getElementById("quantity").value = selectedQuantity;
-      });
-    });
+    function updateQuantity(quantity) {
+      document.getElementById('quantity').setAttribute('value', quantity);
+    }
   </script>
-  
 </section>
 
 {% schema %}
