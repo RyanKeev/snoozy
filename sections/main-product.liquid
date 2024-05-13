@@ -524,7 +524,12 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
-                      
+                      <label for="quantity">Quantity:</label><br>
+<input type="radio" id="quantity1" name="quantity" value="1">
+<label for="quantity1">1</label>
+<input type="radio" id="quantity2" name="quantity" value="2">
+<label for="quantity2">2</label>
+<!-- Add more radio buttons for higher quantities if needed -->
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
                   {%- when 'description-capture' -%}
