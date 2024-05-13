@@ -44,7 +44,7 @@
         "price": {
           "type": "price",
           "settings": {
-            "discount_ten_percent": true,
+            "discount_ten_percent": false,
             "discount_fifteen_percent": false
           }
         },
