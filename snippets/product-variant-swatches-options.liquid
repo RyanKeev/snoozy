@@ -133,8 +133,7 @@
         {% endif %}
     {% else %}
         <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">   
-            {% comment %} {{ value | escape  }} {% endcomment %}
-            standard - $59 each
+            {{ value | escape  }}
             {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
         </label>
     {% endif %}
