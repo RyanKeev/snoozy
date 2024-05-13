@@ -29,8 +29,6 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
   
-  assign discount_factor = 100 | minus: 10
-  assign discounted_price = money_price | times: discount_factor | divided_by: 100
 
 -%}
 
@@ -69,7 +67,6 @@
         </span>
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
-          {{ discounted_price }}
           {{ money_price | remove: 'From ' }}
       </span>
     </div>
