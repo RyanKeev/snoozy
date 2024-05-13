@@ -99,7 +99,12 @@
     color: var(--color);
     /* Other styles */
 }
-
+.quantity-swatch-wrapper {
+    margin-top: 15px;
+}
+.quantity-swatch-wrapper fieldset.product-form__input .form__label {
+    display: none;
+}
 </style>
 {%- liquid
     assign variants_available_arr = product.variants | map: 'available'
