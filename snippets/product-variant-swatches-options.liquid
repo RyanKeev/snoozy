@@ -15,6 +15,32 @@
     block: block
   %}
 {% endcomment %}
+
+<style>
+    .size-swatch {
+        padding-left: 24px !important;
+        padding-right: 24px !important;
+        border-color: #edeeee !important;
+        border-radius: 4px 4px 4px 40px !important;
+        height: 140px !important;
+        line-height: 140px !important;
+        border-radius: 4px !important;
+        background: #fff;
+        display: inline-flex;
+        justify-content: center;
+        margin-right: 10px;
+        padding-right: 20px;
+        padding-left: 20px;
+        width: auto;
+        height: 44px;
+        line-height: 44px;
+        border: 1px solid #dddcdc;
+        font-size: 16px;
+        position: relative;
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+</style>
 {%- liquid
     assign variants_available_arr = product.variants | map: 'available'
     assign variants_option1_arr = product.variants | map: 'option1'
@@ -23,6 +49,7 @@
 
     assign product_form_id = 'product-form-' | append: section.id
 -%}
+
 
 {%- for value in option.values -%}
     {%- liquid
