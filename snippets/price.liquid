@@ -70,6 +70,7 @@
         </span>
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
+        {{ discounted_price  }}
          {%if special_discount %} 
           {{ discounted_price  }}
           {% else %} 
