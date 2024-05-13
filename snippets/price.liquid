@@ -30,8 +30,6 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
   
-  assign mp = 100 | minus: 10
-  assign money_prize = money_price | times: mp
 %}
 <div
   class="
@@ -68,7 +66,7 @@
         </span>
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
-        {{ money_prize }}
+
           {{ money_price | remove: 'From ' }}
       </span>
     </div>
