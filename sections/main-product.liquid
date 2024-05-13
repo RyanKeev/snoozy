@@ -524,42 +524,34 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
-                      <script>
-                        document.addEventListener("DOMContentLoaded", function() {
-                          const quantityRadios = document.querySelectorAll('input[name="quantity"]');
-                          quantityRadios.forEach(function(radio) {
-                              radio.addEventListener('change', function() {
-                                  const selectedQuantity = this.value;
-                                  // Update the cart with the selected quantity
-                                  updateCart(selectedQuantity);
-                              });
-                          });
-                      
-                          function updateCart(quantity) {
-                              // Add logic to update the cart with the selected quantity
-                              // This could involve making an AJAX request to Shopify's cart API
-                              // Example:
-                              // fetch('/cart/update.js', {
-                              //    method: 'POST',
-                              //    body: 'quantity=' + quantity + '&id=' + variantId, // Replace variantId with the actual variant ID
-                              //    credentials: 'same-origin',
-                              //    headers: {
-                              //        'Content-Type': 'application/x-www-form-urlencoded'
-                              //    }
-                              // }).then(function(response) {
-                              //    // Handle the response as needed
-                              // });
-                          }
-                      });
-                      
-                      </script>
-                      <label for="quantity">Quantity:</label><br>
-<input type="radio" id="quantity1" name="quantity" value="1">
-<label for="quantity1">1</label>
-<input type="radio" id="quantity2" name="quantity" value="2">
-<label for="quantity2">2</label>
-<!-- Add more radio buttons for higher quantities if needed -->
-
+                      <div id="Quantity-Form-{{ section.id }}" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %}"
+                        style="max-width: 150px;"
+                        {{ block.shopify_attributes }}>
+                    
+                        {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
+                        {% # theme-check-disable %}
+                        {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
+                        {% # theme-check-enable %}
+                    
+                        <label for="quantity">Quantity:</label><br>
+                    
+                        {% for i in (1..product.selected_or_first_available_variant.quantity_rule.max) %}
+                        <input type="radio" id="quantity{{ i }}" name="quantity" value="{{ i }}" {% if i == product.selected_or_first_available_variant.quantity_rule.min %} checked {% endif %}>
+                        <label for="quantity{{ i }}">{{ i }}</label>
+                        {% endfor %}
+                    
+                        <div class="quantity__rules caption no-js-hidden">
+                            {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
+                            <span class="divider">{{- 'products.product.quantity.multiples_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.increment -}}</span>
+                            {%- endif -%}
+                            {%- if product.selected_or_first_available_variant.quantity_rule.min > 1 -%}
+                            <span class="divider">{{- 'products.product.quantity.minimum_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.min -}}</span>
+                            {%- endif -%}
+                            {%- if product.selected_or_first_available_variant.quantity_rule.max != null -%}
+                            <span class="divider">{{- 'products.product.quantity.maximum_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.max -}}</span>
+                            {%- endif -%}
+                        </div>
+                    </div>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
                   {%- when 'description-capture' -%}
