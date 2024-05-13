@@ -524,70 +524,16 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
-                      <style>
-                        <style>
-                          .gf_swatch {
-                            padding-left: 24px !important;
-                            padding-right: 24px !important;
-                            border-color: #edeeee !important;
-                            border-radius: 4px 4px 4px 40px !important;
-                            height: 100px !important;
-                            line-height: 100px !important;
-                            border-radius: 4px !important;
-                            font-size: 16px !important;
-                            font-family: HarmoniaSansProCyr-Bold !important;
-                            background: #fff;
-                            display: inline-flex;
-                            justify-content: center;
-                            margin-right: 10px;
-                            padding-right: 20px;
-                            padding-left: 20px;
-                            width: auto;
-                            height: 44px;
-                            line-height: 44px;
-                            border: 1px solid #dddcdc;
-                            font-size: 16px;
-                            position: relative;
-                            background-size: cover;
-                            background-repeat: no-repeat;
-                            cursor: pointer;
-                          }
-                          .gf_swatch:first-child::before {
-                            content: "Buy 1";
-                          }
-                          .gf_swatch::before {
-                            position: absolute;
-                            top: 0;
-                            line-height: 1em;
-                            color: #fff;
-                            background: #000;
-                            font-size: 14px;
-                            padding: 5px 20px;
-                            border-radius: 30px;
-                            transform: translateY(-50%);
-                          }
-                      </style>
-                      <div class="quantity-bundle-selector">
-                        <div style="padding-left: 0; padding-right: 0; width: 100%;">
-                          <div style="display: flex; gap: 16px;" class="gf_swatches-custom">
-                            <span style="margin-bottom: 8px; margin-right: 0; flex: 1; align-items: center;" class="gf-swatch">
-                              <span style="line-height: 1.5em; text-align: center;">buy 1</span>
-                            </span>
-                            <span style="margin-bottom: 8px; margin-right: 0; flex: 1; align-items: center;" class="gf-swatch">
-                              <span style="line-height: 1.5em; text-align: center;">buy 2</span>
-                            </span>
-                            <span style="margin-bottom: 8px; margin-right: 0; flex: 1; align-items: center;" class="gf-swatch">
-                              <span style="line-height: 1.5em; text-align: center;">buy 4</span>
-                            </span>
-                          </div>
-                        </div>
-                        {% comment %} {% section 'quantity-bundle-selector' %} {% endcomment %}
-                      </div>
-                      
-                      <form action="/cart/add" method="post" id="product-form">
-                        <!-- Other product form fields -->
-                        <input type="hidden" id="quantity" name="quantity" value="1">
-                        <!-- Other product form fields -->
+                      <form action="/cart/add" method="post" id="product_form">
+                        <!-- other product details -->
+                        
+                        <label for="quantity_radio">Select Quantity:</label><br>
+                        <input type="radio" name="quantity" value="1" onclick="updateQuantity(1)"> 1
+                        <input type="radio" name="quantity" value="2" onclick="updateQuantity(2)"> 2
+                        <!-- Add more radio inputs for other quantities as needed -->
+                        
+                        <!-- Add to Cart button -->
+                        <input type="submit" value="Add to Cart">
                       </form>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
