@@ -29,7 +29,9 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
-  assign extra_discount =''
+  assign discounted_price = money_price | times: (100 - special_discount) | divided_by: 100
+
+
 -%}
 
 <div
@@ -68,7 +70,7 @@
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
           {%if extra_discount %} 
-          {{ extra_discount | remove: 'From' }}
+          {{ discounted_price | remove: 'From' }}
           {% else %}
           {{ money_price | remove: 'From ' }}
           {% endif %}
