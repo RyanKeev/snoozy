@@ -138,7 +138,6 @@
         },
         "quantity_bundle_selector_V3NWMz": {
           "type": "quantity_bundle_selector",
-          "disabled": true,
           "settings": {
             "buy1_text": "1 case - ₱1.499 each",
             "buy2_text": "2 cases - ₱1.349 each (Save 10% EXTRA)",
@@ -211,7 +210,7 @@
           "settings": {
             "jumbotron_heading": "150 Night Risk Free Trial",
             "jumbotron_content": "If for any reason you're not loving your Snoozy, send it back within 150 days from purchase for a full refund.",
-            "jumbotron_image": "shopify:\/\/shop_images\/download.png"
+            "jumbotron_image": "shopify:\/\/shop_images\/150-night-guarantee-icon.png"
           }
         },
         "collapsible_tab_hJhFDM": {
