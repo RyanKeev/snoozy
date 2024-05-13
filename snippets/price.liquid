@@ -29,8 +29,8 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
   
-  assign discount_factor = 100 | minus: 10 | divided_by: 100
-  assign discounted_price = money_price | times: discount_factor
+  assign discount_factor = 100 | minus: 10
+  assign discounted_price = money_price | times: discount_factor | divided_by: 100
 
 -%}
 
