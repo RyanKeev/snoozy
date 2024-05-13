@@ -524,15 +524,16 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
-                      <form action="/cart/add" method="post" id="product_form">
-                        <!-- other product details -->
-                        
-                        <label for="quantity_radio">Select Quantity:</label><br>
-                        <input type="radio" name="quantity" value="1" onclick="updateQuantity(1)"> 1
-                        <input type="radio" name="quantity" value="2" onclick="updateQuantity(2)"> 2
-                        <!-- Add more radio inputs for other quantities as needed -->
-                        <input type="hidden" name="quantity" id="quantity" value="1">
-                      </form>
+<!-- Add this code where you want to display the quantity bundle options -->
+<div class="quantity-bundle-options">
+  {% assign quantity_options = '1,2,4' | split: ',' %}
+  {% for option in quantity_options %}
+    <label>
+      <input type="radio" name="quantity" value="{{ option }}" data-price="{{ product.price | times: option | money }}">
+      {{ option }} item{% if option != '1' %}s{% endif %}
+    </label>
+  {% endfor %}
+</div>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
                   {%- when 'description-capture' -%}
