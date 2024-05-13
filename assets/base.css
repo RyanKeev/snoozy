@@ -1375,6 +1375,10 @@ button.shopify-payment-button__button--unbranded {
     line-height: normal;
     font-family: var(--ff-harmonia-bold)
   }
+  .font-body-bold {
+    font-weight: var(--font-body-weight-bold);
+  }
+  
 }
 
 @media(max-width: 749px) {
@@ -1388,6 +1392,9 @@ button.shopify-payment-button__button--unbranded {
     letter-spacing: 0;
     line-height: normal;
     font-family: var(--ff-harmonia-semibold)
+  }
+  .font-body-bold {
+    font-weight: var(--font-body-semibold);
   }
 }
 
