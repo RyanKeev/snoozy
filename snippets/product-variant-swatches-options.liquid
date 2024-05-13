@@ -45,10 +45,10 @@
     color: rgba(var(--color-foreground));
   }
   
-    .product-form__input input[type='radio'] + label.size-swatch:first-child:before {
+    .product-form__input input[type='radio'] + label.size-swatch:first-child::before {
         content: "Buy 1";
     }
-    .product-form__input input[type='radio'] + label.size-swatch::before {
+    .product-form__input input[type='radio'] + label.size-swatch:nth-child(2)::before {
         line-height: 1em;
         color: #fff;
         background: #000;
