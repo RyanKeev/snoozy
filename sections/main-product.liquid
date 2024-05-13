@@ -609,12 +609,6 @@
                           border-radius: 30px;
                           transform: translateY(-50%);
                         }
-                        .bundle_swatch label {
-                          line-height: 1.5em;
-                          text-align:center;
-                          background: transparent !important;
-                          color: #1a1a1a !important;
-                        }
                         .bundle_swatch::before {
                           content: var(--content);
                           background: var(--background);
@@ -634,6 +628,21 @@
                             border-radius: 4px !important;
                             font-size: 16px !important;
                             font-family: var(--ff-harmonia-bold);
+                          }
+                          .bundle_swatch label {
+                            line-height: 1.5em;
+                            text-align:center;
+                            background: transparent !important;
+                            color: #1a1a1a !important;
+                          }
+                        }
+                        @media (max-width:749){
+                          .bundle_swatch label {
+                            line-height: 1.5em;
+                            text-align:center;
+                            background: transparent !important;
+                            color: #1a1a1a !important;
+                            padding: 10px 4px !important;
                           }
                         }
                       </style>
