@@ -101,7 +101,8 @@
             </label>
         {% endif %}
     {% else %}
-        <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">{{ value -}}xxx
+        <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">   
+            <span>{{ value -}}</span>
             {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
         </label>
     {% endif %}
