@@ -29,7 +29,7 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
-  assign extra_discount = money_price * (100 - special_discount) / 100;
+  assign extra_discount =''
 -%}
 
 <div
