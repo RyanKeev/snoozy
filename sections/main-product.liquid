@@ -210,7 +210,7 @@
               {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
               <div class="price-wrapper" style="margin-top:15px;">
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                  {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                  {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large', special_discount: 10 -%}
                 </div>
                 {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                   <div class="product__tax caption rte">
