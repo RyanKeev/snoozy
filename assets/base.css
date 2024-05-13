@@ -6537,6 +6537,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
 
 .icon-color {
   color : #fc95cf !important;
+  font-family: 'FontAwesome' !important;
 }
 
 /* FRONT PAGE */
