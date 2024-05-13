@@ -538,6 +538,32 @@
                           flex: 1;
                           align-items: center;
                         }
+                        .bundle_swatch {
+                          display: inline-flex;
+                          justify-content: center;
+                          background: #fff;
+                          position: relative;
+                          background-size: cover;
+                          background-repeat: no-repeat;
+                          width: auto;
+                          cursor: pointer;
+                        }
+                        .bundle_swatch::before {
+                          content:'Buy 1';
+                          position: absolute;
+                          top: 0;
+                          line-height: 1em;
+                          color: #fff;
+                          background: #000;
+                          font-size: 14px;
+                          padding: 5px 20px;
+                          border-radius: 30px;
+                          transform: translateY(-50%);
+                        }
+                        .bundle_swatch label {
+                          line-height: 1.5em;
+                          text-align:center;
+                        }
                         @media (min-widtH:750px){
                           .bundle_swatch {
                             padding-left: 24px !important;
