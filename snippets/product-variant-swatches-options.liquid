@@ -45,33 +45,37 @@
     color: rgba(var(--color-foreground));
   }
   
-    .product-form__input input[type='radio'] + label.size-swatch:first-child::before {
-        content: "Buy 1" !important;
-    }
-    .product-form__input input[type='radio'] + label.size-swatch:nth-child(2)::before {
-        content: 'Buy 2' !important;
-    }
-    .product-form__input input[type='radio'] + label.size-swatch:nth-child(3)::before {
-        content: 'Buy 4' !important;
-    }
-    .product-form__input input[type='radio'] + label.size-swatch::before {
-        position: absolute ;
-        top: calc(var(--variant-pills-border-width) * -1) ;
-        right: auto ;
-        bottom: auto ;
-        left: auto ;
-        z-index: auto ;
-        border-radius: var(--variant-pills-radius) ;
-        box-shadow: var(--variant-pills-shadow-horizontal-offset) var(--variant-pills-shadow-vertical-offset) 
-        var(--variant-pills-shadow-blur-radius) rgba(var(--color-shadow), var(--variant-pills-shadow-opacity));
-        line-height: 1em;
-        content: 'Buy 1';
-        color: #fff;
-        background: #000;
-        padding: 5px 20px;
-        border-radius: 30px;
-        transform: translateY(-50%);
-    }
+  .product-form__input input[type='radio'] + label.size-swatch::before {
+    position: absolute ;
+    top: calc(var(--variant-pills-border-width) * -1) ;
+    right: auto ;
+    bottom: auto ;
+    left: auto ;
+    z-index: auto ;
+    border-radius: var(--variant-pills-radius) ;
+    box-shadow: var(--variant-pills-shadow-horizontal-offset) var(--variant-pills-shadow-vertical-offset) 
+    var(--variant-pills-shadow-blur-radius) rgba(var(--color-shadow), var(--variant-pills-shadow-opacity));
+    line-height: 1em;
+    color: #fff;
+    background: #000;
+    padding: 5px 20px;
+    border-radius: 30px;
+    transform: translateY(-50%);
+    content: attr(data-content); /* Use the 'data-content' attribute value */
+}
+
+/* Apply specific content to the first, second, and third child */
+.product-form__input input[type='radio'] + label.size-swatch:nth-child(1)::before {
+    content: 'Buy 1' !important;
+}
+
+.product-form__input input[type='radio'] + label.size-swatch:nth-child(2)::before {
+    content: 'Buy 2' !important;
+}
+
+.product-form__input input[type='radio'] + label.size-swatch:nth-child(3)::before {
+    content: 'Buy 4' !important;
+}
 
 </style>
 {%- liquid
