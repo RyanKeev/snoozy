@@ -524,12 +524,42 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
+                      <script>
+                        document.addEventListener("DOMContentLoaded", function() {
+                          const quantityRadios = document.querySelectorAll('input[name="quantity"]');
+                          quantityRadios.forEach(function(radio) {
+                              radio.addEventListener('change', function() {
+                                  const selectedQuantity = this.value;
+                                  // Update the cart with the selected quantity
+                                  updateCart(selectedQuantity);
+                              });
+                          });
+                      
+                          function updateCart(quantity) {
+                              // Add logic to update the cart with the selected quantity
+                              // This could involve making an AJAX request to Shopify's cart API
+                              // Example:
+                              // fetch('/cart/update.js', {
+                              //    method: 'POST',
+                              //    body: 'quantity=' + quantity + '&id=' + variantId, // Replace variantId with the actual variant ID
+                              //    credentials: 'same-origin',
+                              //    headers: {
+                              //        'Content-Type': 'application/x-www-form-urlencoded'
+                              //    }
+                              // }).then(function(response) {
+                              //    // Handle the response as needed
+                              // });
+                          }
+                      });
+                      
+                      </script>
                       <label for="quantity">Quantity:</label><br>
 <input type="radio" id="quantity1" name="quantity" value="1">
 <label for="quantity1">1</label>
 <input type="radio" id="quantity2" name="quantity" value="2">
 <label for="quantity2">2</label>
 <!-- Add more radio buttons for higher quantities if needed -->
+
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
                   {%- when 'description-capture' -%}
