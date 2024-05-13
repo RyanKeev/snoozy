@@ -529,6 +529,25 @@
                       </script>
                       <script>
                         document.addEventListener("DOMContentLoaded", function() {
+                            var radioButtons = document.querySelectorAll('.bundle_swatch input[type="radio"]');
+                            
+                            radioButtons.forEach(function(radioButton) {
+                                radioButton.addEventListener("change", function() {
+                                    // Remove 'swatch_selected' class from all radio buttons
+                                    radioButtons.forEach(function(rb) {
+                                        rb.parentElement.classList.remove('swatch_selected');
+                                    });
+                                    
+                                    // Add 'swatch_selected' class to the checked radio button's parent span
+                                    if (this.checked) {
+                                        this.parentElement.classList.add('swatch_selected');
+                                    }
+                                });
+                            });
+                        });
+                        </script>
+                      <script>
+                        document.addEventListener("DOMContentLoaded", function() {
                             const labels = document.querySelectorAll(".bundle_swatch");
                             labels.forEach((label, index) => {
                                 let content;
@@ -558,7 +577,7 @@
                                 label.style.setProperty('--color', color);
                             });
                         });    
-                    </script>
+                      </script>
                       <style>
                         .bundle_swatch {
                           margin-bottom: 8px;
@@ -600,6 +619,9 @@
                           background: var(--background);
                           color: var(--color);
                         }
+                        .swatch_selected {
+                          box-shadow: 0 0 0 1px #000;
+                        }
                         @media (min-width:750px){
                           .bundle_swatch {
                             padding-left: 24px !important;
@@ -634,15 +656,15 @@
                           value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                           form="{{ product_form_id }}"
                    />
-                      <span class="bundle_swatch">
+                      <span class="bundle_swatch swatch_selected">
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
                         <label for="quantity1">1</label>
                       </span>
-                      <span class="bundle_swatch">
+                      <span class="bundle_swatch swatch_selected">
                         <input type="radio" id="quantity2" name="quantity" value="2">
                         <label for="quantity2">2</label>
                       </span>
-                      <span class="bundle_swatch">
+                      <span class="bundle_swatch swatch_selected">
                         <input type="radio" id="quantity4" name="quantity" value="4">
                         <label for="quantity4">4</label>
                       </span>
