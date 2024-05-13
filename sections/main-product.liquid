@@ -528,11 +528,10 @@
                         <!-- other product details -->
                         
                         <label for="quantity_radio">Select Quantity:</label><br>
-                        <input type="hidden" name="quantity" id="quantity" value="1">
                         <input type="radio" name="quantity" value="1" onclick="updateQuantity(1)"> 1
                         <input type="radio" name="quantity" value="2" onclick="updateQuantity(2)"> 2
                         <!-- Add more radio inputs for other quantities as needed -->
-                        
+                        <input type="hidden" name="quantity" id="quantity" value="1">
                       </form>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
@@ -750,7 +749,7 @@
   </div>
   <script>
     function updateQuantity(quantity) {
-      document.getElementById('quantity').setAttribute('value', quantity);
+      document.getElementById('quantity').value = quantity;
     }
   </script>
 </section>
