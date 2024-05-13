@@ -974,8 +974,23 @@
     {
       "type": "price",
       "name": "t:sections.main-product.blocks.price.name",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "checkbox",
+          "id": "discount_ten_percent",
+          "label": "Has 10% Discount?",
+          "default": false
+        },
+        {
+          "type": "checkbox",
+          "id": "discount_fifteen_percent",
+          "label": "Has 15% Discount?",
+          "default": false
+        }
+      ]
     },
+    
     {
       "type": "review",
       "name": "Review",
