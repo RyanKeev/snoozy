@@ -40,6 +40,20 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
+    .size-swatch::before {
+        position: absolute;
+        top: 0;
+        line-height: 1em;
+        color: #fff;
+        background: #000;
+        font-size: 14px;
+        padding: 5px 20px;
+        border-radius: 30px;
+        transform: translateY(-50%);
+    }
+    .size-swatch:nth-child(1):before {
+        content: "Buy 1";
+    }
 </style>
 {%- liquid
     assign variants_available_arr = product.variants | map: 'available'
