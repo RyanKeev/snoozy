@@ -4412,9 +4412,9 @@ product-variant-swatches .product-form__input label{
 
 
 product-variant-swatches .product-form__input label.color-swatch{
-  width: 30px;
-  min-width: 30px;
-  height: 30px;
+  width: 40px;
+  min-width: 40px;
+  height: 40px;
   padding: 0!important;
   border-radius: 50%!important;
   border: 1px solid rgba(0,37,84,.4)!important;
