@@ -1,3 +1,4 @@
+
 {% comment %}
   Renders product variant option swatches
 
@@ -15,6 +16,89 @@
     block: block
   %}
 {% endcomment %}
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const labels = document.querySelectorAll(".product-form__input input[type='radio'] + label.size-swatch");
+        labels.forEach((label, index) => {
+            let content;
+            let background;
+            let color;
+            switch (index) {
+                case 0:
+                    content = "Buy 1";
+                    color = "#fff";
+                    background = "#000";
+                    break;
+                case 1:
+                    content = "Buy 2";
+                    color = "#fff";
+                    background = "#000";
+                    break;
+                case 2:
+                    content = "Buy 4";
+                    background = "#fc95cf";
+                    color = "#1a1a1a";
+                    break;
+                default:
+                    content = "Default Content"; // Change as needed
+            }
+            label.style.setProperty('--content', `'${content}'`);
+            label.style.setProperty('--background', background);
+            label.style.setProperty('--color', color);
+        });
+    });    
+</script>
+<style>
+.product-form__input input[type='radio'] + label.quantity-swatch {
+    flex: 1;
+    align-items: center;
+    padding-left: 24px !important;
+    padding-right: 24px !important;
+    border-color: #edeeee !important;
+    border-radius: 4px 4px 4px 40px !important;
+    height: 140px !important;
+    line-height: normal !important;
+    border-radius: 4px !important;
+    background: #fff;
+    display: inline-flex;
+    justify-content: center;
+    margin-right: 10px;
+    padding-right: 20px;
+    padding-left: 20px;
+    width: auto;
+    border: 1px solid #dddcdc;
+    font-size: 16px;
+    position: relative;
+    color: rgba(var(--color-foreground));
+    font-family: var(--ff-harmonia-semibold);
+  }
+  
+  .product-form__input input[type='radio'] + label.quantity-swatch::before {
+    font-family: var(--ff-harmonia-semibold);
+    position: absolute ;
+    top: calc(var(--variant-pills-border-width) * -1) ;
+    right: auto ;
+    bottom: auto ;
+    left: auto ;
+    z-index: auto ;
+    border-radius: var(--variant-pills-radius) ;
+    box-shadow: var(--variant-pills-shadow-horizontal-offset) var(--variant-pills-shadow-vertical-offset) 
+    var(--variant-pills-shadow-blur-radius) rgba(var(--color-shadow), var(--variant-pills-shadow-opacity));
+    line-height: 1em;
+    padding: 5px 20px;
+    border-radius: 30px;
+    transform: translateY(-50%);
+    content: attr(data-content); /* Use the 'data-content' attribute value */
+}
+
+.product-form__input input[type='radio'] + label.quantity-swatch::before {
+    content: var(--content);
+    background: var(--background);
+    color: var(--color);
+    /* Other styles */
+}
+
+</style>
 {%- liquid
     assign variants_available_arr = product.variants | map: 'available'
     assign variants_option1_arr = product.variants | map: 'option1'
@@ -23,6 +107,7 @@
 
     assign product_form_id = 'product-form-' | append: section.id
 -%}
+
 
 {%- for value in option.values -%}
     {%- liquid
@@ -59,11 +144,15 @@
                 class="product-variant-swatch color-swatch" style="background: {{ shop.metaobjects.color[value_handle].color }}" title="{{ value }}">
             </label>
         {% endif %}
+    {% elsif option_handle == 'quantity' %}
+        <label class="product-variant-swatch quantity-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">   
+            {{ value | escape  }}
+            {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
+        </label>
     {% else %}
-        <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">{{ value -}}
+        <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">   
+            {{ value | escape  }}
             {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
         </label>
     {% endif %}
 {%- endfor -%}
-
-
