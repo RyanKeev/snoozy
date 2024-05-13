@@ -4473,7 +4473,7 @@ product-variant-swatches label.size-swatch > span{
 product-variant-swatches input[type=radio]:checked+label.size-swatch,
 product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   background-color: #f0f6ff;
-  color: #1a1a1a;
+  color: #1a1a1a !important;
 }
 
 .settings-wrap .product-form__quantity{
