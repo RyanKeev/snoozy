@@ -49,7 +49,7 @@
     });    
 </script>
 <style>
-.product-form__input input[type='radio'] + label.quantity-swatch {
+.product-form__input input[type='radio'] + label.size-swatch {
     flex: 1;
     align-items: center;
     padding-left: 24px !important;
@@ -73,7 +73,7 @@
     font-family: var(--ff-harmonia-semibold);
   }
   
-  .product-form__input input[type='radio'] + label.quantity-swatch::before {
+  .product-form__input input[type='radio'] + label.size-swatch::before {
     font-family: var(--ff-harmonia-semibold);
     position: absolute ;
     top: calc(var(--variant-pills-border-width) * -1) ;
@@ -91,7 +91,7 @@
     content: attr(data-content); /* Use the 'data-content' attribute value */
 }
 
-.product-form__input input[type='radio'] + label.quantity-swatch::before {
+.product-form__input input[type='radio'] + label.size-swatch::before {
     content: var(--content);
     background: var(--background);
     color: var(--color);
