@@ -1363,15 +1363,32 @@ button.shopify-payment-button__button--unbranded {
   background-color: rgba(var(--color-button-text), 0.3);
 }
 
-.button,
-.button-label,
-.shopify-challenge__button,
-.customer button {
-  font-size: 1.5rem;
-  /* letter-spacing: 0.1rem; */
-  /* line-height: calc(1 + 0.2 / var(--font-body-scale)); */
-  letter-spacing: 0;
-  line-height: normal;
+@media(min-width: 750px) {
+  .button,
+  .button-label,
+  .shopify-challenge__button,
+  .customer button {
+    font-size: 1.5rem;
+    /* letter-spacing: 0.1rem; */
+    /* line-height: calc(1 + 0.2 / var(--font-body-scale)); */
+    letter-spacing: 0;
+    line-height: normal;
+    font-family: var(--ff-harmonia-bold)
+  }
+}
+
+@media(max-width: 749px) {
+  .button,
+  .button-label,
+  .shopify-challenge__button,
+  .customer button {
+    font-size: 1.5rem;
+    /* letter-spacing: 0.1rem; */
+    /* line-height: calc(1 + 0.2 / var(--font-body-scale)); */
+    letter-spacing: 0;
+    line-height: normal;
+    font-family: var(--ff-harmonia-semibold)
+  }
 }
 
 .button--tertiary {
