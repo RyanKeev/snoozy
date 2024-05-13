@@ -6,7 +6,6 @@
   - use_variant: {Boolean} Renders selected or first variant price instead of overall product pricing (optional)
   - show_badges: {Boolean} Renders 'Sale' and 'Sold Out' tags if the product matches the condition (optional)
   - price_class: {String} Adds a price class to the price element (optional)
-  - special_discount: {String} Adds a extra discount price
 
   Usage:
   {% render 'price', product: product %}
@@ -30,11 +29,8 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 
-
 -%}
-{% if special_discount %}
-  assign discounted_price = money_price | times: (100 - special_discount) | divided_by: 100 
-{% endif %}
+
 <div
   class="
     price
@@ -70,12 +66,7 @@
         </span>
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
-        {{ discounted_price  }}
-         {%if special_discount %} 
-          {{ discounted_price  }}
-          {% else %} 
           {{ money_price | remove: 'From ' }}
-          {% endif %} 
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
