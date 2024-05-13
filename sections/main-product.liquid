@@ -659,15 +659,16 @@
                    />
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
-                        <label for="quantity1">1</label>
+          "id": "buy1_text",
+                        <label for="quantity1">{{ block.settings.buy1_text }}</label>
                       </span>
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity2" name="quantity" value="2">
-                        <label for="quantity2">2</label>
+                        <label for="quantity2">{{ block.settings.buy2_text }}</label>
                       </span>
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity4" name="quantity" value="4">
-                        <label for="quantity4">4</label>
+                        <label for="quantity4">{{ block.settings.buy4_text }}</label>
                       </span>
                         <div class="quantity__rules caption no-js-hidden">
                             {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
@@ -1358,7 +1359,24 @@
     {
       "type": "quantity_bundle_selector",
       "name": "Quantity Bundle Selector",
-      "limit": 1
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "buy1_text",
+          "label": "Buy 1 Text"
+        },
+        {
+          "type": "text",
+          "id": "buy2_text",
+          "label": "Buy 2 Text"
+        },
+        {
+          "type": "text",
+          "id": "buy4_text",
+          "label": "Buy 4 Text"
+        }
+      ]
     },
     {
       "type": "variant_swatches",
