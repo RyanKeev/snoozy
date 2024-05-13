@@ -29,8 +29,7 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
-  assign discounted_price = money_price | times: (100 - special_discount) | divided_by: 100
-
+ 
 
 -%}
 
@@ -69,11 +68,11 @@
         </span>
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
-          {%if extra_discount %} 
+          {% comment %} {%if extra_discount %} 
           {{ discounted_price | remove: 'From' }}
-          {% else %}
+          {% else %} {% endcomment %}
           {{ money_price | remove: 'From ' }}
-          {% endif %}
+          {% comment %} {% endif %} {% endcomment %}
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
