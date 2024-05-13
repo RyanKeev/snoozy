@@ -138,7 +138,6 @@
         },
         "quantity_bundle_selector_V3NWMz": {
           "type": "quantity_bundle_selector",
-          "disabled": true,
           "settings": {
           }
         },
