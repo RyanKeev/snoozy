@@ -560,10 +560,6 @@
                         });    
                     </script>
                       <style>
-                        .bundle_swatches {
-                          display: flex !important;
-                          gap: 16px !important;
-                        }
                         .bundle_swatch {
                           margin-bottom: 8px;
                           margin-right: 0px;
@@ -619,8 +615,8 @@
                         }
                       </style>
                       <div id="Quantity-Form-{{ section.id }} bundle_swatches_custom" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} bundle-swatches"
-                        {{ block.shopify_attributes }}>
-                    
+                        {{ block.shopify_attributes }}
+                        style="display: flex !important;gap: 16px !important;">
                         {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
                         {% # theme-check-disable %}
                         {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
