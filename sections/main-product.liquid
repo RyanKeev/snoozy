@@ -527,7 +527,10 @@
                           });
                         });
                       </script>
-                      <div id="Quantity-Form-{{ section.id }} bundle-swatches" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} bundle-swatches"
+                      <style>
+
+                      </style>
+                      <div id="Quantity-Form-{{ section.id }} bundle_swatches_custom" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} bundle-swatches"
                         style="max-width: 150px;"
                         {{ block.shopify_attributes }}>
                     
@@ -549,8 +552,9 @@
                           value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                           form="{{ product_form_id }}"
                    />
+                        <label for="quantity1">
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
-                        <label for="quantity1">1</label>
+                        1</label>
                     
                         <input type="radio" id="quantity2" name="quantity" value="2">
                         <label for="quantity2">2</label>
