@@ -49,7 +49,16 @@
         content: "Buy 1";
     }
     .product-form__input input[type='radio'] + label.size-swatch:nth-child(2):before {
-  
+        position: absolute;
+        top: 0;
+        line-height: 1em;
+        color: #fff;
+        background: #000;
+        font-size: 14px;
+        padding: 5px 20px;
+        border-radius: 30px;
+        transform: translateY(-50%);
+        {% comment %} argiee {% endcomment %}
         content: 'BUY2' ;
         position: absolute ;
         top: calc(var(--variant-pills-border-width) * -1) ;
