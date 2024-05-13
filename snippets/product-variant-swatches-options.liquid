@@ -150,7 +150,7 @@
             {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
         </label>
     {% else %}
-        <label class="product-variant-swatch size-swatch" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">   
+        <label class="product-variant-swatch size-swatch {% if option_handle == 'quantity' %}quantity-swatch {% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">   
             {{ value | escape  }}
             {% comment %}<span class="visually-hidden sold-out-message">{{ 'products.product.variant_sold_out_or_unavailable' | t }}</span>{% endcomment %}
         </label>
