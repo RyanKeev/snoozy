@@ -20,6 +20,8 @@
         const labels = document.querySelectorAll(".product-form__input input[type='radio'] + label.size-swatch");
         labels.forEach((label, index) => {
             let content;
+            let background;
+            let color;
             switch (index) {
                 case 0:
                     content = "Buy 1";
@@ -29,6 +31,8 @@
                     break;
                 case 2:
                     content = "Buy 4";
+                    background = "#fc95cf";
+                    color = "#1a1a1a";
                     break;
                 default:
                     content = "Default Content"; // Change as needed
@@ -86,6 +90,8 @@
 
 .product-form__input input[type='radio'] + label.size-swatch::before {
     content: var(--content);
+    background: var(--background);
+    color: var(--color);
     /* Other styles */
 }
 
