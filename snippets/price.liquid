@@ -70,11 +70,11 @@
         </span>
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
-          {% comment %} {%if extra_discount %} 
-          {{ discounted_price | remove: 'From' }}
-          {% else %} {% endcomment %}
+         {%if special_discount %} 
+          {{ discounted_price  }}
+          {% else %} 
           {{ money_price | remove: 'From ' }}
-          {% comment %} {% endif %} {% endcomment %}
+          {% endif %} 
       </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
