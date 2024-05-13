@@ -44,6 +44,8 @@
         "price": {
           "type": "price",
           "settings": {
+            "discount_ten_percent": true,
+            "discount_fifteen_percent": false
           }
         },
         "text_Kbamhx": {
