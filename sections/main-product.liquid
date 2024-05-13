@@ -524,6 +524,15 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
+                      <div class="quantity-bundle-selector">
+                        {% comment %} {% section 'quantity-bundle-selector' %} {% endcomment %}
+                      </div>
+                      
+                      <form action="/cart/add" method="post" id="product-form">
+                        <!-- Other product form fields -->
+                        <input type="hidden" id="quantity" name="quantity" value="1">
+                        <!-- Other product form fields -->
+                      </form>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
                   {%- when 'description-capture' -%}
