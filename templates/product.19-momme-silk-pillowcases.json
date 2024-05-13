@@ -139,9 +139,9 @@
         "quantity_bundle_selector_V3NWMz": {
           "type": "quantity_bundle_selector",
           "settings": {
-            "buy1_text": "1 case - ₱1499 each",
-            "buy2_text": "2 cases - ₱1299 each (Save 10% EXTRA)",
-            "buy4_text": "4 cases - ₱1275 each (Save 15% EXTRA)"
+            "buy1_text": "1 case - ₱1.499 each",
+            "buy2_text": "2 cases - ₱1.349 each (Save 10% EXTRA)",
+            "buy4_text": "4 cases - ₱1.275 each (Save 15% EXTRA)"
           }
         },
         "buy_buttons": {
