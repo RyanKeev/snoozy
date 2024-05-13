@@ -32,7 +32,9 @@
 
 
 -%}
-
+{% if special_discount %}
+  assign discounted_price = money_price | times: (100 - special_discount) | divided_by: 100 
+{% endif %}
 <div
   class="
     price
