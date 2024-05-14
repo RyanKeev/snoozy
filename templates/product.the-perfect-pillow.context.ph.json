@@ -1,1 +1,61 @@
-{"parent":"product.the-perfect-pillow.json","context":{"market":"ph"},"sections":{"replo_the_perfect_pillow_pdp_kWK9f":{"type":"replo-the-perfect-pillow-pdp","disabled":false,"settings":{},"blocks":{},"block_order":[]},"section_recommend_fxKhg":{"type":"section-recommend","disabled":false,"settings":{"show_section":true,"recommendations_count":5,"show_recommended_automatically":false,"section_background":"#ffffff","section_title":"","section_padding_top":80,"section_padding_bottom":80},"blocks":{},"block_order":[]},"main":{"settings":{},"blocks":{"sale_countdown_KRmFff":{"settings":{"topic":"APRIL SALE"}},"variant_swatches_bJLiMP":{"disabled":true,"settings":{}}}}},"order":["0cd25557-8cef-42a6-991a-1a57bf82fee5","main","82c2b4b1-b3ff-4c0b-bf78-8bb83efe05b1","related-products","replo_the_perfect_pillow_pdp_kWK9f","section_recommend_fxKhg"]}
+{
+  "parent": "product.the-perfect-pillow.json",
+  "context": {
+    "market": "ph"
+  },
+  "sections": {
+    "replo_the_perfect_pillow_pdp_kWK9f": {
+      "type": "replo-the-perfect-pillow-pdp",
+      "disabled": false,
+      "settings": {
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "section_recommend_fxKhg": {
+      "type": "section-recommend",
+      "disabled": false,
+      "settings": {
+        "show_section": true,
+        "recommendations_count": 5,
+        "show_recommended_automatically": false,
+        "section_background": "#ffffff",
+        "section_title": "",
+        "section_padding_top": 80,
+        "section_padding_bottom": 80
+      },
+      "blocks": {
+      },
+      "block_order": [
+
+      ]
+    },
+    "main": {
+      "settings": {
+      },
+      "blocks": {
+        "sale_countdown_KRmFff": {
+          "settings": {
+            "topic": "RIGHT NOW: GET 2 FOR 1"
+          }
+        },
+        "variant_swatches_bJLiMP": {
+          "disabled": true,
+          "settings": {
+          }
+        }
+      }
+    }
+  },
+  "order": [
+    "0cd25557-8cef-42a6-991a-1a57bf82fee5",
+    "main",
+    "82c2b4b1-b3ff-4c0b-bf78-8bb83efe05b1",
+    "related-products",
+    "replo_the_perfect_pillow_pdp_kWK9f",
+    "section_recommend_fxKhg"
+  ]
+}
