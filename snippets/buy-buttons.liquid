@@ -74,9 +74,10 @@
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }}{% unless product.handle == 'snoozy-pillow' %} —
-                {% comment %} {% render 'price-inline', product: product, use_variant: true, hide_compare_at_price: block.settings.hide_compare_at_price %} {% endcomment %}
-                {% endunless %}
+                {{ 'products.product.add_to_cart' | t }}
+                {% comment %} {% unless product.handle == 'snoozy-pillow' %} —
+                {% render 'price-inline', product: product, use_variant: true, hide_compare_at_price: block.settings.hide_compare_at_price %}
+                {% endunless %} {% endcomment %}
               {%- endif -%}
             </span>
             <div class="loading-overlay__spinner hidden">
