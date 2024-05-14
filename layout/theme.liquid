@@ -13,6 +13,7 @@
     const saleContainerElement = priceElement.querySelector('.price__sale');
 
     const updatePriceDisplay = function(quantity) {
+      console.log(quantity,"qtyyy")
       if (quantity == 1) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
         saleContainerElement.querySelector('.one-quantity').style.display = 'inline-block';
