@@ -22,18 +22,20 @@
       const twoLessFourQuantity = saleContainerElement.querySelector('.two-less-four-quantity');
       const fourOrMoreQuantity = saleContainerElement.querySelector('.four-or-more-quantity');
   
-      oneQuantity.style.display = 'none';
-      twoLessFourQuantity.style.display = 'none';
-      fourOrMoreQuantity.style.display = 'none';
-  
       if (quantity == 1) {
         oneQuantity.textContent = moneyPrice;
         oneQuantity.style.display = 'inline-block';
+        twoLessFourQuantity.style.display = 'none';
+        fourOrMoreQuantity.style.display = 'none';
       } else if (quantity >= 2 && quantity < 4) {
         twoLessFourQuantity.textContent = discount10Money;
+        oneQuantity.style.display = 'none';
         twoLessFourQuantity.style.display = 'inline-block';
+        fourOrMoreQuantity.style.display = 'none';
       } else if (quantity >= 4) {
         fourOrMoreQuantity.textContent = discount15Money;
+        oneQuantity.style.display = 'none';
+        twoLessFourQuantity.style.display = 'none';
         fourOrMoreQuantity.style.display = 'inline-block';
       }
     };
@@ -72,7 +74,7 @@
       });
     });
   });
-  
+    
 </script>
 
 <!-- Include Owl Carousel CSS -->
