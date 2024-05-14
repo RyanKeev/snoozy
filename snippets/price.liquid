@@ -31,7 +31,7 @@
   endif
 
   assign discount  = price | times: 0.90 | floor 
-  assign discountedPrice = discount | money
+  assign discountedPrice = discount | money | floor
 %}
 <div
   class="
