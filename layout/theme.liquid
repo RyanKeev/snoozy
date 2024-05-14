@@ -8,6 +8,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    console.log("qtyyyy")
     const priceElement = document.querySelector('.price');
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
@@ -50,7 +51,7 @@
       };
   
       const quantityInput = document.querySelector('.quantity__input');
-        console.log(quantityInput,"qtyyyy")
+   
       if (quantityInput) {
         quantityInput.addEventListener('change', function() {
           const quantity = parseInt(this.value, 10);
