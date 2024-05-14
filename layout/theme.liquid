@@ -21,19 +21,6 @@
       if (saleContainerElement.classList.contains('price-item--last')) {
         saleContainerElement.classList.remove('price-item--last');
       }
-
-      saleContainerElement.insertAdjacentHTML('beforeend', `
-        <span class="price-item price-item--sale price-item--last two-less-four-quantity" style="display: none;">
-          ${discount10_money}
-        </span>
-      `);
-  
-      saleContainerElement.insertAdjacentHTML('beforeend', `
-        <span class="price-item price-item--sale price-item--last four-or-more-quantity" style="display: none;">
-          ${discount15_money}
-        </span>
-      `);
-
   
       const quantityInput = document.querySelector('.quantity__input');
       console.log(quantityInput,"qtyyy")
