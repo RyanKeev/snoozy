@@ -206,15 +206,7 @@
                   </p>
                 {%- endif -%} {% endcomment %}
 
-            {%- when 'price' -%}
-              <script>
-                document.addEventListener('DOMContentLoaded', function() {
-                  var quantityInput = document.getElementById('Quantity-{{ section.id }}');
-
-                  console.log(quantityInput.value, 'qp');
-                  console.log("sameeeeeeee");
-                });
-              </script>              
+            {%- when 'price' -%}             
               <div class="price-wrapper" style="margin-top:15px;">
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
                       {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
