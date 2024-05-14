@@ -66,7 +66,7 @@
         </s>
       </span>
       {% endunless %}
-      <span class="price-item price-item--sale price-item--last one-quantity" >{{ money_price | remove: 'From ' }}</span>
+      <span class="price-item price-item--sale price-item--last one-quantity" style="display: none;">{{ money_price | remove: 'From ' }}</span>
       <span class="price-item price-item--sale price-item--last two-less-four-quantity" style="display: none;">{{ discount_10_money }}</span>
       <span class="price-item price-item--sale price-item--last four-or-more-quantity" style="display: none;">{{ discount_15_money }}</span>
     </div>
