@@ -36,10 +36,11 @@
     console.log(quantityInput, "qtyyy");
 
     if (quantityInput) {
-      quantityInput.addEventListener('input', function() {
+      quantityInput.addEventListener('change', function() {
         const quantity = parseInt(this.value, 10);
         updatePriceDisplay(quantity);
-      });
+    });
+    
 
       // Initial price display based on the default quantity
       const initialQuantity = parseInt(quantityInput.value, 10);
@@ -48,6 +49,29 @@
       console.error('quantityInput element not found');
     }
   });
+  // Observer to monitor changes to the DOM
+const observer = new MutationObserver(function(mutationsList, observer) {
+  for(let mutation of mutationsList) {
+      if (mutation.type === 'childList') {
+          // Quantity input field has been added or changed
+          const newQuantityInput = document.querySelector('.quantity__input');
+          if (newQuantityInput) {
+              newQuantityInput.addEventListener('change', function() {
+                  const quantity = parseInt(this.value, 10);
+                  updatePriceDisplay(quantity);
+              });
+          }
+      }
+  }
+});
+
+// Start observing the DOM for changes
+observer.observe(document.body, { childList: true, subtree: true });
+
+// Initial price display based on the default quantity
+const initialQuantity = parseInt(quantityInput.value, 10);
+updatePriceDisplay(initialQuantity);
+
 </script>
 
 <!-- Include Owl Carousel CSS -->
