@@ -684,10 +684,10 @@
                           value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                           form="{{ product_form_id }}"
                    />
-                   
+                   {{ current_variant.price | money }}
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
-                        <label for="quantity1">{{ current_variant.price | money }}{{ block.settings.buy1_text }}</label>
+                        <label for="quantity1">{{ block.settings.buy1_text }}</label>
                       </span>
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity2" name="quantity" value="2">
