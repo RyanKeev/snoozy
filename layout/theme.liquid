@@ -13,7 +13,7 @@
     const saleContainerElement = priceElement.querySelector('.price__sale');
 
     const updatePriceDisplay = function(quantity) {
-      console.log(quantity,"qtyyy")
+
       if (quantity == 1) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
         saleContainerElement.querySelector('.one-quantity').style.display = 'inline-block';
@@ -33,7 +33,7 @@
     };
 
     const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-    
+    console.log(quantityInputs,"qttttttt")
     quantityInputs.forEach(function(input) {
       input.addEventListener('change', function() {
         const quantity = parseInt(this.value, 10);
