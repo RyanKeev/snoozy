@@ -11,30 +11,28 @@
     const priceElement = document.querySelector('.price');
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
-    const oneQuantity = saleContainerElement.querySelector('.one-quantity');
-    const twoLessFourQuantity = saleContainerElement.querySelector('.two-less-four-quantity');
-    const fourOrMoreQuantity = saleContainerElement.querySelector('.four-or-more-quantity');
 
-    // Function to update the price display based on quantity
     const updatePriceDisplay = function(quantity) {
       if (quantity == 1) {
-        oneQuantity.style.display = 'inline-block';
-        twoLessFourQuantity.style.display = 'none';
-        fourOrMoreQuantity.style.display = 'none';
+        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+        saleContainerElement.querySelector('.one-quantity').style.display = 'inline-block';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
       } else if (quantity >= 2 && quantity < 4) {
-        oneQuantity.style.display = 'none';
-        twoLessFourQuantity.style.display = 'inline-block';
-        fourOrMoreQuantity.style.display = 'none';
+        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+        saleContainerElement.querySelector('.one-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
       } else if (quantity >= 4) {
-        oneQuantity.style.display = 'none';
-        twoLessFourQuantity.style.display = 'none';
-        fourOrMoreQuantity.style.display = 'inline-block';
+        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+        saleContainerElement.querySelector('.one-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
       }
     };
 
-    // Add event listeners to quantity inputs
     const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-    console.log(quantityInputs)
+    
     quantityInputs.forEach(function(input) {
       input.addEventListener('change', function() {
         const quantity = parseInt(this.value, 10);
@@ -42,10 +40,6 @@
       });
     });
 
-    // Set initial display to one-quantity
-    oneQuantity.style.display = 'inline-block';
-
-    // Set initial display and values based on selected variant
     const initialQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
     updatePriceDisplay(initialQuantity);
   });
