@@ -44,6 +44,8 @@
         "price": {
           "type": "price",
           "settings": {
+            "discount_ten_percent": false,
+            "discount_fifteen_percent": false
           }
         },
         "text_Kbamhx": {
@@ -202,7 +204,7 @@
           "settings": {
             "jumbotron_heading": "150 Night Risk Free Trial",
             "jumbotron_content": "If for any reason you're not loving your Snoozy, send it back within 150 days from purchase for a full refund.",
-            "jumbotron_image": "shopify:\/\/shop_images\/download.png"
+            "jumbotron_image": "shopify:\/\/shop_images\/150-night-guarantee-icon.png"
           }
         },
         "collapsible_tab_hJhFDM": {
