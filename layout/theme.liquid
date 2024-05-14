@@ -34,25 +34,9 @@
         </span>
       `);
 
-      const updatePriceDisplay = function(quantity) {
-        if (quantity === 1) {
-          saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'inline-block';
-          saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
-          saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
-        } else if (quantity >= 2 && quantity < 4) {
-          saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'none';
-          saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
-          saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
-        } else if (quantity >= 4) {
-          saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'none';
-          saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
-          saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
-        }
-      };
-      console.log("qtyyy")
   
       const quantityInput = document.querySelector('.quantity__input');
-     
+      console.log(quantityInput,"qtyyy")
       if (quantityInput) {
         quantityInput.addEventListener('change', function() {
           const quantity = parseInt(this.value, 10);
