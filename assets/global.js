@@ -947,7 +947,10 @@ class VariantSelects extends HTMLElement {
     this.removeErrorMessage();
     this.updateVariantStatuses();
 
-    document.dispatchEvent(new CustomEvent('variant:change'));
+  // Dispatch custom event for variant change
+  document.dispatchEvent(new CustomEvent('variant:change'));
+  console.log('variant:change event dispatched'); // Add this line for debugging
+
     
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
