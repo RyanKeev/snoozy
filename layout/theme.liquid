@@ -21,7 +21,7 @@
       if (saleContainerElement.classList.contains('price-item--last')) {
         saleContainerElement.classList.remove('price-item--last');
       }
-      console.log("qtyyy")
+
       saleContainerElement.insertAdjacentHTML('beforeend', `
         <span class="price-item price-item--sale price-item--last two-less-four-quantity" style="display: none;">
           ${discount10_money}
@@ -33,7 +33,7 @@
           ${discount15_money}
         </span>
       `);
-
+      console.log("qtyyy")
       const updatePriceDisplay = function(quantity) {
         if (quantity === 1) {
           saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'inline-block';
