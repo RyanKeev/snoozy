@@ -9,6 +9,8 @@
 <script>
   function initializeQuantityListeners() {
     const priceElement = document.querySelector('.price');
+    if (!priceElement) return; // Exit if price element is not found
+
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
 
@@ -46,13 +48,12 @@
   document.addEventListener('DOMContentLoaded', function() {
     initializeQuantityListeners();
 
-    // Shopify-specific code to reinitialize on variant change
+    // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
       initializeQuantityListeners();
     });
   });
 </script>
-
 
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
