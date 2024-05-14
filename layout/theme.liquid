@@ -9,27 +9,45 @@
 <script>
   function initializeQuantityListeners() {
     const priceElement = document.querySelector('.price');
-    if (!priceElement) return; // Exit if price element is not found
+    if (!priceElement) {
+      console.log('Price element not found.');
+      return; // Exit if price element is not found
+    }
 
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
 
+    if (!regularPriceElement || !saleContainerElement) {
+      console.log('Regular price element or sale container element not found.');
+      return; // Exit if the necessary elements are not found
+    }
+
     const updatePriceDisplay = function(quantity) {
-      if (quantity == 1) {
+      console.log('Updating price display for quantity:', quantity);
+      const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
+      const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
+      const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
+
+      if (!oneQuantityElement || !twoLessFourQuantityElement || !fourOrMoreQuantityElement) {
+        console.log('One or more quantity elements not found.');
+        return; // Exit if the necessary elements are not found
+      }
+
+      if (quantity === 1) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.querySelector('.one-quantity').style.display = 'inline-block';
-        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
-        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
+        oneQuantityElement.style.display = 'inline-block';
+        twoLessFourQuantityElement.style.display = 'none';
+        fourOrMoreQuantityElement.style.display = 'none';
       } else if (quantity >= 2 && quantity < 4) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.querySelector('.one-quantity').style.display = 'none';
-        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
-        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
+        oneQuantityElement.style.display = 'none';
+        twoLessFourQuantityElement.style.display = 'inline-block';
+        fourOrMoreQuantityElement.style.display = 'none';
       } else if (quantity >= 4) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.querySelector('.one-quantity').style.display = 'none';
-        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
-        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
+        oneQuantityElement.style.display = 'none';
+        twoLessFourQuantityElement.style.display = 'none';
+        fourOrMoreQuantityElement.style.display = 'inline-block';
       }
     };
 
@@ -41,20 +59,23 @@
       });
     });
 
-    const initialQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
+    const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
+    const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
     updatePriceDisplay(initialQuantity);
   }
 
   document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded event fired');
     initializeQuantityListeners();
 
     // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
-      console.log('variant:change event received'); // Add this line for debugging
+      console.log('variant:change event received.');
       initializeQuantityListeners();
     });
   });
 </script>
+
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
