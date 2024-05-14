@@ -33,7 +33,7 @@
           ${discount15_money}
         </span>
       `);
-      const updatePriceDisplay = function(quantity) {
+      {% comment %} const updatePriceDisplay = function(quantity) {
         if (quantity === 1) {
           saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'inline-block';
           saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
@@ -48,7 +48,7 @@
           saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
         }
       };
-  
+   {% endcomment %}
 
       console.log("qtyyy")
       const quantityInput = document.querySelector('.quantity__input');
