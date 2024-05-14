@@ -9,26 +9,25 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const priceElement = document.querySelector('.price');
-    const regularPriceElement = priceElement.querySelector('.price-item');
-    const saleContainerElement = priceElement.querySelectorAll('.price-item--sale');
+    const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
+    const saleContainerElement = priceElement.querySelector('.price__sale');
 
     const updatePriceDisplay = function(quantity) {
       if (quantity == 1) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.forEach(item => item.style.display = 'inline-block');
-        saleContainerElement[0].classList.add('one-quantity');
-        saleContainerElement[1].classList.remove('two-less-four-quantity');
-        saleContainerElement[2].classList.remove('four-or-more-quantity');
+        saleContainerElement.querySelector('.one-quantity').style.display = 'inline-block';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
       } else if (quantity >= 2 && quantity < 4) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.forEach(item => item.style.display = 'none');
-        saleContainerElement[1].style.display = 'inline-block';
-        saleContainerElement[1].classList.add('two-less-four-quantity');
+        saleContainerElement.querySelector('.one-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
       } else if (quantity >= 4) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.forEach(item => item.style.display = 'none');
-        saleContainerElement[2].style.display = 'inline-block';
-        saleContainerElement[2].classList.add('four-or-more-quantity');
+        saleContainerElement.querySelector('.one-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
       }
     };
 
