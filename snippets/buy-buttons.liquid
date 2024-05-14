@@ -74,7 +74,7 @@
               {%- if product.selected_or_first_available_variant.available == false or quantity_rule_soldout -%}
                 {{ 'products.product.sold_out' | t }}
               {%- else -%}
-                {{ 'products.product.add_to_cart' | t }} {% render 'icon-arrow' %}
+                {{ 'products.product.add_to_cart' | t }} <span> {% render 'icon-arrow' %}</span>
 
                 {% comment %} {% unless product.handle == 'snoozy-pillow' %} —
                 {% render 'price-inline', product: product, use_variant: true, hide_compare_at_price: block.settings.hide_compare_at_price %}
