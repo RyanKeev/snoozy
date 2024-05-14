@@ -30,16 +30,53 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 
-  if special_discount == 10
-  assign discount  = price | times: 0.90 | floor 
-  assign discountedPrice = discount | money 
-  endif
 
-  if special_discount == 15
-  assign discount  = price | times: 0.85 | floor 
-  assign discountedPrice = discount | money 
-  endif
+  assign discount_10 = price | times: 0.90 | floor
+  assign discount_15 = price | times: 0.85 | floor
+  assign discount_10_money = discount_10 | money
+  assign discount_15_money = discount_15 | money
 %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const priceElement = document.querySelector('.price');
+    const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
+    const salePriceElement = priceElement.querySelector('.price__sale .price-item');
+    const saleContainerElement = priceElement.querySelector('.price__sale');
+  
+    if (priceElement) {
+      const price = parseInt(priceElement.getAttribute('data-price'), 10);
+      const discount10 = parseInt(priceElement.getAttribute('data-discount-10'), 10);
+      const discount15 = parseInt(priceElement.getAttribute('data-discount-15'), 10);
+  
+      if (saleContainerElement.classList.contains('price-item--last')) {
+        saleContainerElement.classList.remove('price-item--last');
+      }
+  
+      saleContainerElement.insertAdjacentHTML('beforeend', `
+        <span class="price-item price-item--sale price-item--last">
+          ${discount10_money}
+        </span>
+      `);
+  
+      saleContainerElement.insertAdjacentHTML('beforeend', `
+        <span class="price-item price-item--sale price-item--last">
+          ${discount15_money}
+        </span>
+      `);
+  
+      saleContainerElement.addEventListener('click', function() {
+        if (salePriceElement.textContent === discount10_money) {
+          regularPriceElement.textContent = discount15_money;
+          salePriceElement.textContent = discount15_money;
+        } else {
+          regularPriceElement.textContent = discount10_money;
+          salePriceElement.textContent = discount10_money;
+        }
+      });
+    }
+  });
+  
+  </script>
 <div
   class="
     price
@@ -62,7 +99,10 @@
         {{ money_price }}
       </span>
     </div>
-    <div class="price__sale">
+    <div class="price__sale"
+      data-price="{{ price }}"
+      data-discount-10="{{ discount_10 }}"
+      data-discount-15="{{ discount_15 }}">
       {%- unless product.price_varies == false and product.compare_at_price_varies %}
         <span>
           <s class="price-item price-item--regular">
@@ -77,6 +117,9 @@
       <span class="price-item price-item--sale price-item--last">
           {{ money_price | remove: 'From ' }}
       </span>
+      <span class="price-item price-item--sale price-item--last">
+        {{ discount_10_money }}
+    </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>

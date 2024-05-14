@@ -140,7 +140,6 @@
         },
         "quantity_bundle_selector_V3NWMz": {
           "type": "quantity_bundle_selector",
-          "disabled": true,
           "settings": {
             "buy1_text": "Get a great deal on a case today",
             "buy2_text": "Purchase 2 cases, with additional 10% discount",
