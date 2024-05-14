@@ -28,6 +28,8 @@ class ProductVariantSwatches extends VariantRadios {
     this.updateColorName();
 
     this.reinitializeVideos()
+    
+    document.dispatchEvent(new CustomEvent('variant:change'));
   }
 
   reinitializeVideos() {
