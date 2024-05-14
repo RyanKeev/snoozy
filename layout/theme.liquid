@@ -8,12 +8,11 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-
     const priceElement = document.querySelector('.price');
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
-    
-    {% comment %} if (priceElement) { {% endcomment %}
+
+    const updatePriceDisplay = function(quantity) {
       const price = parseInt(priceElement.getAttribute('data-price'), 10);
       const discount10 = parseInt(priceElement.getAttribute('data-discount-10'), 10);
       const discount15 = parseInt(priceElement.getAttribute('data-discount-15'), 10);
@@ -21,22 +20,40 @@
       if (saleContainerElement.classList.contains('price-item--last')) {
         saleContainerElement.classList.remove('price-item--last');
       }
-  
-      const quantityInput = document.querySelector('.quantity__input');
-      console.log(quantityInput.value,"qtyyy")
-      if (quantityInput) {
-        quantityInput.addEventListener('change', function() {
-          const quantity = parseInt(this.value, 10);
-          updatePriceDisplay(quantity);
-        });
+
+      if (quantity === 1) {
+        saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'inline-block';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
+      } else if (quantity >= 2 && quantity < 4) {
+        saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'none';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
+      } else if (quantity >= 4) {
+        saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'none';
+        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
       }
-      
+    };
+
+    const quantityInput = document.querySelector('.quantity__input');
+    console.log(quantityInput, "qtyyy");
+
+    if (quantityInput) {
+      quantityInput.addEventListener('change', function() {
+        const quantity = parseInt(this.value, 10);
+        updatePriceDisplay(quantity);
+      });
+
       // Initial price display based on the default quantity
       const initialQuantity = parseInt(quantityInput.value, 10);
       updatePriceDisplay(initialQuantity);
-    {% comment %} } {% endcomment %}
-  });  
+    } else {
+      console.error('quantityInput element not found');
+    }
+  });
 </script>
+
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
