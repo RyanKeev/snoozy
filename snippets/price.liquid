@@ -30,7 +30,7 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 
-  assign discount  = price | times: 0.90 | floor 
+  assign discount  = price | times: 0.90 | money | floor 
 %}
 <div
   class="
