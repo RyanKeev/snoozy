@@ -7,13 +7,8 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-  function initializeQuantityListeners() {
+  function updatePriceDisplay(quantity) {
     const priceElement = document.querySelector('.price');
-    if (!priceElement) {
-      console.log('Price element not found.');
-      return; // Exit if price element is not found
-    }
-
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
 
@@ -22,35 +17,34 @@
       return; // Exit if the necessary elements are not found
     }
 
-    const updatePriceDisplay = function(quantity) {
-      console.log('Updating price display for quantity:', quantity);
-      const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
-      const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
-      const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
+    const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
+    const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
+    const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
 
-      if (!oneQuantityElement || !twoLessFourQuantityElement || !fourOrMoreQuantityElement) {
-        console.log('One or more quantity elements not found.');
-        return; // Exit if the necessary elements are not found
-      }
+    if (!oneQuantityElement || !twoLessFourQuantityElement || !fourOrMoreQuantityElement) {
+      console.log('One or more quantity elements not found.');
+      return; // Exit if the necessary elements are not found
+    }
 
-      if (quantity === 1) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        oneQuantityElement.style.display = 'inline-block';
-        twoLessFourQuantityElement.style.display = 'none';
-        fourOrMoreQuantityElement.style.display = 'none';
-      } else if (quantity >= 2 && quantity < 4) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        oneQuantityElement.style.display = 'none';
-        twoLessFourQuantityElement.style.display = 'inline-block';
-        fourOrMoreQuantityElement.style.display = 'none';
-      } else if (quantity >= 4) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        oneQuantityElement.style.display = 'none';
-        twoLessFourQuantityElement.style.display = 'none';
-        fourOrMoreQuantityElement.style.display = 'inline-block';
-      }
-    };
+    if (quantity === 1) {
+      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      oneQuantityElement.style.display = 'inline-block';
+      twoLessFourQuantityElement.style.display = 'none';
+      fourOrMoreQuantityElement.style.display = 'none';
+    } else if (quantity >= 2 && quantity < 4) {
+      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      oneQuantityElement.style.display = 'none';
+      twoLessFourQuantityElement.style.display = 'inline-block';
+      fourOrMoreQuantityElement.style.display = 'none';
+    } else if (quantity >= 4) {
+      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      oneQuantityElement.style.display = 'none';
+      twoLessFourQuantityElement.style.display = 'none';
+      fourOrMoreQuantityElement.style.display = 'inline-block';
+    }
+  }
 
+  function attachQuantityListeners() {
     const quantityInputs = document.querySelectorAll('input[name="quantity"]');
     quantityInputs.forEach(function(input) {
       input.addEventListener('change', function() {
@@ -64,15 +58,20 @@
     updatePriceDisplay(initialQuantity);
   }
 
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded event fired');
-    initializeQuantityListeners();
+  function initializeQuantityListeners() {
+    console.log('Initializing quantity listeners');
+    attachQuantityListeners();
 
     // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
       console.log('variant:change event received.');
-      initializeQuantityListeners();
+      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
     });
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOMContentLoaded event fired');
+    initializeQuantityListeners();
   });
 </script>
 
