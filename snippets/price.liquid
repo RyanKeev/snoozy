@@ -33,8 +33,8 @@
 
   assign discount_10 = price | times: 0.90 | round
   assign discount_15 = price | times: 0.85 | round
-  assign discount_10_money = discount_10 | money
-  assign discount_15_money = discount_15 | money
+  assign discount_10_money = discount_10 | money | append: ".00"
+  assign discount_15_money = discount_15 | money | append: ".00"
 %}
 <div
   class="
