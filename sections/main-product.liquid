@@ -213,7 +213,7 @@
                       document.addEventListener('DOMContentLoaded', function() {
                         var quantityInput = document.getElementById('quantity');
                         var priceDisplays = document.querySelectorAll('.price-display');
-                        console.log(quantity)
+                        console.log(quantityInput.value,'qp')
                         function handleQuantityChange() {
                           var quantity = parseInt(quantityInput.value, 10) || 1; // Default to 1 if the value is invalid
                           var discountContainerToShow;
