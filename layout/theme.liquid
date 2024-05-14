@@ -7,13 +7,12 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  function initializeQuantityListeners() {
     const priceElement = document.querySelector('.price');
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
 
     const updatePriceDisplay = function(quantity) {
-
       if (quantity == 1) {
         regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
         saleContainerElement.querySelector('.one-quantity').style.display = 'inline-block';
@@ -33,7 +32,6 @@
     };
 
     const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-
     quantityInputs.forEach(function(input) {
       input.addEventListener('change', function() {
         const quantity = parseInt(this.value, 10);
@@ -43,8 +41,18 @@
 
     const initialQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
     updatePriceDisplay(initialQuantity);
+  }
+
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeQuantityListeners();
+
+    // Shopify-specific code to reinitialize on variant change
+    document.addEventListener('variant:change', function() {
+      initializeQuantityListeners();
+    });
   });
 </script>
+
 
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
