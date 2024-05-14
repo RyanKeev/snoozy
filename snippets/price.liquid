@@ -29,7 +29,7 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
-  
+  assign discount  = price 
 %}
 <div
   class="
@@ -66,7 +66,7 @@
         </span>
       {%- endunless -%}
       <span class="price-item price-item--sale price-item--last">
-
+        {{ discount }}
           {{ money_price | remove: 'From ' }}
       </span>
     </div>
