@@ -134,12 +134,12 @@
       <span class="price-item price-item--sale price-item--last">
           {{ money_price | remove: 'From ' }}
       </span>
-       <span class="price-item price-item--sale price-item--last two-less-four-quantity">
+       {% comment %} <span class="price-item price-item--sale price-item--last two-less-four-quantity">
         {{ discount_10_money }}
     </span>
       <span class="price-item price-item--sale price-item--last four-or-more-quantity">
         {{ discount_15_money }}
-    </span> 
+    </span>  {% endcomment %}
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
