@@ -34,6 +34,7 @@
 
     // Add event listeners to quantity inputs
     const quantityInputs = document.querySelectorAll('input[name="quantity"]');
+    console.log(quantityInputs)
     quantityInputs.forEach(function(input) {
       input.addEventListener('change', function() {
         const quantity = parseInt(this.value, 10);
