@@ -29,7 +29,7 @@
   if target == product and product.price_varies
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
-  assign discount  = money_price | times: .90 | floor 
+  assign discount  = money_price | times: 90% | floor 
 %}
 <div
   class="
