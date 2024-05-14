@@ -32,7 +32,7 @@
       }
     };
 
-    const quantityInputs = document.querySelector('input[name="quantity"]');
+    const quantityInputs = document.querySelectorAll('input[name="quantity"]');
     console.log(quantityInputs,"qttttttt")
     quantityInputs.forEach(function(input) {
       input.addEventListener('change', function() {
@@ -40,9 +40,9 @@
         updatePriceDisplay(quantity);
       });
     });
-
+{% comment %} 
     const initialQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
-    updatePriceDisplay(initialQuantity);
+    updatePriceDisplay(initialQuantity); {% endcomment %}
   });
 </script>
 
