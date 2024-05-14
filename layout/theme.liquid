@@ -58,6 +58,14 @@
     updatePriceDisplay(initialQuantity);
   }
 
+  function setDefaultBundleSwatch() {
+    const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
+    if (defaultQuantityInput) {
+      defaultQuantityInput.checked = true;
+      defaultQuantityInput.dispatchEvent(new Event('change'));
+    }
+  }
+
   function initializeQuantityListeners() {
     console.log('Initializing quantity listeners');
     attachQuantityListeners();
@@ -65,6 +73,7 @@
     // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
       console.log('variant:change event received.');
+      setDefaultBundleSwatch();
       attachQuantityListeners(); // Reattach listeners to handle any DOM changes
     });
   }
