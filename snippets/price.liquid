@@ -30,13 +30,11 @@
     assign money_price = 'products.product.price.from_price_html' | t: price: money_price
   endif
 
-  assign discount_10 = price | times: 0.90 | round | money
-  assign discount_15 = price | times: 0.85 | round | money
-
-  assign discount_10_money = discount_10 | remove: "." | replace: ",", "," | append: ".00"
-  assign discount_15_money = discount_15 | remove: "." | replace: ",", "," | append: ".00"
-
-
+  assign discount_10 = price | times: 0.90 | round
+  assign discount_15 = price | times: 0.85 | round
+  assign discount_10_money = discount_10 | money 
+  assign discount_15_money = discount_15 | money
+ 
 
 %}
 <div
