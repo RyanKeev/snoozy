@@ -33,7 +33,6 @@
           ${discount15_money}
         </span>
       `);
-      console.log("qtyyy")
       const updatePriceDisplay = function(quantity) {
         if (quantity === 1) {
           saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'inline-block';
@@ -50,6 +49,8 @@
         }
       };
   
+
+      console.log("qtyyy")
       const quantityInput = document.querySelector('.quantity__input');
      
       if (quantityInput) {
