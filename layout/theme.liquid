@@ -13,35 +13,31 @@
     const saleContainerElement = priceElement.querySelector('.price__sale');
 
     const updatePriceDisplay = function(quantity) {
-      if (quantity == 1) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.querySelector('.one-quantity').style.display = 'inline-block';
-        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
-        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
-      } else if (quantity >= 2 && quantity < 4) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.querySelector('.one-quantity').style.display = 'none';
-        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
-        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
-      } else if (quantity >= 4) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.querySelector('.one-quantity').style.display = 'none';
-        saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
-        saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
-      }
+      const moneyPrice = regularPriceElement.textContent.replace('From ', ''); // Get the money price from the regular price element
+      
+      const displayElements = ['one-quantity', 'two-less-four-quantity', 'four-or-more-quantity'];
+      const displayIndex = Math.min(Math.floor(quantity / 4), 2); // Calculate the display index based on quantity
+      
+      regularPriceElement.textContent = moneyPrice; // Update regular price regardless of quantity
+      saleContainerElement.querySelectorAll('.quantity-info').forEach((element, index) => {
+        element.style.display = index === displayIndex ? 'inline-block' : 'none'; // Show/hide quantity info based on display index
+      });
     };
 
     const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-    
-    quantityInputs.forEach(function(input) {
-      input.addEventListener('change', function() {
-        const quantity = parseInt(this.value, 10);
-        updatePriceDisplay(quantity);
+    if (quantityInputs.length > 0) {
+      quantityInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+          const quantity = parseInt(this.value, 10);
+          updatePriceDisplay(quantity);
+        });
       });
-    });
 
-    const initialQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
-    updatePriceDisplay(initialQuantity);
+      const initialQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
+      updatePriceDisplay(initialQuantity);
+    } else {
+      console.error('Quantity inputs not found');
+    }
   });
 </script>
 
