@@ -12,7 +12,7 @@
     const priceElement = document.querySelector('.price');
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
-    console.log("qtyyyy")
+    
     if (priceElement) {
       const price = parseInt(priceElement.getAttribute('data-price'), 10);
       const discount10 = parseInt(priceElement.getAttribute('data-discount-10'), 10);
@@ -51,7 +51,7 @@
       };
   
       const quantityInput = document.querySelector('.quantity__input');
-   
+      console.log(quantityInput,"qtyyyy")
       if (quantityInput) {
         quantityInput.addEventListener('change', function() {
           const quantity = parseInt(this.value, 10);
