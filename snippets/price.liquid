@@ -33,14 +33,13 @@
 
   assign discount_10 = price | times: 0.90 | floor
   assign discount_15 = price | times: 0.85 | floor
-  assign discount_10_money = discount_10 | money
-  assign discount_15_money = discount_15 | money
+  assign discount_10_money = discount_10 | money | floor
+  assign discount_15_money = discount_15 | money | floor
 %}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const priceElement = document.querySelector('.price');
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
-    const salePriceElement = priceElement.querySelector('.price__sale .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
   
     if (priceElement) {
@@ -53,29 +52,49 @@
       }
   
       saleContainerElement.insertAdjacentHTML('beforeend', `
-        <span class="price-item price-item--sale price-item--last">
+        <span class="price-item price-item--sale price-item--last two-less-four-quantity" style="display: none;">
           ${discount10_money}
         </span>
       `);
   
       saleContainerElement.insertAdjacentHTML('beforeend', `
-        <span class="price-item price-item--sale price-item--last">
+        <span class="price-item price-item--sale price-item--last four-or-more-quantity" style="display: none;">
           ${discount15_money}
         </span>
       `);
   
       saleContainerElement.addEventListener('click', function() {
-        if (salePriceElement.textContent === discount10_money) {
+        if (saleContainerElement.querySelector('.two-less-four-quantity').style.display !== 'none') {
           regularPriceElement.textContent = discount15_money;
-          salePriceElement.textContent = discount15_money;
+          saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+          saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
         } else {
           regularPriceElement.textContent = discount10_money;
-          salePriceElement.textContent = discount10_money;
+          saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
+          saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
         }
       });
+      
+      const quantityInput = document.querySelector('input[name="quantity"]');
+      
+      if (quantityInput) {
+        quantityInput.addEventListener('change', function() {
+          const quantity = parseInt(this.value, 10);
+          
+          if (quantity >= 2 && quantity < 4) {
+            saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
+            saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
+          } else if (quantity >= 4) {
+            saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+            saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
+          } else {
+            saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
+            saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
+          }
+        });
+      }
     }
-  });
-  
+  });  
   </script>
 <div
   class="
@@ -117,7 +136,12 @@
       <span class="price-item price-item--sale price-item--last">
           {{ money_price | remove: 'From ' }}
       </span>
-
+      <span class="price-item price-item--sale price-item--last two-less-four-quantity">
+        {{ discount_10_money }}
+    </span>
+      <span class="price-item price-item--sale price-item--last four-or-more-quantity">
+        {{ discount_15_money }}
+    </span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
