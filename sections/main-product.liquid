@@ -327,6 +327,9 @@
             {%- when 'variant_swatches' -%}
               <div class="info-separator"><span>{{ block.settings.variant_swatches_title }}</span></div>
               {% render 'product-variant-swatches', product: product, block: block, product_form_id: product_form_id %}
+            {%- when 'product_showcase_links' -%}
+              <div class="info-separator"><span>{{ block.settings.product_showcase_title }}</span></div>
+              {% render 'product-variant-swatches', product: product, block: block, product_form_id: product_form_id %}
 
             {%- when 'inventory' -%}
               <p class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -1417,6 +1420,19 @@
           "type": "text",
           "id": "buy4_text",
           "label": "Buy 4 Text"
+        }
+      ]
+    },
+    {
+      "type": "product_showcase_links",
+      "name": "Product showcase links",
+      "limit": 1,
+      "settings": [
+        {
+          "type": "text",
+          "id": "product_showcase_title",
+          "label": "Product showcase title:",
+          "default": "Quantity"
         }
       ]
     },
