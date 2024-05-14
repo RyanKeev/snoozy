@@ -9,31 +9,32 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const priceElement = document.querySelector('.price');
-    const regularPriceElement = priceElement.querySelector('.price-item');
-    const saleContainerElement = priceElement.querySelectorAll('.price-item--sale');
+    const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
+    const saleContainerElement = priceElement.querySelector('.price__sale');
+    const oneQuantity = saleContainerElement.querySelector('.one-quantity');
+    const twoLessFourQuantity = saleContainerElement.querySelector('.two-less-four-quantity');
+    const fourOrMoreQuantity = saleContainerElement.querySelector('.four-or-more-quantity');
 
+    // Function to update the price display based on quantity
     const updatePriceDisplay = function(quantity) {
       if (quantity == 1) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.forEach(item => item.style.display = 'inline-block');
-        saleContainerElement[0].classList.add('one-quantity');
-        saleContainerElement[1].classList.remove('two-less-four-quantity');
-        saleContainerElement[2].classList.remove('four-or-more-quantity');
+        oneQuantity.style.display = 'inline-block';
+        twoLessFourQuantity.style.display = 'none';
+        fourOrMoreQuantity.style.display = 'none';
       } else if (quantity >= 2 && quantity < 4) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.forEach(item => item.style.display = 'none');
-        saleContainerElement[1].style.display = 'inline-block';
-        saleContainerElement[1].classList.add('two-less-four-quantity');
+        oneQuantity.style.display = 'none';
+        twoLessFourQuantity.style.display = 'inline-block';
+        fourOrMoreQuantity.style.display = 'none';
       } else if (quantity >= 4) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        saleContainerElement.forEach(item => item.style.display = 'none');
-        saleContainerElement[2].style.display = 'inline-block';
-        saleContainerElement[2].classList.add('four-or-more-quantity');
+        oneQuantity.style.display = 'none';
+        twoLessFourQuantity.style.display = 'none';
+        fourOrMoreQuantity.style.display = 'inline-block';
       }
     };
 
+    // Add event listeners to quantity inputs
     const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-    
+
     quantityInputs.forEach(function(input) {
       input.addEventListener('change', function() {
         const quantity = parseInt(this.value, 10);
@@ -41,11 +42,14 @@
       });
     });
 
+    // Set initial display to one-quantity
+    oneQuantity.style.display = 'inline-block';
+
+    // Set initial display and values based on selected variant
     const initialQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
     updatePriceDisplay(initialQuantity);
   });
 </script>
-
 
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
