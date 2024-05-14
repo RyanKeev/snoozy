@@ -79,7 +79,7 @@
         }
       };
   
-      const quantityInput = document.querySelector('input[name="quantity"]');
+      const quantityInput = document.querySelector('.quantity__input');
       
       if (quantityInput) {
         quantityInput.addEventListener('change', function() {
@@ -92,8 +92,7 @@
       const initialQuantity = parseInt(quantityInput.value, 10);
       updatePriceDisplay(initialQuantity);
     }
-  });
-  
+  });  
 </script>
 <div
   class="
