@@ -209,34 +209,41 @@
             {%- when 'price' -%}
               <div class="price-wrapper" style="margin-top:15px;">
                 <div class="no-js-hidden" id="price-{{ section.id }}" role="status" {{ block.shopify_attributes }}>
-                  <script>
-                    function getQuantityValue() {
-                      // Get the quantity input element
-                      var quantityInput = document.getElementById('quantity');
-                      
-                      // Get the value of the quantity input element
-                      var quantityValue = quantityInput.value;
-                      
-                      // Convert the value to a number
-                      quantityValue = parseInt(quantityValue, 10);
-                  
-                      // Check if the value is a valid number
-                      if (isNaN(quantityValue)) {
-                          quantityValue = 1; // Default to 1 if not a valid number
-                      }
-                  
-                      return quantityValue;
-                  }
-                  
-                  // Example of using the function
-                  var quantity = getQuantityValue();
-                  console.log("Selected quantity: " + quantity);
-                  </script>
-                  {% if block.settings.discount_ten_percent %}
-                    {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large', special_discount: 10 -%}
-                    {% else %}
+                    <script>
+                      document.addEventListener('DOMContentLoaded', function() {
+                        var quantityInput = document.getElementById('quantity');
+                        var priceDisplays = document.querySelectorAll('.price-display');
+                        console.log(quantity)
+                        function handleQuantityChange() {
+                          var quantity = parseInt(quantityInput.value, 10) || 1; // Default to 1 if the value is invalid
+                          var discountContainerToShow;
+                    
+                          if (quantity == 2) {
+                            discountContainerToShow = document.getElementById('price_display_1');
+                          } else {
+                            discountContainerToShow = document.getElementById('price_display_2');
+                          }
+                    
+                          // Hide all price displays
+                          priceDisplays.forEach(function(container) {
+                            container.style.display = 'none';
+                          });
+                    
+                          // Show the appropriate price display based on quantity
+                          if (discountContainerToShow) {
+                            discountContainerToShow.style.display = 'block';
+                          }
+                        }
+                    
+                        // Attach the change event listener to the quantity input
+                        quantityInput.addEventListener('change', handleQuantityChange);
+                    
+                        // Initial call to handle the default quantity value
+                        handleQuantityChange();
+                      });
+                    </script>
+
                       {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
-                  {% endif %}
                 </div>
                 {%- if cart.taxes_included or shop.shipping_policy.body != blank -%}
                   <div class="product__tax caption rte">
