@@ -31,11 +31,10 @@
   endif
 
 
-  assign discount_10 = price | times: 0.90 | times: 100 | round | divided_by: 100 | money
-  assign discount_15 = price | times: 0.85 | times: 100 | round | divided_by: 100 | money
-
-  assign discount_10_money = discount_10 | append: ".00"
-  assign discount_15_money = discount_15 | append: ".00"
+  assign discount_10 = price | times: 0.90 | round
+  assign discount_15 = price | times: 0.85 | round
+  assign discount_10_money = discount_10 | money 
+  assign discount_15_money = discount_15 | money
 %}
 <div
   class="
