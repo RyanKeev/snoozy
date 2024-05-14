@@ -11,70 +11,66 @@
     const priceElement = document.querySelector('.price');
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item--regular');
     const saleContainerElement = priceElement.querySelector('.price__sale');
+    const oneQuantity = saleContainerElement.querySelector('.one-quantity');
+    const twoLessFourQuantity = saleContainerElement.querySelector('.two-less-four-quantity');
+    const fourOrMoreQuantity = saleContainerElement.querySelector('.four-or-more-quantity');
   
     const updatePriceDisplay = function(quantity) {
-      const price = parseInt(priceElement.getAttribute('data-price'), 10);
-      const discount10Money = priceElement.getAttribute('data-discount-10-money');
-      const discount15Money = priceElement.getAttribute('data-discount-15-money');
-      const moneyPrice = priceElement.getAttribute('data-money-price');
+      const price = priceElement.dataset.price;
+      const discount10Money = priceElement.dataset.discount10Money;
+      const discount15Money = priceElement.dataset.discount15Money;
+      const moneyPrice = priceElement.dataset.moneyPrice;
   
-      const oneQuantity = saleContainerElement.querySelector('.one-quantity');
-      const twoLessFourQuantity = saleContainerElement.querySelector('.two-less-four-quantity');
-      const fourOrMoreQuantity = saleContainerElement.querySelector('.four-or-more-quantity');
+      oneQuantity.style.display = quantity === 1 ? 'inline-block' : 'none';
+      twoLessFourQuantity.style.display = quantity >= 2 && quantity < 4 ? 'inline-block' : 'none';
+      fourOrMoreQuantity.style.display = quantity >= 4 ? 'inline-block' : 'none';
   
-      if (quantity == 1) {
+      if (quantity === 1) {
         oneQuantity.textContent = moneyPrice;
-        oneQuantity.style.display = 'inline-block';
-        twoLessFourQuantity.style.display = 'none';
-        fourOrMoreQuantity.style.display = 'none';
       } else if (quantity >= 2 && quantity < 4) {
         twoLessFourQuantity.textContent = discount10Money;
-        oneQuantity.style.display = 'none';
-        twoLessFourQuantity.style.display = 'inline-block';
-        fourOrMoreQuantity.style.display = 'none';
       } else if (quantity >= 4) {
         fourOrMoreQuantity.textContent = discount15Money;
-        oneQuantity.style.display = 'none';
-        twoLessFourQuantity.style.display = 'none';
-        fourOrMoreQuantity.style.display = 'inline-block';
       }
     };
   
-    const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-    quantityInputs.forEach(function(input) {
-      input.addEventListener('change', function() {
-        const quantity = parseInt(this.value, 10);
-        updatePriceDisplay(quantity);
-      });
+    const onQuantityChange = function() {
+      const quantity = parseInt(this.value, 10);
+      updatePriceDisplay(quantity);
+    };
+  
+    const onVariantChange = function() {
+      const newPrice = this.dataset.price;
+      const newDiscount10Money = this.dataset.discount10Money;
+      const newDiscount15Money = this.dataset.discount15Money;
+      const newMoneyPrice = this.dataset.moneyPrice;
+  
+      priceElement.dataset.price = newPrice;
+      priceElement.dataset.discount10Money = newDiscount10Money;
+      priceElement.dataset.discount15Money = newDiscount15Money;
+      priceElement.dataset.moneyPrice = newMoneyPrice;
+  
+      regularPriceElement.textContent = newMoneyPrice;
+      oneQuantity.textContent = newMoneyPrice;
+      twoLessFourQuantity.textContent = newDiscount10Money;
+      fourOrMoreQuantity.textContent = newDiscount15Money;
+  
+      const updatedQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
+      updatePriceDisplay(updatedQuantity);
+    };
+  
+    document.querySelectorAll('input[name="quantity"]').forEach(function(input) {
+      input.addEventListener('change', onQuantityChange);
+    });
+  
+    document.querySelectorAll('.variant-selectors input[type="radio"]').forEach(function(variant) {
+      variant.addEventListener('change', onVariantChange);
     });
   
     const initialQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
     updatePriceDisplay(initialQuantity);
-  
-    const variantSelects = document.querySelectorAll('.variant-selectors input[type="radio"]');
-    variantSelects.forEach(function(variant) {
-      variant.addEventListener('change', function() {
-        const newPrice = parseInt(this.getAttribute('data-price'), 10);
-        const newDiscount10Money = this.getAttribute('data-discount-10-money');
-        const newDiscount15Money = this.getAttribute('data-discount-15-money');
-        const newMoneyPrice = this.getAttribute('data-money-price');
-  
-        priceElement.setAttribute('data-price', newPrice);
-        priceElement.setAttribute('data-discount-10-money', newDiscount10Money);
-        priceElement.setAttribute('data-discount-15-money', newDiscount15Money);
-        priceElement.setAttribute('data-money-price', newMoneyPrice);
-  
-        regularPriceElement.textContent = newMoneyPrice;
-        saleContainerElement.querySelector('.one-quantity').textContent = newMoneyPrice;
-        saleContainerElement.querySelector('.two-less-four-quantity').textContent = newDiscount10Money;
-        saleContainerElement.querySelector('.four-or-more-quantity').textContent = newDiscount15Money;
-  
-        const updatedQuantity = parseInt(document.querySelector('input[name="quantity"]:checked').value, 10);
-        updatePriceDisplay(updatedQuantity);
-      });
-    });
   });
-    
+      
 </script>
 
 <!-- Include Owl Carousel CSS -->
