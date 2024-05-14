@@ -36,64 +36,6 @@
   assign discount_10_money = discount_10 | money
   assign discount_15_money = discount_15 | money
 %}
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const priceElement = document.querySelector('.price');
-    const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
-    const saleContainerElement = priceElement.querySelector('.price__sale');
-  
-    if (priceElement) {
-      const price = parseInt(priceElement.getAttribute('data-price'), 10);
-      const discount10 = parseInt(priceElement.getAttribute('data-discount-10'), 10);
-      const discount15 = parseInt(priceElement.getAttribute('data-discount-15'), 10);
-  
-      if (saleContainerElement.classList.contains('price-item--last')) {
-        saleContainerElement.classList.remove('price-item--last');
-      }
-  
-      saleContainerElement.insertAdjacentHTML('beforeend', `
-        <span class="price-item price-item--sale price-item--last two-less-four-quantity" style="display: none;">
-          ${discount10_money}
-        </span>
-      `);
-  
-      saleContainerElement.insertAdjacentHTML('beforeend', `
-        <span class="price-item price-item--sale price-item--last four-or-more-quantity" style="display: none;">
-          ${discount15_money}
-        </span>
-      `);
-  
-      const updatePriceDisplay = function(quantity) {
-        if (quantity === 1) {
-          saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'inline-block';
-          saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
-          saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
-        } else if (quantity >= 2 && quantity < 4) {
-          saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'none';
-          saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'inline-block';
-          saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'none';
-        } else if (quantity >= 4) {
-          saleContainerElement.querySelector('.price-item--last:not(.two-less-four-quantity):not(.four-or-more-quantity)').style.display = 'none';
-          saleContainerElement.querySelector('.two-less-four-quantity').style.display = 'none';
-          saleContainerElement.querySelector('.four-or-more-quantity').style.display = 'inline-block';
-        }
-      };
-  
-      const quantityInput = document.querySelector('.quantity__input');
-        console.log(quantityInput,"qtyyyy")
-      if (quantityInput) {
-        quantityInput.addEventListener('change', function() {
-          const quantity = parseInt(this.value, 10);
-          updatePriceDisplay(quantity);
-        });
-      }
-      
-      // Initial price display based on the default quantity
-      const initialQuantity = parseInt(quantityInput.value, 10);
-      updatePriceDisplay(initialQuantity);
-    }
-  });  
-</script>
 <div
   class="
     price
