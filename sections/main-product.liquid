@@ -329,7 +329,9 @@
               {% render 'product-variant-swatches', product: product, block: block, product_form_id: product_form_id %}
             {%- when 'product_showcase_links' -%}
               <div class="info-separator"><span>{{ block.settings.product_showcase_title }}</span></div>
-              {% render 'product-variant-swatches', product: product, block: block, product_form_id: product_form_id %}
+              <label class="product-variant-swatch size-swatch {% if option_handle == 'quantity' %}quantity-swatch {% endif %}" for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}">   
+              {{ value | escape  }}
+            </label>
 
             {%- when 'inventory' -%}
               <p class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
@@ -636,7 +638,7 @@
                             text-align:center;
                             background: transparent !important;
                             color: #1a1a1a !important;
-                            font-size: 16px !important;
+                            font-size: 14px !important;
                             padding: 1rem .5rem !important;
                             margin: 0 !important;
                           }
@@ -1433,6 +1435,28 @@
           "id": "product_showcase_title",
           "label": "Product showcase title:",
           "default": "Quantity"
+        },
+        {
+          "type": "url",
+          "id": "product_showcase_1_link",
+          "label": "Product showcase 1 Link:"
+        },
+        {
+          "type": "text",
+          "id": "product_showcase_1_link_title",
+          "label": "Product showcase 1 link title:",
+          "default": "Product 1"
+        },
+        {
+          "type": "url",
+          "id": "product_showcase_2_link",
+          "label": "Product showcase 2 Link:"
+        },
+        {
+          "type": "text",
+          "id": "product_showcase_2_link_title",
+          "label": "Product showcase 2 link title:",
+          "default": "Product 2"
         }
       ]
     },
