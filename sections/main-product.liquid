@@ -715,7 +715,7 @@
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
                         <label for="quantity1">{{ block.settings.buy1_text }}</label>
-                        {%- render 'price', product: product, use_variant: true, show_badges: true, price_class: 'price--large' -%}
+                        {%- render 'price', product: product, use_variant: true  -%}
                         <span class="bundle_price one-quantity" style="font-size: 1px;">{{ money_price | remove: 'From ' }}</span>
                       </span>
                       <span class="bundle_swatch ">
