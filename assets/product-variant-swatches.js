@@ -29,18 +29,18 @@ class ProductVariantSwatches extends VariantRadios {
 
     this.reinitializeVideos()
     
-    // Calculate new prices
-    const price = variant.price; // Example: Use variant.price or any other logic to get the price
-    const discount10 = (price * 0.9).toFixed(2);
-    const discount15 = (price * 0.85).toFixed(2);
-  
-    // Update the price elements directly
-    document.querySelector('.bundle_price.one-quantity').textContent = `$${price}`;
-    document.querySelector('.bundle_price.two-less-four-quantity').textContent = `$${discount10}`;
-    document.querySelector('.bundle_price.four-or-more-quantity').textContent = `$${discount15}`;
-  
-    // Trigger the custom event
-    document.dispatchEvent(new CustomEvent('variant:change'));  
+  //     // Update the data attributes with the new prices
+  // const variantData = document.getElementById('variant-data');
+  // const price = variant.price; // Example: Use variant.price or any other logic to get the price
+  // const discount10 = (price * 0.9).toFixed(2);
+  // const discount15 = (price * 0.85).toFixed(2);
+
+  // variantData.setAttribute('data-money-price', `${price}`);
+  // variantData.setAttribute('data-discount-10', `${discount10}`);
+  // variantData.setAttribute('data-discount-15', `${discount15}`);
+
+  // Trigger the custom event
+  document.dispatchEvent(new CustomEvent('variant:change'));
   }
 
   reinitializeVideos() {
