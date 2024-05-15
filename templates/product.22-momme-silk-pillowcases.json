@@ -117,6 +117,18 @@
             "product_text_list_fifth": "{{ product.metafields.custom.quantity_break_1.value }}"
           }
         },
+        "product_showcase_links_K8kaUB": {
+          "type": "product_showcase_links",
+          "settings": {
+            "product_showcase_title": "Quantity",
+            "product_showcase_1_link": "shopify:\/\/products\/19-momme-silk-pillowcase",
+            "product_is_active_1": false,
+            "product_showcase_1_link_title": "Mulberry Silk Pillowcase",
+            "product_showcase_2_link": "shopify:\/\/products\/standard-pillowcase",
+            "product_is_active_2": true,
+            "product_showcase_2_link_title": "Premium Mulberry Silk Pillowcase"
+          }
+        },
         "a019fdc3-26d6-4ade-90fd-e1c7c0cc5707": {
           "type": "variant_swatches",
           "settings": {
@@ -253,6 +265,7 @@
         "sale_countdown_nH4rnn",
         "review_BrdzDW",
         "2fad7fee-1e4e-4bbd-a33a-b6131ab0b772",
+        "product_showcase_links_K8kaUB",
         "a019fdc3-26d6-4ade-90fd-e1c7c0cc5707",
         "quantity_selector",
         "fdf08dd9-0177-4af9-b553-89e9fec6efed",
