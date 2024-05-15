@@ -29,7 +29,7 @@ class ProductVariantSwatches extends VariantRadios {
 
     this.reinitializeVideos()
     
-      // Update the data attributes with the new prices
+    // Update the data attributes with the new prices
     const variantData = document.getElementById('variant-data');
     variantData.setAttribute('data-money-price', variant.price);
     variantData.setAttribute('data-discount-10', variant.price * 0.9); // Update with your discount calculation
@@ -37,6 +37,7 @@ class ProductVariantSwatches extends VariantRadios {
 
     // Trigger the custom event
     document.dispatchEvent(new CustomEvent('variant:change'));
+  }
 
   reinitializeVideos() {
     const videoBlock = document.querySelectorAll('.alchemy__element video')
