@@ -137,10 +137,10 @@
         endfor
     -%}
     {% assign value_handle = value | handleize %}
-
+    {% assign product_handle = request.path | split: '/' | last %}
     <script>
         console.log(product_handle)
-        </script>
+    </script>
     <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}"
            {% if option.selected_value == value %}checked{% endif %} {% if option_disabled %}class="disabled"{% endif %}
            data-option-handle="{{ option_handle }}">
