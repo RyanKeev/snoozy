@@ -83,7 +83,7 @@ document.addEventListener('variant:change', function() {
     const discount15Money = variantData.getAttribute('data-discount-15');
 
     // Update price elements
-    document.querySelector('.price__sale').innerText = moneyPrice;
+    document.querySelector('#variant-data').innerText = moneyPrice;
 
     document.querySelector('.bundle_price.one-quantity').innerText = moneyPrice;
     document.querySelector('.bundle_price.two-less-four-quantity').innerText = discount10Money;
