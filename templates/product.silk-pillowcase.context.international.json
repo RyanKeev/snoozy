@@ -1,8 +1,0 @@
-{
-  "parent": "product.silk-pillowcase.json",
-  "context": {
-    "market": "international"
-  },
-  "sections": {
-  }
-}
