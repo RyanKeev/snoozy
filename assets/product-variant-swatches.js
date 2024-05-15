@@ -29,7 +29,17 @@ class ProductVariantSwatches extends VariantRadios {
 
     this.reinitializeVideos()
     
-    document.dispatchEvent(new CustomEvent('variant:change'));
+    const moneyPrice = "{{ money_price | remove: 'From ' }}"; // Update this with the actual new price
+    const discount10Money = "{{ discount_10_money }}"; // Update this with the actual new discount price
+    const discount15Money = "{{ discount_15_money }}"; // Update this with the actual new discount price
+    
+    document.dispatchEvent(new CustomEvent('variant:change', {
+     detail: {
+       moneyPrice: moneyPrice,
+       discount10Money: discount10Money,
+       discount15Money: discount15Money
+     }
+   }));
   }
 
   reinitializeVideos() {

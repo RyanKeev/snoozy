@@ -948,10 +948,19 @@ class VariantSelects extends HTMLElement {
     this.updateVariantStatuses();
 
   // Dispatch custom event for variant change
-  document.dispatchEvent(new CustomEvent('variant:change'));
-  console.log('variant:change event dispatched'); // Add this line for debugging
+   // Trigger the custom event with updated prices
+   const moneyPrice = "{{ money_price | remove: 'From ' }}"; // Update this with the actual new price
+   const discount10Money = "{{ discount_10_money }}"; // Update this with the actual new discount price
+   const discount15Money = "{{ discount_15_money }}"; // Update this with the actual new discount price
+   
+   document.dispatchEvent(new CustomEvent('variant:change', {
+    detail: {
+      moneyPrice: moneyPrice,
+      discount10Money: discount10Money,
+      discount15Money: discount15Money
+    }
+  }));
 
-    
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
