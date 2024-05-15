@@ -669,11 +669,9 @@
                         }
                       </style>
                         {%- liquid
-                          if use_variant
+
                             assign target = product.selected_or_first_available_variant
-                          else
-                            assign target = product
-                          endif
+                    
                           
                         assign price = target.price | default: 1999
                         assign money_price = price | money
