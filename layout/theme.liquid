@@ -11,27 +11,29 @@
     initializeQuantityListeners();
     // Initialize listeners for quantity change
   });
-  
+
   function initializeQuantityListeners() {
     attachQuantityListeners();
     // Attach initial quantity listeners
-  
+
     // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
       setDefaultBundleSwatch();
       attachQuantityListeners(); // Reattach listeners to handle any DOM changes
-  
+
       // Update the price elements with the new prices from the variant data attributes
       const variantData = document.getElementById('variant-data');
       if (variantData) {
         const moneyPrice = variantData.getAttribute('data-money-price');
         const discount10Money = variantData.getAttribute('data-discount-10');
         const discount15Money = variantData.getAttribute('data-discount-15');
-  
+
+        document.querySelector('.price__sale').textContent = moneyPrice;
+
         document.querySelector('.bundle_price.one-quantity').textContent = moneyPrice;
         document.querySelector('.bundle_price.two-less-four-quantity').textContent = discount10Money;
         document.querySelector('.bundle_price.four-or-more-quantity').textContent = discount15Money;
-  
+
         // Update price display based on the selected quantity
         const selectedQuantity = document.querySelector('input[name="quantity"]:checked').value;
         updatePriceDisplay(selectedQuantity);
@@ -40,7 +42,7 @@
       }
     });
   }
-  
+
   function attachQuantityListeners() {
     const quantityInputs = document.querySelectorAll('input[name="quantity"]');
     quantityInputs.forEach(function(input) {
@@ -49,21 +51,21 @@
         updatePriceDisplay(quantity);
       });
     });
-  
+
     // Get initial quantity
     const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
     const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
     updatePriceDisplay(initialQuantity);
   }
-  
+
   function updatePriceDisplay(quantity) {
     const priceElement = document.querySelector('.price');
     const saleContainerElement = priceElement.querySelector('.price__sale');
-  
+
     const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
     const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
     const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
-  
+
     if (quantity === 1) {
       oneQuantityElement.style.display = 'inline-block';
       twoLessFourQuantityElement.style.display = 'none';
@@ -78,7 +80,7 @@
       fourOrMoreQuantityElement.style.display = 'inline-block';
     }
   }
-  
+
   function setDefaultBundleSwatch() {
     const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
     if (defaultQuantityInput) {
@@ -87,7 +89,6 @@
       // Dispatch change event to update price display
     }
   }
-  
 </script>
 
 <!-- Include Owl Carousel CSS -->
