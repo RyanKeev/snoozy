@@ -6,8 +6,9 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
+
 <script>
-  function updatePriceDisplay(quantity, moneyPrice, discount10Money, discount15Money) {
+  function updatePriceDisplay(quantity) {
     const priceElement = document.querySelector('.price');
     const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
     const saleContainerElement = priceElement.querySelector('.price__sale');
@@ -27,22 +28,20 @@
     }
 
     if (quantity === 1) {
-      regularPriceElement.textContent = moneyPrice;
+      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
       oneQuantityElement.style.display = 'inline-block';
       twoLessFourQuantityElement.style.display = 'none';
       fourOrMoreQuantityElement.style.display = 'none';
     } else if (quantity >= 2 && quantity < 4) {
-      regularPriceElement.textContent = moneyPrice;
+      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
       oneQuantityElement.style.display = 'none';
       twoLessFourQuantityElement.style.display = 'inline-block';
       fourOrMoreQuantityElement.style.display = 'none';
-      twoLessFourQuantityElement.textContent = discount10Money; // Update bundle swatch price
     } else if (quantity >= 4) {
-      regularPriceElement.textContent = moneyPrice;
+      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
       oneQuantityElement.style.display = 'none';
       twoLessFourQuantityElement.style.display = 'none';
       fourOrMoreQuantityElement.style.display = 'inline-block';
-      fourOrMoreQuantityElement.textContent = discount15Money; // Update bundle swatch price
     }
   }
 
@@ -51,19 +50,13 @@
     quantityInputs.forEach(function(input) {
       input.addEventListener('change', function() {
         const quantity = parseInt(this.value, 10);
-        const moneyPrice = document.getElementById('variant-data').getAttribute('data-money-price');
-        const discount10Money = document.getElementById('variant-data').getAttribute('data-discount-10');
-        const discount15Money = document.getElementById('variant-data').getAttribute('data-discount-15');
-        updatePriceDisplay(quantity, moneyPrice, discount10Money, discount15Money);
+        updatePriceDisplay(quantity);
       });
     });
 
     const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
     const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
-    const moneyPrice = document.getElementById('variant-data').getAttribute('data-money-price');
-    const discount10Money = document.getElementById('variant-data').getAttribute('data-discount-10');
-    const discount15Money = document.getElementById('variant-data').getAttribute('data-discount-15');
-    updatePriceDisplay(initialQuantity, moneyPrice, discount10Money, discount15Money);
+    updatePriceDisplay(initialQuantity);
   }
 
   function setDefaultBundleSwatch() {
@@ -81,17 +74,8 @@
     // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
       console.log('variant:change event received.');
-      const variantData = document.getElementById('variant-data');
-      if (variantData) {
-        const moneyPrice = variantData.getAttribute('data-money-price');
-        const discount10Money = variantData.getAttribute('data-discount-10');
-        const discount15Money = variantData.getAttribute('data-discount-15');
-        attachQuantityListeners(); // Reattach listeners to handle any DOM changes
-        setDefaultBundleSwatch();
-        updatePriceDisplay(1, moneyPrice, discount10Money, discount15Money);
-      } else {
-        console.error("Variant data not found.");
-      }
+      setDefaultBundleSwatch();
+      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
     });
   }
 
