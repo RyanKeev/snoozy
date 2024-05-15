@@ -70,33 +70,12 @@
     console.log('Initializing quantity listeners');
     attachQuantityListeners();
 
-// Reinitialize on custom variant change event
-document.addEventListener('variant:change', function() {
-  setDefaultBundleSwatch();
-  attachQuantityListeners(); // Reattach listeners to handle any DOM changes
-
-  // Update the price elements with the new prices from the variant data attributes
-  const variantData = document.getElementById('variant-data');
-  if (variantData) {
-    const moneyPrice = variantData.getAttribute('data-money-price');
-    const discount10Money = variantData.getAttribute('data-discount-10');
-    const discount15Money = variantData.getAttribute('data-discount-15');
-
-    // Update price elements
-    document.querySelector('.price__sale').innerText = moneyPrice;
-
-    document.querySelector('.bundle_price.one-quantity').innerText = moneyPrice;
-    document.querySelector('.bundle_price.two-less-four-quantity').innerText = discount10Money;
-    document.querySelector('.bundle_price.four-or-more-quantity').innerText = discount15Money;
-
-    // Update price display based on the selected quantity
-    const selectedQuantity = document.querySelector('input[name="quantity"]:checked').value;
-    updatePriceDisplay(selectedQuantity);
-  } else {
-    console.error("Variant data not found.");
-  }
-});
-
+    // Reinitialize on custom variant change event
+    document.addEventListener('variant:change', function() {
+      console.log('variant:change event received.');
+      setDefaultBundleSwatch();
+      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
+    });
   }
 
   document.addEventListener('DOMContentLoaded', function() {
