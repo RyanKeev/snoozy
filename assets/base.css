@@ -6691,6 +6691,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
 
 .flex-showcase {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
   align-items: center;
   gap:10px;
