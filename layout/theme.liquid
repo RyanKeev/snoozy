@@ -80,8 +80,17 @@
     // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
       console.log('variant:change event received.');
-      setDefaultBundleSwatch();
-      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
+      const variantData = document.getElementById('variant-data');
+      if (variantData) {
+        const moneyPrice = variantData.getAttribute('data-money-price');
+        const discount10Money = variantData.getAttribute('data-discount-10');
+        const discount15Money = variantData.getAttribute('data-discount-15');
+        attachQuantityListeners(); // Reattach listeners to handle any DOM changes
+        setDefaultBundleSwatch();
+        updatePriceDisplay(1, moneyPrice, discount10Money, discount15Money);
+      } else {
+        console.error("Variant data not found.");
+      }
     });
   }
 
@@ -90,6 +99,7 @@
     initializeQuantityListeners();
   });
 </script>
+
 
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
