@@ -8,7 +8,6 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-
     initializeQuantityListeners();
     // Initialize listeners for quantity change
   });
@@ -29,8 +28,10 @@
         const discount10Money = variantData.getAttribute('data-discount-10');
         const discount15Money = variantData.getAttribute('data-discount-15');
 
+        // Update regular price
         document.querySelector('.price__sale').textContent = moneyPrice;
 
+        // Update bundle swatch prices
         document.querySelector('.bundle_price.one-quantity').textContent = moneyPrice;
         document.querySelector('.bundle_price.two-less-four-quantity').textContent = discount10Money;
         document.querySelector('.bundle_price.four-or-more-quantity').textContent = discount15Money;
