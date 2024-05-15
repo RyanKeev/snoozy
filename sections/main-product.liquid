@@ -328,12 +328,22 @@
               {% render 'product-variant-swatches', product: product, block: block, product_form_id: product_form_id %}
             {%- when 'product_showcase_links' -%}
               <div class="info-separator"><span>{{ block.settings.product_showcase_title }}</span></div>
-              <label class="product-variant-swatch size-swatch" for="{{ section.id }}">   
+              <a {% if block.settings.product_showcase_1_link == blank %}
+                  role="link" aria-disabled="true"
+                {% else %}
+                href="{{ block.settings.product_showcase_1_link }}"
+              {% endif %} 
+                 class="showcase_links">   
                 {{ block.settings.product_showcase_1_link_title }}
-              </label>
-              <label class="product-variant-swatch size-swatch" for="{{ section.id }}">   
+              </a>
+              <a {% if block.settings.product_showcase_2_link == blank %}
+                role="link" aria-disabled="true"
+              {% else %}
+              href="{{ block.settings.product_showcase_2_link }}"
+            {% endif %} 
+               class="showcase_links">   
                 {{ block.settings.product_showcase_2_link_title }}
-              </label>
+            </a>
 
             {%- when 'inventory' -%}
               <p class="product__inventory no-js-hidden{% if block.settings.text_style == 'uppercase' %} caption-with-letter-spacing{% elsif block.settings.text_style == 'subtitle' %} subtitle{% endif %}{% if product.selected_or_first_available_variant.inventory_management != 'shopify' %} visibility-hidden{% endif %}"
