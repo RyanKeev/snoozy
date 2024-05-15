@@ -27,17 +27,17 @@
     }
 
     if (quantity === 1) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      regularPriceElement.textContent = oneQuantityElement.textContent;
       oneQuantityElement.style.display = 'inline-block';
       twoLessFourQuantityElement.style.display = 'none';
       fourOrMoreQuantityElement.style.display = 'none';
     } else if (quantity >= 2 && quantity < 4) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      regularPriceElement.textContent = twoLessFourQuantityElement.textContent;
       oneQuantityElement.style.display = 'none';
       twoLessFourQuantityElement.style.display = 'inline-block';
       fourOrMoreQuantityElement.style.display = 'none';
     } else if (quantity >= 4) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      regularPriceElement.textContent = fourOrMoreQuantityElement.textContent;
       oneQuantityElement.style.display = 'none';
       twoLessFourQuantityElement.style.display = 'none';
       fourOrMoreQuantityElement.style.display = 'inline-block';
@@ -66,6 +66,17 @@
     }
   }
 
+  function updateBundleSwatchPrices() {
+    const variantData = document.getElementById('variant-data');
+    const moneyPrice = variantData.getAttribute('data-money-price');
+    const discount10Money = variantData.getAttribute('data-discount-10');
+    const discount15Money = variantData.getAttribute('data-discount-15');
+
+    document.querySelector('.bundle_price.one-quantity').textContent = moneyPrice;
+    document.querySelector('.bundle_price.two-less-four-quantity').textContent = discount10Money;
+    document.querySelector('.bundle_price.four-or-more-quantity').textContent = discount15Money;
+  }
+
   function initializeQuantityListeners() {
     console.log('Initializing quantity listeners');
     attachQuantityListeners();
@@ -73,6 +84,7 @@
     // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
       console.log('variant:change event received.');
+      updateBundleSwatchPrices();
       setDefaultBundleSwatch();
       attachQuantityListeners(); // Reattach listeners to handle any DOM changes
     });
@@ -83,6 +95,7 @@
     initializeQuantityListeners();
   });
 </script>
+
 
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
