@@ -708,9 +708,13 @@
                           form="{{ product_form_id }}"
                       />
                       <div id="variant-data" 
-                        data-money-price="{{ money_price | remove: 'From ' }}" 
-                        data-discount-10="{{ discount_10_money }}" 
-                        data-discount-15="{{ discount_15_money }}">
+                        data-price="{{ price }}"
+                        data-discount-10="{{ discount_10 }}"
+                        data-discount-15="{{ discount_15 }}"
+                        data-money-price="{{ money_price }}"
+                        data-discount-10-money="{{ discount_10_money }}"
+                        data-discount-15-money="{{ discount_15_money }}"
+                      >
                       </div>
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
