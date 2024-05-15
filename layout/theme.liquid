@@ -35,18 +35,22 @@
         }
 
         // Update bundle swatch prices
-        const oneQuantityElement = document.querySelector('.bundle_price.one-quantity');
-        if (oneQuantityElement) {
-          oneQuantityElement.textContent = moneyPrice;
-        }
-        const twoLessFourQuantityElement = document.querySelector('.bundle_price.two-less-four-quantity');
-        if (twoLessFourQuantityElement) {
-          twoLessFourQuantityElement.textContent = discount10Money;
-        }
-        const fourOrMoreQuantityElement = document.querySelector('.bundle_price.four-or-more-quantity');
-        if (fourOrMoreQuantityElement) {
-          fourOrMoreQuantityElement.textContent = discount15Money;
-        }
+        const bundleSwatches = document.querySelectorAll('.bundle_price');
+        bundleSwatches.forEach(function(swatch) {
+          switch (swatch.dataset.quantity) {
+            case '1':
+              swatch.textContent = moneyPrice;
+              break;
+            case '2':
+              swatch.textContent = discount10Money;
+              break;
+            case '4':
+              swatch.textContent = discount15Money;
+              break;
+            default:
+              break;
+          }
+        });
 
         // Update price display based on the selected quantity
         const selectedQuantity = document.querySelector('input[name="quantity"]:checked').value;
@@ -104,6 +108,7 @@
     }
   }
 </script>
+
 
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
