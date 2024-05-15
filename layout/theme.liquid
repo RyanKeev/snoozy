@@ -81,19 +81,29 @@
     const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
 
     if (quantity === 1) {
-      oneQuantityElement.style.display = 'inline-block';
-      twoLessFourQuantityElement.style.display = 'none';
-      fourOrMoreQuantityElement.style.display = 'none';
+        oneQuantityElement.style.display = 'inline-block';
+        twoLessFourQuantityElement.style.display = 'none';
+        fourOrMoreQuantityElement.style.display = 'none';
     } else if (quantity >= 2 && quantity < 4) {
-      oneQuantityElement.style.display = 'none';
-      twoLessFourQuantityElement.style.display = 'inline-block';
-      fourOrMoreQuantityElement.style.display = 'none';
+        oneQuantityElement.style.display = 'none';
+        twoLessFourQuantityElement.style.display = 'inline-block';
+        fourOrMoreQuantityElement.style.display = 'none';
+        
+        // Update the text content of the two-less-four-quantity bundle swatch
+        const variantData = document.getElementById('variant-data');
+        if (variantData) {
+            const discount10Money = variantData.getAttribute('data-discount-10');
+            twoLessFourQuantityElement.textContent = discount10Money;
+        } else {
+            console.error("Variant data not found.");
+        }
     } else if (quantity >= 4) {
-      oneQuantityElement.style.display = 'none';
-      twoLessFourQuantityElement.style.display = 'none';
-      fourOrMoreQuantityElement.style.display = 'inline-block';
+        oneQuantityElement.style.display = 'none';
+        twoLessFourQuantityElement.style.display = 'none';
+        fourOrMoreQuantityElement.style.display = 'inline-block';
     }
-  }
+}
+
 
   function setDefaultBundleSwatch() {
     const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
