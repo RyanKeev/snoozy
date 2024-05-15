@@ -26,18 +26,36 @@
       return; // Exit if the necessary elements are not found
     }
 
+    const updateSwatchLabels = () => {
+      const quantity1Label = document.querySelector('label[for="quantity1"] .bundle_label_price');
+      const quantity2Label = document.querySelector('label[for="quantity2"] .bundle_label_price');
+      const quantity4Label = document.querySelector('label[for="quantity4"] .bundle_label_price');
+
+      if (quantity1Label) {
+        quantity1Label.textContent = quantity1Label.getAttribute('data-price');
+      }
+      if (quantity2Label) {
+        quantity2Label.textContent = quantity2Label.getAttribute('data-price');
+      }
+      if (quantity4Label) {
+        quantity4Label.textContent = quantity4Label.getAttribute('data-price');
+      }
+    };
+
+    updateSwatchLabels();
+
     if (quantity === 1) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      regularPriceElement.textContent = document.querySelector('label[for="quantity1"] .bundle_label_price').getAttribute('data-price');
       oneQuantityElement.style.display = 'inline-block';
       twoLessFourQuantityElement.style.display = 'none';
       fourOrMoreQuantityElement.style.display = 'none';
     } else if (quantity >= 2 && quantity < 4) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      regularPriceElement.textContent = document.querySelector('label[for="quantity2"] .bundle_label_price').getAttribute('data-price');
       oneQuantityElement.style.display = 'none';
       twoLessFourQuantityElement.style.display = 'inline-block';
       fourOrMoreQuantityElement.style.display = 'none';
     } else if (quantity >= 4) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+      regularPriceElement.textContent = document.querySelector('label[for="quantity4"] .bundle_label_price').getAttribute('data-price');
       oneQuantityElement.style.display = 'none';
       twoLessFourQuantityElement.style.display = 'none';
       fourOrMoreQuantityElement.style.display = 'inline-block';
@@ -66,15 +84,27 @@
     }
   }
 
+  function fetchVariantPrices(variantId) {
+    fetch(`/products/${variantId}.js`)
+      .then(response => response.json())
+      .then(data => {
+        document.querySelector('label[for="quantity1"] .bundle_label_price').setAttribute('data-price', data.price / 100); // Convert cents to dollars
+        document.querySelector('label[for="quantity2"] .bundle_label_price').setAttribute('data-price', data.price / 100 * 0.9); // Apply 10% discount
+        document.querySelector('label[for="quantity4"] .bundle_label_price').setAttribute('data-price', data.price / 100 * 0.85); // Apply 15% discount
+        attachQuantityListeners();
+      });
+  }
+
   function initializeQuantityListeners() {
     console.log('Initializing quantity listeners');
     attachQuantityListeners();
 
     // Reinitialize on custom variant change event
-    document.addEventListener('variant:change', function() {
+    document.addEventListener('variant:change', function(event) {
       console.log('variant:change event received.');
+      const variantId = event.detail.variant.id; // Assuming variant id is passed in event detail
+      fetchVariantPrices(variantId);
       setDefaultBundleSwatch();
-      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
     });
   }
 
@@ -83,6 +113,8 @@
     initializeQuantityListeners();
   });
 </script>
+
+
 
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
