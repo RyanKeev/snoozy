@@ -707,8 +707,12 @@
                           step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
                           value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                           form="{{ product_form_id }}"
-                   />
-                   
+                      />
+                      <div id="variant-data" 
+                        data-money-price="{{ money_price | remove: 'From ' }}" 
+                        data-discount-10="{{ discount_10_money }}" 
+                        data-discount-15="{{ discount_15_money }}">
+                      </div>
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
                         <label for="quantity1">{{ block.settings.buy1_text }}</label>
