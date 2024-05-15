@@ -9,12 +9,10 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     initializeQuantityListeners();
-    // Initialize listeners for quantity change
   });
   
   function initializeQuantityListeners() {
     attachQuantityListeners();
-    // Attach initial quantity listeners
   
     // Reinitialize on custom variant change event
     document.addEventListener('variant:change', function() {
@@ -23,20 +21,41 @@
   
       // Update the price elements with the new prices from the variant data attributes
       const variantData = document.getElementById('variant-data');
-      if (variantData) {
-        const moneyPrice = variantData.getAttribute('data-money-price');
-        const discount10Money = variantData.getAttribute('data-discount-10');
-        const discount15Money = variantData.getAttribute('data-discount-15');
+      const moneyPrice = variantData.getAttribute('data-money-price');
+      const discount10Money = variantData.getAttribute('data-discount-10');
+      const discount15Money = variantData.getAttribute('data-discount-15');
   
-        document.querySelector('.bundle_price.one-quantity').textContent = moneyPrice;
-        document.querySelector('.bundle_price.two-less-four-quantity').textContent = discount10Money;
-        document.querySelector('.bundle_price.four-or-more-quantity').textContent = discount15Money;
-  
-        // Assuming updatePriceDisplay function is still needed, call it here if necessary
-      } else {
-        console.error("Variant data not found.");
-      }
+      document.querySelector('.bundle_price.one-quantity').textContent = moneyPrice;
+      document.querySelector('.bundle_price.two-less-four-quantity').textContent = discount10Money;
+      document.querySelector('.bundle_price.four-or-more-quantity').textContent = discount15Money;
     });
+  }
+  
+  function updatePriceDisplay(quantity) {
+    const priceElement = document.querySelector('.price');
+    const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
+    const saleContainerElement = priceElement.querySelector('.price__sale');
+  
+    const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
+    const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
+    const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
+  
+    if (quantity === 1) {
+      regularPriceElement.textContent = oneQuantityElement.textContent;
+      oneQuantityElement.style.display = 'inline-block';
+      twoLessFourQuantityElement.style.display = 'none';
+      fourOrMoreQuantityElement.style.display = 'none';
+    } else if (quantity >= 2 && quantity < 4) {
+      regularPriceElement.textContent = twoLessFourQuantityElement.textContent;
+      oneQuantityElement.style.display = 'none';
+      twoLessFourQuantityElement.style.display = 'inline-block';
+      fourOrMoreQuantityElement.style.display = 'none';
+    } else if (quantity >= 4) {
+      regularPriceElement.textContent = fourOrMoreQuantityElement.textContent;
+      oneQuantityElement.style.display = 'none';
+      twoLessFourQuantityElement.style.display = 'none';
+      fourOrMoreQuantityElement.style.display = 'inline-block';
+    }
   }
   
   function attachQuantityListeners() {
@@ -48,15 +67,9 @@
       });
     });
   
-    // Get initial quantity
     const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
     const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
     updatePriceDisplay(initialQuantity);
-  }
-  
-  function updatePriceDisplay(quantity) {
-    // Function to update price display based on quantity
-    // You might want to adjust this function if necessary
   }
   
   function setDefaultBundleSwatch() {
@@ -64,7 +77,6 @@
     if (defaultQuantityInput) {
       defaultQuantityInput.checked = true;
       defaultQuantityInput.dispatchEvent(new Event('change'));
-      // Dispatch change event to update price display
     }
   }
   
