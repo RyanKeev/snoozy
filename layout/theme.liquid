@@ -8,6 +8,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+
     initializeQuantityListeners();
     // Initialize listeners for quantity change
   });
@@ -28,25 +29,11 @@
         const discount10Money = variantData.getAttribute('data-discount-10');
         const discount15Money = variantData.getAttribute('data-discount-15');
 
-        // Update regular price
-        const saleContainerElement = document.querySelector('.price__sale');
-        if (saleContainerElement) {
-          saleContainerElement.textContent = moneyPrice;
-        }
+        document.querySelector('.price__sale').textContent = moneyPrice;
 
-        // Update bundle swatch prices
-        const oneQuantityElement = document.querySelector('.bundle_price.one-quantity');
-        if (oneQuantityElement) {
-          oneQuantityElement.textContent = moneyPrice;
-        }
-        const twoLessFourQuantityElement = document.querySelector('.bundle_price.two-less-four-quantity');
-        if (twoLessFourQuantityElement) {
-          twoLessFourQuantityElement.textContent = discount10Money;
-        }
-        const fourOrMoreQuantityElement = document.querySelector('.bundle_price.four-or-more-quantity');
-        if (fourOrMoreQuantityElement) {
-          fourOrMoreQuantityElement.textContent = discount15Money;
-        }
+        document.querySelector('.bundle_price.one-quantity').textContent = moneyPrice;
+        document.querySelector('.bundle_price.two-less-four-quantity').textContent = discount10Money;
+        document.querySelector('.bundle_price.four-or-more-quantity').textContent = discount15Money;
 
         // Update price display based on the selected quantity
         const selectedQuantity = document.querySelector('input[name="quantity"]:checked').value;
@@ -80,37 +67,20 @@
     const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
     const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
 
-    const variantData = document.getElementById('variant-data');
-    if (variantData) {
-        const moneyPrice = variantData.getAttribute('data-money-price');
-        const discount10Money = variantData.getAttribute('data-discount-10');
-        const discount15Money = variantData.getAttribute('data-discount-15');
-
-        if (quantity === 1) {
-            oneQuantityElement.style.display = 'inline-block';
-            twoLessFourQuantityElement.style.display = 'none';
-            fourOrMoreQuantityElement.style.display = 'none';
-        } else if (quantity >= 2 && quantity < 4) {
-            oneQuantityElement.style.display = 'none';
-            twoLessFourQuantityElement.style.display = 'inline-block';
-            fourOrMoreQuantityElement.style.display = 'none';
-
-            // Update the text content of the two-less-four-quantity bundle swatch with discount10Money
-            twoLessFourQuantityElement.textContent = discount10Money;
-        } else if (quantity >= 4) {
-            oneQuantityElement.style.display = 'none';
-            twoLessFourQuantityElement.style.display = 'none';
-            fourOrMoreQuantityElement.style.display = 'inline-block';
-            
-            // Update the text content of the four-or-more-quantity bundle swatch with discount15Money
-            fourOrMoreQuantityElement.textContent = discount15Money;
-        }
-    } else {
-        console.error("Variant data not found.");
+    if (quantity === 1) {
+      oneQuantityElement.style.display = 'inline-block';
+      twoLessFourQuantityElement.style.display = 'none';
+      fourOrMoreQuantityElement.style.display = 'none';
+    } else if (quantity >= 2 && quantity < 4) {
+      oneQuantityElement.style.display = 'none';
+      twoLessFourQuantityElement.style.display = 'inline-block';
+      fourOrMoreQuantityElement.style.display = 'none';
+    } else if (quantity >= 4) {
+      oneQuantityElement.style.display = 'none';
+      twoLessFourQuantityElement.style.display = 'none';
+      fourOrMoreQuantityElement.style.display = 'inline-block';
     }
-}
-
-
+  }
 
   function setDefaultBundleSwatch() {
     const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
