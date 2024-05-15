@@ -6708,6 +6708,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   transition: border var(--duration-short) ease;
   cursor: pointer;
   position: relative;
+  width: min-content;
   min-width: 150px;
   border-radius: 12px !important;
   font-size: 14px !important;
