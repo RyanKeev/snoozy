@@ -7,69 +7,79 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
+  document.addEventListener('DOMContentLoaded', function() {
+    initializeQuantityListeners();
+  });
   
-document.addEventListener('DOMContentLoaded', function() {
-  initializeQuantityListeners();
-});
-
-function initializeQuantityListeners() {
-  attachQuantityListeners();
-
-  // Reinitialize on custom variant change event
-  document.addEventListener('variant:change', function() {
-    setDefaultBundleSwatch();
-    attachQuantityListeners(); // Reattach listeners to handle any DOM changes
-  });
-}
-
-function updatePriceDisplay(quantity) {
-  const priceElement = document.querySelector('.price');
-  const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
-  const saleContainerElement = priceElement.querySelector('.price__sale');
-
-  const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
-  const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
-  const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
-
-  if (quantity === 1) {
-    regularPriceElement.textContent = oneQuantityElement.textContent;
-    oneQuantityElement.style.display = 'inline-block';
-    twoLessFourQuantityElement.style.display = 'none';
-    fourOrMoreQuantityElement.style.display = 'none';
-  } else if (quantity >= 2 && quantity < 4) {
-    regularPriceElement.textContent = twoLessFourQuantityElement.textContent;
-    oneQuantityElement.style.display = 'none';
-    twoLessFourQuantityElement.style.display = 'inline-block';
-    fourOrMoreQuantityElement.style.display = 'none';
-  } else if (quantity >= 4) {
-    regularPriceElement.textContent = fourOrMoreQuantityElement.textContent;
-    oneQuantityElement.style.display = 'none';
-    twoLessFourQuantityElement.style.display = 'none';
-    fourOrMoreQuantityElement.style.display = 'inline-block';
-  }
-}
-
-function attachQuantityListeners() {
-  const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-  quantityInputs.forEach(function(input) {
-    input.addEventListener('change', function() {
-      const quantity = parseInt(this.value, 10);
-      updatePriceDisplay(quantity);
+  function initializeQuantityListeners() {
+    attachQuantityListeners();
+  
+    // Reinitialize on custom variant change event
+    document.addEventListener('variant:change', function() {
+      setDefaultBundleSwatch();
+      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
+  
+      // Update the price elements with the new prices from the variant data attributes
+      const variantData = document.getElementById('variant-data');
+      const moneyPrice = variantData.getAttribute('data-money-price');
+      const discount10Money = variantData.getAttribute('data-discount-10');
+      const discount15Money = variantData.getAttribute('data-discount-15');
+  
+      document.querySelector('.bundle_price.one-quantity').textContent = moneyPrice;
+      document.querySelector('.bundle_price.two-less-four-quantity').textContent = discount10Money;
+      document.querySelector('.bundle_price.four-or-more-quantity').textContent = discount15Money;
     });
-  });
-
-  const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
-  const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
-  updatePriceDisplay(initialQuantity);
-}
-
-function setDefaultBundleSwatch() {
-  const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
-  if (defaultQuantityInput) {
-    defaultQuantityInput.checked = true;
-    defaultQuantityInput.dispatchEvent(new Event('change'));
   }
-}
+  
+  function updatePriceDisplay(quantity) {
+    const priceElement = document.querySelector('.price');
+    const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
+    const saleContainerElement = priceElement.querySelector('.price__sale');
+  
+    const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
+    const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
+    const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
+  
+    if (quantity === 1) {
+      regularPriceElement.textContent = oneQuantityElement.textContent;
+      oneQuantityElement.style.display = 'inline-block';
+      twoLessFourQuantityElement.style.display = 'none';
+      fourOrMoreQuantityElement.style.display = 'none';
+    } else if (quantity >= 2 && quantity < 4) {
+      regularPriceElement.textContent = twoLessFourQuantityElement.textContent;
+      oneQuantityElement.style.display = 'none';
+      twoLessFourQuantityElement.style.display = 'inline-block';
+      fourOrMoreQuantityElement.style.display = 'none';
+    } else if (quantity >= 4) {
+      regularPriceElement.textContent = fourOrMoreQuantityElement.textContent;
+      oneQuantityElement.style.display = 'none';
+      twoLessFourQuantityElement.style.display = 'none';
+      fourOrMoreQuantityElement.style.display = 'inline-block';
+    }
+  }
+  
+  function attachQuantityListeners() {
+    const quantityInputs = document.querySelectorAll('input[name="quantity"]');
+    quantityInputs.forEach(function(input) {
+      input.addEventListener('change', function() {
+        const quantity = parseInt(this.value, 10);
+        updatePriceDisplay(quantity);
+      });
+    });
+  
+    const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
+    const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
+    updatePriceDisplay(initialQuantity);
+  }
+  
+  function setDefaultBundleSwatch() {
+    const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
+    if (defaultQuantityInput) {
+      defaultQuantityInput.checked = true;
+      defaultQuantityInput.dispatchEvent(new Event('change'));
+    }
+  }
+  
 </script>
 
 <!-- Include Owl Carousel CSS -->
