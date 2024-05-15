@@ -716,17 +716,17 @@
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity1" name="quantity" value="1" checked>
                         <label for="quantity1">{{ block.settings.buy1_text }}</label>
-                        {% comment %} <span class="bundle_price one-quantity">{{ money_price | remove: 'From ' }}</span> {% endcomment %}
+                        <span class="bundle_price one-quantity">{{ money_price | remove: 'From ' }}</span>
                       </span>
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity2" name="quantity" value="2">
                         <label for="quantity2">{{ block.settings.buy2_text }}</label>
-                        {% comment %} <span class="bundle_price two-less-four-quantity">{{ discount_10_money }}</span> {% endcomment %}
+                        <span class="bundle_price two-less-four-quantity">{{ discount_10_money }}</span>
                       </span>
                       <span class="bundle_swatch ">
                         <input type="radio" id="quantity4" name="quantity" value="4">
                         <label for="quantity4">{{ block.settings.buy4_text }}</label>
-                        {% comment %} <span class="bundle_price four-or-more-quantity">{{ discount_15_money }}</span> {% endcomment %}
+                        <span class="bundle_price four-or-more-quantity">{{ discount_15_money }}</span>
                       </span>
                         <div class="quantity__rules caption no-js-hidden">
                             {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
