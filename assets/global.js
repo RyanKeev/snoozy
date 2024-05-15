@@ -947,11 +947,11 @@ class VariantSelects extends HTMLElement {
     this.removeErrorMessage();
     this.updateVariantStatuses();
 
-    // Update the data attributes with the new prices
-    const variantData = document.getElementById('variant-data');
-    variantData.setAttribute('data-money-price', variant.price);
-    variantData.setAttribute('data-discount-10', variant.price * 0.9); // Update with your discount calculation
-    variantData.setAttribute('data-discount-15', variant.price * 0.85); // Update with your discount calculation
+    // // Update the data attributes with the new prices
+    // const variantData = document.getElementById('variant-data');
+    // variantData.setAttribute('data-money-price', variant.price);
+    // variantData.setAttribute('data-discount-10', variant.price * 0.9); // Update with your discount calculation
+    // variantData.setAttribute('data-discount-15', variant.price * 0.85); // Update with your discount calculation
 
     // Trigger the custom event
     document.dispatchEvent(new CustomEvent('variant:change'));
