@@ -6700,8 +6700,11 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   min-width: fit-content;
   border: none;
 }
+.showcase_link.active {
+  background-color: #f0f6ff !important; 
+}
 .showcase_link {
-  background-color: #f0f6ff;
+  background-color: #ffffff;
   color: #1a1a1a !important;
   letter-spacing: .1rem;
   line-height: 1;
