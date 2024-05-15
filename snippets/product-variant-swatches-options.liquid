@@ -142,6 +142,7 @@
            {% if option.selected_value == value %}checked{% endif %} {% if option_disabled %}class="disabled"{% endif %}
            data-option-handle="{{ option_handle }}">
     {% if option_handle == 'color' %}
+        {% comment %} shop.metaobjects.color[value_handle].image or  {% endcomment %}
         {% if product.handle contains 'pillowcase' %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
                 class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
