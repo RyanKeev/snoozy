@@ -947,20 +947,15 @@ class VariantSelects extends HTMLElement {
     this.removeErrorMessage();
     this.updateVariantStatuses();
 
-  // Dispatch custom event for variant change
-   // Trigger the custom event with updated prices
-   const moneyPrice = "{{ money_price | remove: 'From ' }}"; // Update this with the actual new price
-   const discount10Money = "{{ discount_10_money }}"; // Update this with the actual new discount price
-   const discount15Money = "{{ discount_15_money }}"; // Update this with the actual new discount price
-   
-   document.dispatchEvent(new CustomEvent('variant:change', {
-    detail: {
-      moneyPrice: moneyPrice,
-      discount10Money: discount10Money,
-      discount15Money: discount15Money
-    }
-  }));
+    // Update the data attributes with the new prices
+    const variantData = document.getElementById('variant-data');
+    variantData.setAttribute('data-money-price', variant.price);
+    variantData.setAttribute('data-discount-10', variant.price * 0.9); // Update with your discount calculation
+    variantData.setAttribute('data-discount-15', variant.price * 0.85); // Update with your discount calculation
 
+    // Trigger the custom event
+    document.dispatchEvent(new CustomEvent('variant:change'));
+    
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
