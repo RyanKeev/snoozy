@@ -6687,3 +6687,37 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   /* background-size: 80% 1px; */
   text-decoration: underline; /* Optionally, add text underline on hover */
 }
+
+
+.flex-showcase {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap:10px;
+  padding: 0;
+  min-width: fit-content;
+  border: none;
+}
+.showcase-links {
+  background-color: #f0f6ff;
+  color: #1a1a1a !important;
+  letter-spacing: .1rem;
+  line-height: 1;
+  text-align: center;
+  transition: border var(--duration-short) ease;
+  cursor: pointer;
+  position: relative;
+  min-width: 150px;
+  border-radius: 12px !important;
+  font-size: 14px !important;
+  display: flex !important;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  flex-grow: 1;
+  min-height: 50px;
+  text-decoration: none;
+  padding: 5px 10px !important;
+  border: 1px solid #002554 !important;
+}
