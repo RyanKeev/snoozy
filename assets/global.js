@@ -948,17 +948,22 @@ class VariantSelects extends HTMLElement {
     this.updateVariantStatuses();
 
   // Update the data attributes with the new prices
-  // const variantData = document.getElementById('variant-data');
-  // const price = variant.price; // Example: Use variant.price or any other logic to get the price
-  // const discount10 = (price * 0.9).toFixed(2);
-  // const discount15 = (price * 0.85).toFixed(2);
+  const variantData = document.getElementById('variant-data');
+  const price = variant.price; // Example: Use variant.price or any other logic to get the price
+  const discount10 = (price * 0.9).toFixed(2);
+  const discount15 = (price * 0.85).toFixed(2);
 
-  // variantData.setAttribute('data-money-price', `${price}`);
-  // variantData.setAttribute('data-discount-10', `${discount10}`);
-  // variantData.setAttribute('data-discount-15', `${discount15}`);
+  variantData.setAttribute('data-money-price', `${price}`);
+  variantData.setAttribute('data-discount-10', `${discount10}`);
+  variantData.setAttribute('data-discount-15', `${discount15}`);
 
   // Trigger the custom event
   document.dispatchEvent(new CustomEvent('variant:change'));
+
+
+  // Trigger the custom event
+  document.dispatchEvent(new CustomEvent('variant:change'));
+  
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
