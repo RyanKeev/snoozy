@@ -334,7 +334,7 @@
                 {% else %}
                 href="{{ block.settings.product_showcase_1_link }}"
               {% endif %} 
-                 class="showcase_link">   
+                 class="showcase_link {% if block.settings.product_is_active_1 %}active{% endif %}">   
                 {{ block.settings.product_showcase_1_link_title }}
               </a>
               <a {% if block.settings.product_showcase_2_link == blank %}
@@ -342,7 +342,7 @@
               {% else %}
               href="{{ block.settings.product_showcase_2_link }}"
             {% endif %} 
-               class="showcase_link">   
+               class="showcase_link {% if block.settings.product_is_active_2 %}active{% endif %}">   
                 {{ block.settings.product_showcase_2_link_title }}
             </a>
           </div>
