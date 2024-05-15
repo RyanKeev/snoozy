@@ -7,81 +7,121 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
 <script>
-  function updatePriceDisplay(quantity) {
-    const priceElement = document.querySelector('.price');
-    const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
-    const saleContainerElement = priceElement.querySelector('.price__sale');
-
-    if (!regularPriceElement || !saleContainerElement) {
-      console.log('Regular price element or sale container element not found.');
-      return; // Exit if the necessary elements are not found
+  <script>
+    function updatePriceDisplay(quantity) {
+      const priceElement = document.querySelector('.price');
+      const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
+      const saleContainerElement = priceElement.querySelector('.price__sale');
+  
+      if (!regularPriceElement || !saleContainerElement) {
+        console.log('Regular price element or sale container element not found.');
+        return; // Exit if the necessary elements are not found
+      }
+  
+      const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
+      const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
+      const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
+  
+      if (!oneQuantityElement || !twoLessFourQuantityElement || !fourOrMoreQuantityElement) {
+        console.log('One or more quantity elements not found.');
+        return; // Exit if the necessary elements are not found
+      }
+  
+      if (quantity === 1) {
+        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+        oneQuantityElement.style.display = 'inline-block';
+        twoLessFourQuantityElement.style.display = 'none';
+        fourOrMoreQuantityElement.style.display = 'none';
+      } else if (quantity >= 2 && quantity < 4) {
+        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+        oneQuantityElement.style.display = 'none';
+        twoLessFourQuantityElement.style.display = 'inline-block';
+        fourOrMoreQuantityElement.style.display = 'none';
+      } else if (quantity >= 4) {
+        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
+        oneQuantityElement.style.display = 'none';
+        twoLessFourQuantityElement.style.display = 'none';
+        fourOrMoreQuantityElement.style.display = 'inline-block';
+      }
     }
-
-    const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
-    const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
-    const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
-
-    if (!oneQuantityElement || !twoLessFourQuantityElement || !fourOrMoreQuantityElement) {
-      console.log('One or more quantity elements not found.');
-      return; // Exit if the necessary elements are not found
-    }
-
-    if (quantity === 1) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-      oneQuantityElement.style.display = 'inline-block';
-      twoLessFourQuantityElement.style.display = 'none';
-      fourOrMoreQuantityElement.style.display = 'none';
-    } else if (quantity >= 2 && quantity < 4) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-      oneQuantityElement.style.display = 'none';
-      twoLessFourQuantityElement.style.display = 'inline-block';
-      fourOrMoreQuantityElement.style.display = 'none';
-    } else if (quantity >= 4) {
-      regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-      oneQuantityElement.style.display = 'none';
-      twoLessFourQuantityElement.style.display = 'none';
-      fourOrMoreQuantityElement.style.display = 'inline-block';
-    }
-  }
-
-  function attachQuantityListeners() {
-    const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-    quantityInputs.forEach(function(input) {
-      input.addEventListener('change', function() {
-        const quantity = parseInt(this.value, 10);
-        updatePriceDisplay(quantity);
+  
+    function attachQuantityListeners() {
+      const quantityInputs = document.querySelectorAll('input[name="quantity"]');
+      quantityInputs.forEach(function(input) {
+        input.addEventListener('change', function() {
+          const quantity = parseInt(this.value, 10);
+          updatePriceDisplay(quantity);
+        });
       });
-    });
-
-    const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
-    const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
-    updatePriceDisplay(initialQuantity);
-  }
-
-  function setDefaultBundleSwatch() {
-    const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
-    if (defaultQuantityInput) {
-      defaultQuantityInput.checked = true;
-      defaultQuantityInput.dispatchEvent(new Event('change'));
+  
+      const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
+      const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
+      updatePriceDisplay(initialQuantity);
     }
-  }
-
-  function initializeQuantityListeners() {
-    console.log('Initializing quantity listeners');
-    attachQuantityListeners();
-
-    // Reinitialize on custom variant change event
-    document.addEventListener('variant:change', function() {
-      console.log('variant:change event received.');
-      setDefaultBundleSwatch();
-      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
+  
+    function setDefaultBundleSwatch() {
+      const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
+      if (defaultQuantityInput) {
+        defaultQuantityInput.checked = true;
+        defaultQuantityInput.dispatchEvent(new Event('change'));
+      }
+    }
+  
+    function initializeQuantityListeners() {
+      console.log('Initializing quantity listeners');
+      attachQuantityListeners();
+  
+      // Reinitialize on custom variant change event
+      document.addEventListener('variant:change', function() {
+        console.log('variant:change event received.');
+        setDefaultBundleSwatch();
+        attachQuantityListeners(); // Reattach listeners to handle any DOM changes
+  
+        // Update bundle swatch and variant data
+        updateBundleSwatchAndVariantData();
+      });
+    }
+  
+    function updateBundleSwatchAndVariantData() {
+      const variantDataElement = document.getElementById('variant-data');
+      if (!variantDataElement) {
+        console.error("Variant data element not found.");
+        return;
+      }
+  
+      // Update the variant data attributes
+      variantDataElement.setAttribute('data-money-price', "{{ money_price | remove: 'From ' }}");
+      variantDataElement.setAttribute('data-discount-10', "{{ discount_10_money }}");
+      variantDataElement.setAttribute('data-discount-15', "{{ discount_15_money }}");
+  
+      // Update the bundle swatch prices
+      const bundlePrices = document.querySelectorAll('.bundle_price');
+      bundlePrices.forEach(function(bundlePrice) {
+        const quantity = bundlePrice.classList.contains('one-quantity') ? 1 :
+                         bundlePrice.classList.contains('two-less-four-quantity') ? 2 :
+                         bundlePrice.classList.contains('four-or-more-quantity') ? 4 : 1; // Default to 1
+  
+        // Set the bundle price based on the quantity
+        if (quantity === 1) {
+          bundlePrice.textContent = "{{ money_price | remove: 'From ' }}";
+        } else if (quantity === 2) {
+          bundlePrice.textContent = "{{ discount_10_money }}";
+        } else if (quantity === 4) {
+          bundlePrice.textContent = "{{ discount_15_money }}";
+        }
+      });
+  
+      // Update price display based on the selected quantity
+      const selectedQuantity = document.querySelector('input[name="quantity"]:checked').value;
+      updatePriceDisplay(selectedQuantity);
+    }
+  
+    document.addEventListener('DOMContentLoaded', function() {
+      console.log('DOMContentLoaded event fired');
+      initializeQuantityListeners();
     });
-  }
-
-  document.addEventListener('DOMContentLoaded', function() {
-    console.log('DOMContentLoaded event fired');
-    initializeQuantityListeners();
-  });
+  </script>
+  
 </script>
 
 
