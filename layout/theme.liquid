@@ -29,12 +29,24 @@
         const discount15Money = variantData.getAttribute('data-discount-15');
 
         // Update regular price
-        document.querySelector('.price__sale').textContent = moneyPrice;
+        const saleContainerElement = document.querySelector('.price__sale');
+        if (saleContainerElement) {
+          saleContainerElement.textContent = moneyPrice;
+        }
 
         // Update bundle swatch prices
-        document.querySelector('.bundle_price.one-quantity').textContent = moneyPrice;
-        document.querySelector('.bundle_price.two-less-four-quantity').textContent = discount10Money;
-        document.querySelector('.bundle_price.four-or-more-quantity').textContent = discount15Money;
+        const oneQuantityElement = document.querySelector('.bundle_price.one-quantity');
+        if (oneQuantityElement) {
+          oneQuantityElement.textContent = moneyPrice;
+        }
+        const twoLessFourQuantityElement = document.querySelector('.bundle_price.two-less-four-quantity');
+        if (twoLessFourQuantityElement) {
+          twoLessFourQuantityElement.textContent = discount10Money;
+        }
+        const fourOrMoreQuantityElement = document.querySelector('.bundle_price.four-or-more-quantity');
+        if (fourOrMoreQuantityElement) {
+          fourOrMoreQuantityElement.textContent = discount15Money;
+        }
 
         // Update price display based on the selected quantity
         const selectedQuantity = document.querySelector('input[name="quantity"]:checked').value;
