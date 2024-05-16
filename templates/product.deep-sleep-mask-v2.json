@@ -404,7 +404,7 @@
             "image": "shopify:\/\/shop_images\/snoozy-science-expained-deep-sleep-mask_5aa0aef6-f8af-493a-a680-aa506df68e82.jpg",
             "caption": "",
             "title": "<h1>Sleeping made easy<\/h1>",
-            "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
+            "content": "<p>Easier falling asleep and uninterrupted rest throughout the night with 100% light blocking material, a secure fit to stay on your head without slipping off, and full-face coverage, promoting deeper and more rejuvenating sleep.<br\/><br\/><\/p>",
             "author": "",
             "button_label": "",
             "button_link": "",
@@ -414,10 +414,10 @@
             "drag_initial_position": 50,
             "show_benefits_block": true,
             "benefits_background": "rgba(0,0,0,0)",
-            "benefits_image_one": "shopify:\/\/shop_images\/snoozy-eliminate-bacteria-icon.png",
-            "benefits_title_one": "Bacteria naturally eliminated",
-            "benefits_image_two": "shopify:\/\/shop_images\/snoozy-fewer-pores-icon.png",
-            "benefits_title_two": "Fewer clogged   pores and breakouts",
+            "benefits_image_one": "shopify:\/\/shop_images\/sleep-icon-2.png",
+            "benefits_title_one": "Deeper, uninterrupted sleep",
+            "benefits_image_two": "shopify:\/\/shop_images\/sleep-icon_855f637c-4fb7-46ed-9889-500b10055c79.png",
+            "benefits_title_two": "Easier Falling Asleep",
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
