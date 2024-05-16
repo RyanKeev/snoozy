@@ -4032,7 +4032,7 @@ header.header .menu-label{
 .product-main-section .product-icons-list .image{
   width: 35px;
   min-width: 35px;
-  height: 35px;
+  /* height: 35px; */
   border-radius: 50%;
   overflow: hidden;
 }
