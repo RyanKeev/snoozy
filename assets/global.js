@@ -1,3 +1,4 @@
+
 function getFocusableElements(container) {
   return Array.from(
     container.querySelectorAll(
@@ -947,9 +948,10 @@ class VariantSelects extends HTMLElement {
     this.removeErrorMessage();
     this.updateVariantStatuses();
 
-  // Trigger the custom event
-  document.dispatchEvent(new CustomEvent('variant:change'));
-
+      // Trigger the custom event
+    // document.dispatchEvent(new CustomEvent('variant:change'));
+    // document.dispatchEvent(new CustomEvent('price:update'));
+    
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
       this.setUnavailable();
@@ -1064,58 +1066,72 @@ class VariantSelects extends HTMLElement {
     const sectionId = this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section;
 
     fetch(
-      `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
-        this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
-      }`
+        `${this.dataset.url}?variant=${requestedVariantId}&section_id=${
+            this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section
+        }`
     )
-      .then((response) => response.text())
-      .then((responseText) => {
-        // prevent unnecessary ui changes from abandoned selections
-        if (this.currentVariant.id !== requestedVariantId) return;
+        .then((response) => response.text())
+        .then((responseText) => {
+            // prevent unnecessary ui changes from abandoned selections
+            if (this.currentVariant.id !== requestedVariantId) return;
 
-        const html = new DOMParser().parseFromString(responseText, 'text/html');
-        const destination = document.getElementById(`price-${this.dataset.section}`);
-        const source = html.getElementById(
-          `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-        );
-        const skuSource = html.getElementById(
-          `Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-        );
-        const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
-        const inventorySource = html.getElementById(
-          `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
-        );
-        const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
+            const html = new DOMParser().parseFromString(responseText, 'text/html');
+            const destination = document.getElementById(`price-${this.dataset.section}`);
+            const source = html.getElementById(
+                `price-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+            );
+            const skuSource = html.getElementById(
+                `Sku-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+            );
+            const skuDestination = document.getElementById(`Sku-${this.dataset.section}`);
+            const inventorySource = html.getElementById(
+                `Inventory-${this.dataset.originalSection ? this.dataset.originalSection : this.dataset.section}`
+            );
+            const inventoryDestination = document.getElementById(`Inventory-${this.dataset.section}`);
 
-        if (source && destination) destination.innerHTML = source.innerHTML;
-        if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
-        if (skuSource && skuDestination) {
-          skuDestination.innerHTML = skuSource.innerHTML;
-          skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
-        }
+            if (source && destination) destination.innerHTML = source.innerHTML;
+            if (inventorySource && inventoryDestination) inventoryDestination.innerHTML = inventorySource.innerHTML;
+            if (skuSource && skuDestination) {
+                skuDestination.innerHTML = skuSource.innerHTML;
+                skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
+            }
 
-        const price = document.getElementById(`price-${this.dataset.section}`);
+            const price = document.getElementById(`price-${this.dataset.section}`);
 
-        if (price) price.classList.remove('visibility-hidden');
+            if (price) {
+                price.classList.remove('visibility-hidden');
 
-        if (inventoryDestination)
-          inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
+                const oneQuantityValue = parseFloat(document.querySelector('.one-quantity').textContent.trim().replace(/[^\d.]/g, ''));
+                const prOneQuantity = document.querySelector('.pr-one-quantity');
+                const prTwoLessFourQuantity = document.querySelector('.pr-two-less-four-quantity');
+                const prFourOrMoreQuantity = document.querySelector('.pr-four-or-more-quantity');
+                
+                if (prOneQuantity && prTwoLessFourQuantity && prFourOrMoreQuantity) {
+                    prOneQuantity.textContent = '₱' + oneQuantityValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    prTwoLessFourQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.90).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    prFourOrMoreQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.85).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                }
+                
+            }
 
-        const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
-        this.toggleAddButton(
-          addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
-          window.variantStrings.soldOut
-        );
+            if (inventoryDestination)
+                inventoryDestination.classList.toggle('visibility-hidden', inventorySource.innerText === '');
 
-        publish(PUB_SUB_EVENTS.variantChange, {
-          data: {
-            sectionId,
-            html,
-            variant: this.currentVariant,
-          },
+            const addButtonUpdated = html.getElementById(`ProductSubmitButton-${sectionId}`);
+            this.toggleAddButton(
+                addButtonUpdated ? addButtonUpdated.hasAttribute('disabled') : true,
+                window.variantStrings.soldOut
+            );
+
+            publish(PUB_SUB_EVENTS.variantChange, {
+                data: {
+                    sectionId,
+                    html,
+                    variant: this.currentVariant,
+                },
+            });
         });
-      });
-  }
+}
 
   toggleAddButton(disable = true, text, modifyClass = true) {
     const productForm = document.getElementById(`product-form-${this.dataset.section}`);
@@ -1376,3 +1392,5 @@ class ProductRecommendations extends HTMLElement {
 }
 
 customElements.define('product-recommendations', ProductRecommendations);
+
+
