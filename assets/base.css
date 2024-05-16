@@ -4328,7 +4328,7 @@ header.header .menu-label{
   }
 
   .product-form__buttons .product-form__submit:hover{
-    background: #ffffff;
+    /* background: #ffffff; */
     color: #000000;
   }
 
