@@ -300,7 +300,7 @@
         "heading_7crGEz": {
           "type": "heading",
           "settings": {
-            "heading": "Real Results <br> in Just 30 Days",
+            "heading": "Results from Night One",
             "heading_size": "h1"
           }
         },
@@ -443,7 +443,7 @@
             "after_text": "After",
             "drag_initial_position": 50,
             "show_benefits_block": true,
-            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-fb-comment-deep-sleep-mask.png",
+            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-fb-comment-19-momme.png",
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
@@ -612,7 +612,7 @@
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Is Snoozy really safe to sleep with?",
+            "faq_question": "Is Snoozy really safe to sleep on?",
             "faq_answer": "<p>It sure is! Silver has been used for decades (centuries, actually) as a safe way to stop bacterial spread. The silver ions also are infused into the fabric and cannot be inhaled, in case you were wondering!<\/p>"
           }
         },
