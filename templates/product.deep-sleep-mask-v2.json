@@ -401,7 +401,7 @@
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/snoozy-science-expained-deep-sleep-mask_5aa0aef6-f8af-493a-a680-aa506df68e82.jpg",
+            "image": "shopify:\/\/shop_images\/deep-sleep-website-block-2.jpg",
             "caption": "",
             "title": "<h1>Sleeping made easy<\/h1>",
             "content": "<p>Easier falling asleep and uninterrupted rest throughout the night with 100% light blocking material, a secure fit to stay on your head without slipping off, and full-face coverage, promoting deeper and more rejuvenating sleep.<br\/><br\/><\/p>",
@@ -443,7 +443,7 @@
             "after_text": "After",
             "drag_initial_position": 50,
             "show_benefits_block": true,
-            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-fb-comment-19-momme.png",
+            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-fb-comment-deep-sleep-mask.png",
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
@@ -612,7 +612,7 @@
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Is Snoozy really safe to sleep on?",
+            "faq_question": "Is Snoozy really safe to sleep with?",
             "faq_answer": "<p>It sure is! Silver has been used for decades (centuries, actually) as a safe way to stop bacterial spread. The silver ions also are infused into the fabric and cannot be inhaled, in case you were wondering!<\/p>"
           }
         },
