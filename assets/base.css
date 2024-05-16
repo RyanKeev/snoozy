@@ -2439,7 +2439,7 @@ product-info .loading-overlay:not(.hidden) ~ *,
 
 .header__heading-logo-wrapper {
   width: 100%;
-  display: inline-block;
+  display: flex;
   transition: width 0.3s cubic-bezier(0.52, 0, 0.61, 0.99);
 }
 
