@@ -74,7 +74,8 @@
   .list-menu__item {
     display: flex;
     align-items: center;
-    line-height: calc(1 + 0.3 / var(--font-body-scale));
+    {% comment %} line-height: calc(1 + 0.3 / var(--font-body-scale)); {% endcomment %}
+    line-height: 1;
     font-size: 1.7rem;
     font-family: var(--ff-harmonia-pro-regular);
   }
