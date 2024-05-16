@@ -710,7 +710,7 @@
                         {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
                         {% # theme-check-enable %}
                     
-                        <input class="quantity__input" type="hidden" name="quantity" id="Quantity-{{ section.id }}"
+                        <input class="quantity__input" type="number" name="quantity" id="Quantity-{{ section.id }}"
                           data-cart-quantity="{{ cart_qty }}"
                           data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
                           min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
