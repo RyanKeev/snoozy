@@ -1391,7 +1391,8 @@ button.shopify-payment-button__button--unbranded {
     /* letter-spacing: 0.1rem; */
     /* line-height: calc(1 + 0.2 / var(--font-body-scale)); */
     letter-spacing: 0;
-    line-height: normal;
+    /* line-height: normal; */
+    line-height: 1;
     font-family: var(--ff-harmonia-semibold)
   }
   .font-body-bold {
