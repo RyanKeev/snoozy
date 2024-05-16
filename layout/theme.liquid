@@ -6,120 +6,99 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-  <script>
-    function updatePriceDisplay(quantity) {
-      const priceElement = document.querySelector('.price');
-      const regularPriceElement = priceElement.querySelector('.price__regular .price-item');
-      const saleContainerElement = priceElement.querySelector('.price__sale');
+
+{%- liquid
+  assign target = product.selected_or_first_available_variant
   
-      if (!regularPriceElement || !saleContainerElement) {
-        console.log('Regular price element or sale container element not found.');
-        return; // Exit if the necessary elements are not found
+assign price = target.price | default: 1999
+assign money_price = price | money
+if settings.currency_code_enabled
+  assign money_price = price | money_with_currency
+endif
+
+if target == product and product.price_varies
+  assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+endif
+
+assign discount_10 = price | times: 0.90 | divided_by: 100 | round | times: 100 
+assign discount_15 = price | times: 0.85 | divided_by: 100 | round | times: 100
+assign discount_10_money = discount_10 | money
+assign discount_15_money = discount_15 | money
+%}
+
+<script>
+  // Function to update prices upon variant change
+  function updatePrices() {
+    const moneyPrice = document.querySelector('.price .one-quantity').textContent;
+    const discount10 = document.querySelector('.price .two-less-four-quantity').textContent;
+    const discount15 = document.querySelector('.price .four-or-more-quantity').textContent;
+
+      // Update the variant data element with the retrieved prices
+      const variantData = document.getElementById('variant-data');
+      if (!variantData) {
+          console.log('Variant data element not found.');
+          return;
       }
-  
-      const oneQuantityElement = saleContainerElement.querySelector('.one-quantity');
-      const twoLessFourQuantityElement = saleContainerElement.querySelector('.two-less-four-quantity');
-      const fourOrMoreQuantityElement = saleContainerElement.querySelector('.four-or-more-quantity');
-  
+
+      variantData.setAttribute('data-money-price', moneyPrice);
+      variantData.setAttribute('data-discount-10-money', discount10);
+      variantData.setAttribute('data-discount-15-money', discount15);
+
+      // Update the displayed prices in the bundle DOM
+      document.querySelector('.pr-one-quantity').textContent = moneyPrice;
+      document.querySelector('.pr-two-less-four-quantity').textContent = discount10;
+      document.querySelector('.pr-four-or-more-quantity').textContent = discount15;
+
+      document.dispatchEvent(new CustomEvent('price:update'));
+  }
+
+  // Function to update the price display based on quantity
+  function updatePriceDisplay(quantity) {
+      const oneQuantityElement = document.querySelector('.one-quantity');
+      const twoLessFourQuantityElement = document.querySelector('.two-less-four-quantity');
+      const fourOrMoreQuantityElement = document.querySelector('.four-or-more-quantity');
+
       if (!oneQuantityElement || !twoLessFourQuantityElement || !fourOrMoreQuantityElement) {
-        console.log('One or more quantity elements not found.');
-        return; // Exit if the necessary elements are not found
+          console.log('One or more quantity elements not found.');
+          return;
       }
-  
-      if (quantity === 1) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        oneQuantityElement.style.display = 'inline-block';
-        twoLessFourQuantityElement.style.display = 'none';
-        fourOrMoreQuantityElement.style.display = 'none';
-      } else if (quantity >= 2 && quantity < 4) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        oneQuantityElement.style.display = 'none';
-        twoLessFourQuantityElement.style.display = 'inline-block';
-        fourOrMoreQuantityElement.style.display = 'none';
-      } else if (quantity >= 4) {
-        regularPriceElement.textContent = "{{ money_price | remove: 'From ' }}";
-        oneQuantityElement.style.display = 'none';
-        twoLessFourQuantityElement.style.display = 'none';
-        fourOrMoreQuantityElement.style.display = 'inline-block';
-      }
-    }
-  
-    function attachQuantityListeners() {
+
+      oneQuantityElement.style.display = quantity === 1 ? 'inline-block' : 'none';
+      twoLessFourQuantityElement.style.display = quantity >= 2 && quantity < 4 ? 'inline-block' : 'none';
+      fourOrMoreQuantityElement.style.display = quantity >= 4 ? 'inline-block' : 'none';
+  }
+
+  // Function to attach event listeners to quantity inputs
+  function attachQuantityListeners() {
       const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-      quantityInputs.forEach(function(input) {
-        input.addEventListener('change', function() {
-          const quantity = parseInt(this.value, 10);
-          updatePriceDisplay(quantity);
-        });
+      quantityInputs.forEach(input => {
+          input.addEventListener('change', () => {
+              updatePriceDisplay(parseInt(input.value, 10));
+              updatePrices(); // Update prices when quantity changes
+          });
       });
-  
-      const initialQuantityElement = document.querySelector('input[name="quantity"]:checked');
-      const initialQuantity = initialQuantityElement ? parseInt(initialQuantityElement.value, 10) : 1;
-      updatePriceDisplay(initialQuantity);
-    }
-  
-    function setDefaultBundleSwatch() {
-      const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
-      if (defaultQuantityInput) {
-        defaultQuantityInput.checked = true;
-        defaultQuantityInput.dispatchEvent(new Event('change'));
-      }
-    }
-  
-    function initializeQuantityListeners() {
-      console.log('Initializing quantity listeners');
+  }
+
+  // Reinitialize on custom variant change event
+  document.addEventListener('variant:change', () => {
+      updatePrices(); // Ensure prices are updated on variant change
+      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
+  });
+
+  // Function to initialize quantity listeners and reinitialize on variant change
+  function initializeQuantityListeners() {
       attachQuantityListeners();
-  
-      // Reinitialize on custom variant change event
-      document.addEventListener('variant:change', function() {
-        console.log('variant:change event received.');
-        setDefaultBundleSwatch();
-        attachQuantityListeners(); // Reattach listeners to handle any DOM changes
-  
-        // Update bundle swatch and variant data
-        updateBundleSwatchAndVariantData();
-      });
-    }
-  
-    function updateBundleSwatchAndVariantData() {
-      const variantDataElement = document.getElementById('variant-data');
-      if (!variantDataElement) {
-        console.error("Variant data element not found.");
-        return;
-      }
-  
-      // Update the variant data attributes
-      variantDataElement.setAttribute('data-money-price', "{{ money_price | remove: 'From ' }}");
-      variantDataElement.setAttribute('data-discount-10', "{{ discount_10_money }}");
-      variantDataElement.setAttribute('data-discount-15', "{{ discount_15_money }}");
-  
-      // Update the bundle swatch prices
-      const bundlePrices = document.querySelectorAll('.bundle_price');
-      bundlePrices.forEach(function(bundlePrice) {
-        const quantity = bundlePrice.classList.contains('one-quantity') ? 1 :
-                         bundlePrice.classList.contains('two-less-four-quantity') ? 2 :
-                         bundlePrice.classList.contains('four-or-more-quantity') ? 4 : 1; // Default to 1
-  
-        // Set the bundle price based on the quantity
-        if (quantity === 1) {
-          bundlePrice.textContent = "{{ money_price | remove: 'From ' }}";
-        } else if (quantity === 2) {
-          bundlePrice.textContent = "{{ discount_10_money }}";
-        } else if (quantity === 4) {
-          bundlePrice.textContent = "{{ discount_15_money }}";
-        }
-      });
-  
-      // Update price display based on the selected quantity
-      const selectedQuantity = document.querySelector('input[name="quantity"]:checked').value;
-      updatePriceDisplay(selectedQuantity);
-    }
-  
-    document.addEventListener('DOMContentLoaded', function() {
-      console.log('DOMContentLoaded event fired');
+      updatePrices(); // Ensure prices are updated on variant change
+  }
+
+  // Initialize listeners on DOM content load
+  document.addEventListener('DOMContentLoaded', () => {
       initializeQuantityListeners();
-    });
-  </script>
+      updatePrices();
+  });
+</script>
+
+
 
 <!-- Include Owl Carousel CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
