@@ -401,9 +401,9 @@
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/snoozy-science-expained-19-momme.jpg",
+            "image": "shopify:\/\/shop_images\/snoozy-science-expained-deep-sleep-mask_5aa0aef6-f8af-493a-a680-aa506df68e82.jpg",
             "caption": "",
-            "title": "<h1>The Science Explained<\/h1>",
+            "title": "<h1>Sleeping made easy<\/h1>",
             "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
             "author": "",
             "button_label": "",
@@ -479,6 +479,7 @@
       "block_order": [
         "heading_wTck7F"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -492,6 +493,7 @@
     },
     "multicolumn_mNrjRH": {
       "type": "multicolumn",
+      "disabled": true,
       "settings": {
         "image_banner": "shopify:\/\/shop_images\/snoozy-table-marketplaces.jpg",
         "show_shadow": false,
