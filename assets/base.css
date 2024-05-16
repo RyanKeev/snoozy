@@ -275,7 +275,7 @@ h5,
   /* font-family: var(--font-heading-family);
   font-style: var(--font-heading-style);  */
   font-weight: var(--font-heading-weight);
-  font-family: var(--ff-harmonia-bold);
+  font-family: var(--ff-harmonia-semibold);
   font-style: var(--fs-harmonia-bold);
   letter-spacing: 1px !important;
   line-height: 1.1em !important;
