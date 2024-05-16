@@ -632,7 +632,8 @@
 
 .order dd {
   margin-left: 0;
-  line-height: calc(1 + 0.3 / var(--font-body-scale));
+  /* line-height: calc(1 + 0.3 / var(--font-body-scale)); */
+  line-height: 1;
 }
 
 .order dd s {
