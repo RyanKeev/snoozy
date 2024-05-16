@@ -6589,6 +6589,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     color: #fff !important;
     text-transform: none !important;
     font-weight: bold !important;
+    font-family: var(--ff-harmonia-semibold) !important;
   }
 
   #Banner-template--22565320327473__image_banner_WqKFzc h2 {
