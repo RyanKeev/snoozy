@@ -5669,7 +5669,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   font-size: 18px;
   line-height: 1.4;
   color: #000000;
-  font-family: var(--ff-harmonia-bold);
+  font-family: var(--ff-harmonia-semibold);
 }
 
 .section-faq .faq-question .icon {
@@ -5713,7 +5713,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
 
   .section-faq .faq-question span {
     font-size: 20px;
-    font-family: var(--ff-harmonia-bold);
+    font-family: var(--ff-harmonia-semibold);
   }
 
   .section-faq .faq-question {
