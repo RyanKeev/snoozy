@@ -1097,7 +1097,6 @@ class VariantSelects extends HTMLElement {
             }
 
             const price = document.getElementById(`price-${this.dataset.section}`);
-            console.log(price,"price")
             if (price) {
                 price.classList.remove('visibility-hidden');
 
@@ -1106,7 +1105,6 @@ class VariantSelects extends HTMLElement {
                 const prOneQuantity = document.querySelector('.pr-one-quantity');
                 const prTwoLessFourQuantity = document.querySelector('.pr-two-less-four-quantity');
                 const prFourOrMoreQuantity = document.querySelector('.pr-four-or-more-quantity');
-                console.log(prOneQuantity,prTwoLessFourQuantity,prFourOrMoreQuantity,"qtyy")
                 if (prOneQuantity && prTwoLessFourQuantity && prFourOrMoreQuantity) {
                     prOneQuantity.textContent = '₱' + oneQuantityValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
                     prTwoLessFourQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.90).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
