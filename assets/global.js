@@ -1109,7 +1109,7 @@ class VariantSelects extends HTMLElement {
                 if (prOneQuantity && prTwoLessFourQuantity && prFourOrMoreQuantity) {
                     prOneQuantity.textContent = '₱' + oneQuantityValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
                     prTwoLessFourQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.90).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-                    prFourOrMoreQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.85).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    prFourOrMoreQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.75).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
                 }
                 
             }
