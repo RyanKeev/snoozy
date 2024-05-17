@@ -83,7 +83,7 @@ assign discount_25_money = discount_25 | money
       quantityInputs.forEach(input => {
           input.addEventListener('change', () => {
               updatePriceDisplay(parseInt(input.value, 10));
-              updatePrices(); // Update prices when quantity changes
+              {% comment %} updatePrices(); // Update prices when quantity changes {% endcomment %}
           });
       });
   }
