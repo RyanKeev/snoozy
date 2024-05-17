@@ -77,6 +77,15 @@ assign discount_25_money = discount_25 | money
     }
   }
 
+   // Function to preselect quantity one on initial load
+  function preselectQuantityOne() {
+    const quantityOneInput = document.querySelector('input[name="quantity"][value="1"]');
+    if (quantityOneInput) {
+      quantityOneInput.checked = true;
+      quantityOneInput.dispatchEvent(new Event('change'));
+    }
+  }
+
   // Function to attach event listeners to quantity inputs
   function attachQuantityListeners() {
       const quantityInputs = document.querySelectorAll('input[name="quantity"]');
@@ -105,6 +114,7 @@ assign discount_25_money = discount_25 | money
   document.addEventListener('DOMContentLoaded', () => {
       initializeQuantityListeners();
       updatePrices();
+      preselectQuantityOne(); // Preselect quantity one on initial load
   });
 </script>
 
