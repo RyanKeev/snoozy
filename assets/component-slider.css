@@ -328,6 +328,7 @@ slider-component.slider-component-full-width {
 }
 
 .slider-buttons {
+  display: none !important;
   display: flex;
   align-items: center;
   justify-content: center;
