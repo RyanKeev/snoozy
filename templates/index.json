@@ -290,11 +290,12 @@
         "columns_mobile": "1",
         "swipe_on_mobile": true,
         "padding_top": 0,
-        "padding_bottom": 36
+        "padding_bottom": 0
       }
     },
     "custom_liquid_mUpGHp": {
       "type": "custom-liquid",
+      "disabled": true,
       "settings": {
         "custom_liquid": "<style>\n#shopify-section-template--22494886854961__multicolumn_eVggbb,.section+.section{\n margin-top: 0;\n}\n<\/style>",
         "color_scheme": "scheme-3e67202a-86ca-4178-993a-f35dbb979c3c",
