@@ -6755,3 +6755,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
 }
 
 
+
+#shopify-section-template--22494886854961__multicolumn_eVggbb, .section + .section{
+  margin-top: 0 !important;
+ }
