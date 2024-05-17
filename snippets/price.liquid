@@ -31,9 +31,9 @@
   endif
 
   assign discount_10 = price | times: 0.90 | divided_by: 100 | round | times: 100 
-  assign discount_15 = price | times: 0.85 | divided_by: 100 | round | times: 100
+  assign discount_25 = price | times: 0.75 | divided_by: 100 | round | times: 100
   assign discount_10_money = discount_10 | money
-  assign discount_15_money = discount_15 | money
+  assign discount_25_money = discount_25 | money
 %}
 <div class="price 
   {% if price_class %}{{ price_class }}{% endif %}
@@ -43,10 +43,10 @@
   {% if show_badges %}price--show-badge{% endif %}"
   data-price="{{ price }}"
   data-discount-10="{{ discount_10 }}"
-  data-discount-15="{{ discount_15 }}"
+  data-discount-25="{{ discount_25 }}"
   data-money-price="{{ money_price }}"
   data-discount-10-money="{{ discount_10_money }}"
-  data-discount-15-money="{{ discount_15_money }}"
+  data-discount-25-money="{{ discount_25_money }}"
 >
   <div class="price__container">
     <div class="price__regular">
@@ -67,7 +67,7 @@
       {% endunless %}
       <span class="price-item price-item--sale price-item--last one-quantity">{{ money_price | remove: 'From ' }}</span>
       <span class="price-item price-item--sale price-item--last two-less-four-quantity" style="display: none;">{{ discount_10_money }}</span>
-      <span class="price-item price-item--sale price-item--last four-or-more-quantity" style="display: none;">{{ discount_15_money }}</span>
+      <span class="price-item price-item--sale price-item--last four-or-more-quantity" style="display: none;">{{ discount_25_money }}</span>
     </div>
     <small class="unit-price caption{% if product.selected_or_first_available_variant.unit_price_measurement == nil %} hidden{% endif %}">
       <span class="visually-hidden">{{ 'products.product.price.unit_price' | t }}</span>
