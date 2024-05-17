@@ -516,6 +516,11 @@
         "padding_bottom": 36
       }
     },
+    "replo_deep_sleep_mask_statistic_FfrtT7": {
+      "type": "replo-deep-sleep-mask-statistic",
+      "settings": {
+      }
+    },
     "8f25fb51-6152-4228-93dc-0f38bf14c7ff": {
       "type": "section-brand-logo",
       "blocks": {
@@ -743,6 +748,7 @@
     "section_image_with_text_cgYrLq",
     "rich_text_PyB7yH",
     "multicolumn_mNrjRH",
+    "replo_deep_sleep_mask_statistic_FfrtT7",
     "8f25fb51-6152-4228-93dc-0f38bf14c7ff",
     "3d977cfe-9935-4362-bb26-63085b713377",
     "replo_silk_pillowcase_pdp_wpT88X",
