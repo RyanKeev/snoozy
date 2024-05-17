@@ -4471,7 +4471,7 @@ product-variant-swatches label.size-swatch{
   align-items: center;
   justify-content: center;
   gap: 5px;
-  /* flex-grow: 1; */
+  flex-grow: 1;
   min-height: 45px;
   border: 1px solid #edeeee!important;
   border-radius: 25px!important;
