@@ -6719,7 +6719,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   padding: 0;
   min-width: fit-content;
   border: none;
-  margin-bottom: 2.8rem;
+  margin-bottom: 2.8rem !important;
 }
 .showcase_link.active {
   border: 1px solid #002554 !important;
