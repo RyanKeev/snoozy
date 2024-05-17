@@ -79,10 +79,19 @@ assign discount_25_money = discount_25 | money
       });
   }
 
+  function setDefaultBundleSwatch() {
+    const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
+    if (defaultQuantityInput) {
+      defaultQuantityInput.checked = true;
+      defaultQuantityInput.dispatchEvent(new Event('change'));
+    }
+  }
+
   // Reinitialize on custom variant change event
   document.addEventListener('variant:change', () => {
       updatePrices(); // Ensure prices are updated on variant change
       attachQuantityListeners(); // Reattach listeners to handle any DOM changes
+      setDefaultBundleSwatch();
   });
 
   // Function to initialize quantity listeners and reinitialize on variant change
