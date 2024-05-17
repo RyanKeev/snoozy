@@ -6722,7 +6722,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   margin-bottom: 2.8rem !important;
 }
 .showcase_link.active {
-  border: 1px solid #002554 !important;
+  border: 1.5px solid #002554 !important;
 }
 .showcase_link {
   background-color: #ffffff;
