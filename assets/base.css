@@ -6761,7 +6761,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
  }
 
  @media (max-width: 749px){
-  .section-template--22565320327473__collection_list_AJMB9L-padding {
+  .section-template--22565320327473__collection_list_AJMB9L-padding,.section-template--22565320327473__featured_collection_L6dPDQ-padding {
     padding-top: 0 !important;
   }
  }
