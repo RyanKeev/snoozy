@@ -949,7 +949,7 @@ class VariantSelects extends HTMLElement {
     this.updateVariantStatuses();
 
       // Trigger the custom event
-    // document.dispatchEvent(new CustomEvent('variant:change'));
+    document.dispatchEvent(new CustomEvent('variant:change'));
     // document.dispatchEvent(new CustomEvent('price:update'));
     
     if (!this.currentVariant) {
