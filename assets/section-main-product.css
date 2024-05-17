@@ -376,6 +376,12 @@ a.product__text {
   /* margin-bottom: 0.5rem; */
   /* display: flex; */
   align-items: center;
+  border-radius: 0;
+  background: 0;
+  color: #1a1a1a;
+  border: 1px solid #1a1a1a;
+  padding: 4px 3px 1px;
+  font-size: 17px;
 }
 
 /*.product .price__container {
@@ -1709,3 +1715,4 @@ a.product__text {
 
 
 /* PRODUCT TEMPLATE END */
+
