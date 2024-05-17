@@ -3526,7 +3526,7 @@ h1 {
 
   --ff-harmonia-bold-pro-italic: 'HarmoniaSansProCyr-Bold-Italic', var(--font-heading-family), sans-serif;
   --fs-harmonia-bold-pro-italic: italic;
-  --fw-harmonia-bold-pro-italic: bold;
+  --fw-harmonia-bold-pro-italic: 600;
 }
 
 *{
