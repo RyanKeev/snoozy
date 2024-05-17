@@ -51,7 +51,7 @@
         "text_Kbamhx": {
           "type": "text",
           "settings": {
-            "text": "Only a little over ₱2 per sleep over 2 years 🙌 ",
+            "text": "Keeps your hair healthy, frizz-Free and, beautiful",
             "text_style": "body"
           }
         },
@@ -179,15 +179,15 @@
           "type": "description-capture",
           "settings": {
             "paragraph_1_title": "Why Snoozy's special?",
-            "paragraph_1_content": "Introducing our new 19 Momme Silk Pillowcase – the go-to skin essential designed for your comfort and budget. Treated with natural silver, scientifically shown to eliminate 99.7% of bacteria linked to acne & breakouts. This pillowcase offers the skin benefits of silk at an accessible price point.",
+            "paragraph_1_content": "Enhance your haircare routine with our exquisite collection of 22 momme silk scrunchies. Made from the finest mulberry silk, these luxurious and gentle accessories are perfect for keeping your hair healthy and stylish.",
             "paragraph_2_title": "How can Snoozy help you?",
-            "paragraph_2_content": "Safe for all skin types, ages, and chemical-free. In 30 days, Snoozy works to prevent and improve:",
+            "paragraph_2_content": "Safe for all hair types, and chemical-free. In 30 days, Snoozy works to prevent and improve:",
             "paragraph_3_title": "You'll also love that:",
-            "paragraph_3_content": "Our 19-momme pillowcase is designed with a single-sided finish, focusing the premium silk where it matters most. Treat yourself to the elegance of silk without compromising on quality or price. Snoozy's sustainable, and 4.5x more breathable & cooling than cotton (goodbye midnight sweats).",
-            "list_1_title": "<strong>Skin concerns<\/strong>",
-            "list_1_content": "Acne & breakouts,\nClogged pores,\nDry skin & redness,\nFine lines & wrinkles",
-            "list_2_title": "<strong>Hair concerns<\/strong>",
-            "list_2_content": "Split ends,\nTangles & knots,\nFrizziness,\nBreakages"
+            "paragraph_3_content": "Our 22-momme scrunchies offers gentle care, minimizing hair damage, retaining moisture, and preventing creases. Silk's smooth texture protects your hair, reduces friction, and keeps it looking healthy and nourished.",
+            "list_1_title": "<strong>Hair concerns<\/strong>",
+            "list_1_content": "Hair breakage,\nLess visible tie traces,\nDetangling effect,\nProvides a strong hold",
+            "list_2_title": "",
+            "list_2_content": ""
           }
         },
         "description": {
@@ -221,7 +221,7 @@
           "settings": {
             "heading": "Material Specs",
             "icon": "none",
-            "content": "<p><strong>Fabric: <\/strong>100% 19-momme 6A-grade Mulberry Silk  <br\/><strong>Closure: <\/strong>Hidden zipper<br\/><strong>Treatment: <\/strong>Antibacterial silver ions<br\/><strong>Ethically Certified: <\/strong>Yes (Oeko-Tex®)<\/p><p><strong>Animal Tested:<\/strong> No<br\/><strong>Artificial Chemicals:<\/strong> None<\/p>",
+            "content": "<p><strong>Fabric: <\/strong>100% 22-momme 6A-grade Mulberry Silk  <br\/><strong>Ethically Certified: <\/strong>Yes (Oeko-Tex®)<\/p><p><strong>Animal Tested:<\/strong> No<br\/><strong>Artificial Chemicals:<\/strong> None<\/p>",
             "page": ""
           }
         },
@@ -230,7 +230,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "none",
-            "content": "<p>•   Machine delicate wash with our washing bag or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<br\/><\/p><p>Silver Ion treatment keeps your Snoozy fresher for longer, meaning you only need to wash it every 10-14 days (3x less frequent than cotton!).<\/p>",
+            "content": "<p>•   Machine delicate wash with our washing bag or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<\/p>",
             "page": ""
           }
         },
@@ -300,7 +300,7 @@
         "heading_7crGEz": {
           "type": "heading",
           "settings": {
-            "heading": "Real Results <br> in Just 30 Days",
+            "heading": "Real Results from first night",
             "heading_size": "h1"
           }
         },
@@ -470,6 +470,7 @@
       "blocks": {
         "heading_wTck7F": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Snoozy Versus <br>  Regular Pillowcases",
             "heading_size": "h1"
@@ -479,6 +480,7 @@
       "block_order": [
         "heading_wTck7F"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -492,6 +494,7 @@
     },
     "multicolumn_mNrjRH": {
       "type": "multicolumn",
+      "disabled": true,
       "settings": {
         "image_banner": "shopify:\/\/shop_images\/snoozy-table-marketplaces.jpg",
         "show_shadow": false,
