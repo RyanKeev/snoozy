@@ -323,18 +323,62 @@
                 {{- block.settings.text -}}
               </a>
 
-            {%- when 'variant_swatches' -%}
+            {%- when 'variant_swatches' -%}  
+            {% if block.settings.variant_swatches_title != blank %}
               <div class="info-separator"><span>{{ block.settings.variant_swatches_title }}</span></div>
+            {% endif %}
               {% render 'product-variant-swatches', product: product, block: block, product_form_id: product_form_id %}
-            {%- when 'product_showcase_links' -%}
+           
+              {%- when 'product_showcase_links' -%}
+              <style>
+                {% if block.settings.badge_title_1 != blank %}
+                a.showcase_link.first::before {
+                  content: '{{ block.settings.badge_title_1 }}';
+                  position: absolute;
+                  top: -11px;
+                  right: 7%;
+                  background: #fc95cf;
+                  border-radius: 50px;
+                  padding: 3px 12px;
+                  color: #ffffff;
+                  line-height: normal;
+                  font-family: var(--ff-harmonia-bold-pro-italic);
+                  font-style: italic;
+                  font-size: 11px;
+                  margin: 0;
+                  z-index:3;
+                }
+                {% endif %}
+                {% if block.settings.badge_title_2 != blank %}
+                a.showcase_link.last::before {
+                  content: '{{ block.settings.badge_title_2 }}';
+                  position: absolute;
+                  top: -11px;
+                  right: 7%;
+                  background: #fc95cf;
+                  border-radius: 50px;
+                  padding: 3px 12px;
+                  color: #ffffff;
+                  line-height: normal;
+                  font-family: var(--ff-harmonia-bold-pro-italic);
+                  font-style: italic;
+                  font-size: 11px;
+                  margin: 0;
+                  z-index:3;
+                }
+                {% endif %}
+              </style>
+              {% if block.settings.product_showcase_title != blank %}
               <div class="info-separator"><span>{{ block.settings.product_showcase_title }}</span></div>
+              {% endif %}
+              <span class="flex-showcase-title">{{ block.settings.product_showcase_inline_title }}</span>
             <div class="flex-showcase">
               <a {% if block.settings.product_showcase_1_link == blank %}
                   role="link" aria-disabled="true"
                 {% else %}
                 href="{{ block.settings.product_showcase_1_link }}"
               {% endif %} 
-                 class="showcase_link {% if block.settings.product_is_active_1 %}active{% endif %}">   
+                 class="showcase_link first {% if block.settings.product_is_active_1 %}active{% endif %}">   
                 {{ block.settings.product_showcase_1_link_title }}
               </a>
               <a {% if block.settings.product_showcase_2_link == blank %}
@@ -342,7 +386,7 @@
               {% else %}
               href="{{ block.settings.product_showcase_2_link }}"
             {% endif %} 
-               class="showcase_link {% if block.settings.product_is_active_2 %}active{% endif %}">   
+               class="showcase_link last {% if block.settings.product_is_active_2 %}active{% endif %}">   
                 {{ block.settings.product_showcase_2_link_title }}
             </a>
           </div>
@@ -1501,6 +1545,12 @@
           "default": "Quantity"
         },
         {
+          "type": "text",
+          "id": "product_showcase_inline_title",
+          "label": "Product showcase inline title:",
+          "default": "Quantity"
+        },
+        {
           "type": "url",
           "id": "product_showcase_1_link",
           "label": "Product showcase 1 Link:"
@@ -1518,6 +1568,11 @@
           "default": "Product 1"
         },
         {
+          "type": "text",
+          "id": "badge_title_1",
+          "label": "Badge text"
+        },
+        {
           "type": "url",
           "id": "product_showcase_2_link",
           "label": "Product showcase 2 Link:"
@@ -1533,6 +1588,11 @@
           "id": "product_showcase_2_link_title",
           "label": "Product showcase 2 link title:",
           "default": "Product 2"
+        },
+        {
+          "type": "text",
+          "id": "badge_title_2",
+          "label": "Badge text"
         }
       ]
     },
