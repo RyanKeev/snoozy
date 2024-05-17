@@ -4502,7 +4502,7 @@ product-variant-swatches label.size-swatch > span{
 product-variant-swatches input[type=radio]:checked+label.size-swatch,
 product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   background-color: #ffffff;
-  border: 1px solid #002554 !important;
+  border: 1.5px solid #002554 !important;
   color: #1a1a1a !important;
 }
 
