@@ -135,6 +135,7 @@
         },
         "a019fdc3-26d6-4ade-90fd-e1c7c0cc5707": {
           "type": "variant_swatches",
+          "disabled": true,
           "settings": {
             "variant_swatches_title": "Size & Color"
           }
