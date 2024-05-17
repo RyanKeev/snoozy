@@ -90,7 +90,7 @@ assign discount_25_money = discount_25 | money
 
   // Reinitialize on custom variant change event
   document.addEventListener('variant:change', () => {
-    
+      setDefaultBundleSwatch(); // Set bundle swatch to 1 on variant change
       updatePrices(); // Ensure prices are updated on variant change
       attachQuantityListeners(); // Reattach listeners to handle any DOM changes
   });
@@ -105,6 +105,7 @@ assign discount_25_money = discount_25 | money
   document.addEventListener('DOMContentLoaded', () => {
       initializeQuantityListeners();
       updatePrices();
+      preselectQuantityOne(); // Preselect quantity one on initial load
   });
 </script>
 
