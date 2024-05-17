@@ -310,7 +310,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/nucleus.svg",
             "rating": "",
-            "title": "<em><strong>Infused with silver<\/strong><\/em>",
+            "title": "<em>Infused with silver<\/em>",
             "text": "<p>Silver's been used for years as a natural, safe way to stop bacterial spread. <\/p>",
             "link_label": "",
             "link": ""
@@ -321,7 +321,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/bacteria.svg",
             "rating": "",
-            "title": "<em><strong>Stops bad bacteria<\/strong><\/em>",
+            "title": "<em>Stops bad bacteria<\/em>",
             "text": "<p>We're talking P. Acnes and Staph, shown to trigger acne and other skin concerns.<\/p>",
             "link_label": "",
             "link": ""
@@ -332,7 +332,7 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/approved_test.svg",
             "rating": "",
-            "title": "<em><strong>Lab-tested<\/strong><\/em>",
+            "title": "<em>Lab-tested<\/em>",
             "text": "<p>Antibacterial for over two years, you can sleep easy knowing your silver's working.<\/p>",
             "link_label": "",
             "link": ""
