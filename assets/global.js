@@ -950,7 +950,7 @@ class VariantSelects extends HTMLElement {
 
       // Trigger the custom event
     document.dispatchEvent(new CustomEvent('variant:change'));
-    // document.dispatchEvent(new CustomEvent('price:update'));
+    document.dispatchEvent(new CustomEvent('price:update'));
     
     if (!this.currentVariant) {
       this.toggleAddButton(true, '', true);
