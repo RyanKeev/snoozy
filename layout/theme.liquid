@@ -79,7 +79,7 @@ assign discount_25_money = discount_25 | money
 
    // Function to preselect quantity one on initial load
   function preselectQuantityOne() {
-    const quantityOneInput = document.querySelector('input[name="quantity"][value="1"]');
+    const quantityOneInput = document.querySelector('input[name="quantity"][value="2"]');
     if (quantityOneInput) {
       quantityOneInput.checked = true;
       quantityOneInput.dispatchEvent(new Event('change'));
