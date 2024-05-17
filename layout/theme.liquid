@@ -69,13 +69,13 @@ assign discount_25_money = discount_25 | money
   }
 
   // Function to set the bundle swatch to quantity 1
-  {% comment %} function setDefaultBundleSwatch() {
+  function setDefaultBundleSwatch() {
     const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
     if (defaultQuantityInput) {
       defaultQuantityInput.checked = true;
       defaultQuantityInput.dispatchEvent(new Event('change'));
     }
-  } {% endcomment %}
+  }
 
   // Function to attach event listeners to quantity inputs
   function attachQuantityListeners() {
@@ -90,7 +90,7 @@ assign discount_25_money = discount_25 | money
 
   // Reinitialize on custom variant change event
   document.addEventListener('variant:change', () => {
-      {% comment %} setDefaultBundleSwatch(); // Set bundle swatch to 1 on variant change {% endcomment %}
+      setDefaultBundleSwatch(); // Set bundle swatch to 1 on variant change
       updatePrices(); // Ensure prices are updated on variant change
       attachQuantityListeners(); // Reattach listeners to handle any DOM changes
   });
@@ -98,7 +98,7 @@ assign discount_25_money = discount_25 | money
   // Function to initialize quantity listeners and reinitialize on variant change
   function initializeQuantityListeners() {
       attachQuantityListeners();
-      updatePrices(); // Ensure prices are updated on variant change
+      {% comment %} updatePrices(); // Ensure prices are updated on variant change {% endcomment %}
   }
 
   // Initialize listeners on DOM content load
