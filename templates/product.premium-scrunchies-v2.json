@@ -299,6 +299,7 @@
       "blocks": {
         "heading_7crGEz": {
           "type": "heading",
+          "disabled": true,
           "settings": {
             "heading": "Real Results from first night",
             "heading_size": "h1"
@@ -315,6 +316,7 @@
         "heading_7crGEz",
         "text_AzpbJM"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -368,6 +370,7 @@
         "column_cWp4CG",
         "column_g7ceMb"
       ],
+      "disabled": true,
       "settings": {
         "show_shadow": true,
         "disabled_fullwidth": false,
@@ -403,8 +406,8 @@
             "note": "",
             "image": "shopify:\/\/shop_images\/snoozy-science-expained-19-momme.jpg",
             "caption": "",
-            "title": "<h1>The Science Explained<\/h1>",
-            "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
+            "title": "<h1>The best for your hair<\/h1>",
+            "content": "<p>These premium scrunchies prevent damage to your hair, which is crucial in keeping it healthy and beautiful. It's also the most comfortable scrunchie you'll ever own.<\/p>",
             "author": "",
             "button_label": "",
             "button_link": "",
@@ -414,10 +417,10 @@
             "drag_initial_position": 50,
             "show_benefits_block": true,
             "benefits_background": "rgba(0,0,0,0)",
-            "benefits_image_one": "shopify:\/\/shop_images\/snoozy-eliminate-bacteria-icon.png",
-            "benefits_title_one": "Bacteria naturally eliminated",
-            "benefits_image_two": "shopify:\/\/shop_images\/snoozy-fewer-pores-icon.png",
-            "benefits_title_two": "Fewer clogged   pores and breakouts",
+            "benefits_image_one": "shopify:\/\/shop_images\/hair-breakage-icon.png",
+            "benefits_title_one": "Prevents hair breakage",
+            "benefits_image_two": "shopify:\/\/shop_images\/hair-less-tangle-icon.png",
+            "benefits_title_two": "Tange-free hair",
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
