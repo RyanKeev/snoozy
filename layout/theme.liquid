@@ -83,7 +83,7 @@ assign discount_25_money = discount_25 | money
       quantityInputs.forEach(input => {
           input.addEventListener('change', () => {
               updatePriceDisplay(parseInt(input.value, 10));
-              {% comment %} updatePrices(); // Update prices when quantity changes {% endcomment %}
+              updatePrices(); // Update prices when quantity changes
           });
       });
   }
@@ -98,14 +98,14 @@ assign discount_25_money = discount_25 | money
   // Function to initialize quantity listeners and reinitialize on variant change
   function initializeQuantityListeners() {
       attachQuantityListeners();
-      {% comment %} updatePrices(); // Ensure prices are updated on variant change {% endcomment %}
+      updatePrices(); // Ensure prices are updated on variant change
   }
 
   // Initialize listeners on DOM content load
   document.addEventListener('DOMContentLoaded', () => {
       initializeQuantityListeners();
-      {% comment %} updatePrices(); {% endcomment %}
-
+      updatePrices();
+      preselectQuantityOne(); // Preselect quantity one on initial load
   });
 </script>
 
