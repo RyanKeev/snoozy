@@ -152,6 +152,7 @@
         },
         "quantity_bundle_selector_E39rA7": {
           "type": "quantity_bundle_selector",
+          "disabled": true,
           "settings": {
             "buy1_text": "",
             "buy2_text": "",
