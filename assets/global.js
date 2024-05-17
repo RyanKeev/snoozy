@@ -1102,6 +1102,7 @@ class VariantSelects extends HTMLElement {
                 price.classList.remove('visibility-hidden');
 
                 const oneQuantityValue = parseFloat(document.querySelector('.one-quantity').textContent.trim().replace(/[^\d.]/g, ''));
+                console.log(oneQuantityValue,"qtyy")
                 const prOneQuantity = document.querySelector('.pr-one-quantity');
                 const prTwoLessFourQuantity = document.querySelector('.pr-two-less-four-quantity');
                 const prFourOrMoreQuantity = document.querySelector('.pr-four-or-more-quantity');
