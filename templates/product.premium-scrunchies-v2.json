@@ -617,24 +617,32 @@
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Is Snoozy really safe to sleep on?",
-            "faq_answer": "<p>It sure is! Silver has been used for decades (centuries, actually) as a safe way to stop bacterial spread. The silver ions also are infused into the fabric and cannot be inhaled, in case you were wondering!<\/p>"
+            "faq_question": "What's the biggest difference with regular scrunchies?",
+            "faq_answer": "<p>With regular scrunchies, your hair can get tangled, get stuck and leave marks. Our scrunchies are made from the highest-quality mulberry silk, offering gentle care, minimizing hair damage, retaining moisture, and avoiding creases. Silk's smooth texture protects your hair, reduces friction, and keeps it looking healthy and nourished.<\/p>"
           }
         },
         "ccb3e38b-7264-454f-898c-ec48251f4bfc": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Will the antibacterial effects wear off over time?",
+            "faq_question": "Is it suitable for all hair types?",
             "faq_answer": "<p>Yes, but very slowly. In fact, even after 50 washes, the antibacterial decrease is just 1% (still 98% effective).<\/p>"
+          }
+        },
+        "image_picker_QhBCDX": {
+          "type": "image_picker",
+          "settings": {
+            "question_background": "#f7f3eb",
+            "faq_question": "How does it leave no tie trace?",
+            "faq_answer": "<p>The silk fabric allows your hair to glide effortlessly, minimizing the risk of tangles or damage when removing the scrunchie.<\/p>"
           }
         },
         "image_picker_ynBwXj": {
           "type": "image_picker",
           "settings": {
             "question_background": "#f7f3eb",
-            "faq_question": "",
-            "faq_answer": ""
+            "faq_question": "How does it avoid hair breakage?",
+            "faq_answer": "<p>The soft elastic used provides a secure hold without excessive tension, preventing pulling and stress on the hair. By combining these hair-friendly features, our silk scrunchies help protect your hair from breakage.<\/p>"
           }
         },
         "caf0fac1-1888-4f1c-9393-e61de8324dc1": {
@@ -658,6 +666,7 @@
         "f591aed1-1b24-4d17-ac3d-be1800d26353",
         "95536cff-c742-4eda-9d93-260ba9187482",
         "ccb3e38b-7264-454f-898c-ec48251f4bfc",
+        "image_picker_QhBCDX",
         "image_picker_ynBwXj",
         "caf0fac1-1888-4f1c-9393-e61de8324dc1",
         "a45422fb-336d-4598-bcfd-ddab8fbd0d6c"
