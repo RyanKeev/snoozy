@@ -4234,6 +4234,7 @@ header.header .menu-label{
   background: #FC95CF;
   color: #000000;
   min-height: 46px;
+  padding: 18px 24px 14px;
 }
 
 .product-form__buttons .product-form__submit:not(:hover) .price--on-sale .price-item--regular {
