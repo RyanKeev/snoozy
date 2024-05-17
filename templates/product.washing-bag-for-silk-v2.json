@@ -122,12 +122,15 @@
           "disabled": true,
           "settings": {
             "product_showcase_title": "Quantity",
+            "product_showcase_inline_title": "Quantity",
             "product_showcase_1_link": "shopify:\/\/products\/19-momme-silk-pillowcase",
             "product_is_active_1": true,
             "product_showcase_1_link_title": "Mulberry Silk Pillowcase",
+            "badge_title_1": "",
             "product_showcase_2_link": "shopify:\/\/products\/standard-pillowcase",
             "product_is_active_2": false,
-            "product_showcase_2_link_title": "Premium Mulberry Silk Pillowcase"
+            "product_showcase_2_link_title": "Premium Mulberry Silk Pillowcase",
+            "badge_title_2": ""
           }
         },
         "a019fdc3-26d6-4ade-90fd-e1c7c0cc5707": {
@@ -191,16 +194,16 @@
         "description_capture_U3W9GV": {
           "type": "description-capture",
           "settings": {
-            "paragraph_1_title": "Why Snoozy's special?",
-            "paragraph_1_content": "Introducing our new 19 Momme Silk Pillowcase – the go-to skin essential designed for your comfort and budget. Treated with natural silver, scientifically shown to eliminate 99.7% of bacteria linked to acne & breakouts. This pillowcase offers the skin benefits of silk at an accessible price point.",
-            "paragraph_2_title": "How can Snoozy help you?",
-            "paragraph_2_content": "Safe for all skin types, ages, and chemical-free. In 30 days, Snoozy works to prevent and improve:",
-            "paragraph_3_title": "You'll also love that:",
-            "paragraph_3_content": "Our 19-momme pillowcase is designed with a single-sided finish, focusing the premium silk where it matters most. Treat yourself to the elegance of silk without compromising on quality or price. Snoozy's sustainable, and 4.5x more breathable & cooling than cotton (goodbye midnight sweats).",
-            "list_1_title": "<strong>Skin concerns<\/strong>",
-            "list_1_content": "Acne & breakouts,\nClogged pores,\nDry skin & redness,\nFine lines & wrinkles",
-            "list_2_title": "<strong>Hair concerns<\/strong>",
-            "list_2_content": "Split ends,\nTangles & knots,\nFrizziness,\nBreakages"
+            "paragraph_1_title": "Why get a washing bag?",
+            "paragraph_1_content": "To keep your silk essentials in the best condition, you need to wash it with love. Our silk washing bag is designed to maintain the quality and lifetime of your premium silk pillowcase and sleep masks. The washing bag is built to last for hundreds of uses.",
+            "paragraph_2_title": "",
+            "paragraph_2_content": "",
+            "paragraph_3_title": "",
+            "paragraph_3_content": "",
+            "list_1_title": "",
+            "list_1_content": "",
+            "list_2_title": "",
+            "list_2_content": ""
           }
         },
         "description": {
@@ -234,7 +237,7 @@
           "settings": {
             "heading": "Material Specs",
             "icon": "none",
-            "content": "<p><strong>Fabric: <\/strong>100% 19-momme 6A-grade Mulberry Silk  <br\/><strong>Closure: <\/strong>Hidden zipper<br\/><strong>Treatment: <\/strong>Antibacterial silver ions<br\/><strong>Ethically Certified: <\/strong>Yes (Oeko-Tex®)<\/p><p><strong>Animal Tested:<\/strong> No<br\/><strong>Artificial Chemicals:<\/strong> None<\/p>",
+            "content": "<p><strong>Fabric: <\/strong>White mesh fabric<br\/><strong>Closure: <\/strong>Secure zipper system<br\/><strong><br\/>Animal Tested:<\/strong> No<br\/><strong>Artificial Chemicals:<\/strong> None<\/p>",
             "page": ""
           }
         },
@@ -243,7 +246,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "none",
-            "content": "<p>•   Machine delicate wash with our washing bag or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<br\/><\/p><p>Silver Ion treatment keeps your Snoozy fresher for longer, meaning you only need to wash it every 10-14 days (3x less frequent than cotton!).<\/p>",
+            "content": "<p>Place your silk essentials in the bag and close it with the smarty-designed zipper.<br\/><br\/>Be sure to use the delicate or gentle cycle setting on your washer. Use cool water, no higher than 30° Celsius or 84° Fahrenheit. The cooler, the better. Warmer water will break down your Snoozy's threading over time.<br\/><br\/>•   Machine delicate wash with our washing bag or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<\/p>",
             "page": ""
           }
         },
@@ -329,6 +332,7 @@
         "heading_7crGEz",
         "text_AzpbJM"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -382,6 +386,7 @@
         "column_cWp4CG",
         "column_g7ceMb"
       ],
+      "disabled": true,
       "settings": {
         "show_shadow": true,
         "disabled_fullwidth": false,
@@ -415,10 +420,10 @@
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/snoozy-science-expained-19-momme.jpg",
+            "image": "shopify:\/\/shop_images\/washing-bag-2_b16254fc-c7df-4f47-aeaf-cfd47dd6801c.jpg",
             "caption": "",
-            "title": "<h1>The Science Explained<\/h1>",
-            "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
+            "title": "<h1>Protect your silk essentials<\/h1>",
+            "content": "<p>Silk is a delicate fabric, that needs proper care. Our Washing Bag is designed to do just that. The zipper system securely conceals and holds the zipper in put using an elastic loop, preventing breakage, clothes damage, and any harm to the washer drum during wash cycles. <\/p>",
             "author": "",
             "button_label": "",
             "button_link": "",
@@ -428,16 +433,17 @@
             "drag_initial_position": 50,
             "show_benefits_block": true,
             "benefits_background": "rgba(0,0,0,0)",
-            "benefits_image_one": "shopify:\/\/shop_images\/snoozy-eliminate-bacteria-icon.png",
-            "benefits_title_one": "Bacteria naturally eliminated",
-            "benefits_image_two": "shopify:\/\/shop_images\/snoozy-fewer-pores-icon.png",
-            "benefits_title_two": "Fewer clogged   pores and breakouts",
+            "benefits_image_one": "shopify:\/\/shop_images\/extends-life-icon.png",
+            "benefits_title_one": "Extends the lifetime of your silk",
+            "benefits_image_two": "shopify:\/\/shop_images\/zipper-system-icon.png",
+            "benefits_title_two": "Smartly designed zipper system",
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
         },
         "image_picker_g9yyE6": {
           "type": "image_picker",
+          "disabled": true,
           "settings": {
             "half_width": true,
             "image_first": true,
@@ -493,6 +499,7 @@
       "block_order": [
         "heading_wTck7F"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -506,6 +513,7 @@
     },
     "multicolumn_mNrjRH": {
       "type": "multicolumn",
+      "disabled": true,
       "settings": {
         "image_banner": "shopify:\/\/shop_images\/snoozy-table-marketplaces.jpg",
         "show_shadow": false,
