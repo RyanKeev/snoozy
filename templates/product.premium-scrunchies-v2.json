@@ -51,7 +51,7 @@
         "text_Kbamhx": {
           "type": "text",
           "settings": {
-            "text": "Keeps your hair healthy, frizz-Free and, beautiful",
+            "text": "Keeps your hair healthy, frizz-free and, beautiful",
             "text_style": "body"
           }
         },
@@ -404,7 +404,7 @@
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/snoozy-science-expained-19-momme.jpg",
+            "image": "shopify:\/\/shop_images\/premium-scrunchies-website-block-2.jpg",
             "caption": "",
             "title": "<h1>The best for your hair<\/h1>",
             "content": "<p>These premium scrunchies prevent damage to your hair, which is crucial in keeping it healthy and beautiful. It's also the most comfortable scrunchie you'll ever own.<\/p>",
@@ -427,6 +427,7 @@
         },
         "image_picker_g9yyE6": {
           "type": "image_picker",
+          "disabled": true,
           "settings": {
             "half_width": true,
             "image_first": true,
