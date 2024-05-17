@@ -69,13 +69,13 @@ assign discount_25_money = discount_25 | money
   }
 
   // Function to set the bundle swatch to quantity 1
-  function setDefaultBundleSwatch() {
+  {% comment %} function setDefaultBundleSwatch() {
     const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
     if (defaultQuantityInput) {
       defaultQuantityInput.checked = true;
       defaultQuantityInput.dispatchEvent(new Event('change'));
     }
-  }
+  } {% endcomment %}
 
   // Function to attach event listeners to quantity inputs
   function attachQuantityListeners() {
