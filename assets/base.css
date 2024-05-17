@@ -6636,7 +6636,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   #name-placeholder {
   color: #1a1a1a !important;
   letter-spacing: -1px !important;
-  font-family: var(--ff-harmonia-semibold) !important;
+  font-family: var(--ff-harmonia-bold-pro-italic)!important;
   }
 }
 /* FRONT PAGE END */
