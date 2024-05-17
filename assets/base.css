@@ -6579,10 +6579,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
 }
 
 /* FRONT PAGE */
-#shopify-section-template--22494886854961__multicolumn_eVggbb,.section+.section{
-  margin-top: 0 !important;
- }
- 
+
 @media (min-width: 750px) {
   #shopify-section-template--22565320327473__section_image_with_text_4cXHF9 .benefits-layout {
     display: none !important; 
