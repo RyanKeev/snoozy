@@ -4961,7 +4961,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   overflow: hidden;
 }
 
-.section-image-content .benefits-title{
+/* .section-image-content .benefits-title{
   font-size: 15px;
   line-height: 1.2;
   line-height: 1.4em !important;
@@ -4971,7 +4971,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   font-weight: 600 !important;
   margin-bottom: 10px;
   font-family: var(--ff-harmonia-bold);
-}
+} */
 
 .section-image-content .section-decor svg path{
   stroke: var(--color-decor);
@@ -6440,11 +6440,14 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   -o-border-radius: 5%;
 }
 
+.on-mobile-flex {
+  display: none !important;
+}
 .on-mobile {
-  display: none;
+  display: none !important;
 }
 .on-desktop {
-  display: block;
+  display: block !important;
 }
 
 .content-container .grid {
@@ -6458,6 +6461,12 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
 }
 
 @media screen and (max-width: 750px) {
+  .loox-space {
+    margin: 5px 10px 0 5px;
+  }
+  .on-mobile-flex {
+    display: flex !important;
+  }
   .on-mobile {
     display: block !important;
   }
@@ -6526,7 +6535,21 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
           align-items: center;
         }
       /* Media query to adjust layout for mobile screens */
-      @media (max-width: 768px) {
+      @media (min-width: 750px) {
+          .loox-rating-wrapper {
+            /* Use flexbox to stack the star icons and the text vertically */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center elements horizontally */
+          }
+      }
+      @media (max-width: 749px) {
+          .loox-rating-wrapper {
+            /* Use flexbox to stack the star icons and the text vertically */
+            display: flex;
+            flex-direction: row;
+            align-items: center; /* Center elements horizontally */
+          }
           .grid-cols-2-lap, .grid-cols-2-lap-reverse, .grid-cols-12 {
             grid-template-columns: repeat(1, minmax(0, 1fr));
           }
@@ -6552,13 +6575,6 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     align-items: flex-start;
   }
 
- /* Wrap the loox-rating and customize its content */
-.loox-rating-wrapper {
-  /* Use flexbox to stack the star icons and the text vertically */
-  display: flex;
-  flex-direction: column;
-  align-items: center; /* Center elements horizontally */
-}
 
 /* Customize the loox-rating-label */
 .loox-rating span.loox-rating-label {
@@ -6712,7 +6728,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
 }
 .flex-showcase {
   display: flex;
-  margin-top: 1.5rem !important;
+  margin-top: 0.7rem !important;
   flex-direction: row;
   flex-wrap: wrap;
   align-items: center;
