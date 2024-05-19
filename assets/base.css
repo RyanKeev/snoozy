@@ -4932,7 +4932,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   grid-column-gap: 19px;
   width: 100%;
   grid-template-columns: repeat(12, minmax(0, 1fr));
-  padding-top:  30px!important;
+  padding-top:  20px!important;
 }
 
 .section-image-content .benefits-layout:empty{
