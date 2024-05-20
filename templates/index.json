@@ -103,6 +103,7 @@
             "info_block_color": "#000000",
             "content_alignment": "left",
             "note": "",
+            "image": "shopify:\/\/shop_images\/kyliexsnoozy-block-web_da80363f-1d77-4441-a1eb-d22ce6b24065.jpg",
             "caption": "",
             "title": "<h1><em>Snoozy x Kylie<\/em><\/h1>",
             "content": "<p>Introducing our very first collab, we've partnered with superstar, Kylie Verzosa, known for her class and always feeling and looking the best. Spice up your bedroom with beautiful silk essentials, and experience true beauty sleep.<\/p>",
@@ -298,6 +299,7 @@
         "column_JpCjXp": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/nucleus.svg",
             "rating": "",
             "title": "<em>Infused with silver<\/em>",
             "text": "<p>Silver's been used for years as a natural, safe way to stop bacterial spread. <\/p>",
@@ -308,6 +310,7 @@
         "column_zKrzMT": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/bacteria.svg",
             "rating": "",
             "title": "<em>Stops bad bacteria<\/em>",
             "text": "<p>We're talking P. Acnes and Staph, shown to trigger acne and other skin concerns.<\/p>",
@@ -318,6 +321,7 @@
         "column_ahxBa9": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/approved_test.svg",
             "rating": "",
             "title": "<em>Lab-tested<\/em>",
             "text": "<p>Antibacterial for over two years, you can sleep easy knowing your silver's working.<\/p>",
@@ -403,6 +407,8 @@
             "before_text": "Before",
             "after_text": "After",
             "drag_initial_position": 50,
+            "video_poster": "shopify:\/\/shop_images\/1cc0eb5470bd44abbe45bde165dec929.thumbnail.0000000000_555x_b55e23b6-3cb9-407d-995e-c044a9d61839.jpg",
+            "video": "shopify:\/\/files\/videos\/promotional.HD-1080p-7.2Mbps-29200075.mp4",
             "show_benefits_block": true,
             "benefits_background": "#ffffff",
             "benefits_title_one": "SNOOZY",
