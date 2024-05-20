@@ -1,5 +1,24 @@
 <script src="{{ 'section-before-after.js' | asset_url }}" defer="defer"></script>
 
+{% if template == 'index' and section.id contains 'kyhAzY' %}
+<style>
+	#shopify-section-{{ section.id }} {
+		margin-top: -61px !important;
+	}
+	@media (min-width: 750px) {
+		#shopify-section-{{ section.id }} .wrap-rounded {
+			padding: 0 40px !important;
+			justify-content: center !important;
+		}
+	}
+	@media (max-width: 749px) {
+		#shopify-section-{{ section.id }} .wrap-rounded {
+			padding: 0px !important;
+			justify-content: center !important;
+		}
+	}
+</style>
+{% endif %}
 {% if section.settings.show_section %}
 	<section id="section-image-with-text-{{ section.id }}" class="section-image-content {% if section.settings.show_section_decor %}has-decor{% endif %} {% if section.settings.use_style_2_benefits_icon %} SectionImageWithTextTemplate2 {% endif %}" style="--background-section: {{ section.settings.section_background }}">
 		<div class="container">
