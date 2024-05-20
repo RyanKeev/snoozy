@@ -36,6 +36,8 @@
         "buttons_krVzyN"
       ],
       "settings": {
+        "image": "shopify:\/\/shop_images\/hero-banner-desktop-1.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/snoozy-mobile-desktop.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
@@ -54,19 +56,22 @@
         "review_iG7fKT": {
           "type": "review",
           "settings": {
-            "review_text": "This silver-infused pillowcase changed our hair and skin forever"
+            "review_text": "This silver-infused pillowcase changed our hair and skin forever",
+            "image": "shopify:\/\/shop_images\/vice-logo-transparent.png"
           }
         },
         "review_zyzmXB": {
           "type": "review",
           "settings": {
-            "review_text": "In as little as four weeks, the pillowcase works to prevent breakouts"
+            "review_text": "In as little as four weeks, the pillowcase works to prevent breakouts",
+            "image": "shopify:\/\/shop_images\/7_news_logo.png"
           }
         },
         "review_g7d4wN": {
           "type": "review",
           "settings": {
-            "review_text": "An amazing addition to beds everywhere to help promote the well-being of your skin"
+            "review_text": "An amazing addition to beds everywhere to help promote the well-being of your skin",
+            "image": "shopify:\/\/shop_images\/refinery29_logo.png"
           }
         }
       },
@@ -155,7 +160,6 @@
         "column_XRWUCP": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "Best Pillowcase 2022",
             "text": "",
@@ -166,7 +170,6 @@
         "column_gJzTkh": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "Best Pillowcase 2022",
             "text": "",
@@ -295,7 +298,6 @@
         "column_JpCjXp": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "<em>Infused with silver<\/em>",
             "text": "<p>Silver's been used for years as a natural, safe way to stop bacterial spread. <\/p>",
@@ -306,7 +308,6 @@
         "column_zKrzMT": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "<em>Stops bad bacteria<\/em>",
             "text": "<p>We're talking P. Acnes and Staph, shown to trigger acne and other skin concerns.<\/p>",
@@ -317,7 +318,6 @@
         "column_ahxBa9": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "<em>Lab-tested<\/em>",
             "text": "<p>Antibacterial for over two years, you can sleep easy knowing your silver's working.<\/p>",
@@ -405,9 +405,7 @@
             "drag_initial_position": 50,
             "show_benefits_block": true,
             "benefits_background": "#ffffff",
-            "benefits_image_one": "",
             "benefits_title_one": "SNOOZY",
-            "benefits_image_two": "",
             "benefits_title_two": "COTTON",
             "benefits_title_third": "",
             "benefits_title_fourth": ""
@@ -490,7 +488,6 @@
         "column_a4izQ8": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "<strong>@sam<\/strong>",
             "title": "<em>\"Sleeping will and protecting my skin with Snoozy\"<\/em>",
             "text": "",
@@ -501,7 +498,6 @@
         "column_pjCGdy": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "<strong>@zoe<\/strong>",
             "title": "<em>\"Thank you to Snoozy for a good, worry-free night's sleep\"<\/em>",
             "text": "",
@@ -512,7 +508,6 @@
         "column_CBbKqE": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "<strong>@kezia<\/strong>",
             "title": "<em>\"Thank you, thank you, thank you!\"<\/em>",
             "text": "",
@@ -524,7 +519,6 @@
           "type": "column",
           "disabled": true,
           "settings": {
-            "image": "",
             "rating": "★★★★★",
             "title": "<strong>\"EXTREMELY IMPRESSED\"<\/strong>",
             "text": "<p>\"I have hormonal acne and I'm extremely impressed. The second shot is after only one week using Silvi!\"<\/p><p><strong>Georgie B.<\/strong><\/p>",
@@ -591,7 +585,6 @@
         "column_jBeP9R": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "All Skin Types",
             "text": "",
@@ -602,7 +595,6 @@
         "column_zqekBk": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "Affordable",
             "text": "",
@@ -613,7 +605,6 @@
         "column_xKNFYK": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "Vegan Options",
             "text": "",
@@ -624,7 +615,6 @@
         "column_twVeWB": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "Ultra Soft",
             "text": "",
@@ -635,7 +625,6 @@
         "column_xPQPFH": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "Easy Care",
             "text": "",
@@ -646,7 +635,6 @@
         "column_PJDGf6": {
           "type": "column",
           "settings": {
-            "image": "",
             "rating": "",
             "title": "Top Rated",
             "text": "",
