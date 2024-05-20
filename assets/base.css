@@ -6690,6 +6690,9 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   }
 }
 
+.section + .section{
+  margin-top: 0 !important;
+ }
  @media (min-width: 750px){
   .product__title {
     max-width: 310px;
