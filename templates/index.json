@@ -22,7 +22,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "GET YOUR PILLOWCASE →",
-            "button_link_1": "",
+            "button_link_1": "#",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -36,7 +36,7 @@
         "buttons_krVzyN"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/hero-banner-desktop-1.jpg",
+        "image": "shopify:\/\/shop_images\/hero-banner-desktop-1_1.jpg",
         "mobile_image": "shopify:\/\/shop_images\/snoozy-mobile-desktop.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
