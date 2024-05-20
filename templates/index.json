@@ -494,6 +494,7 @@
         "column_a4izQ8": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/frontpage-ugc-2_1c54edfb-06ed-4453-b2e6-b4ccec3b7246.jpg",
             "rating": "<strong>@sam<\/strong>",
             "title": "<em>\"Sleeping will and protecting my skin with Snoozy\"<\/em>",
             "text": "",
@@ -504,6 +505,7 @@
         "column_pjCGdy": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/frontpage-ugc-1.jpg",
             "rating": "<strong>@zoe<\/strong>",
             "title": "<em>\"Thank you to Snoozy for a good, worry-free night's sleep\"<\/em>",
             "text": "",
@@ -514,6 +516,7 @@
         "column_CBbKqE": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/frontpage-ugc-3.jpg",
             "rating": "<strong>@kezia<\/strong>",
             "title": "<em>\"Thank you, thank you, thank you!\"<\/em>",
             "text": "",
