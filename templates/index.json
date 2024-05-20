@@ -114,6 +114,8 @@
             "before_text": "Before",
             "after_text": "After",
             "drag_initial_position": 50,
+            "show_benefits_on_desktop": true,
+            "show_benefits_on_mobile": true,
             "show_benefits_block": false,
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
@@ -194,6 +196,7 @@
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
+        "is_regular_title": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
@@ -340,6 +343,7 @@
         "disabled_fullwidth": true,
         "show_desktop": true,
         "show_mobile": false,
+        "is_regular_title": false,
         "title": "",
         "heading_size": "h0",
         "image_width": "small",
@@ -409,6 +413,8 @@
             "drag_initial_position": 50,
             "video_poster": "shopify:\/\/shop_images\/1cc0eb5470bd44abbe45bde165dec929.thumbnail.0000000000_555x_b55e23b6-3cb9-407d-995e-c044a9d61839.jpg",
             "video": "shopify:\/\/files\/videos\/promotional.HD-1080p-7.2Mbps-29200075.mp4",
+            "show_benefits_on_desktop": false,
+            "show_benefits_on_mobile": true,
             "show_benefits_block": true,
             "benefits_background": "#ffffff",
             "benefits_image_one": "shopify:\/\/shop_images\/snoozy-bacteria-snoozy.png",
@@ -549,6 +555,7 @@
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
+        "is_regular_title": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
@@ -596,6 +603,7 @@
         "column_jBeP9R": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/perfect_fit_50x50_f03f1f2d-3204-430e-95ec-036e9fb75937.svg",
             "rating": "",
             "title": "All Skin Types",
             "text": "",
@@ -606,6 +614,7 @@
         "column_zqekBk": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/fair_price_50x50_72e0ae56-5399-4c5e-97ec-c42744657290.svg",
             "rating": "",
             "title": "Affordable",
             "text": "",
@@ -616,6 +625,7 @@
         "column_xKNFYK": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/premium_quality_50x50_fe157f57-95c0-42c7-a0d7-867b82de1b2b.svg",
             "rating": "",
             "title": "Vegan Options",
             "text": "",
@@ -626,6 +636,7 @@
         "column_twVeWB": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/ultra_soft_50x50_6b83f63f-9a13-4257-ac4d-e71472007361.svg",
             "rating": "",
             "title": "Ultra Soft",
             "text": "",
@@ -636,6 +647,7 @@
         "column_xPQPFH": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/easy_care_50x50_d6edacc7-f6cf-4592-bbfb-037567c11829.svg",
             "rating": "",
             "title": "Easy Care",
             "text": "",
@@ -646,6 +658,7 @@
         "column_PJDGf6": {
           "type": "column",
           "settings": {
+            "image": "shopify:\/\/shop_images\/150k_reviews_50x50_ca444d0b-4b2d-4f1a-9aaf-1298bb74c2f8.svg",
             "rating": "",
             "title": "Top Rated",
             "text": "",
@@ -667,6 +680,7 @@
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": true,
+        "is_regular_title": true,
         "title": "",
         "heading_size": "h1",
         "image_width": "third",
