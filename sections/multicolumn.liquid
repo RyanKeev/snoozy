@@ -113,6 +113,15 @@
           endfor
         -%}
         <style>
+          #regularTitle{
+            font-size: inherit !important;
+            font-family: inherit !important;
+            text-align: inherit !important;
+            color: inherit !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            font-weight: 300 !important;
+          }
           .image-60-width {
             width:60% !important;
             height: auto !important;
@@ -225,7 +234,7 @@
                   </h3>
                 {% endif  %}
                 {%- if block.settings.title != blank -%}
-                  <h3 class="inline-richtext heading-title">{{ block.settings.title }}</h3>
+                  <h3 id="{% if section.settings.is_regular_title %}regularTitle{% endif %}" class="inline-richtext heading-title">{{ block.settings.title }}</h3>
                 {%- endif -%}
                 {%- if block.settings.text != blank -%}
                   <div class="rte">{{ block.settings.text }}</div>
@@ -330,6 +339,12 @@
       "id": "show_mobile",
       "default": false,
       "label": "Show on mobile"
+    },
+    {
+      "type": "checkbox",
+      "id": "is_regular_title",
+      "default": false,
+      "label": "Fix to regular title"
     },
     {
       "type": "inline_richtext",

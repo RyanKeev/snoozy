@@ -6446,6 +6446,9 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
 .on-mobile {
   display: none !important;
 }
+.on-desktop-flex {
+  display: flex !important;
+}
 .on-desktop {
   display: block !important;
 }
@@ -6466,6 +6469,9 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   }
   .on-mobile-flex {
     display: flex !important;
+  }
+  .on-desktop-flex {
+    display: none !important;
   }
   .on-mobile {
     display: block !important;
