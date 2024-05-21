@@ -6700,3 +6700,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     max-width: 100%;
   }
  }
+ 
+ .section + .section{
+  margin-top: 0 !important;
+ }
