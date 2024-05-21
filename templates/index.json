@@ -737,6 +737,20 @@
     },
     "1713757839ddfccfc4": {
       "type": "apps",
+      "blocks": {
+        "instafeed_app_block_4x63Rn": {
+          "type": "shopify:\/\/apps\/instafeed\/blocks\/app-block\/c447db20-095d-4a10-9725-b5977662c9d5",
+          "settings": {
+            "title": "",
+            "title_color": "",
+            "alignment": "center",
+            "html_area": ""
+          }
+        }
+      },
+      "block_order": [
+        "instafeed_app_block_4x63Rn"
+      ],
       "settings": {
         "include_margins": true
       }

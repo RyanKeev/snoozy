@@ -149,20 +149,8 @@
         "settings": {
         }
       },
-      "1868344454708136311": {
-        "type": "shopify:\/\/apps\/coming-soon-product-notify-me\/blocks\/coming-soon-product\/15cc8900-06cb-4f9e-ab8d-ef7624ebcd8a",
-        "disabled": true,
-        "settings": {
-        }
-      },
       "13375938897875554821": {
         "type": "shopify:\/\/apps\/qikify-sales-pop-up\/blocks\/app-embed\/688dd516-1cdc-4008-8329-23089a1c4e24",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "starapps-via": {
-        "type": "shopify:\/\/apps\/variant-image-automator\/blocks\/starapps-via-embed\/2a01d106-3d10-48e8-ba53-5cb971217ac4",
         "disabled": false,
         "settings": {
         }
@@ -179,57 +167,9 @@
         "settings": {
         }
       },
-      "starapps-vsk": {
-        "type": "shopify:\/\/apps\/swatch-king-variants-options\/blocks\/variant-swatch-king\/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
-        "disabled": false,
-        "settings": {
-          "alignment": "left",
-          "swatch_location": "After price",
-          "switch_on_hover": true,
-          "preselect_variant": false
-        }
-      },
-      "8605505498557855500": {
-        "type": "shopify:\/\/apps\/bogos-free-gift-buy-x-get-y\/blocks\/app-embed\/0432bba6-720a-4e95-be5a-b868386f7aa6",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "15683396631634586217": {
-        "type": "shopify:\/\/apps\/inbox\/blocks\/chat\/841fc607-4181-4ad1-842d-e24d7f8bad6b",
-        "disabled": false,
-        "settings": {
-          "button_color": "#000000",
-          "secondary_color": "#FFFFFF",
-          "ternary_color": "#6A6A6A",
-          "button_icon": "chat_bubble",
-          "button_text": "chat_with_us",
-          "button_horizontal_position": "bottom_right",
-          "button_vertical_position": "lowest",
-          "greeting_message": ""
-        }
-      },
-      "17676059084223943535": {
-        "type": "shopify:\/\/apps\/triplewhale\/blocks\/triple_pixel_snippet\/483d496b-3f1a-4609-aea7-8eee3b6b7a2a",
-        "disabled": false,
-        "settings": {
-        }
-      },
-      "pagefly-page-builder": {
-        "type": "shopify:\/\/apps\/pagefly-page-builder\/blocks\/app-embed\/83e179f7-59a0-4589-8c66-c0dddf959200",
-        "disabled": false,
-        "settings": {
-        }
-      },
       "1232542678405107163": {
         "type": "shopify:\/\/apps\/instafeed\/blocks\/head-block\/c447db20-095d-4a10-9725-b5977662c9d5",
         "disabled": false,
-        "settings": {
-        }
-      },
-      "14060646107696862457": {
-        "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
-        "disabled": true,
         "settings": {
         }
       }
