@@ -137,9 +137,7 @@
         endfor
     -%}
     {% assign value_handle = value | handleize %}
-        <script>
-            console.log("{{ value_handle }}")
-            </script>
+
     <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}"
            {% if option.selected_value == value %}checked{% endif %} {% if option_disabled %}class="disabled"{% endif %}
            data-option-handle="{{ option_handle }}">
@@ -150,9 +148,9 @@
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
                 class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
             </label>
-        {% elsif product.handle contains 'pillowcase' %}
+        {% elsif product.handle contains 'deep-sleep-mask' %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
-                class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+                class="product-variant-swatch color-swatch" style="background-image: url('deep-sleep-color-variant-{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
             </label>
         {% else %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
