@@ -150,7 +150,7 @@
             </label>
         {% elsif product.handle contains 'deep-sleep-mask' %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
-                class="product-variant-swatch color-swatch" style="background-image: url('deep-sleep-color-variant-{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+                class="product-variant-swatch color-swatch" style="background-image: url('{{ deep-sleep-color-variant-value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
             </label>
         {% else %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
