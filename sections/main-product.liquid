@@ -629,7 +629,6 @@
                             });
                         });
                       </script>
-                        
                       <script>
                         document.addEventListener("DOMContentLoaded", function() {
                             const labels = document.querySelectorAll(".bundle_swatch");
@@ -804,19 +803,19 @@
                                 <span class="bundle_swatch swatch_selected">
                                   <input type="radio" id="quantity1" name="quantity" value="1" checked>
                                   <label for="quantity1">
-                                  1 case - <span class="bundle_price pr-one-quantity"></span> each
+                                  {{block.settings.buy1_before_text}} - <span class="bundle_price pr-one-quantity"></span> each
                                   </label>
                                 </span>
                                 <span class="bundle_swatch ">
                                   <input type="radio" id="quantity2" name="quantity" value="2">
                                   <label for="quantity2">
-                                    2 cases - <span class="bundle_price pr-two-less-four-quantity"></span> each (Save 10% EXTRA)
+                                    {{block.settings.buy2_before_text}} - <span class="bundle_price pr-two-less-four-quantity"></span> each (Save 10% EXTRA)
                                   </label>
                                 </span>
                                 <span class="bundle_swatch ">
                                   <input type="radio" id="quantity4" name="quantity" value="4">
                                   <label for="quantity4">
-                                  4 cases - <span class="bundle_price pr-four-or-more-quantity"></span> each (Save 25% EXTRA)
+                                    {{block.settings.buy4_before_text}} - <span class="bundle_price pr-four-or-more-quantity"></span> each (Save 25% EXTRA)
                                   </label>
                                 </span>
                         <div class="quantity__rules caption no-js-hidden">
@@ -1527,18 +1526,21 @@
       "settings": [
         {
           "type": "text",
-          "id": "buy1_text",
-          "label": "Buy 1 Text"
+          "id": "buy1_before_text",
+          "label": "Buy 1 Before Text",
+          "default": "1 case"
         },
         {
           "type": "text",
-          "id": "buy2_text",
-          "label": "Buy 2 Text"
+          "id": "buy2_before_text",
+          "label": "Buy 2 Before Text",
+          "default": "2 cases"
         },
         {
           "type": "text",
-          "id": "buy4_text",
-          "label": "Buy 4 Text"
+          "id": "buy4_before_text",
+          "label": "Buy 4 Before Text",
+          "default": "4 cases"
         }
       ]
     },
