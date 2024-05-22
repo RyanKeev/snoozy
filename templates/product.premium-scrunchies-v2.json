@@ -141,9 +141,9 @@
         "quantity_bundle_selector_V3NWMz": {
           "type": "quantity_bundle_selector",
           "settings": {
-            "buy1_text": "1 case - ₱1.499 each",
-            "buy2_text": "2 cases - 1.349 each Save 10% EXTRA",
-            "buy4_text": "4 Cases - 1.274 each Save 15% EXTRA"
+            "buy1_before_text": "1 scrunchie",
+            "buy2_before_text": "2 scrunchies",
+            "buy4_before_text": "4 scrunchies"
           }
         },
         "buy_buttons": {
