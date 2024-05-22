@@ -4042,6 +4042,8 @@ header.header .menu-label{
   line-height: 1.5;
   color: #000000;
   font-size: 15px;
+  display: flex;
+  align-items: center;
 }
 
 .product-main-section .product-icons-list .text-wrap svg{

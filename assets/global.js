@@ -1110,7 +1110,6 @@ class VariantSelects extends HTMLElement {
                     prTwoLessFourQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.90).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
                     prFourOrMoreQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.75).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
                 }
-                
             }
 
             if (inventoryDestination)
