@@ -118,7 +118,7 @@
     "show_vendor": false,
     "show_cart_note": true,
     "cart_drawer_collection": "",
-    "checkout_logo_image": "shopify:\/\/shop_images\/snoozy-logo-black.png",
+    "checkout_logo_image": "shopify:\/\/shop_images\/snoozy-logo-square-512x512.png",
     "sections": {
       "main-password-header": {
         "type": "main-password-header",
