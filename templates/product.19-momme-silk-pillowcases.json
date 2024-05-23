@@ -153,9 +153,9 @@
         "quantity_bundle_selector_V3NWMz": {
           "type": "quantity_bundle_selector",
           "settings": {
-            "buy1_text": "1 case - ₱1.499 each",
-            "buy2_text": "2 cases - 1.349 each Save 10% EXTRA",
-            "buy4_text": "4 Cases - 1.274 each Save 15% EXTRA"
+            "buy1_before_text": "1 case",
+            "buy2_before_text": "2 cases",
+            "buy4_before_text": "4 cases"
           }
         },
         "buy_buttons": {
@@ -467,11 +467,42 @@
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
+        },
+        "image_picker_TURACR": {
+          "type": "image_picker",
+          "settings": {
+            "half_width": true,
+            "image_first": false,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "content_alignment": "center",
+            "note": "",
+            "caption": "",
+            "title": "<h1>Repels Bacteria Like An Invisible Forcefield<\/h1>",
+            "content": "<p>Our pillowcases can have 1000x more bacteria than your toilet seat, shown to clog pores and trigger breakouts. Like an invisible forcefield, Snoozy's silver stops 99.7% of the nasties before they affect your skin.<\/p>",
+            "author": "",
+            "button_label": "",
+            "button_link": "",
+            "active_before_after": false,
+            "before_text": "Before",
+            "after_text": "After",
+            "drag_initial_position": 50,
+            "video": "shopify:\/\/files\/videos\/Snoozy 02 Render - 1x1 (1).mp4",
+            "show_benefits_on_desktop": true,
+            "show_benefits_on_mobile": true,
+            "show_benefits_block": false,
+            "benefits_background": "#FFFFFF",
+            "benefits_title_one": "",
+            "benefits_title_two": "",
+            "benefits_title_third": "",
+            "benefits_title_fourth": ""
+          }
         }
       },
       "block_order": [
         "image_picker_bY3DR4",
-        "image_picker_g9yyE6"
+        "image_picker_g9yyE6",
+        "image_picker_TURACR"
       ],
       "settings": {
         "show_section": true,
