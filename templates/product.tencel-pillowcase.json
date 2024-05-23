@@ -656,6 +656,14 @@
     "3d977cfe-9935-4362-bb26-63085b713377": {
       "type": "section-faq",
       "blocks": {
+        "image_picker_Uf3mJ7": {
+          "type": "image_picker",
+          "settings": {
+            "question_background": "#f7f3eb",
+            "faq_question": "How can silk be vegan?",
+            "faq_answer": "<p>The Skin Saviour<strong>™<\/strong> is the perfect choice for the eco-conscious buyer. Made from sustainably sourced eucalyptus fibres, it offers the same skin and hair benefits as real silk. The Skin Saviour<strong>™ <\/strong>is made from TENCEL<strong>™ <\/strong>Lyocell, the gold-standard of natural alternatives to silk.<strong>  <\/strong><\/p>"
+          }
+        },
         "f591aed1-1b24-4d17-ac3d-be1800d26353": {
           "type": "image_picker",
           "settings": {
@@ -706,6 +714,7 @@
         }
       },
       "block_order": [
+        "image_picker_Uf3mJ7",
         "f591aed1-1b24-4d17-ac3d-be1800d26353",
         "95536cff-c742-4eda-9d93-260ba9187482",
         "ccb3e38b-7264-454f-898c-ec48251f4bfc",
