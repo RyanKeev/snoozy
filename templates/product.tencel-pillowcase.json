@@ -119,6 +119,7 @@
         },
         "product_showcase_links_WPExE8": {
           "type": "product_showcase_links",
+          "disabled": true,
           "settings": {
             "product_showcase_title": "",
             "product_showcase_inline_title": "Type",
