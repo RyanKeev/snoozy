@@ -348,7 +348,7 @@
         "column_kznqcU": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fbcomments-1.jpg",
+            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-1.png",
             "rating": "",
             "title": "",
             "text": "",
@@ -359,7 +359,7 @@
         "column_cWp4CG": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fbcomments-2.jpg",
+            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-2.png",
             "rating": "",
             "title": "",
             "text": "",
@@ -370,7 +370,7 @@
         "column_g7ceMb": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fbcomments-snoozy-3.jpg",
+            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-3.png",
             "rating": "",
             "title": "",
             "text": "",
@@ -471,11 +471,42 @@
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
+        },
+        "image_picker_eBWM3V": {
+          "type": "image_picker",
+          "settings": {
+            "half_width": true,
+            "image_first": false,
+            "info_block_background_color": "#FFFFFF",
+            "info_block_color": "#000000",
+            "content_alignment": "center",
+            "note": "",
+            "caption": "",
+            "title": "<h1>Repels Bacteria Like An Invisible Forcefield<\/h1>",
+            "content": "<p>Our pillowcases can have 1000x more bacteria than your toilet seat, shown to clog pores and trigger breakouts. Like an invisible forcefield, Snoozy's silver stops 99.7% of the nasties before they affect your skin.<\/p>",
+            "author": "",
+            "button_label": "",
+            "button_link": "",
+            "active_before_after": false,
+            "before_text": "Before",
+            "after_text": "After",
+            "drag_initial_position": 50,
+            "video": "shopify:\/\/files\/videos\/Snoozy 02 Render - 1x1.mp4",
+            "show_benefits_on_desktop": true,
+            "show_benefits_on_mobile": true,
+            "show_benefits_block": false,
+            "benefits_background": "#FFFFFF",
+            "benefits_title_one": "",
+            "benefits_title_two": "",
+            "benefits_title_third": "",
+            "benefits_title_fourth": ""
+          }
         }
       },
       "block_order": [
         "image_picker_bY3DR4",
-        "image_picker_g9yyE6"
+        "image_picker_g9yyE6",
+        "image_picker_eBWM3V"
       ],
       "settings": {
         "show_section": true,
