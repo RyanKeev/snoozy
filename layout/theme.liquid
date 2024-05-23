@@ -28,6 +28,13 @@ assign discount_25_money = discount_25 | money
 
 <script>
   // Function to update prices upon variant change
+  // Function to compute the discount percentage
+  function computeDiscountPercentage(originalPrice, discountedPrice) {
+    const difference = originalPrice - discountedPrice;
+    const percentage = (difference / originalPrice) * 100;
+    return Math.round(percentage);
+  }
+
   function updatePrices() {
     const moneyPrice = document.querySelector('.price .one-quantity').textContent;
     const discount10 = document.querySelector('.price .two-less-four-quantity').textContent;
@@ -66,6 +73,41 @@ assign discount_25_money = discount_25 | money
       oneQuantityElement.style.display = quantity === 1 ? 'inline-block' : 'none';
       twoLessFourQuantityElement.style.display = quantity >= 2 && quantity < 4 ? 'inline-block' : 'none';
       fourOrMoreQuantityElement.style.display = quantity >= 4 ? 'inline-block' : 'none';
+        
+      updateDiscountPercentage();
+    }
+
+  // Function to update the discount percentage display
+  function updateDiscountPercentage() {
+    const originalPriceElement = document.querySelector('.price-item.price-item--regular.orig-price');
+
+    if (!originalPriceElement) {
+        console.log('Original price element not found.');
+        return;
+    }
+
+    const originalPrice = parseFloat(originalPriceElement.textContent.trim().replace(/[^\d.]/g, ''));
+    let discountedPrice;
+
+    const oneQuantityElement = document.querySelector('.one-quantity');
+    const twoLessFourQuantityElement = document.querySelector('.two-less-four-quantity');
+    const fourOrMoreQuantityElement = document.querySelector('.four-or-more-quantity');
+
+    if (oneQuantityElement.style.display === 'inline-block') {
+        discountedPrice = parseFloat(oneQuantityElement.textContent.trim().replace(/[^\d.]/g, ''));
+    } else if (twoLessFourQuantityElement.style.display === 'inline-block') {
+        discountedPrice = parseFloat(twoLessFourQuantityElement.textContent.trim().replace(/[^\d.]/g, ''));
+    } else if (fourOrMoreQuantityElement.style.display === 'inline-block') {
+        discountedPrice = parseFloat(fourOrMoreQuantityElement.textContent.trim().replace(/[^\d.]/g, ''));
+    }
+    console.log(originalPriceElement,originalPrice)
+    if (originalPrice && discountedPrice) {
+        const discountPercentage = computeDiscountPercentage(originalPrice, discountedPrice);
+        const discountSaleSpan = document.getElementById('discount-sale');
+        if (discountSaleSpan) {
+            discountSaleSpan.textContent = `${discountPercentage}% OFF`;
+        }
+    }
   }
 
   // Function to set the bundle swatch to quantity 1
