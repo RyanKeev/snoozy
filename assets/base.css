@@ -6704,5 +6704,16 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
  }
  
  .section + .section{
-  margin-top: 0 !important;
+  margin-top: 10px !important;
  }
+
+ .placeholder_img_product {
+  max-width: 130px;
+  width: 100%;
+  position: absolute;
+  z-index: 10;
+  bottom: 10px;
+  right: 10px;
+ }
+
+

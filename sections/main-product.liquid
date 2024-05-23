@@ -97,7 +97,7 @@
   
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      {% render 'product-media-gallery', variant_images: variant_images %}
+      {% render 'product-media-gallery', variant_images: variant_images, placeholder_image: section.settings.placeholder_image %}
       <div class="product-media-blocks on-desktop"  style="margin-top:25px;">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
@@ -930,7 +930,7 @@
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
       <div class="grid__item product__media-wrapper small-hide">
-        {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %}
+        {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true, placeholder_image: section.settings.placeholder_image %}
       </div>
     {%- endif -%}
   </div>
@@ -3226,6 +3226,11 @@
       ],
       "default": "hide",
       "label": "t:sections.main-product.settings.mobile_thumbnails.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "placeholder_image",
+      "label": "Icon Image"
     },
     {
       "type": "checkbox",
