@@ -144,9 +144,9 @@
     {% if option_handle == 'color' %}
         {% comment %} shop.metaobjects.color[value_handle].image or  {% endcomment %}
         {% comment %} {% if product.handle contains 'pillowcase' %} {% endcomment %}
-        {% if product.handle contains 'pillowcase' %}
+        {% if product.handle contains 'skin-savior-pillowcase' %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
-                class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+                class="product-variant-swatch color-swatch" style="background-image: url('{{ "snoozy-skin-savior-variant-" | append: value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
             </label>
         {% elsif product.handle contains 'deep-sleep-mask' %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
@@ -160,6 +160,10 @@
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
                 class="product-variant-swatch color-swatch" style="background-image: url('{{ "skin-recovering-mask-color-variant-" | append: value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
             </label>
+        {% elsif product.handle contains 'pillowcase' %}
+        <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+            class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+        </label>
         {% else %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
                 class="product-variant-swatch color-swatch" style="background: {{ shop.metaobjects.color[value_handle].color }}" title="{{ value }}">
