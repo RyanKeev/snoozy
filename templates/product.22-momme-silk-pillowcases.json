@@ -472,20 +472,18 @@
             "benefits_title_fourth": ""
           }
         },
-        "image_picker_WpAiTw": {
+        "image_picker_4PfLWy": {
           "type": "image_picker",
-          "disabled": true,
           "settings": {
             "half_width": true,
             "image_first": false,
-            "info_block_background_color": "rgba(0,0,0,0)",
+            "info_block_background_color": "#FFFFFF",
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/about-us-image-2.jpg",
             "caption": "",
-            "title": "<h1>The Science Explained<\/h1>",
-            "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
+            "title": "<h1>Repels Bacteria Like An Invisible Forcefield<\/h1>",
+            "content": "<p>Our pillowcases can have 1000x more bacteria than your toilet seat, shown to clog pores and trigger breakouts. Like an invisible forcefield, Snoozy's silver stops 99.7% of the nasties before they affect your skin.<\/p>",
             "author": "",
             "button_label": "",
             "button_link": "",
@@ -493,14 +491,13 @@
             "before_text": "Before",
             "after_text": "After",
             "drag_initial_position": 50,
+            "video": "shopify:\/\/files\/videos\/Snoozy 02 Render - 1x1_8896920b-806d-47d0-bcdf-3dff3eea5431.mp4",
             "show_benefits_on_desktop": true,
             "show_benefits_on_mobile": true,
-            "show_benefits_block": true,
-            "benefits_background": "#ffffff",
-            "benefits_image_one": "shopify:\/\/shop_images\/snoozy-fewer-pores-icon.png",
-            "benefits_title_one": "title one",
-            "benefits_image_two": "shopify:\/\/shop_images\/snoozy-eliminate-bacteria-icon.png",
-            "benefits_title_two": "title two",
+            "show_benefits_block": false,
+            "benefits_background": "#FFFFFF",
+            "benefits_title_one": "",
+            "benefits_title_two": "",
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
@@ -509,7 +506,7 @@
       "block_order": [
         "image_picker_bY3DR4",
         "image_picker_g9yyE6",
-        "image_picker_WpAiTw"
+        "image_picker_4PfLWy"
       ],
       "settings": {
         "show_section": true,
