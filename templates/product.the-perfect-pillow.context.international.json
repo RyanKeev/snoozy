@@ -1,8 +1,0 @@
-{
-  "parent": "product.the-perfect-pillow.json",
-  "context": {
-    "market": "international"
-  },
-  "sections": {
-  }
-}
