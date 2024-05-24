@@ -251,6 +251,14 @@
     "collection_list_AJMB9L": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_exPCCe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "skin-savior™",
+            "button_text": "Shop here",
+            "button_link": ""
+          }
+        },
         "featured_collection_WJzPVz": {
           "type": "featured_collection",
           "settings": {
@@ -266,20 +274,12 @@
             "button_text": "Save 38% Now",
             "button_link": "shopify:\/\/products\/standard-pillowcase"
           }
-        },
-        "featured_collection_D48A3k": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "all-products",
-            "button_text": "Shop here",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
+        "featured_collection_exPCCe",
         "featured_collection_WJzPVz",
-        "featured_collection_8W3D8L",
-        "featured_collection_D48A3k"
+        "featured_collection_8W3D8L"
       ],
       "settings": {
         "show_desktop": false,
