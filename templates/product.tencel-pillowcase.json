@@ -416,7 +416,7 @@
           "type": "image_picker",
           "settings": {
             "half_width": true,
-            "image_first": false,
+            "image_first": true,
             "info_block_background_color": "#fbf5f4",
             "info_block_color": "#000000",
             "content_alignment": "center",
@@ -479,7 +479,7 @@
           "type": "image_picker",
           "settings": {
             "half_width": true,
-            "image_first": false,
+            "image_first": true,
             "info_block_background_color": "#ffffff",
             "info_block_color": "#000000",
             "content_alignment": "center",
