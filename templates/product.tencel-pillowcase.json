@@ -448,7 +448,7 @@
           "type": "image_picker",
           "settings": {
             "half_width": true,
-            "image_first": true,
+            "image_first": false,
             "info_block_background_color": "#fbf5f4",
             "info_block_color": "#000000",
             "content_alignment": "center",
