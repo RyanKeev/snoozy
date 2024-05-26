@@ -51,7 +51,7 @@
         "text_Kbamhx": {
           "type": "text",
           "settings": {
-            "text": "Can come down to PHP 1 per sleep over 2 years 🙌 ",
+            "text": "Perfect waves and curls without the heat damage! 👩‍🦱",
             "text_style": "body"
           }
         },
@@ -247,7 +247,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "none",
-            "content": "<p>•   Machine delicate wash with our washing bag or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<br\/><\/p><p>Silver Ion treatment keeps your Snoozy fresher for longer, meaning you only need to wash it every 10-14 days (3x less frequent than cotton!).<\/p>",
+            "content": "<p>•   Machine delicate wash with our washing bag or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<\/p>",
             "page": ""
           }
         },
@@ -794,6 +794,7 @@
       "block_order": [
         "loox_reviews_loox_dynamic_section_EtjnaR"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": false
       }
