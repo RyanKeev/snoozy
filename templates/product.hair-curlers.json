@@ -157,9 +157,9 @@
         "quantity_bundle_selector_V3NWMz": {
           "type": "quantity_bundle_selector",
           "settings": {
-            "buy1_before_text": "1 case",
-            "buy2_before_text": "2 cases",
-            "buy4_before_text": "4 cases"
+            "buy1_before_text": "1 curler",
+            "buy2_before_text": "2 curlers",
+            "buy4_before_text": "4 curlers"
           }
         },
         "buy_buttons": {
