@@ -334,6 +334,7 @@
         "heading_7crGEz",
         "text_AzpbJM"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -387,6 +388,7 @@
         "column_cWp4CG",
         "column_g7ceMb"
       ],
+      "disabled": true,
       "settings": {
         "show_shadow": true,
         "disabled_fullwidth": false,
@@ -468,7 +470,7 @@
             "show_benefits_on_desktop": false,
             "show_benefits_on_mobile": false,
             "show_benefits_block": true,
-            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-skin-savior-fb-comment_c91f1ea2-74e9-458e-8f16-8f6673910edc.png",
+            "general_benefit_image": "shopify:\/\/shop_images\/silk-hair-curlers-fb-comment.png",
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
@@ -540,6 +542,7 @@
       "block_order": [
         "heading_wTck7F"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -553,6 +556,7 @@
     },
     "multicolumn_mNrjRH": {
       "type": "multicolumn",
+      "disabled": true,
       "settings": {
         "image_banner": "shopify:\/\/shop_images\/snoozy-table-skin-savior.jpg",
         "show_shadow": false,
