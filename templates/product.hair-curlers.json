@@ -668,24 +668,16 @@
           "type": "image_picker",
           "settings": {
             "question_background": "#f7f3eb",
-            "faq_question": "How to use?",
-            "faq_answer": "<p>For best results, use on 80% dry hair.<\/p><ol><li>Place the silk hair curler over your head with even lengths of ribbon on each side of your face.<\/li><li>Optionally, use a clip to secure the curler, but avoid if possible to prevent catching on hair.<\/li><li>Split your hair into two sections.<\/li><li>Take a small section from the front of one side and wrap it around the ribbon away from your face.<\/li><li>With each wrap, add another small section of hair until all hair on that side is wrapped.<\/li><li>Secure with a silk scrunchie.<\/li><li>Repeat on the other side.<\/li><li>Leave for 2-3 hours for loose waves or overnight for best results.<\/li><li>For best results, sleep on a silk pillowcase to minimize frizz and keep hair hydrated.<\/li><li>In the morning, gently remove the scrunchies and curler to reveal smooth, heatless curls.<\/li><li>Brush gently with a wide-tooth comb or your fingers for extra volume.<\/li><\/ol>"
-          }
-        },
-        "f591aed1-1b24-4d17-ac3d-be1800d26353": {
-          "type": "image_picker",
-          "settings": {
-            "question_background": "#ffffff",
-            "faq_question": "What if Snoozy doesn't work for me?",
-            "faq_answer": "<p>If for any reason you feel that Snoozy isn't working for you or you're simply not vibing it, simply send us an email to hello@snoozy.com.ph and we'll fix you up with a full refund.<\/p>"
+            "faq_question": "How to use the hair curlers?",
+            "faq_answer": "<p>For best results, use on 80% dry hair.<\/p><p>STEP 1<br\/>Starting with slightly damp and parted hair, use the claw clip to hold the heatless curler on top of your head.<br\/><br\/>STEP 2<br\/>With the piece of hair closest to your parting, begin wrapping hair around the curler away from the face.<br\/>(Pro Tip: The smaller the sections of hair and more closely wrapped, the tighter the curl. The larger the sections and more widely wrapped, the bigger the wave.)<br\/><br\/>STEP 3<br\/>Working your way down, take additional sections of hair and wrap around the curler until all hair on each side has been wrapped.<br\/>(Pro Tip: Aim to make all sections the same size for evenly shaped curls.)<br\/><br\/>STEP 4<br\/>Secure the ends of the hair with your silk hair ties, remove the clip, and keep your curler in for just a few hours, or for best results, overnight!<br\/><br\/>THE RESULTS<br\/>Unwrap your locks to reveal your gorgeous curls or waves.<\/p>"
           }
         },
         "95536cff-c742-4eda-9d93-260ba9187482": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Is Snoozy really safe to sleep on?",
-            "faq_answer": "<p>It sure is! Silver has been used for decades (centuries, actually) as a safe way to stop bacterial spread. The silver ions also are infused into the fabric and cannot be inhaled, in case you were wondering!<\/p>"
+            "faq_question": "Are the hair curlers safe to use?",
+            "faq_answer": "<p>The Silk Hair Curlers are 100% safe to use. <\/p>"
           }
         },
         "ccb3e38b-7264-454f-898c-ec48251f4bfc": {
@@ -723,7 +715,6 @@
       },
       "block_order": [
         "image_picker_Uf3mJ7",
-        "f591aed1-1b24-4d17-ac3d-be1800d26353",
         "95536cff-c742-4eda-9d93-260ba9187482",
         "ccb3e38b-7264-454f-898c-ec48251f4bfc",
         "image_picker_ynBwXj",
