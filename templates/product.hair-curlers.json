@@ -680,14 +680,6 @@
             "faq_answer": "<p>The Silk Hair Curlers are 100% safe to use. <\/p>"
           }
         },
-        "ccb3e38b-7264-454f-898c-ec48251f4bfc": {
-          "type": "image_picker",
-          "settings": {
-            "question_background": "#ffffff",
-            "faq_question": "Will the antibacterial effects wear off over time?",
-            "faq_answer": "<p>Yes, but very slowly. In fact, even after 50 washes, the antibacterial decrease is just 1% (still 98% effective).<\/p>"
-          }
-        },
         "image_picker_ynBwXj": {
           "type": "image_picker",
           "settings": {
@@ -716,7 +708,6 @@
       "block_order": [
         "image_picker_Uf3mJ7",
         "95536cff-c742-4eda-9d93-260ba9187482",
-        "ccb3e38b-7264-454f-898c-ec48251f4bfc",
         "image_picker_ynBwXj",
         "caf0fac1-1888-4f1c-9393-e61de8324dc1",
         "a45422fb-336d-4598-bcfd-ddab8fbd0d6c"
