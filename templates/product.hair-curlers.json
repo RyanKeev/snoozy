@@ -51,7 +51,7 @@
         "text_Kbamhx": {
           "type": "text",
           "settings": {
-            "text": "Only a little over ₱3 per sleep over 2 years 🙌 ",
+            "text": "Perfect waves and curls without the heat damage! 👩‍🦱",
             "text_style": "body"
           }
         },
@@ -191,15 +191,15 @@
           "type": "description-capture",
           "settings": {
             "paragraph_1_title": "<strong>Why Snoozy's special?<\/strong>",
-            "paragraph_1_content": "Prepare yourself for love at first sleep with the most premium silk pillowcase treated with natural silver, scientifically shown to eliminate 99.7% of bacteria linked to acne & breakouts. This pillowcase is for you if only the best is good enough! Skin and hair benefits with long-lasting effect.",
-            "paragraph_2_title": "<strong>How can Snoozy help you?<\/strong>",
-            "paragraph_2_content": "Safe for all skin types, ages, and chemical-free. In 30 days, Snoozy works to prevent and improve:",
+            "paragraph_1_content": "The viral hair curlers made even better. Create perfect waves and curls without the heat damage. Made from 100% pure 22 momme mulberry silk grade 6A, the new Silk Hair Curlers are the best heatless way to curl your hair and keep it stylish and healthy. Skip the damage on your hair routine and say hello to gorgeous hair.",
+            "paragraph_2_title": "<strong>How can the curlers help you?<\/strong>",
+            "paragraph_2_content": "Safe for all hair types and lengths. Snoozy's Silk Hair Curls are your new go-to for many reasons:",
             "paragraph_3_title": "<strong>You'll also love that:<\/strong>",
-            "paragraph_3_content": "Our 22-momme pillowcase is made from pure 6A-grade mulberry silk to give you the most superior pillowcase out there. Snoozy's  sustainable, and 4.5x more breathable & cooling than cotton (goodbye midnight sweats). It's so soft you'll think you're sleeping on a cloud.",
-            "list_1_title": "<strong>Skin concerns<\/strong>",
-            "list_1_content": "Acne & breakouts,\nClogged pores,\nDry skin & redness,\nFine lines & wrinkles",
-            "list_2_title": "<strong>Hair concerns<\/strong>",
-            "list_2_content": "Split ends,\nTangles & knots,\nFrizziness,\nBreakages"
+            "paragraph_3_content": "It's so easy to use. You'll have no heat curls in a few quick steps and enjoy beautiful curls without damage. The silk curler comes with a matching bag.",
+            "list_1_title": "<strong>Say hi to<\/strong>",
+            "list_1_content": "Perfect waves & curls,\nFrizz-free hair,\nHydrated hair,\nBeautiful shine",
+            "list_2_title": "<strong>And goodbye to<\/strong>",
+            "list_2_content": "Heat damage,\nHair breakage,\nFrizziness,\nBreakages"
           }
         },
         "description": {
@@ -233,7 +233,7 @@
           "settings": {
             "heading": "Material Specs",
             "icon": "none",
-            "content": "<p><strong>Fabric: <\/strong>100% 22-momme 6A-grade Mulberry Silk<br\/><strong>Closure: <\/strong>Hidden zipper<br\/><strong>Treatment: <\/strong>Antibacterial silver ions<br\/><strong>Ethically Certified: <\/strong>Yes (Oeko-Tex®)<br\/><br\/><strong>Animal Tested:<\/strong> No<br\/><strong>Artificial Chemicals:<\/strong> None<\/p>",
+            "content": "<p><strong>Fabric: <\/strong>100% 22-momme 6A-grade Mulberry Silk<br\/><strong>Ethically Certified: <\/strong>Yes (Oeko-Tex®)<\/p><p><strong>Animal Tested:<\/strong> No<br\/><strong>Artificial Chemicals:<\/strong> None<\/p>",
             "page": ""
           }
         },
@@ -242,7 +242,7 @@
           "settings": {
             "heading": "Care Instructions",
             "icon": "none",
-            "content": "<p>•   Machine delicate wash with our washing bag or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<br\/><\/p><p>Silver Ion treatment keeps your Snoozy fresher for longer, meaning you only need to wash it every 10-14 days (3x less frequent than cotton!).<\/p>",
+            "content": "<p>•   Machine delicate wash with our washing bag or hand wash (cold setting)<br\/>•   Use pH neutral detergent<br\/>•   Do not bleach, tumble dry or dry clean (no trichloroethylene)<br\/>•   Iron low heat<\/p>",
             "page": ""
           }
         },
@@ -258,7 +258,7 @@
         "collapsible_tab_cnjdcd": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "100 Day Money Back Guarantee",
+            "heading": "150 Night Money Back Guarante",
             "icon": "none",
             "content": "<p>We know some things take time, that's why we offer a 150 night trial. If for any reason you're not loving your Snoozy pillowcase after 150 days, send it back for a full refund + return postage.<br\/><\/p><p>Note: This is not applicable for colour exchanges.<\/p>",
             "page": ""
