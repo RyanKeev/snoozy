@@ -313,14 +313,14 @@
         "heading_7crGEz": {
           "type": "heading",
           "settings": {
-            "heading": "Real Results <br> in Just 30 Days",
+            "heading": "Real Results From Real People!",
             "heading_size": "h1"
           }
         },
         "text_AzpbJM": {
           "type": "text",
           "settings": {
-            "text": "<p>See why 150k+ choose Snoozy<\/p>"
+            "text": "<p>See why 10k+ choose Snoozy<\/p>"
           }
         }
       },
@@ -345,7 +345,7 @@
         "column_kznqcU": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fbcomments-1_0682437b-e185-4487-910b-6d790704839c.jpg",
+            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-3.png",
             "rating": "",
             "title": "",
             "text": "",
@@ -356,7 +356,7 @@
         "column_cWp4CG": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fbcomments-2_a36b4dde-8073-4bb8-b340-ab579846ff72.jpg",
+            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-2.png",
             "rating": "",
             "title": "",
             "text": "",
@@ -367,7 +367,7 @@
         "column_g7ceMb": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/fbcomments-snoozy-3.jpg",
+            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-1.png",
             "rating": "",
             "title": "",
             "text": "",
@@ -410,12 +410,12 @@
           "type": "image_picker",
           "settings": {
             "half_width": true,
-            "image_first": false,
+            "image_first": true,
             "info_block_background_color": "#fbf5f4",
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/snoozy-science-expained.jpg",
+            "image": "shopify:\/\/shop_images\/snoozy-skin-savior-science-explained_88a7c7b6-13c0-41fe-8514-02bbbb8105ed.jpg",
             "caption": "",
             "title": "<h1>The Science Explained<\/h1>",
             "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
@@ -442,14 +442,14 @@
           "type": "image_picker",
           "settings": {
             "half_width": true,
-            "image_first": true,
+            "image_first": false,
             "info_block_background_color": "#fbf5f4",
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/snoozy-pdp-gift.jpg",
+            "image": "shopify:\/\/shop_images\/skin-savior-block-kylie.jpg",
             "caption": "",
-            "title": "<h1>Visible results in 4 nights<\/h1>",
+            "title": "<h1>Results in a flash<\/h1>",
             "content": "<p><strong>Designed by dermatologists to recover your skin <\/strong>overnight and protect it from irritation- and acne-causing bacteria. This pillowcase with silver ions will give you <strong>better sleep and real results.<\/strong><\/p>",
             "author": "",
             "button_label": "",
@@ -461,7 +461,7 @@
             "show_benefits_on_desktop": false,
             "show_benefits_on_mobile": false,
             "show_benefits_block": true,
-            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-gift-testimonial.png",
+            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-skin-savior-fb-comment_c91f1ea2-74e9-458e-8f16-8f6673910edc.png",
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
@@ -473,7 +473,7 @@
           "type": "image_picker",
           "settings": {
             "half_width": true,
-            "image_first": false,
+            "image_first": true,
             "info_block_background_color": "#ffffff",
             "info_block_color": "#000000",
             "content_alignment": "center",
