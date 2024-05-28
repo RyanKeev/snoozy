@@ -6702,7 +6702,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   max-width: 130px;
   width: 100%;
   position: absolute;
-  z-index: 10;
+  z-index: 2;
   bottom: 10px;
   right: 10px;
  }
