@@ -14,3 +14,4 @@ Thumbs.db
 process.env
 config.yml
 node_modules
+.json
