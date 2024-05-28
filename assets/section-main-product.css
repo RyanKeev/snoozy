@@ -1710,9 +1710,8 @@ a.product__text {
   -o-border-radius: 0;
   width: 550px;
   margin: 0 auto;
-  height: auto;
+  height: 100%;
 }
-
 
 /* PRODUCT TEMPLATE END */
 
