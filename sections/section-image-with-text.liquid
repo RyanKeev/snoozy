@@ -30,7 +30,9 @@
 				{%- for block in section.blocks -%}
 					<style>
 						#shopify-section-{{ section.id }} .wrap-rounded {
-							height: 100%;
+							{% comment %} height: 100%; {% endcomment %}
+							height: auto;
+							max-height: 480px;
 							background: {{ block.settings.info_block_background_color }};
 							{% if block.settings.info_block_background_color != section.settings.section_background %}padding: 0 20px; {% endif %}
 							justify-content: center;
@@ -58,7 +60,8 @@
 								font-family: var(--ff-harmonia-semibold) !important;
 							  }
 							#shopify-section-{{ section.id }} .wrap-rounded {
-								height: 100%;
+								height: auto;
+								{% comment %} height: 100%; {% endcomment %}
 								background: {{ block.settings.info_block_background_color }};
 								padding: 2rem 0rem;
 								align-items: start;
