@@ -328,6 +328,7 @@
         "heading_7crGEz",
         "text_AzpbJM"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -381,6 +382,7 @@
         "column_cWp4CG",
         "column_g7ceMb"
       ],
+      "disabled": true,
       "settings": {
         "show_shadow": true,
         "disabled_fullwidth": false,
@@ -415,10 +417,10 @@
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/snoozy-skin-savior-science-explained_88a7c7b6-13c0-41fe-8514-02bbbb8105ed.jpg",
+            "image": "shopify:\/\/shop_images\/silk-hair-curler-curls-web-2.jpg",
             "caption": "",
-            "title": "<h1>The Science Explained<\/h1>",
-            "content": "<p>Antibacterial silver has been used for years as a safe way to stop smell and bacterial spread. Silver ions bind to bacteria to prevent them from reproducing.<\/p>",
+            "title": "<h1>Naturally beautiful curls<\/h1>",
+            "content": "<p>Get salon-like curls without breaking the bank or your hair. Excessive heat on hair can weaken the follicles, leading to breakage and increased hair loss. A heatless curler is the perfect quick and easy way to have beautifully styled hair with zero damage.<\/p>",
             "author": "",
             "button_label": "",
             "button_link": "",
@@ -430,10 +432,10 @@
             "show_benefits_on_mobile": false,
             "show_benefits_block": true,
             "benefits_background": "rgba(0,0,0,0)",
-            "benefits_image_one": "shopify:\/\/shop_images\/snoozy-eliminate-bacteria-icon.png",
-            "benefits_title_one": "Bacteria naturally  eliminated",
-            "benefits_image_two": "shopify:\/\/shop_images\/snoozy-fewer-pores-icon.png",
-            "benefits_title_two": "Fewer clogged  pores and breakouts",
+            "benefits_image_one": "shopify:\/\/shop_images\/icon-curls.png",
+            "benefits_title_one": "Beautiful, natural curls",
+            "benefits_image_two": "shopify:\/\/shop_images\/hair-breakage-icon_f278ae1f-6dd9-4c18-b001-0edfc67ee044.png",
+            "benefits_title_two": "No hair breakage or damage",
             "benefits_title_third": "",
             "benefits_title_fourth": ""
           }
@@ -447,21 +449,22 @@
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
-            "image": "shopify:\/\/shop_images\/skin-savior-block-kylie.jpg",
             "caption": "",
-            "title": "<h1>Results in a flash<\/h1>",
-            "content": "<p><strong>Designed by dermatologists to recover your skin <\/strong>overnight and protect it from irritation- and acne-causing bacteria. This pillowcase with silver ions will give you <strong>better sleep and real results.<\/strong><\/p>",
+            "title": "<h1>Undeniable results<\/h1>",
+            "content": "<p>With just a few minutes of effort, you can get the most beautiful curls. Less time consuming than ordinary curlers, but even better results. And it doesn't damage your hair either!<\/p>",
             "author": "",
             "button_label": "",
             "button_link": "",
-            "active_before_after": false,
+            "active_before_after": true,
+            "before_image": "shopify:\/\/shop_images\/silk-hair-curlers-before-web_91546c2a-4a63-450e-a4a9-87605d0491ed.jpg",
+            "after_image": "shopify:\/\/shop_images\/silk-hair-curlers-after-web_c5ff2f69-6b89-43b3-a344-2d7f9bc9816c.jpg",
             "before_text": "Before",
             "after_text": "After",
             "drag_initial_position": 50,
             "show_benefits_on_desktop": false,
             "show_benefits_on_mobile": false,
             "show_benefits_block": true,
-            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-skin-savior-fb-comment_c91f1ea2-74e9-458e-8f16-8f6673910edc.png",
+            "general_benefit_image": "shopify:\/\/shop_images\/silk-hair-curlers-fb-comment.png",
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
@@ -478,9 +481,10 @@
             "info_block_color": "#000000",
             "content_alignment": "center",
             "note": "",
+            "image": "shopify:\/\/shop_images\/silk-hair-curler-white-3-web_b1e6c043-b038-43b8-ad12-623f1b5cb5d0.jpg",
             "caption": "",
-            "title": "<h1>Repels Bacteria Like An Invisible Forcefield<\/h1>",
-            "content": "<p>Our pillowcases can have 1000x more bacteria than your toilet seat, shown to clog pores and trigger breakouts. Like an invisible forcefield, Snoozy's silver stops 99.7% of the nasties before they affect your skin.<\/p>",
+            "title": "<h1>Easy to use<\/h1>",
+            "content": "<p>The Silk Hair Curlers are super easy to use, giving you beautiful curls with close to no effort. Just take 5 minutes to place the curling rod on your hair and start wrapping. That’s it! No buttons, no settings, no temperatures to watch out for.<\/p>",
             "author": "",
             "button_label": "",
             "button_link": "",
@@ -488,7 +492,6 @@
             "before_text": "Before",
             "after_text": "After",
             "drag_initial_position": 50,
-            "video": "shopify:\/\/files\/videos\/Snoozy 02 Render - 1x1 (1).mp4",
             "show_benefits_on_desktop": true,
             "show_benefits_on_mobile": true,
             "show_benefits_block": false,
@@ -514,8 +517,8 @@
         "section_title": ""
       }
     },
-    "replo_silkpilllowcase_statistic_jii9C8": {
-      "type": "replo-silkpilllowcase-statistic",
+    "replo_hair_rollers_statistic_CzGmFB": {
+      "type": "replo-hair-rollers-statistic",
       "settings": {
       }
     },
@@ -533,6 +536,7 @@
       "block_order": [
         "heading_wTck7F"
       ],
+      "disabled": true,
       "settings": {
         "show_desktop": false,
         "show_mobile": false,
@@ -546,6 +550,7 @@
     },
     "multicolumn_mNrjRH": {
       "type": "multicolumn",
+      "disabled": true,
       "settings": {
         "image_banner": "shopify:\/\/shop_images\/snoozy-table-marketplaces.jpg",
         "show_shadow": false,
@@ -657,39 +662,31 @@
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "What if Snoozy doesn't work for me?",
-            "faq_answer": "<p>If for any reason you feel that Snoozy isn't working for you or you're simply not vibing it, simply send us an email to hello@snoozy.com.ph and we'll fix you up with a full refund.<br\/><\/p>"
+            "faq_question": "How to use the hair curlers?",
+            "faq_answer": "<p>For best results, use on 80% dry hair.<\/p><p>STEP 1<br\/>Starting with slightly damp and parted hair, use the claw clip to hold the heatless curler on top of your head.<br\/><br\/>STEP 2<br\/>With the piece of hair closest to your parting, begin wrapping hair around the curler away from the face.<br\/>(Pro Tip: The smaller the sections of hair and more closely wrapped, the tighter the curl. The larger the sections and more widely wrapped, the bigger the wave.)<br\/><br\/>STEP 3<br\/>Working your way down, take additional sections of hair and wrap around the curler until all hair on each side has been wrapped.<br\/>(Pro Tip: Aim to make all sections the same size for evenly shaped curls.)<br\/><br\/>STEP 4<br\/>Secure the ends of the hair with your silk hair ties, remove the clip, and keep your curler in for just a few hours, or for best results, overnight!<br\/><br\/>THE RESULTS<br\/>Unwrap your locks to reveal your gorgeous curls or waves.<\/p>"
           }
         },
         "95536cff-c742-4eda-9d93-260ba9187482": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Is Snoozy really safe to sleep on?",
-            "faq_answer": "<p>It sure is! Silver has been used for decades (centuries, actually) as a safe way to stop bacterial spread. The silver ions also are infused into the fabric and cannot be inhaled, in case you were wondering!<\/p>"
+            "faq_question": "Are the hair curlers safe to use?",
+            "faq_answer": "<p>The Silk Hair Curlers are 100% safe to use.<\/p>"
           }
         },
         "ccb3e38b-7264-454f-898c-ec48251f4bfc": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Will the antibacterial effects wear off over time?",
-            "faq_answer": "<p>Yes, but very slowly. In fact, even after 50 washes, the antibacterial decrease is just 1% (still 98% effective).<\/p>"
+            "faq_question": "How do I track my order?",
+            "faq_answer": "<p>We'll send you a tracking code as soon as the package has left our premise!<\/p>"
           }
         },
         "caf0fac1-1888-4f1c-9393-e61de8324dc1": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "How do I track my order?",
-            "faq_answer": "<p>We'll send you a tracking code within as soon is your package has left our premise.<\/p>"
-          }
-        },
-        "a45422fb-336d-4598-bcfd-ddab8fbd0d6c": {
-          "type": "image_picker",
-          "settings": {
-            "question_background": "#ffffff",
-            "faq_question": "Can children or pregnant women use Argie?",
+            "faq_question": "Can children or pregnant women use Snoozy?",
             "faq_answer": "<p>Yep! Our silver technology is perfectly safe for children and pregnant women.<\/p>"
           }
         }
@@ -698,8 +695,7 @@
         "f591aed1-1b24-4d17-ac3d-be1800d26353",
         "95536cff-c742-4eda-9d93-260ba9187482",
         "ccb3e38b-7264-454f-898c-ec48251f4bfc",
-        "caf0fac1-1888-4f1c-9393-e61de8324dc1",
-        "a45422fb-336d-4598-bcfd-ddab8fbd0d6c"
+        "caf0fac1-1888-4f1c-9393-e61de8324dc1"
       ],
       "settings": {
         "show_section": true,
@@ -749,6 +745,7 @@
     },
     "1715132442c2f542d4": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -771,6 +768,7 @@
       "block_order": [
         "loox-product-reviews"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": false
       }
@@ -782,7 +780,7 @@
     "rich_text_3kKKa6",
     "multicolumn_XXj866",
     "section_image_with_text_cgYrLq",
-    "replo_silkpilllowcase_statistic_jii9C8",
+    "replo_hair_rollers_statistic_CzGmFB",
     "rich_text_PyB7yH",
     "multicolumn_mNrjRH",
     "8f25fb51-6152-4228-93dc-0f38bf14c7ff",
