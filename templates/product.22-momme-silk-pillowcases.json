@@ -461,7 +461,7 @@
             "show_benefits_on_desktop": false,
             "show_benefits_on_mobile": false,
             "show_benefits_block": true,
-            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-fb-comment-19-momme.png",
+            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-gift-testimonial.png",
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
@@ -472,8 +472,8 @@
         "image_picker_ef9pnA": {
           "type": "image_picker",
           "settings": {
-            "half_width": false,
-            "image_first": true,
+            "half_width": true,
+            "image_first": false,
             "info_block_background_color": "#ffffff",
             "info_block_color": "#000000",
             "content_alignment": "center",
