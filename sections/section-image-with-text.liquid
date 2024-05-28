@@ -32,7 +32,7 @@
 						#shopify-section-{{ section.id }} .wrap-rounded {
 							height: 100%;
 							background: {{ block.settings.info_block_background_color }};
-							padding: 0 40px;
+							{% if block.settings.info_block_background_color != section.settings.section_background %}padding: 0 20px; {% endif %}
 							justify-content: center;
 							border-radius: 10px;
 							-webkit-border-radius: 10px;
