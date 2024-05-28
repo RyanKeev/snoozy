@@ -657,11 +657,19 @@
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "What if Snoozy doesn't work for me?",
-            "faq_answer": "<p>If for any reason you feel that Snoozy isn't working for you or you're simply not vibing it, simply send us an email to hello@snoozy.com.ph and we'll fix you up with a full refund.<br\/><\/p>"
+            "faq_question": "How can silk be vegan?",
+            "faq_answer": "<p>The Skin Savior<strong>™<\/strong>is the perfect choice for the eco-conscious buyer. Made from sustainably sourced eucalyptus fibres, it offers the same skin and hair benefits as real silk. The Skin Savior<strong>™<\/strong>is made from TENCEL<strong>™<\/strong>Lyocell, the gold-standard of natural alternatives to silk.<\/p>"
           }
         },
         "95536cff-c742-4eda-9d93-260ba9187482": {
+          "type": "image_picker",
+          "settings": {
+            "question_background": "#ffffff",
+            "faq_question": "What if Snoozy doesn't work for me?",
+            "faq_answer": "<p>If for any reason you feel that Snoozy isn't working for you or you're simply not vibing it, simply send us an email to hello@snoozy.com.ph and we'll fix you up with a full refund.<\/p>"
+          }
+        },
+        "ccb3e38b-7264-454f-898c-ec48251f4bfc": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
@@ -669,7 +677,7 @@
             "faq_answer": "<p>It sure is! Silver has been used for decades (centuries, actually) as a safe way to stop bacterial spread. The silver ions also are infused into the fabric and cannot be inhaled, in case you were wondering!<\/p>"
           }
         },
-        "ccb3e38b-7264-454f-898c-ec48251f4bfc": {
+        "caf0fac1-1888-4f1c-9393-e61de8324dc1": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
@@ -677,19 +685,19 @@
             "faq_answer": "<p>Yes, but very slowly. In fact, even after 50 washes, the antibacterial decrease is just 1% (still 98% effective).<\/p>"
           }
         },
-        "caf0fac1-1888-4f1c-9393-e61de8324dc1": {
-          "type": "image_picker",
-          "settings": {
-            "question_background": "#ffffff",
-            "faq_question": "How do I track my order?",
-            "faq_answer": "<p>We'll send you a tracking code within as soon is your package has left our premise.<\/p>"
-          }
-        },
         "a45422fb-336d-4598-bcfd-ddab8fbd0d6c": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Can children or pregnant women use Argie?",
+            "faq_question": "How do I track my order?",
+            "faq_answer": "<p>We'll send you a tracking code as soon as the package has left our premise!<\/p>"
+          }
+        },
+        "image_picker_YgA6TU": {
+          "type": "image_picker",
+          "settings": {
+            "question_background": "#ffffff",
+            "faq_question": "Can children or pregnant women use Snoozy?",
             "faq_answer": "<p>Yep! Our silver technology is perfectly safe for children and pregnant women.<\/p>"
           }
         }
@@ -699,7 +707,8 @@
         "95536cff-c742-4eda-9d93-260ba9187482",
         "ccb3e38b-7264-454f-898c-ec48251f4bfc",
         "caf0fac1-1888-4f1c-9393-e61de8324dc1",
-        "a45422fb-336d-4598-bcfd-ddab8fbd0d6c"
+        "a45422fb-336d-4598-bcfd-ddab8fbd0d6c",
+        "image_picker_YgA6TU"
       ],
       "settings": {
         "show_section": true,
@@ -749,6 +758,7 @@
     },
     "1715132442c2f542d4": {
       "type": "apps",
+      "disabled": true,
       "settings": {
         "include_margins": true
       }
@@ -771,6 +781,7 @@
       "block_order": [
         "loox-product-reviews"
       ],
+      "disabled": true,
       "settings": {
         "include_margins": false
       }
