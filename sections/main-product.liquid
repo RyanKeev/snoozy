@@ -596,6 +596,31 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
+                      {%- liquid
+                        assign use_variant = true
+                       if use_variant
+                         assign target = product.selected_or_first_available_variant
+                       else
+                         assign target = product
+                       endif
+                     
+                       assign compare_at_price = target.compare_at_price
+                       assign price = target.price | default: 1999 | round
+                       assign available = target.available | default: false
+                       assign money_price = price | money
+                       if settings.currency_code_enabled
+                         assign money_price = price | money_with_currency
+                       endif
+                     
+                       if target == product and product.price_varies
+                         assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+                       endif
+                     
+                       assign discount_10 = price | times: 0.90 | divided_by: 100 | round | times: 100 
+                       assign discount_25 = price | times: 0.75 | divided_by: 100 | round | times: 100
+                       assign discount_10_money = discount_10 | money
+                       assign discount_25_money = discount_25 | money
+                     %}
                       <script>
                         document.addEventListener("DOMContentLoaded", function() {
                           const quantityRadios = document.querySelectorAll('input[name="quantity"]');
@@ -746,32 +771,6 @@
                           }
                         }
                       </style>
-                      {%- liquid
-                        assign use_variant = true
-                       if use_variant
-                         assign target = product.selected_or_first_available_variant
-                       else
-                         assign target = product
-                       endif
-                     
-                       assign compare_at_price = target.compare_at_price
-                       assign price = target.price | default: 1999 | round
-                       assign available = target.available | default: false
-                       assign money_price = price | money
-                       if settings.currency_code_enabled
-                         assign money_price = price | money_with_currency
-                       endif
-                     
-                       if target == product and product.price_varies
-                         assign money_price = 'products.product.price.from_price_html' | t: price: money_price
-                       endif
-                     
-                       assign discount_10 = price | times: 0.90 | divided_by: 100 | round | times: 100 
-                       assign discount_25 = price | times: 0.75 | divided_by: 100 | round | times: 100
-                       assign discount_10_money = discount_10 | money
-                       assign discount_25_money = discount_25 | money
-                     %}
-
                      <div id="Quantity-Form-{{ section.id }} bundle_swatches_custom" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} bundle-swatches"
                      {{ block.shopify_attributes }}
                      style="display: flex !important;gap: 16px !important;">
@@ -831,6 +830,7 @@
                             {%- endif -%}
                         </div>
                     </div>
+                    <script src="{{ 'price-ladder.js' | asset_url }}" defer="defer"></script>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
                   {%- when 'description-capture' -%}
