@@ -12,7 +12,7 @@
         "text_mmJb9V": {
           "type": "text",
           "settings": {
-            "text": "<strong>SILVER-INFUSED SILK PILLOWCASES<\/strong>",
+            "text": "<strong>THE NEW SILK SAVIOR™ PILLOWCASE<\/strong>",
             "text_style": "body"
           }
         },
@@ -28,7 +28,7 @@
           "type": "buttons",
           "settings": {
             "button_label_1": "GET YOUR PILLOWCASE →",
-            "button_link_1": "shopify:\/\/products\/19-momme-silk-pillowcase",
+            "button_link_1": "shopify:\/\/products\/skin-savior-pillowcase",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
@@ -42,8 +42,8 @@
         "buttons_krVzyN"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/hero-banner-desktop-1.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/snoozy-mobile-desktop.jpg",
+        "image": "shopify:\/\/shop_images\/hero-banner-desktop-vegan-2.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/hero-banner-mobile-vegan.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
@@ -109,7 +109,7 @@
             "info_block_color": "#000000",
             "content_alignment": "left",
             "note": "",
-            "image": "shopify:\/\/shop_images\/kyliexsnoozy-block-web_da80363f-1d77-4441-a1eb-d22ce6b24065.jpg",
+            "image": "shopify:\/\/shop_images\/kylie-snoozy-web-block.jpg",
             "caption": "",
             "title": "<h1><em>Snoozy x Kylie<\/em><\/h1>",
             "content": "<p>Introducing our very first collab, we've partnered with superstar, Kylie Verzosa, known for her class and always feeling and looking the best. Spice up your bedroom with beautiful silk essentials, and experience true beauty sleep.<\/p>",
@@ -120,6 +120,8 @@
             "before_text": "Before",
             "after_text": "After",
             "drag_initial_position": 50,
+            "show_benefits_on_desktop": true,
+            "show_benefits_on_mobile": true,
             "show_benefits_block": false,
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
@@ -204,6 +206,7 @@
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
+        "is_regular_title": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
@@ -248,6 +251,14 @@
     "collection_list_AJMB9L": {
       "type": "collection-list",
       "blocks": {
+        "featured_collection_exPCCe": {
+          "type": "featured_collection",
+          "settings": {
+            "collection": "skin-savior™",
+            "button_text": "PRE-ORDER",
+            "button_link": "https:\/\/snoozy.com.ph\/products\/skin-savior-pillowcase"
+          }
+        },
         "featured_collection_WJzPVz": {
           "type": "featured_collection",
           "settings": {
@@ -263,20 +274,12 @@
             "button_text": "Save 38% Now",
             "button_link": "shopify:\/\/products\/standard-pillowcase"
           }
-        },
-        "featured_collection_D48A3k": {
-          "type": "featured_collection",
-          "settings": {
-            "collection": "all-products",
-            "button_text": "Shop here",
-            "button_link": ""
-          }
         }
       },
       "block_order": [
+        "featured_collection_exPCCe",
         "featured_collection_WJzPVz",
-        "featured_collection_8W3D8L",
-        "featured_collection_D48A3k"
+        "featured_collection_8W3D8L"
       ],
       "settings": {
         "show_desktop": false,
@@ -350,6 +353,7 @@
         "disabled_fullwidth": true,
         "show_desktop": true,
         "show_mobile": false,
+        "is_regular_title": false,
         "title": "",
         "heading_size": "h0",
         "image_width": "small",
@@ -418,6 +422,8 @@
             "after_text": "After",
             "drag_initial_position": 50,
             "video": "shopify:\/\/files\/videos\/Snoozy 02 Render - 1x1_8896920b-806d-47d0-bcdf-3dff3eea5431.mp4",
+            "show_benefits_on_desktop": false,
+            "show_benefits_on_mobile": true,
             "show_benefits_block": true,
             "benefits_background": "#ffffff",
             "benefits_image_one": "shopify:\/\/shop_images\/snoozy-bacteria-snoozy.png",
@@ -559,6 +565,7 @@
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": false,
+        "is_regular_title": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "full",
@@ -683,6 +690,7 @@
         "disabled_fullwidth": false,
         "show_desktop": false,
         "show_mobile": true,
+        "is_regular_title": false,
         "title": "",
         "heading_size": "h1",
         "image_width": "third",

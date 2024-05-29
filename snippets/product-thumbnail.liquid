@@ -15,7 +15,7 @@
     - media_fit: {String} Method ("contain" or "cover") to fit image into container
     - media_width: {Float} The width percentage that the media column occupies on desktop.
     - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
-
+    - placeholder : image below product thumbnail
     Usage:
     {% render 'product-thumbnail',
       media: media,
@@ -56,6 +56,9 @@
   <noscript>
     {%- if media.media_type == 'video' or media.media_type == 'external_video' -%}
       <span class="product__media-icon motion-reduce quick-add-hidden">{% render 'icon-play' %}</span>
+      {% if placeholder_image %}
+          <img src="{{ placeholder_image | img_url: 'master' }}" alt="placeholder_image-sleep" width="auto" height="auto" style="max-width:110px;width:100%;" />
+        {% endif %}
       <div class="product__media media">
         {{ media.preview_image | image_url: width: 1946 | image_tag:
           loading: lazy,
@@ -91,6 +94,9 @@
         endcase
       -%}
     </span>
+    {% if placeholder_image %}
+      <img src="{{ placeholder_image | img_url: 'master' }}" alt="placeholder_image-sleep" width="auto" height="auto" class="placeholder_img_product" />
+    {% endif %}
     <div class="loading-overlay__spinner hidden">
       <svg
         aria-hidden="true"

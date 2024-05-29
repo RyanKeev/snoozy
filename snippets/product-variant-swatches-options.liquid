@@ -141,12 +141,33 @@
     <input type="radio" id="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" name="{{ option.name }}" value="{{ value | escape }}" form="{{ product_form_id }}"
            {% if option.selected_value == value %}checked{% endif %} {% if option_disabled %}class="disabled"{% endif %}
            data-option-handle="{{ option_handle }}">
-    {% if option_handle == 'color' %}
+    {% if option_handle contains 'color' %}
         {% comment %} shop.metaobjects.color[value_handle].image or  {% endcomment %}
-        {% if product.handle contains 'pillowcase' %}
+        {% comment %} {% if product.handle contains 'pillowcase' %} {% endcomment %}
+        {% if product.handle contains 'skin-savior-pillowcase' %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
-                class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+                class="product-variant-swatch color-swatch" style="background-image: url('{{ "snoozy-skin-savior-variant-" | append: value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
             </label>
+        {% elsif product.handle contains 'deep-sleep-mask' %}
+            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+                class="product-variant-swatch color-swatch" style="background-image: url('{{ "deep-sleep-color-variant-" | append: value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+            </label>
+        {% elsif product.handle contains 'scrunchies' or option_handle contains 'scrunchies'  %}
+            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+                class="product-variant-swatch color-swatch" style="background-image: url('{{ "scrunchie-color-variant-" | append: value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+            </label>
+        {% elsif product.handle contains 'snoozy-sleep-mask' %}
+            <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+                class="product-variant-swatch color-swatch" style="background-image: url('{{ "skin-recovering-mask-color-variant-" | append: value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+            </label>
+        {% elsif product.handle contains 'pillowcase' %}
+        <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+            class="product-variant-swatch color-swatch" style="background-image: url('{{ value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+        </label>
+        {% elsif product.handle contains 'hair-curlers' %}
+        <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
+            class="product-variant-swatch color-swatch" style="background-image: url('{{ "snoozy-hair-curler-variant-" | append:value_handle | append: ".png" | asset_url }}'); background-size: cover;" title="{{ value }}">
+        </label>
         {% else %}
             <label for="{{ section.id }}-{{ option.position }}-{{ forloop.index0 }}" test="{{ variant.metafields.custom.variant_pre_order }}"
                 class="product-variant-swatch color-swatch" style="background: {{ shop.metaobjects.color[value_handle].color }}" title="{{ value }}">

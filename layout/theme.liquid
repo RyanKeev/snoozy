@@ -6,7 +6,6 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
-
 {%- liquid
   assign target = product.selected_or_first_available_variant
   
@@ -25,89 +24,6 @@ assign discount_25 = price | times: 0.75 | divided_by: 100 | round | times: 100
 assign discount_10_money = discount_10 | money
 assign discount_25_money = discount_25 | money
 %}
-
-<script>
-  // Function to update prices upon variant change
-  function updatePrices() {
-    const moneyPrice = document.querySelector('.price .one-quantity').textContent;
-    const discount10 = document.querySelector('.price .two-less-four-quantity').textContent;
-    const discount25 = document.querySelector('.price .four-or-more-quantity').textContent;
-
-      // Update the variant data element with the retrieved prices
-      const variantData = document.getElementById('variant-data');
-      if (!variantData) {
-          console.log('Variant data element not found.');
-          return;
-      }
-
-      variantData.setAttribute('data-money-price', moneyPrice);
-      variantData.setAttribute('data-discount-10-money', discount10);
-      variantData.setAttribute('data-discount-25-money', discount25);
-
-      // Update the displayed prices in the bundle DOM
-      document.querySelector('.pr-one-quantity').textContent = moneyPrice;
-      document.querySelector('.pr-two-less-four-quantity').textContent = discount10;
-      document.querySelector('.pr-four-or-more-quantity').textContent = discount25;
-
-      document.dispatchEvent(new CustomEvent('price:update'));
-  }
-
-  // Function to update the price display based on quantity
-  function updatePriceDisplay(quantity) {
-      const oneQuantityElement = document.querySelector('.one-quantity');
-      const twoLessFourQuantityElement = document.querySelector('.two-less-four-quantity');
-      const fourOrMoreQuantityElement = document.querySelector('.four-or-more-quantity');
-
-      if (!oneQuantityElement || !twoLessFourQuantityElement || !fourOrMoreQuantityElement) {
-          console.log('One or more quantity elements not found.');
-          return;
-      }
-
-      oneQuantityElement.style.display = quantity === 1 ? 'inline-block' : 'none';
-      twoLessFourQuantityElement.style.display = quantity >= 2 && quantity < 4 ? 'inline-block' : 'none';
-      fourOrMoreQuantityElement.style.display = quantity >= 4 ? 'inline-block' : 'none';
-  }
-
-  // Function to set the bundle swatch to quantity 1
-  function setDefaultBundleSwatch() {
-    const defaultQuantityInput = document.querySelector('input[name="quantity"][value="1"]');
-    if (defaultQuantityInput) {
-      defaultQuantityInput.checked = true;
-      defaultQuantityInput.dispatchEvent(new Event('change'));
-    }
-  }
-
-  // Function to attach event listeners to quantity inputs
-  function attachQuantityListeners() {
-      const quantityInputs = document.querySelectorAll('input[name="quantity"]');
-      quantityInputs.forEach(input => {
-          input.addEventListener('change', () => {
-              updatePriceDisplay(parseInt(input.value, 10));
-              updatePrices(); // Update prices when quantity changes
-          });
-      });
-  }
-
-  // Reinitialize on custom variant change event
-  document.addEventListener('variant:change', () => {
-      setDefaultBundleSwatch(); // Set bundle swatch to 1 on variant change
-      updatePrices(); // Ensure prices are updated on variant change
-      attachQuantityListeners(); // Reattach listeners to handle any DOM changes
-  });
-
-  // Function to initialize quantity listeners and reinitialize on variant change
-  function initializeQuantityListeners() {
-      attachQuantityListeners();
-      updatePrices(); // Ensure prices are updated on variant change
-  }
-
-  // Initialize listeners on DOM content load
-  document.addEventListener('DOMContentLoaded', () => {
-      initializeQuantityListeners();
-      updatePrices();
-  });
-</script>
-
 
 
 <!-- Include Owl Carousel CSS -->

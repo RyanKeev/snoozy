@@ -233,7 +233,7 @@ fieldset.product-form__input .form__label {
 }
 
 .product-form__input input[type='radio']:checked + label {
-  background-color: rgb(var(--color-foreground));
+  /* background-color: rgb(var(--color-foreground)); */
   color: rgb(var(--color-background));
 }
 
@@ -1682,7 +1682,7 @@ a.product__text {
     width: 50% !important;
   }
   .SectionImageWithTextTemplate2 .wrap-rounded {
-    padding: 0 !important;
+    padding: 20px 30px !important;
   }
 }
 
@@ -1710,9 +1710,8 @@ a.product__text {
   -o-border-radius: 0;
   width: 550px;
   margin: 0 auto;
-  height: auto;
+  height: 100%;
 }
-
 
 /* PRODUCT TEMPLATE END */
 

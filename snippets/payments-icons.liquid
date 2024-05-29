@@ -49,4 +49,14 @@
             {% endif %}
         </div>
     {% endif %}
+    {% if block.settings.icon_pay_6th != blank or block.settings.icon_pay_6th_img %}
+        <div class="icon-wrap">
+            {% if block.settings.icon_pay_6th != blank %}
+                {{ block.settings.icon_pay_6th }}
+            {% else %}
+                {{ block.settings.icon_pay_6th_img | image_url: width: 42
+                | image_tag: alt: "gallery image", loading: 'lazy', class: 'lazyload' }}
+            {% endif %}
+        </div>
+    {% endif %}
 </div>

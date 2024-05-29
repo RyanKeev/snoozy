@@ -5,6 +5,7 @@
   - block: {Object} passing the block information.
   - product_form_id: {String} product form id.
   - section_id: {String} id of section to which this snippet belongs.
+  - order_description: {String} Description if sellable or pre-order.
   - show_pickup_availability: {Boolean} for the pickup availability. If true the pickup availability is rendered, false - not rendered (optional).
 
   Usage:
@@ -28,14 +29,14 @@
     <div class="product-icons-list settings-icons-list {% if quantity %}has-quantity{% endif %}">
       <div class="list-item">
         <div class="image img-wrap shipped-today">{% render 'icons', icon: 'icon-shipped-today' %}</div>
-        <div class="text-wrap">Ordered before 10pm = Packed today</div>
+        <div class="text-wrap">{{ block.settings.order_description }}</div>
       </div>
       <div class="list-item">
         <div class="image img-wrap free-delivery">{% render 'icons', icon: 'icon-free-delivery' %}</div>
         {%- if shop.url contains 'ph' -%}
           <div class="text-wrap">Free nationwide delivery {% render 'icons', icon: 'icon-fhilippines-flag' %}</div>
         {%- else -%}
-          <div class="text-wrap">Free nationwide delivery {% render 'icons', icon: 'icon-singapore-flag' %}</div>
+          <div class="text-wrap">Free nationwide delivery {% render 'icons', icon: 'icon-usa-flag' %}</div>
         {%- endif -%}
       </div>
     </div>

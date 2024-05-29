@@ -97,7 +97,7 @@
   
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      {% render 'product-media-gallery', variant_images: variant_images %}
+      {% render 'product-media-gallery', variant_images: variant_images, placeholder_image: section.settings.placeholder_image %}
       <div class="product-media-blocks on-desktop"  style="margin-top:25px;">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
@@ -596,6 +596,31 @@
                       </div>
                     </div>
                     {%- when 'quantity_bundle_selector' -%}
+                      {%- liquid
+                        assign use_variant = true
+                       if use_variant
+                         assign target = product.selected_or_first_available_variant
+                       else
+                         assign target = product
+                       endif
+                     
+                       assign compare_at_price = target.compare_at_price
+                       assign price = target.price | default: 1999 | round
+                       assign available = target.available | default: false
+                       assign money_price = price | money
+                       if settings.currency_code_enabled
+                         assign money_price = price | money_with_currency
+                       endif
+                     
+                       if target == product and product.price_varies
+                         assign money_price = 'products.product.price.from_price_html' | t: price: money_price
+                       endif
+                     
+                       assign discount_10 = price | times: 0.90 | divided_by: 100 | round | times: 100 
+                       assign discount_25 = price | times: 0.75 | divided_by: 100 | round | times: 100
+                       assign discount_10_money = discount_10 | money
+                       assign discount_25_money = discount_25 | money
+                     %}
                       <script>
                         document.addEventListener("DOMContentLoaded", function() {
                           const quantityRadios = document.querySelectorAll('input[name="quantity"]');
@@ -629,7 +654,6 @@
                             });
                         });
                       </script>
-                        
                       <script>
                         document.addEventListener("DOMContentLoaded", function() {
                             const labels = document.querySelectorAll(".bundle_swatch");
@@ -747,31 +771,6 @@
                           }
                         }
                       </style>
-                      {%- liquid
-                        assign use_variant = true
-                       if use_variant
-                         assign target = product.selected_or_first_available_variant
-                       else
-                         assign target = product
-                       endif
-                     
-                       assign compare_at_price = target.compare_at_price
-                       assign price = target.price | default: 1999 | round
-                       assign available = target.available | default: false
-                       assign money_price = price | money
-                       if settings.currency_code_enabled
-                         assign money_price = price | money_with_currency
-                       endif
-                     
-                       if target == product and product.price_varies
-                         assign money_price = 'products.product.price.from_price_html' | t: price: money_price
-                       endif
-                     
-                       assign discount_10 = price | times: 0.90 | divided_by: 100 | round | times: 100 
-                       assign discount_25 = price | times: 0.75 | divided_by: 100 | round | times: 100
-                       assign discount_10_money = discount_10 | money
-                       assign discount_25_money = discount_25 | money
-                     %}
                      <div id="Quantity-Form-{{ section.id }} bundle_swatches_custom" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} bundle-swatches"
                      {{ block.shopify_attributes }}
                      style="display: flex !important;gap: 16px !important;">
@@ -804,19 +803,19 @@
                                 <span class="bundle_swatch swatch_selected">
                                   <input type="radio" id="quantity1" name="quantity" value="1" checked>
                                   <label for="quantity1">
-                                  1 case - <span class="bundle_price pr-one-quantity"></span> each
+                                  {{block.settings.buy1_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span> <span class="bundle_price pr-one-quantity"></span> each
                                   </label>
                                 </span>
                                 <span class="bundle_swatch ">
                                   <input type="radio" id="quantity2" name="quantity" value="2">
                                   <label for="quantity2">
-                                    2 cases - <span class="bundle_price pr-two-less-four-quantity"></span> each (Save 10% EXTRA)
+                                    {{block.settings.buy2_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-two-less-four-quantity"></span> each (Save 10% EXTRA)
                                   </label>
                                 </span>
                                 <span class="bundle_swatch ">
                                   <input type="radio" id="quantity4" name="quantity" value="4">
                                   <label for="quantity4">
-                                  4 cases - <span class="bundle_price pr-four-or-more-quantity"></span> each (Save 25% EXTRA)
+                                    {{block.settings.buy4_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-four-or-more-quantity"></span> each (Save 25% EXTRA)
                                   </label>
                                 </span>
                         <div class="quantity__rules caption no-js-hidden">
@@ -831,6 +830,7 @@
                             {%- endif -%}
                         </div>
                     </div>
+                    <script src="{{ 'price-ladder.js' | asset_url }}" defer="defer"></script>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
                   {%- when 'description-capture' -%}
@@ -931,7 +931,7 @@
     {%- if section.settings.media_position == 'right' -%}
       {% comment %} Duplicate gallery to display after product content on tablet/desktop breakpoint {% endcomment %}
       <div class="grid__item product__media-wrapper small-hide">
-        {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true %}
+        {% render 'product-media-gallery', variant_images: variant_images, is_duplicate: true, placeholder_image: section.settings.placeholder_image %}
       </div>
     {%- endif -%}
   </div>
@@ -1527,18 +1527,21 @@
       "settings": [
         {
           "type": "text",
-          "id": "buy1_text",
-          "label": "Buy 1 Text"
+          "id": "buy1_before_text",
+          "label": "Buy 1 Before Text",
+          "default": "1 case"
         },
         {
           "type": "text",
-          "id": "buy2_text",
-          "label": "Buy 2 Text"
+          "id": "buy2_before_text",
+          "label": "Buy 2 Before Text",
+          "default": "2 cases"
         },
         {
           "type": "text",
-          "id": "buy4_text",
-          "label": "Buy 4 Text"
+          "id": "buy4_before_text",
+          "label": "Buy 4 Before Text",
+          "default": "4 cases"
         }
       ]
     },
@@ -1678,6 +1681,12 @@
           "label": "Pre-order info:"
         },
         {
+          "type": "text",
+          "id": "order_description",
+          "label": "Order info:",
+          "default": "Ordered before 10pm = Packed today"
+        },
+        {
           "type": "html",
           "id": "icon_pay_1th",
           "label": "Icon Pay:1th"
@@ -1726,6 +1735,16 @@
           "type": "image_picker",
           "id": "icon_pay_5th_img",
           "label": "List Icon(Image):5th"
+        },
+        {
+          "type": "html",
+          "id": "icon_pay_6th",
+          "label": "Icon Pay(SVG):6th"
+        },
+        {
+          "type": "image_picker",
+          "id": "icon_pay_6th_img",
+          "label": "List Icon(Image):6th"
         }
       ]
     },
@@ -3208,6 +3227,11 @@
       ],
       "default": "hide",
       "label": "t:sections.main-product.settings.mobile_thumbnails.label"
+    },
+    {
+      "type": "image_picker",
+      "id": "placeholder_image",
+      "label": "Icon Image"
     },
     {
       "type": "checkbox",
