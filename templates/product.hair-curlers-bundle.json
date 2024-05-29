@@ -426,38 +426,14 @@
         "section_title": ""
       }
     },
-    "replo_silkpilllowcase_statistic_WQfaQw": {
-      "type": "replo-silkpilllowcase-statistic",
+    "replo_hair_rollers_statistic_DWC4Mz": {
+      "type": "replo-hair-rollers-statistic",
       "settings": {
-      }
-    },
-    "rich_text_PyB7yH": {
-      "type": "rich-text",
-      "blocks": {
-        "heading_wTck7F": {
-          "type": "heading",
-          "settings": {
-            "heading": "Snoozy Versus <br>  Regular Pillowcases",
-            "heading_size": "h1"
-          }
-        }
-      },
-      "block_order": [
-        "heading_wTck7F"
-      ],
-      "settings": {
-        "show_desktop": false,
-        "show_mobile": false,
-        "desktop_content_position": "center",
-        "content_alignment": "center",
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 64,
-        "padding_bottom": 4
       }
     },
     "multicolumn_mNrjRH": {
       "type": "multicolumn",
+      "disabled": true,
       "settings": {
         "image_banner": "shopify:\/\/shop_images\/snoozy-table-marketplaces.jpg",
         "show_shadow": false,
@@ -481,87 +457,6 @@
         "padding_bottom": 36
       }
     },
-    "8f25fb51-6152-4228-93dc-0f38bf14c7ff": {
-      "type": "section-brand-logo",
-      "blocks": {
-        "f904779a-6ef5-4b7f-8584-08dbb18eccb9": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/cosmopolitan-logo.png"
-          }
-        },
-        "7b421f1b-6ad3-424f-8f5f-4597043a64b2": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/harpers-bazaar-logo.png"
-          }
-        },
-        "2bc0d276-3e8a-4505-8711-d1651624aa37": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/people-magazine-logo.png"
-          }
-        },
-        "fdfd2943-b740-48ee-bfc8-4de6d97f9763": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/new-york-magazine-logo.png"
-          }
-        },
-        "8087ff6f-d2f8-40d7-9cc9-1ee434d909c2": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/marie-claire-logo.png"
-          }
-        },
-        "4b2f005d-b4e0-477b-b060-261eca4843d4": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/glamour-logo.png"
-          }
-        },
-        "c79f6496-46b2-4c50-a6f5-6163ec4b0c14": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/womens-health-logo.png"
-          }
-        },
-        "8bb78781-31c9-4d85-af13-9558d1dd1521": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/vogue-logo.png"
-          }
-        },
-        "ae25b1c1-f952-4a8b-8766-7f388983b0c2": {
-          "type": "image_picker",
-          "settings": {
-            "gallery_images": "shopify:\/\/shop_images\/hello-magazine-logo.png"
-          }
-        },
-        "0b82228a-eb4e-4e4d-b759-e6e2a0ff4dd6": {
-          "type": "image_picker",
-          "settings": {
-          }
-        }
-      },
-      "block_order": [
-        "f904779a-6ef5-4b7f-8584-08dbb18eccb9",
-        "7b421f1b-6ad3-424f-8f5f-4597043a64b2",
-        "2bc0d276-3e8a-4505-8711-d1651624aa37",
-        "fdfd2943-b740-48ee-bfc8-4de6d97f9763",
-        "8087ff6f-d2f8-40d7-9cc9-1ee434d909c2",
-        "4b2f005d-b4e0-477b-b060-261eca4843d4",
-        "c79f6496-46b2-4c50-a6f5-6163ec4b0c14",
-        "8bb78781-31c9-4d85-af13-9558d1dd1521",
-        "ae25b1c1-f952-4a8b-8766-7f388983b0c2",
-        "0b82228a-eb4e-4e4d-b759-e6e2a0ff4dd6"
-      ],
-      "disabled": true,
-      "settings": {
-        "show_section": true,
-        "section_background": "#ffffff"
-      }
-    },
     "3d977cfe-9935-4362-bb26-63085b713377": {
       "type": "section-faq",
       "blocks": {
@@ -569,24 +464,24 @@
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "What if Snoozy doesn't work for me?",
-            "faq_answer": "<p>If for any reason you feel that Snoozy isn't working for you or you're simply not vibing it, simply send us an email to hello@snoozy.com.ph and we'll fix you up with a full refund.<\/p>"
+            "faq_question": "How to use the hair curlers?",
+            "faq_answer": "<p>For best results, use on 80% dry hair.<\/p><p>STEP 1<br\/>Starting with slightly damp and parted hair, use the claw clip to hold the heatless curler on top of your head.<br\/><br\/>STEP 2<br\/>With the piece of hair closest to your parting, begin wrapping hair around the curler away from the face.<br\/>(Pro Tip: The smaller the sections of hair and more closely wrapped, the tighter the curl. The larger the sections and more widely wrapped, the bigger the wave.)<br\/><br\/>STEP 3<br\/>Working your way down, take additional sections of hair and wrap around the curler until all hair on each side has been wrapped.<br\/>(Pro Tip: Aim to make all sections the same size for evenly shaped curls.)<br\/><br\/>STEP 4<br\/>Secure the ends of the hair with your silk hair ties, remove the clip, and keep your curler in for just a few hours, or for best results, overnight!<br\/><br\/>THE RESULTS<br\/>Unwrap your locks to reveal your gorgeous curls or waves.<\/p>"
           }
         },
         "95536cff-c742-4eda-9d93-260ba9187482": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Is Snoozy really safe to sleep on?",
-            "faq_answer": "<p>It sure is! Silver has been used for decades (centuries, actually) as a safe way to stop bacterial spread. The silver ions also are infused into the fabric and cannot be inhaled, in case you were wondering!<\/p>"
+            "faq_question": "Are the hair curlers safe to use?",
+            "faq_answer": "<p>The Silk Hair Curlers are 100% safe to use.<\/p>"
           }
         },
         "ccb3e38b-7264-454f-898c-ec48251f4bfc": {
           "type": "image_picker",
           "settings": {
             "question_background": "#ffffff",
-            "faq_question": "Will the antibacterial effects wear off over time?",
-            "faq_answer": "<p>Yes, but very slowly. In fact, even after 50 washes, the antibacterial decrease is just 1% (still 98% effective).<\/p>"
+            "faq_question": "How do I track my order?",
+            "faq_answer": "<p>We'll send you a tracking code as soon as the package has left our premise!<\/p>"
           }
         },
         "image_picker_ynBwXj": {
@@ -595,14 +490,6 @@
             "question_background": "#f7f3eb",
             "faq_question": "",
             "faq_answer": ""
-          }
-        },
-        "caf0fac1-1888-4f1c-9393-e61de8324dc1": {
-          "type": "image_picker",
-          "settings": {
-            "question_background": "#ffffff",
-            "faq_question": "How do I track my order?",
-            "faq_answer": "<p>We'll send you a tracking code as soon as the package has left our premise!<\/p>"
           }
         },
         "a45422fb-336d-4598-bcfd-ddab8fbd0d6c": {
@@ -619,7 +506,6 @@
         "95536cff-c742-4eda-9d93-260ba9187482",
         "ccb3e38b-7264-454f-898c-ec48251f4bfc",
         "image_picker_ynBwXj",
-        "caf0fac1-1888-4f1c-9393-e61de8324dc1",
         "a45422fb-336d-4598-bcfd-ddab8fbd0d6c"
       ],
       "settings": {
@@ -695,10 +581,8 @@
     "0cd25557-8cef-42a6-991a-1a57bf82fee5",
     "main",
     "section_image_with_text_cgYrLq",
-    "replo_silkpilllowcase_statistic_WQfaQw",
-    "rich_text_PyB7yH",
+    "replo_hair_rollers_statistic_DWC4Mz",
     "multicolumn_mNrjRH",
-    "8f25fb51-6152-4228-93dc-0f38bf14c7ff",
     "3d977cfe-9935-4362-bb26-63085b713377",
     "replo_silk_pillowcase_pdp_wpT88X",
     "related-products",
