@@ -1095,7 +1095,7 @@ class VariantSelects extends HTMLElement {
                 skuDestination.innerHTML = skuSource.innerHTML;
                 skuDestination.classList.toggle('visibility-hidden', skuSource.classList.contains('visibility-hidden'));
             }
-
+            var currencySymbol = document.getElementById('currency-symbol').getAttribute('data-symbol');
             const price = document.getElementById(`price-${this.dataset.section}`);
             if (price) {
                 price.classList.remove('visibility-hidden');
@@ -1106,9 +1106,9 @@ class VariantSelects extends HTMLElement {
                 const prTwoLessFourQuantity = document.querySelector('.pr-two-less-four-quantity');
                 const prFourOrMoreQuantity = document.querySelector('.pr-four-or-more-quantity');
                 if (prOneQuantity && prTwoLessFourQuantity && prFourOrMoreQuantity) {
-                    prOneQuantity.textContent = '₱' + oneQuantityValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-                    prTwoLessFourQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.90).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
-                    prFourOrMoreQuantity.textContent = '₱' + Math.round(oneQuantityValue * 0.75).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    prOneQuantity.textContent = currencySymbol + oneQuantityValue.toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    prTwoLessFourQuantity.textContent = currencySymbol + Math.round(oneQuantityValue * 0.90).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
+                    prFourOrMoreQuantity.textContent = currencySymbol + Math.round(oneQuantityValue * 0.75).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,');
                 }
             }
 
