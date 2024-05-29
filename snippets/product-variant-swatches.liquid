@@ -14,7 +14,7 @@
     {% if update_url == false %} data-update-url="false"{% endif %} {{ block.shopify_attributes }} class="product-variant-swatches">
     {%- for option in product.options_with_values -%}
         {% assign option_handle = option.name | handleize %}
-        <fieldset class="product-form__input {% if option_handle == 'color' %}color-swatch-wrapper{% elsif option_handle == 'quantity' %}quantity-swatch-wrapper{% else %}size-swatch-wrapper{% endif %}">
+        <fieldset class="product-form__input {% if option_handle contains 'color' %}color-swatch-wrapper{% elsif option_handle == 'quantity' %}quantity-swatch-wrapper{% else %}size-swatch-wrapper{% endif %}">
             <legend class="form__label swatch-option__label" data-option-handle="{{ option_handle }}">
                 {{ option.name }} <span class="swatch-option__label-value visibility-hidden"></span>
             </legend>
