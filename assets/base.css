@@ -6699,7 +6699,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     max-width: 100%;
   }
   .showcase-container {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: .6rem !important;
     gap: 10px;
     display: flex !important;
     justify-content: center;
@@ -6715,17 +6715,17 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     -o-transform: translateX(-50%);
   }
   .placeholder_img_product_1 {
-    max-width: 100px;
+    max-width: 145px;
     width: 100%;
     z-index: 2;
   }
   .placeholder_img_product_2 {
-    max-width: 100px;
+    max-width: 145px;
     width: 100%;
     z-index: 2;
   }
   .placeholder_img_product_3 {
-    max-width: 100px;
+    max-width: 145px;
     width: 100%;
     z-index: 2;
   }
@@ -6748,22 +6748,22 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     margin: 0 auto;
   }
   .placeholder_img_product_1 {
-    max-width: 130px;
+    max-width: 160px;
     width: 100%;
     z-index: 2;
   }
   .placeholder_img_product_2 {
-    max-width: 130px;
+    max-width: 160px;
     width: 100%;
     z-index: 2;
   }
   .placeholder_img_product_3 {
-    max-width: 130px;
+    max-width: 160px;
     width: 100%;
     z-index: 2;
   }
   .showcase-container {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.1rem !important;
     gap: 15px;
     display: flex !important;
     justify-content: center;
@@ -6797,22 +6797,22 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     margin: 0 auto;
   }
   .placeholder_img_product_1 {
-    max-width: 180px;
+    max-width: 200px;
     width: 100%;
     z-index: 2;
   }
   .placeholder_img_product_2 {
-    max-width: 180px;
+    max-width: 200px;
     width: 100%;
     z-index: 2;
   }
   .placeholder_img_product_3 {
-    max-width: 180px;
+    max-width: 200px;
     width: 100%;
     z-index: 2;
   }
   .showcase-container {
-    margin-bottom: 1.5rem !important;
+    margin-bottom: 1.1rem !important;
     gap: 15px;
     display: flex !important;
     justify-content: center;
