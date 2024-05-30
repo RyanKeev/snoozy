@@ -97,7 +97,7 @@
   
   <div class="product product--{{ section.settings.media_size }} product--{{ section.settings.media_position }} product--{{ section.settings.gallery_layout }} product--mobile-{{ section.settings.mobile_thumbnails }} grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper{% if section.settings.media_position == 'right' %} medium-hide large-up-hide{% endif %}">
-      {% render 'product-media-gallery', variant_images: variant_images, placeholder_image: section.settings.placeholder_image %}
+      {% render 'product-media-gallery', variant_images: variant_images, placeholder_image: section.settings.placeholder_image,showcase_image_1: section.settings.showcase_image_1,showcase_image_2: section.settings.showcase_image_2,showcase_image_3: section.settings.showcase_image_3 %}
       <div class="product-media-blocks on-desktop"  style="margin-top:25px;">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
@@ -3231,7 +3231,22 @@
     {
       "type": "image_picker",
       "id": "placeholder_image",
-      "label": "Icon Image"
+      "label": "Pre-Order Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "showcase_image_1",
+      "label": "Showcase Image 1"
+    },
+    {
+      "type": "image_picker",
+      "id": "showcase_image_2",
+      "label": "Showcase Image 2"
+    },
+    {
+      "type": "image_picker",
+      "id": "showcase_image_3",
+      "label": "Showcase Image 3"
     },
     {
       "type": "checkbox",
