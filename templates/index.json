@@ -19,16 +19,16 @@
         "heading_TQHkda": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Save Up To 53% <b<\/em>",
-            "name_string": "Dry Skin\nBlackheads\nAcne\nBreakouts",
+            "heading": "<em>Save Up To 53% Right Now!<\/em>",
+            "name_string": "",
             "heading_size": "h0"
           }
         },
         "buttons_krVzyN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "GET YOUR PILLOWCASE →",
-            "button_link_1": "shopify:\/\/products\/skin-savior-pillowcase",
+            "button_label_1": "GO TO SALE→",
+            "button_link_1": "shopify:\/\/collections\/all",
             "button_style_secondary_1": false,
             "button_label_2": "",
             "button_link_2": "",
