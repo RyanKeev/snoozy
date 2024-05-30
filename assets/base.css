@@ -6699,6 +6699,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     max-width: 100%;
   }
   .showcase-container {
+    margin-bottom: 1.5rem !important;
     gap: 20px;
     display: flex !important;
     justify-content: center;
@@ -6762,6 +6763,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     z-index: 2;
   }
   .showcase-container {
+    margin-bottom: 1.5rem !important;
     gap: 20px;
     display: flex !important;
     justify-content: center;
@@ -6810,6 +6812,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     z-index: 2;
   }
   .showcase-container {
+    margin-bottom: 1.5rem !important;
     gap: 20px;
     display: flex !important;
     justify-content: center;
