@@ -12,7 +12,7 @@
         "text_mmJb9V": {
           "type": "text",
           "settings": {
-            "text": "<strong>Let's Celebrate Pay-Day!<\/strong>",
+            "text": "<strong>Let's Celebrate!<\/strong>",
             "text_style": "body"
           }
         },
@@ -27,7 +27,7 @@
         "buttons_krVzyN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "GO TO SALE→",
+            "button_label_1": "GO TO PAY-DAY SALE→",
             "button_link_1": "https:\/\/snoozy.com.ph\/collections\/all-products",
             "button_style_secondary_1": false,
             "button_label_2": "",
