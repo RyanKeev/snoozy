@@ -6763,7 +6763,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     z-index: 2;
   }
   .showcase-container {
-    margin-bottom: 1.1rem !important;
+    margin-bottom: 0 !important;
     gap: 15px;
     display: flex !important;
     justify-content: center;
@@ -6812,7 +6812,7 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
     z-index: 2;
   }
   .showcase-container {
-    margin-bottom: 1.1rem !important;
+    margin-bottom: 0 !important;
     gap: 15px;
     display: flex !important;
     justify-content: center;
