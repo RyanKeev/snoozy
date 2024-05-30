@@ -7,7 +7,7 @@
   - variant_images: {Array} Product images associated with a variant
   - placeholder: {object} Display placeholder image lower bottom of product thumbnail
   - is_duplicate: {Boolean} Prevents rendering uneeded elements and duplicate ids for subsequent instances
-
+  - showcase_image_1,showcase_image_2,showcase_image_3 {object} showcase images of product
   Usage:
   {% render 'product-media-gallery', is_duplicate: true %}
 {% endcomment %}
@@ -86,7 +86,10 @@
             media_fit: section.settings.media_fit,
             constrain_to_viewport: section.settings.constrain_to_viewport,
             lazy_load: false,
-            placeholder_image:placeholder_image
+            placeholder_image:placeholder_image,
+            showcase_image_1:showcase_image_1,
+            showcase_image_2:showcase_image_2,
+            showcase_image_3:showcase_image_3
           %}
         </li>
       {%- endif -%}
@@ -117,7 +120,10 @@
               media_fit: section.settings.media_fit,
               constrain_to_viewport: section.settings.constrain_to_viewport,
               lazy_load: lazy_load,
-              placeholder_image: placeholder_image
+              placeholder_image: placeholder_image,
+              showcase_image_1:showcase_image_1,
+              showcase_image_2:showcase_image_2,
+              showcase_image_3:showcase_image_3
             %}
           </li>
         {%- endunless -%}

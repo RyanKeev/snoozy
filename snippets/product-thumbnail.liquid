@@ -15,7 +15,8 @@
     - media_fit: {String} Method ("contain" or "cover") to fit image into container
     - media_width: {Float} The width percentage that the media column occupies on desktop.
     - lazy_load: {Boolean} Image should be lazy loaded. Default: true (optional)
-    - placeholder : image below product thumbnail
+    - placeholder : image top product thumbnail
+      - showcase_image_1,showcase_image_2,showcase_image_3 {object} showcase images of product
     Usage:
     {% render 'product-thumbnail',
       media: media,
@@ -97,6 +98,17 @@
     {% if placeholder_image %}
       <img src="{{ placeholder_image | img_url: 'master' }}" alt="placeholder_image-sleep" width="auto" height="auto" class="placeholder_img_product" />
     {% endif %}
+    <div class="grid open-grid-cols-12 showcase-container">
+      {% if showcase_image_1 %}
+        <img src="{{ showcase_image_1 | img_url: 'master' }}" alt="showcase_image_1" width="auto" height="auto" class="col-span-3 placeholder_img_product_1" />
+      {% endif %}
+      {% if showcase_image_2 %}
+        <img src="{{ showcase_image_2 | img_url: 'master' }}" alt="showcase_image_2" width="auto" height="auto" class="col-span-3 placeholder_img_product_2" />
+      {% endif %}
+      {% if showcase_image_3 %}
+        <img src="{{ showcase_image_3 | img_url: 'master' }}" alt="showcase_image_3" width="auto" height="auto" class="col-span-3 placeholder_img_product_3" />
+      {% endif %}
+    </div>
     <div class="loading-overlay__spinner hidden">
       <svg
         aria-hidden="true"
