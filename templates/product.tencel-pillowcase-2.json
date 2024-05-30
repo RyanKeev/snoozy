@@ -346,7 +346,7 @@
         "column_kznqcU": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-3.png",
+            "image": "shopify:\/\/shop_images\/fbcomments-us-skin-savior-1.jpg",
             "rating": "",
             "title": "",
             "text": "",
@@ -357,7 +357,7 @@
         "column_cWp4CG": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-2.png",
+            "image": "shopify:\/\/shop_images\/fbcomments-us-skin-savior-3.jpg",
             "rating": "",
             "title": "",
             "text": "",
@@ -368,7 +368,7 @@
         "column_g7ceMb": {
           "type": "column",
           "settings": {
-            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-1.png",
+            "image": "shopify:\/\/shop_images\/fbcomments-us-skin-savior-2.jpg",
             "rating": "",
             "title": "",
             "text": "",
@@ -462,7 +462,7 @@
             "show_benefits_on_desktop": false,
             "show_benefits_on_mobile": false,
             "show_benefits_block": true,
-            "general_benefit_image": "shopify:\/\/shop_images\/snoozy-skin-savior-fb-comment_c91f1ea2-74e9-458e-8f16-8f6673910edc.png",
+            "general_benefit_image": "shopify:\/\/shop_images\/fbcomments-us-skin-savior-block.png",
             "benefits_background": "#ffffff",
             "benefits_title_one": "",
             "benefits_title_two": "",
