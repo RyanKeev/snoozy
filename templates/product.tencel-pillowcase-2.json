@@ -51,7 +51,7 @@
         "text_Kbamhx": {
           "type": "text",
           "settings": {
-            "text": "Can come down to PHP 1 per sleep over 2 years 🙌 ",
+            "text": "Can come down to less than 8 cent per night over a year  🙌 ",
             "text_style": "body"
           }
         },
@@ -116,6 +116,7 @@
         },
         "product_showcase_links_K8kaUB": {
           "type": "product_showcase_links",
+          "disabled": true,
           "settings": {
             "product_showcase_title": "",
             "product_showcase_inline_title": "Type",
