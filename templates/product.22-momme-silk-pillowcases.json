@@ -305,6 +305,7 @@
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
+        "showcase_image_2": "shopify:\/\/shop_images\/snoozy-overlay-mega.png",
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 24,
