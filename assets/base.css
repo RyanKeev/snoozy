@@ -3545,6 +3545,15 @@ html{
   max-width: 1300px;
 }
 
+@media (max-width:749px){
+  .container{
+    padding: 50px 15px 50px 15px;
+    width: 100%;
+    margin: auto;
+    max-width: 1300px;
+  }
+}
+
 .section-title{
   margin: 0 0 20px;
   padding: 0;
@@ -6659,14 +6668,15 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   .order-image {
     order: 1 !important;
   }
-
-
 }
 
 @media (max-width: 749px) { 
-  .order-info {
+  /* .order-info {
     order: 2 !important;
-  }
+  } */
+  /* .order-image {
+    order: 1 !important;
+  } */
   .note {
     display: block;
     font-size: 13px !important;
