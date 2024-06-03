@@ -179,16 +179,6 @@
         "settings": {
         }
       },
-      "starapps-vsk": {
-        "type": "shopify:\/\/apps\/swatch-king-variants-options\/blocks\/variant-swatch-king\/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
-        "disabled": false,
-        "settings": {
-          "alignment": "left",
-          "swatch_location": "After price",
-          "switch_on_hover": true,
-          "preselect_variant": false
-        }
-      },
       "8605505498557855500": {
         "type": "shopify:\/\/apps\/bogos-free-gift-buy-x-get-y\/blocks\/app-embed\/0432bba6-720a-4e95-be5a-b868386f7aa6",
         "disabled": false,
@@ -231,6 +221,16 @@
         "type": "shopify:\/\/apps\/judge-me-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
         "disabled": true,
         "settings": {
+        }
+      },
+      "starapps-vsk": {
+        "type": "shopify:\/\/apps\/swatch-king-variants-options\/blocks\/variant-swatch-king\/0850b1e4-ba30-4a0d-a8f4-f9a939276d7d",
+        "disabled": true,
+        "settings": {
+          "alignment": "left",
+          "swatch_location": "After price",
+          "switch_on_hover": true,
+          "preselect_variant": false
         }
       }
     },
