@@ -12,14 +12,14 @@
         "text_mmJb9V": {
           "type": "text",
           "settings": {
-            "text": "<strong>Let's Celebrate!<\/strong>",
+            "text": "<strong>It's finally here!<\/strong>",
             "text_style": "body"
           }
         },
         "heading_TQHkda": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Best Deal Ever! Limited Time<\/em>",
+            "heading": "<em>Super Deals On Everything!<\/em>",
             "name_string": "",
             "heading_size": "h0"
           }
@@ -27,7 +27,7 @@
         "buttons_krVzyN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "GO TO PAY-DAY SALE→",
+            "button_label_1": "GO TO 6.6. SALE→",
             "button_link_1": "https:\/\/snoozy.com.ph\/collections\/all-products",
             "button_style_secondary_1": false,
             "button_label_2": "",
