@@ -305,6 +305,7 @@
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
+        "placeholder_image": "shopify:\/\/shop_images\/6.6-sale-icon-overlay.png",
         "showcase_image_2": "shopify:\/\/shop_images\/snoozy-overlay-mega-bigger-2.png",
         "hide_variants": false,
         "enable_video_looping": false,

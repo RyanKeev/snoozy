@@ -307,6 +307,7 @@
         "media_position": "left",
         "image_zoom": "lightbox",
         "mobile_thumbnails": "show",
+        "placeholder_image": "shopify:\/\/shop_images\/6.6-sale-icon-overlay.png",
         "hide_variants": false,
         "enable_video_looping": false,
         "padding_top": 24,
