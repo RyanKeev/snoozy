@@ -140,11 +140,10 @@
         },
         "quantity_bundle_selector_V3NWMz": {
           "type": "quantity_bundle_selector",
-          "disabled": true,
           "settings": {
-            "buy1_before_text": "1 case",
-            "buy2_before_text": "2 cases",
-            "buy4_before_text": "4 cases"
+            "buy1_before_text": "1 mask",
+            "buy2_before_text": "2 masks",
+            "buy4_before_text": "4 masks"
           }
         },
         "buy_buttons": {
