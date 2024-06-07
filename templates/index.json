@@ -12,14 +12,14 @@
         "text_mmJb9V": {
           "type": "text",
           "settings": {
-            "text": "<strong>It's finally here!<\/strong>",
+            "text": "<strong>Are You Ready For True Beauty Sleep?<\/strong>",
             "text_style": "body"
           }
         },
         "heading_TQHkda": {
           "type": "heading",
           "settings": {
-            "heading": "<em>Super Deals On Everything!<\/em>",
+            "heading": "<em>Snoozy's Mid-Year Sale Is On!<\/em>",
             "name_string": "",
             "heading_size": "h0"
           }
@@ -27,7 +27,7 @@
         "buttons_krVzyN": {
           "type": "buttons",
           "settings": {
-            "button_label_1": "GO TO 6.6. SALE→",
+            "button_label_1": "GO TO SALE Now→",
             "button_link_1": "https:\/\/snoozy.com.ph\/collections\/all-products",
             "button_style_secondary_1": false,
             "button_label_2": "",
@@ -42,8 +42,8 @@
         "buttons_krVzyN"
       ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/hero-banner-desktop-6-6-sale.jpg",
-        "mobile_image": "shopify:\/\/shop_images\/hero-banner-mobile-6-6-sale.jpg",
+        "image": "shopify:\/\/shop_images\/hero-banner-mid-year-sale.jpg",
+        "mobile_image": "shopify:\/\/shop_images\/hero-banner-mid-year-sale-mobile.jpg",
         "image_overlay_opacity": 0,
         "image_height": "medium",
         "desktop_content_position": "middle-left",
