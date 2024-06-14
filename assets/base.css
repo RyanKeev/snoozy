@@ -4441,7 +4441,8 @@ product-variant-swatches .product-form__input label.color-swatch span{
   left: 50%;
   transform: translateX(-50%);
   z-index: 1;
-  font-size: 11px;
+  font-size: 9px;
+  letter-spacing: 0;
   padding: 3px 5px;
   color: #fff;
   display: block;
