@@ -4435,11 +4435,11 @@ product-variant-swatches .product-form__input label.color-swatch{
 }
 
 product-variant-swatches .product-form__input label.color-swatch span{
+  width: max-content;
   position: absolute;
   bottom: -4px;
   left: 50%;
   transform: translateX(-50%);
-
   z-index: 1;
   font-size: 11px;
   padding: 3px 5px;
