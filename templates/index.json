@@ -19,7 +19,7 @@
         "heading_TQHkda": {
           "type": "heading",
           "settings": {
-            "heading": "<em>The Pay-Day Deals Are Here <\/em>",
+            "heading": "<em>The Mid-Year Deals Are Here <\/em>",
             "name_string": "",
             "heading_size": "h0"
           }
@@ -255,7 +255,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "skin-savior™",
-            "button_text": "PAY-DAY DEALS",
+            "button_text": "MID-YEAR DEALS",
             "button_link": "https:\/\/snoozy.com.ph\/products\/skin-savior-pillowcase"
           }
         },
@@ -263,7 +263,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "19-momme-pillowcase",
-            "button_text": "PAY-DAY DEALS",
+            "button_text": "MID-YEAR DEALS",
             "button_link": "shopify:\/\/products\/19-momme-silk-pillowcase"
           }
         },
@@ -271,7 +271,7 @@
           "type": "featured_collection",
           "settings": {
             "collection": "22-momme-pillowcase",
-            "button_text": "PAY-DAY DEALS",
+            "button_text": "MID-YEAR DEALS",
             "button_link": "shopify:\/\/products\/standard-pillowcase"
           }
         }
