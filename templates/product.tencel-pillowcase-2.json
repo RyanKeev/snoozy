@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "sections": {
     "0cd25557-8cef-42a6-991a-1a57bf82fee5": {
@@ -192,7 +201,7 @@
           "type": "description-capture",
           "settings": {
             "paragraph_1_title": "<strong>Why Snoozy's special?<\/strong>",
-            "paragraph_1_content": "Prepare yourself for love at first sleep with the world's first vegan silk pillowcase treated with natural silver, scientifically shown to eliminate 99.7% of bacteria linked to acne & breakouts. Super sustainable with the same feel and touch as silk. And even better… It offers the same beauty benefits without breaking the bank. It’s cooling, vegan, and your new skin savior!",
+            "paragraph_1_content": "Prepare yourself for love at first sleep with the vegan silk pillowcase treated with natural silver, scientifically shown to eliminate 99.7% of bacteria linked to acne & breakouts. Super sustainable with the same feel and touch as silk. And even better… It offers the same beauty benefits without breaking the bank. It’s cooling, vegan, and your new skin savior!",
             "paragraph_2_title": "<strong>How can Skin Savior™ help you?<\/strong>",
             "paragraph_2_content": "Safe for all skin types, ages, and chemical-free. In 30 days, Snoozy works to prevent and improve:",
             "paragraph_3_title": "<strong>You'll also love that:<\/strong>",
