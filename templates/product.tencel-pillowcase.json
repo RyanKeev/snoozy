@@ -358,17 +358,6 @@
     "multicolumn_XXj866": {
       "type": "multicolumn",
       "blocks": {
-        "column_kznqcU": {
-          "type": "column",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-1.png",
-            "rating": "",
-            "title": "",
-            "text": "",
-            "link_label": "",
-            "link": ""
-          }
-        },
         "column_cWp4CG": {
           "type": "column",
           "settings": {
@@ -390,12 +379,23 @@
             "link_label": "",
             "link": ""
           }
+        },
+        "column_kznqcU": {
+          "type": "column",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/skin-savior-fbcomments-slider-1.png",
+            "rating": "",
+            "title": "",
+            "text": "",
+            "link_label": "",
+            "link": ""
+          }
         }
       },
       "block_order": [
-        "column_kznqcU",
         "column_cWp4CG",
-        "column_g7ceMb"
+        "column_g7ceMb",
+        "column_kznqcU"
       ],
       "settings": {
         "show_shadow": true,
