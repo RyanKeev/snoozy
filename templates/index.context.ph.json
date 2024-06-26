@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "parent": "index.json",
   "context": {
@@ -11,6 +20,27 @@
         "image_picker_UAmcrY": {
           "settings": {
             "image": "shopify:\/\/shop_images\/kylie-snoozy-web-block_7d194a62-5aa9-4fd6-8586-673781c92a7d.jpg"
+          }
+        }
+      }
+    },
+    "image_banner_WqKFzc": {
+      "settings": {
+      },
+      "blocks": {
+        "text_mmJb9V": {
+          "settings": {
+            "text": "Dont' Miss Out On Our Snoozy Deal"
+          }
+        },
+        "heading_TQHkda": {
+          "settings": {
+            "heading": "<em>The Pay-Day Sale is Here <\/em>"
+          }
+        },
+        "buttons_krVzyN": {
+          "settings": {
+            "button_label_1": "GO TO SALE NOW →"
           }
         }
       }
