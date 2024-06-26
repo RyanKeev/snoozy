@@ -44,6 +44,27 @@
           }
         }
       }
+    },
+    "collection_list_AJMB9L": {
+      "settings": {
+      },
+      "blocks": {
+        "featured_collection_exPCCe": {
+          "settings": {
+            "button_text": "PAY-DAY SALE"
+          }
+        },
+        "featured_collection_WJzPVz": {
+          "settings": {
+            "button_text": "PAY-DAY SALE"
+          }
+        },
+        "featured_collection_8W3D8L": {
+          "settings": {
+            "button_text": "PAY-DAY SALE"
+          }
+        }
+      }
     }
   }
 }
