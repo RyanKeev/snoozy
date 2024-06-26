@@ -1,3 +1,12 @@
+/*
+* ------------------------------------------------------------
+* IMPORTANT: The contents of this file are auto-generated.
+*
+* This file may be updated by the Shopify admin theme editor
+* or related systems. Please exercise caution as any changes
+* made to this file may be overwritten.
+* ------------------------------------------------------------
+*/
 {
   "parent": "header-group.json",
   "context": {
@@ -11,12 +20,12 @@
         "announcement_bar_tfr7Qc": {
           "settings": {
             "announcement_bg": "#ed5894",
-            "item_text_1th": "MID-YEAR DEALS - Up to 55% OFF + FREE SHIPPING",
-            "item_text_2th": "MID-YEAR DEALS - Up to 55% OFF + FREE SHIPPING",
-            "item_text_3th": "MID-YEAR DEALS - Up to 55% OFF + FREE SHIPPING",
-            "item_text_4th": "MID-YEAR DEALS - Up to 55% OFF + FREE SHIPPING",
-            "item_text_5th": "MID-YEAR DEALS - Up to 55% OFF + FREE SHIPPING",
-            "item_text_6th": "MID-YEAR DEALS - Up to 55% OFF + FREE SHIPPING"
+            "item_text_1th": "PAY-DAY SALE - Up to 55% OFF + FREE SHIPPING",
+            "item_text_2th": "PAY-DAY SALE - Up to 55% OFF + FREE SHIPPING",
+            "item_text_3th": "PAY-DAY SALE - Up to 55% OFF + FREE SHIPPING",
+            "item_text_4th": "PAY-DAY SALE - Up to 55% OFF + FREE SHIPPING",
+            "item_text_5th": "PAY-DAY SALE - Up to 55% OFF + FREE SHIPPING",
+            "item_text_6th": "PAY-DAY SALE - Up to 55% OFF + FREE SHIPPING"
           }
         }
       }
