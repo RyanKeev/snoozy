@@ -6840,3 +6840,6 @@ product-variant-swatches input[type=radio]:checked+label.quantity-swatch{
   }
  }
 
+.regular {
+  font-family: var(--ff-harmonia-regular) !important;
+}
