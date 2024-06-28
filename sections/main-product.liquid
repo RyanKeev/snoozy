@@ -661,21 +661,29 @@
                                 let content;
                                 let background;
                                 let color;
+                                let size;
+                                let alignment;
                                 switch (index) {
                                     case 0:
                                         content = "Buy 1";
                                         color = "#fff";
                                         background = "#000";
+                                        size = "11px";
+                                        alignment = "center";
                                         break;
                                     case 1:
-                                        content = "Buy 2";
+                                        content = "{{block.settings.buy2_tag}}";
                                         color = "#fff";
                                         background = "#000";
+                                        size = "11px";
+                                        alignment = "center";
                                         break;
                                     case 2:
-                                        content = "Buy 4";
+                                        content = "{{block.settings.buy4_tag}}";
                                         background = "#fc95cf";
                                         color = "#1a1a1a";
+                                        size = "11px";
+                                        alignment = "center";
                                         break;
                                     default:
                                         content = "Default Content"; // Change as needed
@@ -683,6 +691,8 @@
                                 label.style.setProperty('--content', `'${content}'`);
                                 label.style.setProperty('--background', background);
                                 label.style.setProperty('--color', color);
+                                label.style.setProperty('--size', size);
+                                label.style.setProperty('--alignment', alignment);
                             });
                         });    
                       </script>
@@ -707,7 +717,7 @@
                         .bundle_swatch::before {
                           content:'Buy 1';
                           position: absolute;
-                          top: 0;
+                          top: -2px;
                           line-height: 1em;
                           color: #fff;
                           background: #000;
@@ -720,6 +730,8 @@
                           content: var(--content);
                           background: var(--background);
                           color: var(--color);
+                          font-size: var(--size);
+                          text-align: var(--alignment);
                         }
                         .swatch_selected {
                           box-shadow: 0 0 0 1px #000;
@@ -734,13 +746,13 @@
                             line-height: 100px !important;
                             border-radius: 4px !important;
                             font-size: 16px !important;
-                            font-family: var(--ff-harmonia-bold);
+                            font-family:var(--ff-harmonia-semibold);
                           }
                           .bundle_swatch label {
                             text-align:center;
                             background: transparent !important;
                             color: #1a1a1a !important;
-                            font-size: 14px !important;
+                            font-size: 13px !important;
                             padding: 1rem .5rem !important;
                             margin: 0 !important;
                           }
@@ -752,7 +764,7 @@
                             background: transparent !important;
                             color: #1a1a1a !important;
                             padding: 10px 4px !important;
-                            font-size: 14px !important;
+                            font-size: 12px !important;
                             margin-top: 10px !important;
                             margin-left: 0  !important;
                             margin-right: 0 !important;
@@ -766,7 +778,7 @@
                             height: 100px !important;
                             line-height: 100px !important;
                             border-radius: 4px !important;
-                            font-size: 16px !important;
+                            font-size: 14px !important;
                             font-family: var(--ff-harmonia-semibold);
                           }
                         }
@@ -780,44 +792,44 @@
                      {% # theme-check-enable %}
                      
                        <input class="quantity__input" type="hidden" name="quantity" id="Quantity-{{ section.id }}"
-                                    data-cart-quantity="{{ cart_qty }}"
-                                    data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                                    min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                                     {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
-                                       data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                                       max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
-                                     {% endif %}
-                                    step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
-                                    value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
-                                    form="{{ product_form_id }}"
-                                />
-                                <div id="variant-data" 
-                                  data-price="{{ price }}"
-                                  data-discount-10="{{ discount_10 }}"
-                                  data-discount-25="{{ discount_25 }}"
-                                  data-money-price="{{ money_price }}"
-                                  data-discount-10-money="{{ discount_10_money }}"
-                                  data-discount-25-money="{{ discount_25_money }}"
-                                >
-                                </div>
-                                <span class="bundle_swatch swatch_selected">
-                                  <input type="radio" id="quantity1" name="quantity" value="1" checked>
-                                  <label for="quantity1">
-                                  {{block.settings.buy1_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span> <span class="bundle_price pr-one-quantity"></span> each
-                                  </label>
-                                </span>
-                                <span class="bundle_swatch ">
-                                  <input type="radio" id="quantity2" name="quantity" value="2">
-                                  <label for="quantity2">
-                                    {{block.settings.buy2_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-two-less-four-quantity"></span> each (Save 10% EXTRA)
-                                  </label>
-                                </span>
-                                <span class="bundle_swatch ">
-                                  <input type="radio" id="quantity4" name="quantity" value="4">
-                                  <label for="quantity4">
-                                    {{block.settings.buy4_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-four-or-more-quantity"></span> each (Save 25% EXTRA)
-                                  </label>
-                                </span>
+                        data-cart-quantity="{{ cart_qty }}"
+                        data-min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                        min="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                          {% if product.selected_or_first_available_variant.quantity_rule.max != null %}
+                            data-max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                            max="{{ product.selected_or_first_available_variant.quantity_rule.max }}"
+                          {% endif %}
+                        step="{{ product.selected_or_first_available_variant.quantity_rule.increment }}"
+                        value="{{ product.selected_or_first_available_variant.quantity_rule.min }}"
+                        form="{{ product_form_id }}"
+                        />
+                        <div id="variant-data" 
+                          data-price="{{ price }}"
+                          data-discount-10="{{ discount_10 }}"
+                          data-discount-25="{{ discount_25 }}"
+                          data-money-price="{{ money_price }}"
+                          data-discount-10-money="{{ discount_10_money }}"
+                          data-discount-25-money="{{ discount_25_money }}"
+                        >
+                        </div>
+                        <span class="bundle_swatch swatch_selected">
+                          <input type="radio" id="quantity1" name="quantity" value="1" checked>
+                          <label for="quantity1">
+                          {{block.settings.buy1_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span> <span class="bundle_price pr-one-quantity"></span> each
+                          </label>
+                        </span>
+                        <span class="bundle_swatch ">
+                          <input type="radio" id="quantity2" name="quantity" value="2">
+                          <label for="quantity2">
+                            {{block.settings.buy2_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-two-less-four-quantity"></span> each <br/> <span class="regular">(Save 10% EXTRA) </span>
+                          </label>
+                        </span>
+                        <span class="bundle_swatch ">
+                          <input type="radio" id="quantity4" name="quantity" value="4">
+                          <label for="quantity4">
+                            {{block.settings.buy4_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-four-or-more-quantity"></span> each <br/>  <span class="regular">(Save 25% EXTRA) </span>
+                          </label>
+                        </span>
                         <div class="quantity__rules caption no-js-hidden">
                             {%- if product.selected_or_first_available_variant.quantity_rule.increment > 1 -%}
                             <span class="divider">{{- 'products.product.quantity.multiples_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.increment -}}</span>
@@ -829,7 +841,7 @@
                             <span class="divider">{{- 'products.product.quantity.maximum_of' | t: quantity: product.selected_or_first_available_variant.quantity_rule.max -}}</span>
                             {%- endif -%}
                         </div>
-                    </div>
+                      </div>
                     <script src="{{ 'price-ladder.js' | asset_url }}" defer="defer"></script>
                   {%- when 'icon-with-text' -%}
                     {% render 'icon-with-text', block: block %}
@@ -1539,10 +1551,22 @@
         },
         {
           "type": "text",
+          "id": "buy2_tag",
+          "label": "Buy 2 Tag label",
+          "default": "MOST POPULAR"
+        },
+        {
+          "type": "text",
           "id": "buy4_before_text",
           "label": "Buy 4 Before Text",
           "default": "4 cases"
-        }
+        },
+        {
+          "type": "text",
+          "id": "buy4_tag",
+          "label": "Buy 4 Tag label",
+          "default": "BIGGEST SAVING"
+        },
       ]
     },
     {
