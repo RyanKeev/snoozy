@@ -718,11 +718,11 @@
                           content:'Buy 1';
                           position: absolute;
                           top: -2px;
-                          line-height: 1em;
+                          line-height: 1;
                           color: #fff;
                           background: #000;
                           font-size: 14px;
-                          padding: 5px 20px;
+                          padding: 7px 20px 5px 20px;
                           border-radius: 30px;
                           transform: translateY(-50%);
                         }
@@ -815,19 +815,19 @@
                         <span class="bundle_swatch swatch_selected">
                           <input type="radio" id="quantity1" name="quantity" value="1" checked>
                           <label for="quantity1">
-                          {{block.settings.buy1_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span> <span class="bundle_price pr-one-quantity"></span> each
+                          <span style="font-family: var(--ff-harmonia-bold) !important;">{{block.settings.buy1_before_text}}</span> - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span> <span class="bundle_price pr-one-quantity"></span> each
                           </label>
                         </span>
                         <span class="bundle_swatch ">
                           <input type="radio" id="quantity2" name="quantity" value="2">
                           <label for="quantity2">
-                            {{block.settings.buy2_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-two-less-four-quantity"></span> each <br/> <span class="regular">(Save 10% EXTRA) </span>
+                            <span style="font-family: var(--ff-harmonia-bold) !important;">{{block.settings.buy2_before_text}}</span> - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-two-less-four-quantity"></span> each <br/> <span class="regular">(Save 10% EXTRA) </span>
                           </label>
                         </span>
                         <span class="bundle_swatch ">
                           <input type="radio" id="quantity4" name="quantity" value="4">
                           <label for="quantity4">
-                            {{block.settings.buy4_before_text}} - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-four-or-more-quantity"></span> each <br/>  <span class="regular">(Save 25% EXTRA) </span>
+                            <span style="font-family: var(--ff-harmonia-bold) !important;">{{block.settings.buy4_before_text}}</span> - <span id="currency-symbol" data-symbol="{{ cart.currency.symbol }}" style="display:none;"></span><span class="bundle_price pr-four-or-more-quantity"></span> each <br/>  <span class="regular">(Save 25% EXTRA) </span>
                           </label>
                         </span>
                         <div class="quantity__rules caption no-js-hidden">
