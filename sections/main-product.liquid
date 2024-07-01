@@ -665,9 +665,9 @@
                                 let alignment;
                                 switch (index) {
                                     case 0:
-                                        content = "Buy 1";
+                                        content = "{{block.settings.buy1_tag}}";
                                         color = "#fff";
-                                        background = "#000";
+                                        background = "";
                                         size = "11px";
                                         alignment = "center";
                                         break;
@@ -715,7 +715,7 @@
                           border: 1px solid #dddcdc;
                         }
                         .bundle_swatch::before {
-                          content:'Buy 1';
+                          content:'';
                           position: absolute;
                           top: -2px;
                           line-height: 1;
@@ -1542,6 +1542,11 @@
           "id": "buy1_before_text",
           "label": "Buy 1 Before Text",
           "default": "1 case"
+        },
+        {
+          "type": "text",
+          "id": "buy1_tag",
+          "label": "Buy 1 Tag label"
         },
         {
           "type": "text",
