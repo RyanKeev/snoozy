@@ -4416,7 +4416,8 @@ product-variant-swatches .product-form__input{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  gap: 7px;
+  /* gap: 7px; */
+  gap: 12px;
 }
 
 product-variant-swatches .product-form__input label{
