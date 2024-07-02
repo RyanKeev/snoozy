@@ -714,29 +714,30 @@
                           cursor: pointer;
                           border: 1px solid #dddcdc;
                         }
-                        .bundle_swatch::before {
-                          content:'';
-                          position: absolute;
-                          top: -2px;
-                          line-height: 1;
-                          color: #fff;
-                          background: #000;
-                          font-size: 14px;
-                          padding: 7px 20px 5px 20px;
-                          border-radius: 30px;
-                          transform: translateY(-50%);
-                        }
-                        .bundle_swatch::before {
-                          content: var(--content);
-                          background: var(--background);
-                          color: var(--color);
-                          font-size: var(--size);
-                          text-align: var(--alignment);
-                        }
+
                         .swatch_selected {
                           box-shadow: 0 0 0 1px #000;
                         }
                         @media (min-width:750px){
+                          .bundle_swatch::before {
+                            content:'';
+                            position: absolute;
+                            top: -2px;
+                            line-height: 1;
+                            color: #fff;
+                            background: #000;
+                            font-size: 14px;
+                            padding: 7px 20px 5px 20px;
+                            border-radius: 30px;
+                            transform: translateY(-50%);
+                          }
+                          .bundle_swatch::before {
+                            content: var(--content);
+                            background: var(--background);
+                            color: var(--color);
+                            font-size: var(--size);
+                            text-align: var(--alignment);
+                          }
                           .bundle_swatch {
                             padding-left: 5px !important;
                             padding-right: 5px !important;
@@ -758,12 +759,31 @@
                           }
                         }
                         @media (max-width:749px){
+                          .bundle_swatch::before {
+                            content:'';
+                            position: absolute;
+                            top: -2px;
+                            line-height: 1;
+                            color: #fff;
+                            background: #000;
+                            font-size: 10px;
+                            padding: 7px 10px 5px 10px;
+                            border-radius: 30px;
+                            transform: translateY(-50%);
+                          }
+                          .bundle_swatch::before {
+                            content: var(--content);
+                            background: var(--background);
+                            color: var(--color);
+                            font-size: 10px;
+                            text-align: var(--alignment);
+                          }
                           .bundle_swatch label {
                             line-height: 1.5em;
                             text-align:center;
                             background: transparent !important;
                             color: #1a1a1a !important;
-                            padding: 10px 4px !important;
+                            padding: 0px 4px !important;
                             font-size: 12px !important;
                             margin-top: 10px !important;
                             margin-left: 0  !important;
@@ -785,7 +805,7 @@
                       </style>
                      <div id="Quantity-Form-{{ section.id }} bundle_swatches_custom" class="product-form__input product-form__quantity{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} product-form__quantity-top{% endif %} bundle-swatches"
                      {{ block.shopify_attributes }}
-                     style="display: flex !important;gap: 16px !important;">
+                     style="display: flex !important;gap: 8px !important;">
                      {% comment %} TODO: enable theme-check once `item_count_for_variant` is accepted as valid filter {% endcomment %}
                      {% # theme-check-disable %}
                      {%- assign cart_qty = cart | item_count_for_variant: product.selected_or_first_available_variant.id -%}
